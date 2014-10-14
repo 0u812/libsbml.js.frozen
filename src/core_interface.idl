@@ -1,0 +1,10 @@
+[Prefix="libsbml::"]
+interface SBMLDocument {
+  long getNumErrors();
+};
+
+[Prefix="libsbml::"]
+interface SBMLReader {
+  void SBMLReader();
+  SBMLDocument readSBMLFromString(DOMString sbmlstr);
+};
