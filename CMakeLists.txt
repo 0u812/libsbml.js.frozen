@@ -234,8 +234,8 @@ commands 'make test' or 'ctest'.)" OFF)
 endif()
 
 # Choose the xml parsing library to be used.
-option(WITH_EXPAT    "Use the Expat XML parser library."     OFF)
-option(WITH_LIBXML   "Use the libxml2 XML parser library."   ON )
+option(WITH_EXPAT    "Use the Expat XML parser library."     ON )
+option(WITH_LIBXML   "Use the libxml2 XML parser library."   OFF)
 option(WITH_XERCES   "Use the Xerces XML parser library."    OFF)
 
 # Use C++ namespace.
@@ -327,20 +327,30 @@ set(LIBSBML_XML_LIBRARY)
 set(LIBSBML_XML_LIBRARY_INCLUDE)
 set(LIBSBML_XML_LIBRARY_LIBS)
 
+set(CMAKE_FIND_LIBRARY_PREFIXES "lib")
+set(CMAKE_FIND_LIBRARY_SUFFIXES ".so" ".a")
+set(EXPAT_PATH /usr CACHE PATH "Path to expat")
+
 if(WITH_EXPAT)
     find_library(LIBEXPAT_LIBRARY
-        NAMES libexpat.lib expat
-        PATHS ${LIBSBML_DEPENDENCY_DIR}/lib
-              /usr/lib /usr/local/lib
-              /usr/lib/i386-linux-gnu
+        NAMES libexpat.so
+        PATHS ${EXPAT_PATH}/lib
+        HINTS "${EXPAT_PATH}/lib"
+#                ${LIBSBML_DEPENDENCY_DIR}/lib
+#                NO_DEFAULT_PATH
+#               /usr/lib /usr/local/lib
+#               /usr/lib/i386-linux-gnu
+        NO_CMAKE_FIND_ROOT_PATH
         DOC "The file name of the Expat library."
                 )
 
     find_path(LIBEXPAT_INCLUDE_DIR
         NAMES expat.h
-        PATHS ${LIBSBML_DEPENDENCY_DIR}/include
-              /usr/include /usr/local/include
-              ${CMAKE_OSX_SYSROOT}/usr/include              
+        PATHS "${EXPAT_PATH}/include"
+#         PATHS ${LIBSBML_DEPENDENCY_DIR}/include
+#               /usr/include /usr/local/include
+#               ${CMAKE_OSX_SYSROOT}/usr/include
+        NO_CMAKE_FIND_ROOT_PATH
         DOC "The directory containing the Expat include files."
               )
 
