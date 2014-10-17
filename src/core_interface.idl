@@ -1,6 +1,18 @@
 [Prefix="libsbml::"]
+interface Reaction {
+  DOMString getId();
+};
+
+[Prefix="libsbml::"]
+interface Model {
+  long getNumReactions();
+  Reaction getReaction(long i);
+};
+
+[Prefix="libsbml::"]
 interface SBMLDocument {
   long getNumErrors();
+  Model getModel();
 };
 
 [Prefix="libsbml::"]

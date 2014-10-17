@@ -61,6 +61,59 @@ function ensureString(value) {
 }
 
 
+// Reaction
+function Reaction() { throw "cannot construct a Reaction, no constructor in IDL" }
+Reaction.prototype = Object.create(WrapperObject.prototype);
+Reaction.prototype.constructor = Reaction;
+Reaction.prototype.__class__ = Reaction;
+Reaction.__cache__ = {};
+Module['Reaction'] = Reaction;
+
+Reaction.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Reaction_getId_0(self));
+};
+
+  Reaction.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Reaction___destroy___0(self);
+}
+// Model
+function Model() { throw "cannot construct a Model, no constructor in IDL" }
+Model.prototype = Object.create(WrapperObject.prototype);
+Model.prototype.constructor = Model;
+Model.prototype.__class__ = Model;
+Model.__cache__ = {};
+Module['Model'] = Model;
+
+Model.prototype['getNumReactions'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Model_getNumReactions_0(self);
+};
+
+Model.prototype['getReaction'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Model_getReaction_1(self, arg0), Reaction);
+};
+
+  Model.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Model___destroy___0(self);
+}
+// VoidPtr
+function VoidPtr() { throw "cannot construct a VoidPtr, no constructor in IDL" }
+VoidPtr.prototype = Object.create(WrapperObject.prototype);
+VoidPtr.prototype.constructor = VoidPtr;
+VoidPtr.prototype.__class__ = VoidPtr;
+VoidPtr.__cache__ = {};
+Module['VoidPtr'] = VoidPtr;
+
+  VoidPtr.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_VoidPtr___destroy___0(self);
+}
 // SBMLReader
 function SBMLReader() {
   this.ptr = _emscripten_bind_SBMLReader_SBMLReader_0();
@@ -83,18 +136,6 @@ SBMLReader.prototype['readSBMLFromString'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_SBMLReader___destroy___0(self);
 }
-// VoidPtr
-function VoidPtr() { throw "cannot construct a VoidPtr, no constructor in IDL" }
-VoidPtr.prototype = Object.create(WrapperObject.prototype);
-VoidPtr.prototype.constructor = VoidPtr;
-VoidPtr.prototype.__class__ = VoidPtr;
-VoidPtr.__cache__ = {};
-Module['VoidPtr'] = VoidPtr;
-
-  VoidPtr.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_VoidPtr___destroy___0(self);
-}
 // SBMLDocument
 function SBMLDocument() { throw "cannot construct a SBMLDocument, no constructor in IDL" }
 SBMLDocument.prototype = Object.create(WrapperObject.prototype);
@@ -106,6 +147,11 @@ Module['SBMLDocument'] = SBMLDocument;
 SBMLDocument.prototype['getNumErrors'] = function() {
   var self = this.ptr;
   return _emscripten_bind_SBMLDocument_getNumErrors_0(self);
+};
+
+SBMLDocument.prototype['getModel'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SBMLDocument_getModel_0(self), Model);
 };
 
   SBMLDocument.prototype['__destroy__'] = function() {
