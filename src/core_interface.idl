@@ -1,6 +1,19 @@
 [Prefix="libsbml::"]
+interface SpeciesReference {
+  DOMString getId();
+  DOMString getSpecies();
+};
+
+[Prefix="libsbml::"]
 interface Reaction {
   DOMString getId();
+
+  long getNumReactants();
+  long getNumModifiers();
+  long getNumProducts();
+
+  SpeciesReference getReactant(long i);
+  SpeciesReference getProduct(long i);
 };
 
 [Prefix="libsbml::"]

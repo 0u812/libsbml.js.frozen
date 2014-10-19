@@ -74,9 +74,104 @@ Reaction.prototype['getId'] = function() {
   return Pointer_stringify(_emscripten_bind_Reaction_getId_0(self));
 };
 
+Reaction.prototype['getNumReactants'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_getNumReactants_0(self);
+};
+
+Reaction.prototype['getNumModifiers'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_getNumModifiers_0(self);
+};
+
+Reaction.prototype['getNumProducts'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_getNumProducts_0(self);
+};
+
+Reaction.prototype['getReactant'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Reaction_getReactant_1(self, arg0), SpeciesReference);
+};
+
+Reaction.prototype['getProduct'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Reaction_getProduct_1(self, arg0), SpeciesReference);
+};
+
   Reaction.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Reaction___destroy___0(self);
+}
+// SBMLReader
+function SBMLReader() {
+  this.ptr = _emscripten_bind_SBMLReader_SBMLReader_0();
+  getCache(SBMLReader)[this.ptr] = this;
+};
+SBMLReader.prototype = Object.create(WrapperObject.prototype);
+SBMLReader.prototype.constructor = SBMLReader;
+SBMLReader.prototype.__class__ = SBMLReader;
+SBMLReader.__cache__ = {};
+Module['SBMLReader'] = SBMLReader;
+
+SBMLReader.prototype['readSBMLFromString'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_SBMLReader_readSBMLFromString_1(self, arg0), SBMLDocument);
+};
+
+  SBMLReader.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBMLReader___destroy___0(self);
+}
+// SpeciesReference
+function SpeciesReference() { throw "cannot construct a SpeciesReference, no constructor in IDL" }
+SpeciesReference.prototype = Object.create(WrapperObject.prototype);
+SpeciesReference.prototype.constructor = SpeciesReference;
+SpeciesReference.prototype.__class__ = SpeciesReference;
+SpeciesReference.__cache__ = {};
+Module['SpeciesReference'] = SpeciesReference;
+
+SpeciesReference.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesReference_getId_0(self));
+};
+
+SpeciesReference.prototype['getSpecies'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesReference_getSpecies_0(self));
+};
+
+  SpeciesReference.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SpeciesReference___destroy___0(self);
+}
+// SBMLDocument
+function SBMLDocument() { throw "cannot construct a SBMLDocument, no constructor in IDL" }
+SBMLDocument.prototype = Object.create(WrapperObject.prototype);
+SBMLDocument.prototype.constructor = SBMLDocument;
+SBMLDocument.prototype.__class__ = SBMLDocument;
+SBMLDocument.__cache__ = {};
+Module['SBMLDocument'] = SBMLDocument;
+
+SBMLDocument.prototype['getNumErrors'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_getNumErrors_0(self);
+};
+
+SBMLDocument.prototype['getModel'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SBMLDocument_getModel_0(self), Model);
+};
+
+  SBMLDocument.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBMLDocument___destroy___0(self);
 }
 // Model
 function Model() { throw "cannot construct a Model, no constructor in IDL" }
@@ -113,48 +208,4 @@ Module['VoidPtr'] = VoidPtr;
   VoidPtr.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_VoidPtr___destroy___0(self);
-}
-// SBMLReader
-function SBMLReader() {
-  this.ptr = _emscripten_bind_SBMLReader_SBMLReader_0();
-  getCache(SBMLReader)[this.ptr] = this;
-};
-SBMLReader.prototype = Object.create(WrapperObject.prototype);
-SBMLReader.prototype.constructor = SBMLReader;
-SBMLReader.prototype.__class__ = SBMLReader;
-SBMLReader.__cache__ = {};
-Module['SBMLReader'] = SBMLReader;
-
-SBMLReader.prototype['readSBMLFromString'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_SBMLReader_readSBMLFromString_1(self, arg0), SBMLDocument);
-};
-
-  SBMLReader.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_SBMLReader___destroy___0(self);
-}
-// SBMLDocument
-function SBMLDocument() { throw "cannot construct a SBMLDocument, no constructor in IDL" }
-SBMLDocument.prototype = Object.create(WrapperObject.prototype);
-SBMLDocument.prototype.constructor = SBMLDocument;
-SBMLDocument.prototype.__class__ = SBMLDocument;
-SBMLDocument.__cache__ = {};
-Module['SBMLDocument'] = SBMLDocument;
-
-SBMLDocument.prototype['getNumErrors'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_SBMLDocument_getNumErrors_0(self);
-};
-
-SBMLDocument.prototype['getModel'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_SBMLDocument_getModel_0(self), Model);
-};
-
-  SBMLDocument.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_SBMLDocument___destroy___0(self);
 }
