@@ -2,6 +2,7 @@
 interface SpeciesReference {
   DOMString getId();
   DOMString getSpecies();
+  long setSpecies(DOMString sid);
 };
 
 [Prefix="libsbml::"]
@@ -14,6 +15,9 @@ interface Reaction {
 
   SpeciesReference getReactant(long i);
   SpeciesReference getProduct(long i);
+
+  long addReactant(SpeciesReference sr);
+  long addProduct(SpeciesReference sr);
 };
 
 [Prefix="libsbml::"]

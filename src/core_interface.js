@@ -103,6 +103,13 @@ Reaction.prototype['getProduct'] = function(arg0) {
   return wrapPointer(_emscripten_bind_Reaction_getProduct_1(self, arg0), SpeciesReference);
 };
 
+Reaction.prototype['addReactant'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Reaction_addReactant_1(self, arg0);
+};
+
   Reaction.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Reaction___destroy___0(self);
@@ -145,6 +152,13 @@ SpeciesReference.prototype['getId'] = function() {
 SpeciesReference.prototype['getSpecies'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_SpeciesReference_getSpecies_0(self));
+};
+
+SpeciesReference.prototype['setSpecies'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_SpeciesReference_setSpecies_1(self, arg0);
 };
 
   SpeciesReference.prototype['__destroy__'] = function() {
