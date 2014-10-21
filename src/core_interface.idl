@@ -6,8 +6,44 @@ interface SpeciesReference {
 };
 
 [Prefix="libsbml::"]
+interface ModifierSpeciesReference {
+  DOMString getId();
+  DOMString getSpecies();
+  long setSpecies(DOMString sid);
+};
+
+[Prefix="libsbml::"]
+interface Species {
+  DOMString getId();
+  boolean setId(DOMString id);
+
+  DOMString getName();
+  long setName(DOMString name);
+
+  long setInitialAmount(double amt);
+  double getInitialAmount();
+};
+
+[Prefix="libsbml::"]
+interface ASTNode_t {
+};
+
+[Prefix="libsbml::"]
+interface KineticLaw {
+  long setMath(ASTNode_t math);
+};
+
+[Prefix="libsbml::"]
+interface SBMLFormulaParser {
+  void SBMLFormulaParser();
+  ASTNode_t parseL3Formula(DOMString formula);
+  ASTNode_t parseFormula(DOMString formula);
+};
+
+[Prefix="libsbml::"]
 interface Reaction {
   DOMString getId();
+  boolean setId(DOMString id);
 
   long getNumReactants();
   long getNumModifiers();
@@ -18,22 +54,42 @@ interface Reaction {
 
   long addReactant(SpeciesReference sr);
   long addProduct(SpeciesReference sr);
+
+  SpeciesReference createReactant();
+  SpeciesReference createProduct();
+  ModifierSpeciesReference createModifier();
+
+  KineticLaw createKineticLaw();
 };
 
 [Prefix="libsbml::"]
 interface Model {
   long getNumReactions();
   Reaction getReaction(long i);
+  Species createSpecies();
+};
+
+[Prefix="libsbml::"]
+interface SBMLErrorLog {
+// reserved word apparently. whoop-de-doo
+//   DOMString toString();
 };
 
 [Prefix="libsbml::"]
 interface SBMLDocument {
   long getNumErrors();
   Model getModel();
+  SBMLErrorLog getErrorLog();
 };
 
 [Prefix="libsbml::"]
 interface SBMLReader {
   void SBMLReader();
   SBMLDocument readSBMLFromString(DOMString sbmlstr);
+};
+
+[Prefix="libsbml::"]
+interface SBMLWriterjs {
+  void SBMLWriterjs();
+  DOMString writeSBMLToString(SBMLDocument doc);
 };
