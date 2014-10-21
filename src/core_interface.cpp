@@ -124,6 +124,10 @@ char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_getId_0(libs
   return (char*)self->getId().c_str();
 }
 
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_setId_1(libsbml::ModifierSpeciesReference* self, char* arg0) {
+  return self->setId(arg0);
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_getSpecies_0(libsbml::ModifierSpeciesReference* self) {
   return (char*)self->getSpecies().c_str();
 }
@@ -140,6 +144,10 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference___destroy___0
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getId_0(libsbml::SpeciesReference* self) {
   return (char*)self->getId().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_setId_1(libsbml::SpeciesReference* self, char* arg0) {
+  return self->setId(arg0);
 }
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getSpecies_0(libsbml::SpeciesReference* self) {
@@ -294,12 +302,20 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setName_1(libsbml::Species* sel
   return self->setName(arg0);
 }
 
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getInitialAmount_0(libsbml::Species* self) {
+  return self->getInitialAmount();
+}
+
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setInitialAmount_1(libsbml::Species* self, double arg0) {
   return self->setInitialAmount(arg0);
 }
 
-double EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getInitialAmount_0(libsbml::Species* self) {
-  return self->getInitialAmount();
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getInitialConcentration_0(libsbml::Species* self) {
+  return self->getInitialConcentration();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setInitialConcentration_1(libsbml::Species* self, double arg0) {
+  return self->setInitialConcentration(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Species___destroy___0(libsbml::Species* self) {

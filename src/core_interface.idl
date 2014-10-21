@@ -1,15 +1,19 @@
 [Prefix="libsbml::"]
 interface SpeciesReference {
   DOMString getId();
+  boolean setId(DOMString id);
+
   DOMString getSpecies();
-  long setSpecies(DOMString sid);
+  long setSpecies(DOMString spec);
 };
 
 [Prefix="libsbml::"]
 interface ModifierSpeciesReference {
   DOMString getId();
+  boolean setId(DOMString id);
+
   DOMString getSpecies();
-  long setSpecies(DOMString sid);
+  long setSpecies(DOMString spec);
 };
 
 [Prefix="libsbml::"]
@@ -20,8 +24,11 @@ interface Species {
   DOMString getName();
   long setName(DOMString name);
 
-  long setInitialAmount(double amt);
   double getInitialAmount();
+  long setInitialAmount(double amt);
+
+  double getInitialConcentration();
+  long setInitialConcentration(double conc);
 };
 
 [Prefix="libsbml::"]

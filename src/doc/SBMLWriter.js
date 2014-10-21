@@ -5,7 +5,7 @@
  */
 
 /**
- * Constructs a new reader object.
+ * Constructs a new writer object.
  *
  * @method SBMLWriter
  * @constructor

@@ -1,5 +1,7 @@
 /**
- * Provides an interface for using SBML documents.
+ * Provides an object representing an SBML model.
+ * A document typically consists of one model, which
+ * stores all of the quantitative parameters of the system.
  *
  * @class Model
  */

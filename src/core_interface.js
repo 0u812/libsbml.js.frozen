@@ -240,6 +240,13 @@ ModifierSpeciesReference.prototype['getId'] = function() {
   return Pointer_stringify(_emscripten_bind_ModifierSpeciesReference_getId_0(self));
 };
 
+ModifierSpeciesReference.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_ModifierSpeciesReference_setId_1(self, arg0);
+};
+
 ModifierSpeciesReference.prototype['getSpecies'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_ModifierSpeciesReference_getSpecies_0(self));
@@ -267,6 +274,13 @@ Module['SpeciesReference'] = SpeciesReference;
 SpeciesReference.prototype['getId'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_SpeciesReference_getId_0(self));
+};
+
+SpeciesReference.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_SpeciesReference_setId_1(self, arg0);
 };
 
 SpeciesReference.prototype['getSpecies'] = function() {
@@ -511,6 +525,11 @@ Species.prototype['setName'] = function(arg0) {
   return _emscripten_bind_Species_setName_1(self, arg0);
 };
 
+Species.prototype['getInitialAmount'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Species_getInitialAmount_0(self);
+};
+
 Species.prototype['setInitialAmount'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
@@ -518,9 +537,16 @@ Species.prototype['setInitialAmount'] = function(arg0) {
   return _emscripten_bind_Species_setInitialAmount_1(self, arg0);
 };
 
-Species.prototype['getInitialAmount'] = function() {
+Species.prototype['getInitialConcentration'] = function() {
   var self = this.ptr;
-  return _emscripten_bind_Species_getInitialAmount_0(self);
+  return _emscripten_bind_Species_getInitialConcentration_0(self);
+};
+
+Species.prototype['setInitialConcentration'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Species_setInitialConcentration_1(self, arg0);
 };
 
   Species.prototype['__destroy__'] = function() {
