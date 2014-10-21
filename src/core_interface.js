@@ -180,11 +180,40 @@ Compartment.prototype['setId'] = function(arg0) {
   return _emscripten_bind_Compartment_setId_1(self, arg0);
 };
 
+Compartment.prototype['getSize'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_getSize_0(self);
+};
+
 Compartment.prototype['setSize'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_Compartment_setSize_1(self, arg0);
+};
+
+Compartment.prototype['getVolume'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_getVolume_0(self);
+};
+
+Compartment.prototype['setVolume'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setVolume_1(self, arg0);
+};
+
+Compartment.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Compartment_getUnits_0(self));
+};
+
+Compartment.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setUnits_1(self, arg0);
 };
 
   Compartment.prototype['__destroy__'] = function() {

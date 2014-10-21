@@ -86,8 +86,28 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setId_1(libsbml::Compartmen
   return self->setId(arg0);
 }
 
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getSize_0(libsbml::Compartment* self) {
+  return self->getSize();
+}
+
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setSize_1(libsbml::Compartment* self, double arg0) {
   return self->setSize(arg0);
+}
+
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getVolume_0(libsbml::Compartment* self) {
+  return self->getVolume();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setVolume_1(libsbml::Compartment* self, double arg0) {
+  return self->setVolume(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getUnits_0(libsbml::Compartment* self) {
+  return (char*)self->getUnits().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setUnits_1(libsbml::Compartment* self, char* arg0) {
+  return self->setUnits(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment___destroy___0(libsbml::Compartment* self) {

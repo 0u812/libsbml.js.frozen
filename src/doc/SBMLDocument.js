@@ -24,7 +24,7 @@
  * Gets the model associated with this document.
  *
  * @method getModel
- * @return {Object} The model
+ * @return {Model} The model
  */
 
 /**
@@ -32,7 +32,7 @@
  * The model is owned by the document.
  *
  * @method createModel
- * @return {Object} The model
+ * @return {Model} The model
  */
 
 /**

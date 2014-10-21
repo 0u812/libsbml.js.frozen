@@ -67,7 +67,14 @@ interface Compartment {
   DOMString getId();
   long setId(DOMString id);
 
+  double getSize();
   long setSize(double val);
+
+  double getVolume();
+  long setVolume(double val);
+
+  DOMString getUnits();
+  long setUnits(DOMString units);
 };
 
 [Prefix="libsbml::"]
