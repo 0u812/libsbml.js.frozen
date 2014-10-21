@@ -112,20 +112,6 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference___destroy___0
   delete self;
 }
 
-// SBMLWriterjs
-
-libsbml::SBMLWriterjs* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriterjs_SBMLWriterjs_0() {
-  return new libsbml::SBMLWriterjs();
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriterjs_writeSBMLToString_1(libsbml::SBMLWriterjs* self, libsbml::SBMLDocument* arg0) {
-  return (char*)self->writeSBMLToString(arg0).c_str();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriterjs___destroy___0(libsbml::SBMLWriterjs* self) {
-  delete self;
-}
-
 // SpeciesReference
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getId_0(libsbml::SpeciesReference* self) {
@@ -285,6 +271,20 @@ double EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getInitialAmount_0(libsbml::
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Species___destroy___0(libsbml::Species* self) {
+  delete self;
+}
+
+// SBMLWriter
+
+libsbmljs::SBMLWriter* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_SBMLWriter_0() {
+  return new libsbmljs::SBMLWriter();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_writeSBMLToString_1(libsbmljs::SBMLWriter* self, libsbml::SBMLDocument* arg0) {
+  return (char*)self->writeSBMLToString(arg0).c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter___destroy___0(libsbmljs::SBMLWriter* self) {
   delete self;
 }
 

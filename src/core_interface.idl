@@ -106,8 +106,8 @@ interface SBMLReader {
 };
 
 // different name req'd b/c libsbml version did not have consistent usage of types
-[Prefix="libsbml::"]
-interface SBMLWriterjs {
-  void SBMLWriterjs();
+[Prefix="libsbmljs::"]
+interface SBMLWriter {
+  void SBMLWriter();
   DOMString writeSBMLToString(SBMLDocument doc);
 };

@@ -220,28 +220,6 @@ ModifierSpeciesReference.prototype['setSpecies'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_ModifierSpeciesReference___destroy___0(self);
 }
-// SBMLWriterjs
-function SBMLWriterjs() {
-  this.ptr = _emscripten_bind_SBMLWriterjs_SBMLWriterjs_0();
-  getCache(SBMLWriterjs)[this.ptr] = this;
-};
-SBMLWriterjs.prototype = Object.create(WrapperObject.prototype);
-SBMLWriterjs.prototype.constructor = SBMLWriterjs;
-SBMLWriterjs.prototype.__class__ = SBMLWriterjs;
-SBMLWriterjs.__cache__ = {};
-Module['SBMLWriterjs'] = SBMLWriterjs;
-
-SBMLWriterjs.prototype['writeSBMLToString'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return Pointer_stringify(_emscripten_bind_SBMLWriterjs_writeSBMLToString_1(self, arg0));
-};
-
-  SBMLWriterjs.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_SBMLWriterjs___destroy___0(self);
-}
 // SpeciesReference
 function SpeciesReference() { throw "cannot construct a SpeciesReference, no constructor in IDL" }
 SpeciesReference.prototype = Object.create(WrapperObject.prototype);
@@ -502,4 +480,26 @@ Species.prototype['getInitialAmount'] = function() {
   Species.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Species___destroy___0(self);
+}
+// SBMLWriter
+function SBMLWriter() {
+  this.ptr = _emscripten_bind_SBMLWriter_SBMLWriter_0();
+  getCache(SBMLWriter)[this.ptr] = this;
+};
+SBMLWriter.prototype = Object.create(WrapperObject.prototype);
+SBMLWriter.prototype.constructor = SBMLWriter;
+SBMLWriter.prototype.__class__ = SBMLWriter;
+SBMLWriter.__cache__ = {};
+Module['SBMLWriter'] = SBMLWriter;
+
+SBMLWriter.prototype['writeSBMLToString'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return Pointer_stringify(_emscripten_bind_SBMLWriter_writeSBMLToString_1(self, arg0));
+};
+
+  SBMLWriter.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBMLWriter___destroy___0(self);
 }
