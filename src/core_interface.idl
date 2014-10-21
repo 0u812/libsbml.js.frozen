@@ -43,7 +43,7 @@ interface SBMLFormulaParser {
 [Prefix="libsbml::"]
 interface Reaction {
   DOMString getId();
-  boolean setId(DOMString id);
+  long setId(DOMString id);
 
   long getNumReactants();
   long getNumModifiers();
@@ -63,10 +63,23 @@ interface Reaction {
 };
 
 [Prefix="libsbml::"]
+interface Compartment {
+  DOMString getId();
+  long setId(DOMString id);
+  long setSize(double val);
+};
+
+[Prefix="libsbml::"]
 interface Model {
+  DOMString getId();
+  long setId(DOMString id);
+
   long getNumReactions();
   Reaction getReaction(long i);
+  Reaction createReaction();
+
   Species createSpecies();
+  Compartment createCompartment();
 };
 
 [Prefix="libsbml::"]
@@ -77,8 +90,12 @@ interface SBMLErrorLog {
 
 [Prefix="libsbml::"]
 interface SBMLDocument {
+  void SBMLDocument(long level, long version);
   long getNumErrors();
+
   Model getModel();
+  Model createModel();
+
   SBMLErrorLog getErrorLog();
 };
 
@@ -88,6 +105,7 @@ interface SBMLReader {
   SBMLDocument readSBMLFromString(DOMString sbmlstr);
 };
 
+// different name req'd b/c libsbml version did not have consistent usage of types
 [Prefix="libsbml::"]
 interface SBMLWriterjs {
   void SBMLWriterjs();

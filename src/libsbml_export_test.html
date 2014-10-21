@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+  <script type="text/javascript" src="out.js"></script>
+<script>
+var libsbml = this.libsbml;
+
+function log(param){
+    setTimeout(function(){
+        throw new Error("Debug: "+param)
+    },0);
+}
+
+loadsbml = function () {
+  var doc = new libsbml.SBMLDocument(2,4);
+  if(doc == 0) {
+    log('failed to create doc');
+  }
+  log('num errors = ' + String(doc.getNumErrors()))
+
+  var model = doc.createModel();
+
+  model.setId('model1');
+
+  var comp = model.createCompartment();
+  comp.setId('comp1');
+  comp.setSize(1);
+
+  log('created compartment');
+
+  var sp1 = model.createSpecies();
+  sp1.setId('spec1');
+  sp1.setName('S1');
+  sp1.setInitialAmount(0);
+
+  log('Created species 1');
+
+  var sp2 = model.createSpecies();
+  sp2.setId('spec2');
+  sp2.setName('S2');
+  sp2.setInitialAmount(0);
+
+  log('Created species 2');
+
+  var rxn = model.createReaction();
+  rxn.setId('reaction1');
+
+  log('Created reaction');
+
+  var spr1 = rxn.createReactant();
+  spr1.setSpecies('spec1');
+
+  log('Created spec ref 1');
+
+  var spr2 = rxn.createReactant();
+  spr2.setSpecies('spec2');
+
+  log('Created spec ref 2');
+
+  var k1 = rxn.createKineticLaw();
+  var parser = new libsbml.SBMLFormulaParser();
+  var kmath = parser.parseL3Formula('S1*S2');
+  k1.setMath(kmath);
+//   libsbml.destroy(kmath); // manual mem management
+
+  log('Created kinetic law');
+
+  var writer = new libsbml.SBMLWriterjs();
+
+  log('Serializing model...\nto a multiline\nstring\n');
+
+  log(writer.writeSBMLToString(doc));
+};
+
+libsbml.onload(loadsbml);
+</script>
+</head>
+<body>
+</body>
+</html>
