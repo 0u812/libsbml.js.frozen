@@ -25,19 +25,21 @@ interface Species {
 };
 
 [Prefix="libsbml::"]
-interface ASTNode_t {
+interface ASTNode {
+  long getNumChildren();
+  ASTNode getChild(long i);
 };
 
 [Prefix="libsbml::"]
 interface KineticLaw {
-  long setMath(ASTNode_t math);
+  long setMath(ASTNode math);
 };
 
 [Prefix="libsbml::"]
 interface SBMLFormulaParser {
   void SBMLFormulaParser();
-  ASTNode_t parseL3Formula(DOMString formula);
-  ASTNode_t parseFormula(DOMString formula);
+  ASTNode parseL3Formula(DOMString formula);
+  ASTNode parseFormula(DOMString formula);
 };
 
 [Prefix="libsbml::"]
@@ -46,11 +48,12 @@ interface Reaction {
   long setId(DOMString id);
 
   long getNumReactants();
-  long getNumModifiers();
   long getNumProducts();
+  long getNumModifiers();
 
   SpeciesReference getReactant(long i);
   SpeciesReference getProduct(long i);
+  ModifierSpeciesReference getModifier(long i);
 
   long addReactant(SpeciesReference sr);
   long addProduct(SpeciesReference sr);

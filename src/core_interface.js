@@ -98,14 +98,14 @@ Reaction.prototype['getNumReactants'] = function() {
   return _emscripten_bind_Reaction_getNumReactants_0(self);
 };
 
-Reaction.prototype['getNumModifiers'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_Reaction_getNumModifiers_0(self);
-};
-
 Reaction.prototype['getNumProducts'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Reaction_getNumProducts_0(self);
+};
+
+Reaction.prototype['getNumModifiers'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_getNumModifiers_0(self);
 };
 
 Reaction.prototype['getReactant'] = function(arg0) {
@@ -120,6 +120,13 @@ Reaction.prototype['getProduct'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_Reaction_getProduct_1(self, arg0), SpeciesReference);
+};
+
+Reaction.prototype['getModifier'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Reaction_getModifier_1(self, arg0), ModifierSpeciesReference);
 };
 
 Reaction.prototype['addReactant'] = function(arg0) {
@@ -278,6 +285,28 @@ SpeciesReference.prototype['setSpecies'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_SpeciesReference___destroy___0(self);
 }
+// SBMLWriter
+function SBMLWriter() {
+  this.ptr = _emscripten_bind_SBMLWriter_SBMLWriter_0();
+  getCache(SBMLWriter)[this.ptr] = this;
+};
+SBMLWriter.prototype = Object.create(WrapperObject.prototype);
+SBMLWriter.prototype.constructor = SBMLWriter;
+SBMLWriter.prototype.__class__ = SBMLWriter;
+SBMLWriter.__cache__ = {};
+Module['SBMLWriter'] = SBMLWriter;
+
+SBMLWriter.prototype['writeSBMLToString'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return Pointer_stringify(_emscripten_bind_SBMLWriter_writeSBMLToString_1(self, arg0));
+};
+
+  SBMLWriter.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBMLWriter___destroy___0(self);
+}
 // KineticLaw
 function KineticLaw() { throw "cannot construct a KineticLaw, no constructor in IDL" }
 KineticLaw.prototype = Object.create(WrapperObject.prototype);
@@ -334,14 +363,14 @@ SBMLFormulaParser.prototype['parseL3Formula'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseL3Formula_1(self, arg0), ASTNode_t);
+  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseL3Formula_1(self, arg0), ASTNode);
 };
 
 SBMLFormulaParser.prototype['parseFormula'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseFormula_1(self, arg0), ASTNode_t);
+  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseFormula_1(self, arg0), ASTNode);
 };
 
   SBMLFormulaParser.prototype['__destroy__'] = function() {
@@ -386,18 +415,6 @@ SBMLDocument.prototype['getErrorLog'] = function() {
   SBMLDocument.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SBMLDocument___destroy___0(self);
-}
-// ASTNode_t
-function ASTNode_t() { throw "cannot construct a ASTNode_t, no constructor in IDL" }
-ASTNode_t.prototype = Object.create(WrapperObject.prototype);
-ASTNode_t.prototype.constructor = ASTNode_t;
-ASTNode_t.prototype.__class__ = ASTNode_t;
-ASTNode_t.__cache__ = {};
-Module['ASTNode_t'] = ASTNode_t;
-
-  ASTNode_t.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_ASTNode_t___destroy___0(self);
 }
 // Model
 function Model() { throw "cannot construct a Model, no constructor in IDL" }
@@ -510,25 +527,27 @@ Species.prototype['getInitialAmount'] = function() {
   var self = this.ptr;
   _emscripten_bind_Species___destroy___0(self);
 }
-// SBMLWriter
-function SBMLWriter() {
-  this.ptr = _emscripten_bind_SBMLWriter_SBMLWriter_0();
-  getCache(SBMLWriter)[this.ptr] = this;
-};
-SBMLWriter.prototype = Object.create(WrapperObject.prototype);
-SBMLWriter.prototype.constructor = SBMLWriter;
-SBMLWriter.prototype.__class__ = SBMLWriter;
-SBMLWriter.__cache__ = {};
-Module['SBMLWriter'] = SBMLWriter;
+// ASTNode
+function ASTNode() { throw "cannot construct a ASTNode, no constructor in IDL" }
+ASTNode.prototype = Object.create(WrapperObject.prototype);
+ASTNode.prototype.constructor = ASTNode;
+ASTNode.prototype.__class__ = ASTNode;
+ASTNode.__cache__ = {};
+Module['ASTNode'] = ASTNode;
 
-SBMLWriter.prototype['writeSBMLToString'] = function(arg0) {
+ASTNode.prototype['getNumChildren'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ASTNode_getNumChildren_0(self);
+};
+
+ASTNode.prototype['getChild'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return Pointer_stringify(_emscripten_bind_SBMLWriter_writeSBMLToString_1(self, arg0));
+  return wrapPointer(_emscripten_bind_ASTNode_getChild_1(self, arg0), ASTNode);
 };
 
-  SBMLWriter.prototype['__destroy__'] = function() {
+  ASTNode.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  _emscripten_bind_SBMLWriter___destroy___0(self);
+  _emscripten_bind_ASTNode___destroy___0(self);
 }

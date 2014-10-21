@@ -32,12 +32,12 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getNumReactants_0(libsbml::Rea
   return self->getNumReactants();
 }
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getNumModifiers_0(libsbml::Reaction* self) {
-  return self->getNumModifiers();
-}
-
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getNumProducts_0(libsbml::Reaction* self) {
   return self->getNumProducts();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getNumModifiers_0(libsbml::Reaction* self) {
+  return self->getNumModifiers();
 }
 
 libsbml::SpeciesReference* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getReactant_1(libsbml::Reaction* self, int arg0) {
@@ -46,6 +46,10 @@ libsbml::SpeciesReference* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getReac
 
 libsbml::SpeciesReference* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getProduct_1(libsbml::Reaction* self, int arg0) {
   return self->getProduct(arg0);
+}
+
+libsbml::ModifierSpeciesReference* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getModifier_1(libsbml::Reaction* self, int arg0) {
+  return self->getModifier(arg0);
 }
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_addReactant_1(libsbml::Reaction* self, libsbml::SpeciesReference* arg0) {
@@ -150,9 +154,23 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference___destroy___0(libsbml
   delete self;
 }
 
+// SBMLWriter
+
+libsbmljs::SBMLWriter* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_SBMLWriter_0() {
+  return new libsbmljs::SBMLWriter();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_writeSBMLToString_1(libsbmljs::SBMLWriter* self, libsbml::SBMLDocument* arg0) {
+  return (char*)self->writeSBMLToString(arg0).c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter___destroy___0(libsbmljs::SBMLWriter* self) {
+  delete self;
+}
+
 // KineticLaw
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_setMath_1(libsbml::KineticLaw* self, libsbml::ASTNode_t* arg0) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_setMath_1(libsbml::KineticLaw* self, libsbml::ASTNode* arg0) {
   return self->setMath(arg0);
 }
 
@@ -180,11 +198,11 @@ libsbml::SBMLFormulaParser* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaPars
   return new libsbml::SBMLFormulaParser();
 }
 
-libsbml::ASTNode_t* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseL3Formula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
+libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseL3Formula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
   return self->parseL3Formula(arg0);
 }
 
-libsbml::ASTNode_t* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseFormula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
+libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseFormula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
   return self->parseFormula(arg0);
 }
 
@@ -215,12 +233,6 @@ libsbml::SBMLErrorLog* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getErro
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument___destroy___0(libsbml::SBMLDocument* self) {
-  delete self;
-}
-
-// ASTNode_t
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_t___destroy___0(libsbml::ASTNode_t* self) {
   delete self;
 }
 
@@ -294,17 +306,17 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Species___destroy___0(libsbml::Species
   delete self;
 }
 
-// SBMLWriter
+// ASTNode
 
-libsbmljs::SBMLWriter* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_SBMLWriter_0() {
-  return new libsbmljs::SBMLWriter();
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_getNumChildren_0(libsbml::ASTNode* self) {
+  return self->getNumChildren();
 }
 
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_writeSBMLToString_1(libsbmljs::SBMLWriter* self, libsbml::SBMLDocument* arg0) {
-  return (char*)self->writeSBMLToString(arg0).c_str();
+libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_getChild_1(libsbml::ASTNode* self, int arg0) {
+  return self->getChild(arg0);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter___destroy___0(libsbmljs::SBMLWriter* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode___destroy___0(libsbml::ASTNode* self) {
   delete self;
 }
 
