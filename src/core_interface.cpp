@@ -332,8 +332,239 @@ libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_getChild_1(libsbm
   return self->getChild(arg0);
 }
 
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_getType_0(libsbml::ASTNode* self) {
+  return self->getType();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_isSetUnits_0(libsbml::ASTNode* self) {
+  return self->isSetUnits();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_getUnits_0(libsbml::ASTNode* self) {
+  return (char*)self->getUnits().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_setUnits_1(libsbml::ASTNode* self, char* arg0) {
+  return self->setUnits(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode___destroy___0(libsbml::ASTNode* self) {
   delete self;
+}
+
+// libsbml__idl__ASTNodeType_t
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_PLUS() {
+  return libsbml::AST_PLUS;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_MINUS() {
+  return libsbml::AST_MINUS;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_TIMES() {
+  return libsbml::AST_TIMES;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_DIVIDE() {
+  return libsbml::AST_DIVIDE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_POWER() {
+  return libsbml::AST_POWER;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_INTEGER() {
+  return libsbml::AST_INTEGER;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_REAL() {
+  return libsbml::AST_REAL;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_REAL_E() {
+  return libsbml::AST_REAL_E;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RATIONAL() {
+  return libsbml::AST_RATIONAL;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_NAME() {
+  return libsbml::AST_NAME;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_NAME_AVOGADRO() {
+  return libsbml::AST_NAME_AVOGADRO;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_NAME_TIME() {
+  return libsbml::AST_NAME_TIME;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_E() {
+  return libsbml::AST_CONSTANT_E;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_FALSE() {
+  return libsbml::AST_CONSTANT_FALSE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_PI() {
+  return libsbml::AST_CONSTANT_PI;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_TRUE() {
+  return libsbml::AST_CONSTANT_TRUE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LAMBDA() {
+  return libsbml::AST_LAMBDA;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION() {
+  return libsbml::AST_FUNCTION;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ABS() {
+  return libsbml::AST_FUNCTION_ABS;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOS() {
+  return libsbml::AST_FUNCTION_ARCCOS;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOSH() {
+  return libsbml::AST_FUNCTION_ARCCOSH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOT() {
+  return libsbml::AST_FUNCTION_ARCCOT;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOTH() {
+  return libsbml::AST_FUNCTION_ARCCOTH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCSC() {
+  return libsbml::AST_FUNCTION_ARCCSC;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCSCH() {
+  return libsbml::AST_FUNCTION_ARCCSCH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSEC() {
+  return libsbml::AST_FUNCTION_ARCSEC;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSECH() {
+  return libsbml::AST_FUNCTION_ARCSECH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSIN() {
+  return libsbml::AST_FUNCTION_ARCSIN;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSINH() {
+  return libsbml::AST_FUNCTION_ARCSINH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCTAN() {
+  return libsbml::AST_FUNCTION_ARCTAN;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCTANH() {
+  return libsbml::AST_FUNCTION_ARCTANH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_CEILING() {
+  return libsbml::AST_FUNCTION_CEILING;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COS() {
+  return libsbml::AST_FUNCTION_COS;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COSH() {
+  return libsbml::AST_FUNCTION_COSH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COT() {
+  return libsbml::AST_FUNCTION_COT;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COTH() {
+  return libsbml::AST_FUNCTION_COTH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_CSC() {
+  return libsbml::AST_FUNCTION_CSC;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_CSCH() {
+  return libsbml::AST_FUNCTION_CSCH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_DELAY() {
+  return libsbml::AST_FUNCTION_DELAY;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_EXP() {
+  return libsbml::AST_FUNCTION_EXP;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_FACTORIAL() {
+  return libsbml::AST_FUNCTION_FACTORIAL;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_FLOOR() {
+  return libsbml::AST_FUNCTION_FLOOR;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_LN() {
+  return libsbml::AST_FUNCTION_LN;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_LOG() {
+  return libsbml::AST_FUNCTION_LOG;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_PIECEWISE() {
+  return libsbml::AST_FUNCTION_PIECEWISE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_POWER() {
+  return libsbml::AST_FUNCTION_POWER;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ROOT() {
+  return libsbml::AST_FUNCTION_ROOT;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SEC() {
+  return libsbml::AST_FUNCTION_SEC;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SECH() {
+  return libsbml::AST_FUNCTION_SECH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SIN() {
+  return libsbml::AST_FUNCTION_SIN;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SINH() {
+  return libsbml::AST_FUNCTION_SINH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_TAN() {
+  return libsbml::AST_FUNCTION_TAN;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_TANH() {
+  return libsbml::AST_FUNCTION_TANH;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_AND() {
+  return libsbml::AST_LOGICAL_AND;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_NOT() {
+  return libsbml::AST_LOGICAL_NOT;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_OR() {
+  return libsbml::AST_LOGICAL_OR;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_XOR() {
+  return libsbml::AST_LOGICAL_XOR;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_EQ() {
+  return libsbml::AST_RELATIONAL_EQ;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_GEQ() {
+  return libsbml::AST_RELATIONAL_GEQ;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_GT() {
+  return libsbml::AST_RELATIONAL_GT;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_LEQ() {
+  return libsbml::AST_RELATIONAL_LEQ;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_LT() {
+  return libsbml::AST_RELATIONAL_LT;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_NEQ() {
+  return libsbml::AST_RELATIONAL_NEQ;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_QUALIFIER_BVAR() {
+  return libsbml::AST_QUALIFIER_BVAR;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_QUALIFIER_LOGBASE() {
+  return libsbml::AST_QUALIFIER_LOGBASE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_QUALIFIER_DEGREE() {
+  return libsbml::AST_QUALIFIER_DEGREE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_SEMANTICS() {
+  return libsbml::AST_SEMANTICS;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTRUCTOR_PIECE() {
+  return libsbml::AST_CONSTRUCTOR_PIECE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTRUCTOR_OTHERWISE() {
+  return libsbml::AST_CONSTRUCTOR_OTHERWISE;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_UNKNOWN() {
+  return libsbml::AST_UNKNOWN;
+}
+libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_ORIGINATES_IN_PACKAGE() {
+  return libsbml::AST_ORIGINATES_IN_PACKAGE;
 }
 
 }

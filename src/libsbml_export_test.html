@@ -53,6 +53,10 @@ var loadsbml = function () {
   var k1 = rxn.createKineticLaw();
   var parser = new libsbml.SBMLFormulaParser();
   var kmath = parser.parseL3Formula('S1*S2');
+
+  console.log('type of root note for math: ' + kmath.getType())
+  console.log('AST_TIMES: ' + libsbml.AST_TIMES)
+
   k1.setMath(kmath);
 
   console.log('Created kinetic law');

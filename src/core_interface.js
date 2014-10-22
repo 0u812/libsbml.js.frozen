@@ -573,7 +573,102 @@ ASTNode.prototype['getChild'] = function(arg0) {
   return wrapPointer(_emscripten_bind_ASTNode_getChild_1(self, arg0), ASTNode);
 };
 
+ASTNode.prototype['getType'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ASTNode_getType_0(self);
+};
+
+ASTNode.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ASTNode_isSetUnits_0(self);
+};
+
+ASTNode.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ASTNode_getUnits_0(self));
+};
+
+ASTNode.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_ASTNode_setUnits_1(self, arg0);
+};
+
   ASTNode.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_ASTNode___destroy___0(self);
 }
+// libsbml__idl__ASTNodeType_t
+Module['AST_PLUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_PLUS();
+Module['AST_MINUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_MINUS();
+Module['AST_TIMES'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_TIMES();
+Module['AST_DIVIDE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_DIVIDE();
+Module['AST_POWER'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_POWER();
+Module['AST_INTEGER'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_INTEGER();
+Module['AST_REAL'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_REAL();
+Module['AST_REAL_E'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_REAL_E();
+Module['AST_RATIONAL'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RATIONAL();
+Module['AST_NAME'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_NAME();
+Module['AST_NAME_AVOGADRO'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_NAME_AVOGADRO();
+Module['AST_NAME_TIME'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_NAME_TIME();
+Module['AST_CONSTANT_E'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_E();
+Module['AST_CONSTANT_FALSE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_FALSE();
+Module['AST_CONSTANT_PI'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_PI();
+Module['AST_CONSTANT_TRUE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTANT_TRUE();
+Module['AST_LAMBDA'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LAMBDA();
+Module['AST_FUNCTION'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION();
+Module['AST_FUNCTION_ABS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ABS();
+Module['AST_FUNCTION_ARCCOS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOS();
+Module['AST_FUNCTION_ARCCOSH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOSH();
+Module['AST_FUNCTION_ARCCOT'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOT();
+Module['AST_FUNCTION_ARCCOTH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCOTH();
+Module['AST_FUNCTION_ARCCSC'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCSC();
+Module['AST_FUNCTION_ARCCSCH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCCSCH();
+Module['AST_FUNCTION_ARCSEC'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSEC();
+Module['AST_FUNCTION_ARCSECH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSECH();
+Module['AST_FUNCTION_ARCSIN'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSIN();
+Module['AST_FUNCTION_ARCSINH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCSINH();
+Module['AST_FUNCTION_ARCTAN'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCTAN();
+Module['AST_FUNCTION_ARCTANH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ARCTANH();
+Module['AST_FUNCTION_CEILING'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_CEILING();
+Module['AST_FUNCTION_COS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COS();
+Module['AST_FUNCTION_COSH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COSH();
+Module['AST_FUNCTION_COT'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COT();
+Module['AST_FUNCTION_COTH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_COTH();
+Module['AST_FUNCTION_CSC'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_CSC();
+Module['AST_FUNCTION_CSCH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_CSCH();
+Module['AST_FUNCTION_DELAY'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_DELAY();
+Module['AST_FUNCTION_EXP'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_EXP();
+Module['AST_FUNCTION_FACTORIAL'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_FACTORIAL();
+Module['AST_FUNCTION_FLOOR'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_FLOOR();
+Module['AST_FUNCTION_LN'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_LN();
+Module['AST_FUNCTION_LOG'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_LOG();
+Module['AST_FUNCTION_PIECEWISE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_PIECEWISE();
+Module['AST_FUNCTION_POWER'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_POWER();
+Module['AST_FUNCTION_ROOT'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_ROOT();
+Module['AST_FUNCTION_SEC'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SEC();
+Module['AST_FUNCTION_SECH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SECH();
+Module['AST_FUNCTION_SIN'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SIN();
+Module['AST_FUNCTION_SINH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_SINH();
+Module['AST_FUNCTION_TAN'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_TAN();
+Module['AST_FUNCTION_TANH'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_FUNCTION_TANH();
+Module['AST_LOGICAL_AND'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_AND();
+Module['AST_LOGICAL_NOT'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_NOT();
+Module['AST_LOGICAL_OR'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_OR();
+Module['AST_LOGICAL_XOR'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_LOGICAL_XOR();
+Module['AST_RELATIONAL_EQ'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_EQ();
+Module['AST_RELATIONAL_GEQ'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_GEQ();
+Module['AST_RELATIONAL_GT'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_GT();
+Module['AST_RELATIONAL_LEQ'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_LEQ();
+Module['AST_RELATIONAL_LT'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_LT();
+Module['AST_RELATIONAL_NEQ'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_RELATIONAL_NEQ();
+Module['AST_QUALIFIER_BVAR'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_QUALIFIER_BVAR();
+Module['AST_QUALIFIER_LOGBASE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_QUALIFIER_LOGBASE();
+Module['AST_QUALIFIER_DEGREE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_QUALIFIER_DEGREE();
+Module['AST_SEMANTICS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_SEMANTICS();
+Module['AST_CONSTRUCTOR_PIECE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTRUCTOR_PIECE();
+Module['AST_CONSTRUCTOR_OTHERWISE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTRUCTOR_OTHERWISE();
+Module['AST_UNKNOWN'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_UNKNOWN();
+Module['AST_ORIGINATES_IN_PACKAGE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_ORIGINATES_IN_PACKAGE();
+

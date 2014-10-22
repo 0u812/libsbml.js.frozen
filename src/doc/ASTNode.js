@@ -21,3 +21,29 @@
  * @param {Integer} i The index of the child node
  * @return {ASTNode} The child node at index *i*
  */
+
+/**
+ * Returns true if the "units" attribute is set, false otherwise.
+ *
+ * @method isSetUnits
+ * @return {Boolean} Units are set?
+ */
+
+/**
+ * Get the value of the "units" attribute.
+ * SBML Level 3 Version 1 introduced the ability to specify units
+ * on a _MathML_ `<cn>` node.
+ *
+ * @method getUnits
+ * @return {String} The value of the "units" attribute
+ */
+
+/**
+ * Set the value of the "units" attribute.
+ * SBML Level 3 Version 1 introduced the ability to specify units
+ * on a _MathML_ `<cn>` node.
+ *
+ * @method setUnits
+ * @param {String} id The new value of the "units" attribute
+ * @return {Integer} Code indicating success/failure
+ */

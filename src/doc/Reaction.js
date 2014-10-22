@@ -2,6 +2,8 @@
  * Provides an object encapsulating SBML reactions.
  * Reactions reside within a model, and may reference
  * multiple species as well as modifiers.
+ * To create a reaction, use
+ * `Model.`{{#crossLink "Model/createReaction:method"}}{{/crossLink}}
  *
  * @class Reaction
  */
