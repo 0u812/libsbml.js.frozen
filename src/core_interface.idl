@@ -129,8 +129,44 @@ interface ASTNode {
 };
 
 [Prefix="libsbml::"]
+interface Parameter {
+  DOMString getName();
+  long setName(DOMString name);
+  boolean isSetName();
+
+  double getValue();
+  long setValue(double value);
+  boolean isSetValue();
+
+  boolean isSetUnits();
+  DOMString getUnits();
+  long setUnits(DOMString units);
+};
+
+[Prefix="libsbml::"]
+interface LocalParameter {
+  DOMString getName();
+  long setName(DOMString name);
+  boolean isSetName();
+
+  double getValue();
+  long setValue(double value);
+  boolean isSetValue();
+
+  boolean isSetUnits();
+  DOMString getUnits();
+  long setUnits(DOMString units);
+};
+
+[Prefix="libsbml::"]
 interface KineticLaw {
   long setMath(ASTNode math);
+
+  LocalParameter createLocalParameter();
+  LocalParameter getLocalParameter(unsigned long i);
+
+  Parameter createParameter();
+  Parameter getParameter(unsigned long i);
 };
 
 [Prefix="libsbml::"]

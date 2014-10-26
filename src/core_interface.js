@@ -263,6 +263,69 @@ ModifierSpeciesReference.prototype['setSpecies'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_ModifierSpeciesReference___destroy___0(self);
 }
+// LocalParameter
+function LocalParameter() { throw "cannot construct a LocalParameter, no constructor in IDL" }
+LocalParameter.prototype = Object.create(WrapperObject.prototype);
+LocalParameter.prototype.constructor = LocalParameter;
+LocalParameter.prototype.__class__ = LocalParameter;
+LocalParameter.__cache__ = {};
+Module['LocalParameter'] = LocalParameter;
+
+LocalParameter.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalParameter_getName_0(self));
+};
+
+LocalParameter.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalParameter_setName_1(self, arg0);
+};
+
+LocalParameter.prototype['isSetName'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalParameter_isSetName_0(self);
+};
+
+LocalParameter.prototype['getValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalParameter_getValue_0(self);
+};
+
+LocalParameter.prototype['setValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalParameter_setValue_1(self, arg0);
+};
+
+LocalParameter.prototype['isSetValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalParameter_isSetValue_0(self);
+};
+
+LocalParameter.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalParameter_isSetUnits_0(self);
+};
+
+LocalParameter.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalParameter_getUnits_0(self));
+};
+
+LocalParameter.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalParameter_setUnits_1(self, arg0);
+};
+
+  LocalParameter.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LocalParameter___destroy___0(self);
+}
 // SpeciesReference
 function SpeciesReference() { throw "cannot construct a SpeciesReference, no constructor in IDL" }
 SpeciesReference.prototype = Object.create(WrapperObject.prototype);
@@ -334,6 +397,30 @@ KineticLaw.prototype['setMath'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_KineticLaw_setMath_1(self, arg0);
+};
+
+KineticLaw.prototype['createLocalParameter'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_KineticLaw_createLocalParameter_0(self), LocalParameter);
+};
+
+KineticLaw.prototype['getLocalParameter'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_KineticLaw_getLocalParameter_1(self, arg0), LocalParameter);
+};
+
+KineticLaw.prototype['createParameter'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_KineticLaw_createParameter_0(self), Parameter);
+};
+
+KineticLaw.prototype['getParameter'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_KineticLaw_getParameter_1(self, arg0), Parameter);
 };
 
   KineticLaw.prototype['__destroy__'] = function() {
@@ -492,6 +579,69 @@ Module['VoidPtr'] = VoidPtr;
   VoidPtr.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_VoidPtr___destroy___0(self);
+}
+// Parameter
+function Parameter() { throw "cannot construct a Parameter, no constructor in IDL" }
+Parameter.prototype = Object.create(WrapperObject.prototype);
+Parameter.prototype.constructor = Parameter;
+Parameter.prototype.__class__ = Parameter;
+Parameter.__cache__ = {};
+Module['Parameter'] = Parameter;
+
+Parameter.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Parameter_getName_0(self));
+};
+
+Parameter.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Parameter_setName_1(self, arg0);
+};
+
+Parameter.prototype['isSetName'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Parameter_isSetName_0(self);
+};
+
+Parameter.prototype['getValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Parameter_getValue_0(self);
+};
+
+Parameter.prototype['setValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Parameter_setValue_1(self, arg0);
+};
+
+Parameter.prototype['isSetValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Parameter_isSetValue_0(self);
+};
+
+Parameter.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Parameter_isSetUnits_0(self);
+};
+
+Parameter.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Parameter_getUnits_0(self));
+};
+
+Parameter.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Parameter_setUnits_1(self, arg0);
+};
+
+  Parameter.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Parameter___destroy___0(self);
 }
 // Species
 function Species() { throw "cannot construct a Species, no constructor in IDL" }
