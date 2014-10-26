@@ -76,6 +76,10 @@ libsbml::KineticLaw* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_createKinetic
   return self->createKineticLaw();
 }
 
+libsbml::KineticLaw* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getKineticLaw_0(libsbml::Reaction* self) {
+  return self->getKineticLaw();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction___destroy___0(libsbml::Reaction* self) {
   delete self;
 }
@@ -141,6 +145,14 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference___destroy___0
 }
 
 // LocalParameter
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalParameter_getId_0(libsbml::LocalParameter* self) {
+  return (char*)self->getId().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalParameter_setId_1(libsbml::LocalParameter* self, char* arg0) {
+  return self->setId(arg0);
+}
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalParameter_getName_0(libsbml::LocalParameter* self) {
   return (char*)self->getName().c_str();
@@ -224,12 +236,20 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_setMath_1(libsbml::KineticLa
   return self->setMath(arg0);
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getNumLocalParameters_0(libsbml::KineticLaw* self) {
+  return self->getNumLocalParameters();
+}
+
 libsbml::LocalParameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_createLocalParameter_0(libsbml::KineticLaw* self) {
   return self->createLocalParameter();
 }
 
 libsbml::LocalParameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getLocalParameter_1(libsbml::KineticLaw* self, unsigned int arg0) {
   return self->getLocalParameter(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getNumParameters_0(libsbml::KineticLaw* self) {
+  return self->getNumParameters();
 }
 
 libsbml::Parameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_createParameter_0(libsbml::KineticLaw* self) {
@@ -332,6 +352,18 @@ libsbml::Compartment* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_createCompartme
   return self->createCompartment();
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getNumParameters_0(libsbml::Model* self) {
+  return self->getNumParameters();
+}
+
+libsbml::Parameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_createParameter_0(libsbml::Model* self) {
+  return self->createParameter();
+}
+
+libsbml::Parameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getParameter_1(libsbml::Model* self, unsigned int arg0) {
+  return self->getParameter(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Model___destroy___0(libsbml::Model* self) {
   delete self;
 }
@@ -343,6 +375,14 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_VoidPtr___destroy___0(void** self) {
 }
 
 // Parameter
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Parameter_getId_0(libsbml::Parameter* self) {
+  return (char*)self->getId().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Parameter_setId_1(libsbml::Parameter* self, char* arg0) {
+  return self->setId(arg0);
+}
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Parameter_getName_0(libsbml::Parameter* self) {
   return (char*)self->getName().c_str();

@@ -14,6 +14,13 @@ loadsbml = function (sbmlstr) {
   var json = [];
 
   var model = doc.getModel();
+  console.log('num params = ' + String(model.getNumParameters()))
+  if(model.getNumParameters() > 0) {
+    for(var j=0; j<model.getNumParameters(); j++) {
+      var param = model.getParameter(j);
+      console.log('*param ' + param.getId());
+    }
+  }
   console.log('num rxns = ' + String(model.getNumReactions()))
   for(var i=0; i<model.getNumReactions(); i++) {
     var rxn = model.getReaction(i);
@@ -24,6 +31,13 @@ loadsbml = function (sbmlstr) {
       for(var j=0; j<rxn.getNumReactants(); j++) {
         var rref = rxn.getReactant();
         console.log('    ' + rref.getSpecies());
+      }
+    }
+    var klaw = rxn.getKineticLaw();
+    if(klaw.getNumParameters() > 0) {
+      for(var j=0; j<klaw.getNumParameters(); j++) {
+        var param = klaw.getParameter(j);
+        console.log('      *param ' + param.getName());
       }
     }
   }
@@ -53,47 +67,47 @@ function drop(ev) {
     ev.preventDefault();
     //var data = ev.dataTransfer.getData("text/html");
     //ev.target.appendChild(document.getElementById(data));
-	//console.log(data)
-	var files = ev.dataTransfer.files; // FileList object.
-	
-	var reader = new FileReader();
-	
-	for (var i = 0, f; f = files[i]; i++) {
-		// console.log(escape(f.name))
-		reader.onload = (function(thefile) {
-			return function(e) {
-				//console.log(e.target.result);
-				var sbml = e.target.result;
-				loadsbml(sbml);
-			};
-		})(f);
-		reader.readAsText(f);
-	}
+  //console.log(data)
+  var files = ev.dataTransfer.files; // FileList object.
+
+  var reader = new FileReader();
+
+  for (var i = 0, f; f = files[i]; i++) {
+    // console.log(escape(f.name))
+    reader.onload = (function(thefile) {
+      return function(e) {
+        //console.log(e.target.result);
+        var sbml = e.target.result;
+        loadsbml(sbml);
+      };
+    })(f);
+    reader.readAsText(f);
+  }
 }
 
 function TheController($scope) {
-	$scope.reactions = [];
-	$scope.reactions.push({
-		id: "Rxn0",
-	})
+  $scope.reactions = [];
+  $scope.reactions.push({
+    id: "Rxn0",
+  })
 }
 
 </script>
 </head>
 <body>
-	<div>
-		<div id="div1" class="dropbox" ondrop="drop(event)" ondragover="drag(event)">
-			<img src="sbml.jpg" class="dropsbmllogo">
-		</div>
-	</div>
-	<div ng-app>
-		<div id="browser" ng-controller="TheController">
-			<ul>
-				<li ng-repeat="x in reactions">
-					{{x.id}}
-				</li>
-			</ul>
-		</div>
-	</div>
+  <div>
+    <div id="div1" class="dropbox" ondrop="drop(event)" ondragover="drag(event)">
+      <img src="sbml.jpg" class="dropsbmllogo">
+    </div>
+  </div>
+  <div ng-app>
+    <div id="browser" ng-controller="TheController">
+      <ul>
+        <li ng-repeat="x in reactions">
+          {{x.id}}
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

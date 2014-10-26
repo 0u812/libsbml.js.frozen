@@ -163,6 +163,11 @@ Reaction.prototype['createKineticLaw'] = function() {
   return wrapPointer(_emscripten_bind_Reaction_createKineticLaw_0(self), KineticLaw);
 };
 
+Reaction.prototype['getKineticLaw'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Reaction_getKineticLaw_0(self), KineticLaw);
+};
+
   Reaction.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Reaction___destroy___0(self);
@@ -270,6 +275,18 @@ LocalParameter.prototype.constructor = LocalParameter;
 LocalParameter.prototype.__class__ = LocalParameter;
 LocalParameter.__cache__ = {};
 Module['LocalParameter'] = LocalParameter;
+
+LocalParameter.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalParameter_getId_0(self));
+};
+
+LocalParameter.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalParameter_setId_1(self, arg0);
+};
 
 LocalParameter.prototype['getName'] = function() {
   var self = this.ptr;
@@ -399,6 +416,11 @@ KineticLaw.prototype['setMath'] = function(arg0) {
   return _emscripten_bind_KineticLaw_setMath_1(self, arg0);
 };
 
+KineticLaw.prototype['getNumLocalParameters'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_KineticLaw_getNumLocalParameters_0(self);
+};
+
 KineticLaw.prototype['createLocalParameter'] = function() {
   var self = this.ptr;
   return wrapPointer(_emscripten_bind_KineticLaw_createLocalParameter_0(self), LocalParameter);
@@ -409,6 +431,11 @@ KineticLaw.prototype['getLocalParameter'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_KineticLaw_getLocalParameter_1(self, arg0), LocalParameter);
+};
+
+KineticLaw.prototype['getNumParameters'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_KineticLaw_getNumParameters_0(self);
 };
 
 KineticLaw.prototype['createParameter'] = function() {
@@ -564,6 +591,23 @@ Model.prototype['createCompartment'] = function() {
   return wrapPointer(_emscripten_bind_Model_createCompartment_0(self), Compartment);
 };
 
+Model.prototype['getNumParameters'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Model_getNumParameters_0(self);
+};
+
+Model.prototype['createParameter'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Model_createParameter_0(self), Parameter);
+};
+
+Model.prototype['getParameter'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Model_getParameter_1(self, arg0), Parameter);
+};
+
   Model.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Model___destroy___0(self);
@@ -587,6 +631,18 @@ Parameter.prototype.constructor = Parameter;
 Parameter.prototype.__class__ = Parameter;
 Parameter.__cache__ = {};
 Module['Parameter'] = Parameter;
+
+Parameter.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Parameter_getId_0(self));
+};
+
+Parameter.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Parameter_setId_1(self, arg0);
+};
 
 Parameter.prototype['getName'] = function() {
   var self = this.ptr;

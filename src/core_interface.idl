@@ -128,8 +128,12 @@ interface ASTNode {
   long setUnits(DOMString units);
 };
 
+// TODO: doc
 [Prefix="libsbml::"]
 interface Parameter {
+  DOMString getId();
+  boolean setId(DOMString id);
+
   DOMString getName();
   long setName(DOMString name);
   boolean isSetName();
@@ -143,8 +147,12 @@ interface Parameter {
   long setUnits(DOMString units);
 };
 
+// TODO: doc
 [Prefix="libsbml::"]
 interface LocalParameter {
+  DOMString getId();
+  boolean setId(DOMString id);
+  
   DOMString getName();
   long setName(DOMString name);
   boolean isSetName();
@@ -162,9 +170,13 @@ interface LocalParameter {
 interface KineticLaw {
   long setMath(ASTNode math);
 
+  // TODO: doc
+  unsigned long getNumLocalParameters();
   LocalParameter createLocalParameter();
   LocalParameter getLocalParameter(unsigned long i);
 
+  // TODO: doc
+  unsigned long getNumParameters();
   Parameter createParameter();
   Parameter getParameter(unsigned long i);
 };
@@ -197,6 +209,7 @@ interface Reaction {
   ModifierSpeciesReference createModifier();
 
   KineticLaw createKineticLaw();
+  KineticLaw getKineticLaw();
 };
 
 [Prefix="libsbml::"]
@@ -225,6 +238,11 @@ interface Model {
 
   Species createSpecies();
   Compartment createCompartment();
+
+  // TODO: doc
+  unsigned long getNumParameters();
+  Parameter createParameter();
+  Parameter getParameter(unsigned long i);
 };
 
 [Prefix="libsbml::"]

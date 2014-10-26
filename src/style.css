@@ -5,8 +5,8 @@
 	width: 620px;
 	height: 120px;
 	border-radius: 5px;
-	// border-style:dashed;
-	// background-color: lightblue;
+/* 	border-style:dashed; */
+/* 	background-color: lightblue; */
 }
 
 .dropsbmllogo {
@@ -14,5 +14,5 @@
 	margin-left:auto; 
 	margin-right:auto;
 	margin-top:1em;
-	//vertical-align: middle;
+/* 	vertical-align: middle; */
 }

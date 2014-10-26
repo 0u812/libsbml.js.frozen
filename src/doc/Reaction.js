@@ -102,3 +102,11 @@
  * @method createKineticLaw
  * @return {KineticLaw} The newly created kinetic law
  */
+
+/**
+ * Gets the current kinetic law associated with this
+ * reaction object.
+ *
+ * @method getKineticLaw
+ * @return {KineticLaw} The kinetic law
+ */
