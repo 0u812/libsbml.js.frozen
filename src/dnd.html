@@ -21,6 +21,12 @@ loadsbml = function (sbmlstr) {
       console.log('*param ' + param.getId());
     }
   }
+
+  console.log('num species = ' + String(model.getNumSpecies()));
+  model.species.forEach(function(e) {
+    console.log(e.getId());
+  });
+
   console.log('num rxns = ' + String(model.getNumReactions()))
   for(var i=0; i<model.getNumReactions(); i++) {
     var rxn = model.getReaction(i);
