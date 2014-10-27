@@ -118,6 +118,10 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setUnits_1(libsbml::Compart
   return self->setUnits(arg0);
 }
 
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_isSetUnits_0(libsbml::Compartment* self) {
+  return self->isSetUnits();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment___destroy___0(libsbml::Compartment* self) {
   delete self;
 }
@@ -344,8 +348,24 @@ libsbml::Reaction* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_createReaction_0(l
   return self->createReaction();
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getNumSpecies_0(libsbml::Model* self) {
+  return self->getNumSpecies();
+}
+
 libsbml::Species* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_createSpecies_0(libsbml::Model* self) {
   return self->createSpecies();
+}
+
+libsbml::Species* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getSpecies_1(libsbml::Model* self, unsigned int arg0) {
+  return self->getSpecies(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getNumCompartments_0(libsbml::Model* self) {
+  return self->getNumCompartments();
+}
+
+libsbml::Compartment* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getCompartment_1(libsbml::Model* self, unsigned int arg0) {
+  return self->getCompartment(arg0);
 }
 
 libsbml::Compartment* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_createCompartment_0(libsbml::Model* self) {
@@ -456,6 +476,30 @@ double EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getInitialConcentration_0(li
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setInitialConcentration_1(libsbml::Species* self, double arg0) {
   return self->setInitialConcentration(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getCompartment_0(libsbml::Species* self) {
+  return (char*)self->getCompartment().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setCompartment_1(libsbml::Species* self, char* arg0) {
+  return self->setCompartment(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetCompartment_0(libsbml::Species* self) {
+  return self->isSetCompartment();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getUnits_0(libsbml::Species* self) {
+  return (char*)self->getUnits().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setUnits_1(libsbml::Species* self, char* arg0) {
+  return self->setUnits(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetUnits_0(libsbml::Species* self) {
+  return self->isSetUnits();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Species___destroy___0(libsbml::Species* self) {

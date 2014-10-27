@@ -29,6 +29,16 @@ interface Species {
 
   double getInitialConcentration();
   long setInitialConcentration(double conc);
+
+  // TODO: doc
+  DOMString getCompartment();
+  long setCompartment(DOMString comp);
+  boolean isSetCompartment();
+
+  // TODO: doc
+  DOMString getUnits();
+  long setUnits(DOMString units);
+  boolean isSetUnits();
 };
 
 enum libsbml__idl__ASTNodeType_t {
@@ -152,7 +162,7 @@ interface Parameter {
 interface LocalParameter {
   DOMString getId();
   boolean setId(DOMString id);
-  
+
   DOMString getName();
   long setName(DOMString name);
   boolean isSetName();
@@ -225,6 +235,8 @@ interface Compartment {
 
   DOMString getUnits();
   long setUnits(DOMString units);
+  // TODO: doc
+  boolean isSetUnits();
 };
 
 [Prefix="libsbml::"]
@@ -236,7 +248,12 @@ interface Model {
   Reaction getReaction(long i);
   Reaction createReaction();
 
+  unsigned long getNumSpecies();
   Species createSpecies();
+  Species getSpecies(unsigned long i);
+
+  unsigned long getNumCompartments();
+  Compartment getCompartment(unsigned long i);
   Compartment createCompartment();
 
   // TODO: doc

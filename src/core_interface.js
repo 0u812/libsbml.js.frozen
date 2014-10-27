@@ -228,6 +228,11 @@ Compartment.prototype['setUnits'] = function(arg0) {
   return _emscripten_bind_Compartment_setUnits_1(self, arg0);
 };
 
+Compartment.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_isSetUnits_0(self);
+};
+
   Compartment.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Compartment___destroy___0(self);
@@ -581,9 +586,33 @@ Model.prototype['createReaction'] = function() {
   return wrapPointer(_emscripten_bind_Model_createReaction_0(self), Reaction);
 };
 
+Model.prototype['getNumSpecies'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Model_getNumSpecies_0(self);
+};
+
 Model.prototype['createSpecies'] = function() {
   var self = this.ptr;
   return wrapPointer(_emscripten_bind_Model_createSpecies_0(self), Species);
+};
+
+Model.prototype['getSpecies'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Model_getSpecies_1(self, arg0), Species);
+};
+
+Model.prototype['getNumCompartments'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Model_getNumCompartments_0(self);
+};
+
+Model.prototype['getCompartment'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Model_getCompartment_1(self, arg0), Compartment);
 };
 
 Model.prototype['createCompartment'] = function() {
@@ -753,6 +782,40 @@ Species.prototype['setInitialConcentration'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_Species_setInitialConcentration_1(self, arg0);
+};
+
+Species.prototype['getCompartment'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Species_getCompartment_0(self));
+};
+
+Species.prototype['setCompartment'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Species_setCompartment_1(self, arg0);
+};
+
+Species.prototype['isSetCompartment'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Species_isSetCompartment_0(self);
+};
+
+Species.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Species_getUnits_0(self));
+};
+
+Species.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Species_setUnits_1(self, arg0);
+};
+
+Species.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Species_isSetUnits_0(self);
 };
 
   Species.prototype['__destroy__'] = function() {
