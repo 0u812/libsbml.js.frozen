@@ -31,18 +31,18 @@ var Module = {
 //         console.log(request.response);
 //         result.text = request.response;
 
-        console.log('pre sbml reader');
+//         console.log('pre sbml reader');
         reader = new libsbml.SBMLReader();
-        console.log('post sbml reader');
+//         console.log('post sbml reader');
         result.doc = reader.readSBMLFromString(request.response);
-        console.log('post read sbml from str');
+//         console.log('post read sbml from str');
 //         this.destroy(reader);
 
         if(result.doc.getNumErrors() > 0) {
           console.log('Invalid model: ' + url);
           result.error = true;
         }
-        console.log('ready');
+//         console.log('ready');
         result.ready = true;
         callback.apply(null, [result]);
       }
