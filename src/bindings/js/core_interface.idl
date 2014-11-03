@@ -136,6 +136,10 @@ interface ASTNode {
   boolean isSetUnits();
   DOMString getUnits();
   long setUnits(DOMString units);
+
+  // TODO: doc
+  DOMString getName();
+  long setName(DOMString);
 };
 
 // TODO: doc
