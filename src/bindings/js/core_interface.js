@@ -603,6 +603,13 @@ Model.prototype['getSpecies'] = function(arg0) {
   return wrapPointer(_emscripten_bind_Model_getSpecies_1(self, arg0), Species);
 };
 
+Model.prototype['removeSpecies'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Model_removeSpecies_1(self, arg0), Species);
+};
+
 Model.prototype['getNumCompartments'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Model_getNumCompartments_0(self);
@@ -635,6 +642,18 @@ Model.prototype['getParameter'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_Model_getParameter_1(self, arg0), Parameter);
+};
+
+Model.prototype['getVersion'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Model_getVersion_0(self);
+};
+
+Model.prototype['setAnnotation'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Model_setAnnotation_1(self, arg0);
 };
 
   Model.prototype['__destroy__'] = function() {

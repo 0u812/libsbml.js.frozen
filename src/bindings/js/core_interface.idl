@@ -251,6 +251,8 @@ interface Model {
   unsigned long getNumSpecies();
   Species createSpecies();
   Species getSpecies(unsigned long i);
+  // TODO: doc
+  Species removeSpecies(unsigned long i);
 
   unsigned long getNumCompartments();
   Compartment getCompartment(unsigned long i);
@@ -260,6 +262,12 @@ interface Model {
   unsigned long getNumParameters();
   Parameter createParameter();
   Parameter getParameter(unsigned long i);
+
+  // TODO: doc
+  unsigned long getVersion();
+
+  // TODO: doc
+  long setAnnotation(DOMString str);
 };
 
 [Prefix="libsbml::"]

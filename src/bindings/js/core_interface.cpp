@@ -360,6 +360,10 @@ libsbml::Species* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getSpecies_1(libsbm
   return self->getSpecies(arg0);
 }
 
+libsbml::Species* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_removeSpecies_1(libsbml::Model* self, unsigned int arg0) {
+  return self->removeSpecies(arg0);
+}
+
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getNumCompartments_0(libsbml::Model* self) {
   return self->getNumCompartments();
 }
@@ -382,6 +386,14 @@ libsbml::Parameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_createParameter_0
 
 libsbml::Parameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getParameter_1(libsbml::Model* self, unsigned int arg0) {
   return self->getParameter(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getVersion_0(libsbml::Model* self) {
+  return self->getVersion();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_setAnnotation_1(libsbml::Model* self, char* arg0) {
+  return self->setAnnotation(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Model___destroy___0(libsbml::Model* self) {
