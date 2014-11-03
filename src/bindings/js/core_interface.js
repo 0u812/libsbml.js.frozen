@@ -414,6 +414,11 @@ KineticLaw.prototype.__class__ = KineticLaw;
 KineticLaw.__cache__ = {};
 Module['KineticLaw'] = KineticLaw;
 
+KineticLaw.prototype['getMath'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_KineticLaw_getMath_0(self), ASTNode);
+};
+
 KineticLaw.prototype['setMath'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;

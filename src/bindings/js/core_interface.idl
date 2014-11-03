@@ -178,6 +178,7 @@ interface LocalParameter {
 
 [Prefix="libsbml::"]
 interface KineticLaw {
+  [Const] ASTNode getMath();
   long setMath(ASTNode math);
 
   // TODO: doc
