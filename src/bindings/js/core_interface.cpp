@@ -28,6 +28,22 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setId_1(libsbml::Reaction* sel
   return self->setId(arg0);
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getMetaId_0(libsbml::Reaction* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setMetaId_1(libsbml::Reaction* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getName_0(libsbml::Reaction* self) {
+  return (char*)self->getName().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setName_1(libsbml::Reaction* self, char* arg0) {
+  return self->setName(arg0);
+}
+
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getNumReactants_0(libsbml::Reaction* self) {
   return self->getNumReactants();
 }
@@ -80,6 +96,30 @@ libsbml::KineticLaw* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getKineticLaw
   return self->getKineticLaw();
 }
 
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getReversible_0(libsbml::Reaction* self) {
+  return self->getReversible();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setReversible_1(libsbml::Reaction* self, double arg0) {
+  return self->setReversible(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_isSetReversible_0(libsbml::Reaction* self) {
+  return self->isSetReversible();
+}
+
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getSBOTerm_0(libsbml::Reaction* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setSBOTerm_1(libsbml::Reaction* self, double arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_isSetSBOTerm_0(libsbml::Reaction* self) {
+  return self->isSetSBOTerm();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction___destroy___0(libsbml::Reaction* self) {
   delete self;
 }
@@ -120,6 +160,18 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setUnits_1(libsbml::Compart
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_isSetUnits_0(libsbml::Compartment* self) {
   return self->isSetUnits();
+}
+
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getSBOTerm_0(libsbml::Compartment* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setSBOTerm_1(libsbml::Compartment* self, double arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_isSetSBOTerm_0(libsbml::Compartment* self) {
+  return self->isSetSBOTerm();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment___destroy___0(libsbml::Compartment* self) {
@@ -244,6 +296,14 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_setMath_1(libsbml::KineticLa
   return self->setMath(arg0);
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getMetaId_0(libsbml::KineticLaw* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_setMetaId_1(libsbml::KineticLaw* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getNumLocalParameters_0(libsbml::KineticLaw* self) {
   return self->getNumLocalParameters();
 }
@@ -338,6 +398,14 @@ char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getId_0(libsbml::Model* self) {
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_setId_1(libsbml::Model* self, char* arg0) {
   return self->setId(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getMetaId_0(libsbml::Model* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_setMetaId_1(libsbml::Model* self, char* arg0) {
+  return self->setMetaId(arg0);
 }
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getNumReactions_0(libsbml::Model* self) {
@@ -470,6 +538,14 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setId_1(libsbml::Species* self
   return self->setId(arg0);
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getMetaId_0(libsbml::Species* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setMetaId_1(libsbml::Species* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getName_0(libsbml::Species* self) {
   return (char*)self->getName().c_str();
 }
@@ -516,6 +592,18 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setUnits_1(libsbml::Species* se
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetUnits_0(libsbml::Species* self) {
   return self->isSetUnits();
+}
+
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getSBOTerm_0(libsbml::Species* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setSBOTerm_1(libsbml::Species* self, double arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetSBOTerm_0(libsbml::Species* self) {
+  return self->isSetSBOTerm();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Species___destroy___0(libsbml::Species* self) {

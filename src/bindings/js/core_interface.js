@@ -93,6 +93,30 @@ Reaction.prototype['setId'] = function(arg0) {
   return _emscripten_bind_Reaction_setId_1(self, arg0);
 };
 
+Reaction.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Reaction_getMetaId_0(self));
+};
+
+Reaction.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Reaction_setMetaId_1(self, arg0);
+};
+
+Reaction.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Reaction_getName_0(self));
+};
+
+Reaction.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Reaction_setName_1(self, arg0);
+};
+
 Reaction.prototype['getNumReactants'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Reaction_getNumReactants_0(self);
@@ -168,6 +192,40 @@ Reaction.prototype['getKineticLaw'] = function() {
   return wrapPointer(_emscripten_bind_Reaction_getKineticLaw_0(self), KineticLaw);
 };
 
+Reaction.prototype['getReversible'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_getReversible_0(self);
+};
+
+Reaction.prototype['setReversible'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Reaction_setReversible_1(self, arg0);
+};
+
+Reaction.prototype['isSetReversible'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_isSetReversible_0(self);
+};
+
+Reaction.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_getSBOTerm_0(self);
+};
+
+Reaction.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Reaction_setSBOTerm_1(self, arg0);
+};
+
+Reaction.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Reaction_isSetSBOTerm_0(self);
+};
+
   Reaction.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Reaction___destroy___0(self);
@@ -231,6 +289,23 @@ Compartment.prototype['setUnits'] = function(arg0) {
 Compartment.prototype['isSetUnits'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Compartment_isSetUnits_0(self);
+};
+
+Compartment.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_getSBOTerm_0(self);
+};
+
+Compartment.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setSBOTerm_1(self, arg0);
+};
+
+Compartment.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_isSetSBOTerm_0(self);
 };
 
   Compartment.prototype['__destroy__'] = function() {
@@ -426,6 +501,18 @@ KineticLaw.prototype['setMath'] = function(arg0) {
   return _emscripten_bind_KineticLaw_setMath_1(self, arg0);
 };
 
+KineticLaw.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_KineticLaw_getMetaId_0(self));
+};
+
+KineticLaw.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_KineticLaw_setMetaId_1(self, arg0);
+};
+
 KineticLaw.prototype['getNumLocalParameters'] = function() {
   var self = this.ptr;
   return _emscripten_bind_KineticLaw_getNumLocalParameters_0(self);
@@ -572,6 +659,18 @@ Model.prototype['setId'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_Model_setId_1(self, arg0);
+};
+
+Model.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Model_getMetaId_0(self));
+};
+
+Model.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Model_setMetaId_1(self, arg0);
 };
 
 Model.prototype['getNumReactions'] = function() {
@@ -772,6 +871,18 @@ Species.prototype['setId'] = function(arg0) {
   return _emscripten_bind_Species_setId_1(self, arg0);
 };
 
+Species.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Species_getMetaId_0(self));
+};
+
+Species.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Species_setMetaId_1(self, arg0);
+};
+
 Species.prototype['getName'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_Species_getName_0(self));
@@ -840,6 +951,23 @@ Species.prototype['setUnits'] = function(arg0) {
 Species.prototype['isSetUnits'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Species_isSetUnits_0(self);
+};
+
+Species.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Species_getSBOTerm_0(self);
+};
+
+Species.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Species_setSBOTerm_1(self, arg0);
+};
+
+Species.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Species_isSetSBOTerm_0(self);
 };
 
   Species.prototype['__destroy__'] = function() {

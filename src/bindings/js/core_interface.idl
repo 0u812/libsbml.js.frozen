@@ -21,6 +21,10 @@ interface Species {
   DOMString getId();
   boolean setId(DOMString id);
 
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+
   DOMString getName();
   long setName(DOMString name);
 
@@ -39,6 +43,11 @@ interface Species {
   DOMString getUnits();
   long setUnits(DOMString units);
   boolean isSetUnits();
+
+  // TODO: doc
+  double getSBOTerm();
+  long setSBOTerm(double value);
+  boolean isSetSBOTerm();
 };
 
 enum libsbml__idl__ASTNodeType_t {
@@ -186,6 +195,10 @@ interface KineticLaw {
   long setMath(ASTNode math);
 
   // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+
+  // TODO: doc
   unsigned long getNumLocalParameters();
   LocalParameter createLocalParameter();
   LocalParameter getLocalParameter(unsigned long i);
@@ -208,6 +221,14 @@ interface Reaction {
   DOMString getId();
   long setId(DOMString id);
 
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+
+  // TODO: doc
+  DOMString getName();
+  long setName(DOMString name);
+
   long getNumReactants();
   long getNumProducts();
   long getNumModifiers();
@@ -225,6 +246,16 @@ interface Reaction {
 
   KineticLaw createKineticLaw();
   KineticLaw getKineticLaw();
+
+  // TODO: doc
+  double getReversible();
+  long setReversible(double value);
+  boolean isSetReversible();
+
+  // TODO: doc
+  double getSBOTerm();
+  long setSBOTerm(double value);
+  boolean isSetSBOTerm();
 };
 
 [Prefix="libsbml::"]
@@ -242,12 +273,21 @@ interface Compartment {
   long setUnits(DOMString units);
   // TODO: doc
   boolean isSetUnits();
+
+  // TODO: doc
+  double getSBOTerm();
+  long setSBOTerm(double value);
+  boolean isSetSBOTerm();
 };
 
 [Prefix="libsbml::"]
 interface Model {
   DOMString getId();
   long setId(DOMString id);
+
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
 
   long getNumReactions();
   Reaction getReaction(long i);
