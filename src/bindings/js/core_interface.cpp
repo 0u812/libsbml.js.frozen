@@ -96,11 +96,11 @@ libsbml::KineticLaw* EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getKineticLaw
   return self->getKineticLaw();
 }
 
-double EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getReversible_0(libsbml::Reaction* self) {
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getReversible_0(libsbml::Reaction* self) {
   return self->getReversible();
 }
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setReversible_1(libsbml::Reaction* self, double arg0) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setReversible_1(libsbml::Reaction* self, bool arg0) {
   return self->setReversible(arg0);
 }
 
@@ -108,11 +108,11 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_isSetReversible_0(libsbml::Re
   return self->isSetReversible();
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getSBOTerm_0(libsbml::Reaction* self) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_getSBOTerm_0(libsbml::Reaction* self) {
   return self->getSBOTerm();
 }
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setSBOTerm_1(libsbml::Reaction* self, bool arg0) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Reaction_setSBOTerm_1(libsbml::Reaction* self, int arg0) {
   return self->setSBOTerm(arg0);
 }
 
@@ -162,11 +162,11 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_isSetUnits_0(libsbml::Comp
   return self->isSetUnits();
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getSBOTerm_0(libsbml::Compartment* self) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getSBOTerm_0(libsbml::Compartment* self) {
   return self->getSBOTerm();
 }
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setSBOTerm_1(libsbml::Compartment* self, bool arg0) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setSBOTerm_1(libsbml::Compartment* self, int arg0) {
   return self->setSBOTerm(arg0);
 }
 
@@ -594,11 +594,11 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetUnits_0(libsbml::Species*
   return self->isSetUnits();
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getSBOTerm_0(libsbml::Species* self) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getSBOTerm_0(libsbml::Species* self) {
   return self->getSBOTerm();
 }
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setSBOTerm_1(libsbml::Species* self, bool arg0) {
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setSBOTerm_1(libsbml::Species* self, int arg0) {
   return self->setSBOTerm(arg0);
 }
 

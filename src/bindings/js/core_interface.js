@@ -203,7 +203,7 @@ Reaction.prototype['getKineticLaw'] = function() {
 
 Reaction.prototype['getReversible'] = function() {
   var self = this.ptr;
-  return _emscripten_bind_Reaction_getReversible_0(self);
+  return idl_wrapBool(_emscripten_bind_Reaction_getReversible_0(self));
 };
 
 Reaction.prototype['setReversible'] = function(arg0) {
@@ -220,7 +220,7 @@ Reaction.prototype['isSetReversible'] = function() {
 
 Reaction.prototype['getSBOTerm'] = function() {
   var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Reaction_getSBOTerm_0(self));
+  return _emscripten_bind_Reaction_getSBOTerm_0(self);
 };
 
 Reaction.prototype['setSBOTerm'] = function(arg0) {
@@ -302,7 +302,7 @@ Compartment.prototype['isSetUnits'] = function() {
 
 Compartment.prototype['getSBOTerm'] = function() {
   var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Compartment_getSBOTerm_0(self));
+  return _emscripten_bind_Compartment_getSBOTerm_0(self);
 };
 
 Compartment.prototype['setSBOTerm'] = function(arg0) {
@@ -964,7 +964,7 @@ Species.prototype['isSetUnits'] = function() {
 
 Species.prototype['getSBOTerm'] = function() {
   var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Species_getSBOTerm_0(self));
+  return _emscripten_bind_Species_getSBOTerm_0(self);
 };
 
 Species.prototype['setSBOTerm'] = function(arg0) {
