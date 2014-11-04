@@ -65,3 +65,7 @@ var Module = {
 //   preInit: [function() { console.log('preInit'); }],
 //   preRun: [function() { console.log('preRun'); }],
 };
+
+if(typeof(libsbmlMemoryInitPrefix) != 'undefined') {
+  Module.memoryInitializerPrefixURL = libsbmlMemoryInitPrefix;
+}
