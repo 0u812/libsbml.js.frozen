@@ -138,8 +138,8 @@ interface ASTNode {
   long setUnits(DOMString units);
 
   // TODO: doc
-  DOMString getName();
-  long setName(DOMString);
+  ByteString getName();
+  long setName(ByteString name);
 };
 
 // TODO: doc

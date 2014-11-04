@@ -888,6 +888,18 @@ ASTNode.prototype['setUnits'] = function(arg0) {
   return _emscripten_bind_ASTNode_setUnits_1(self, arg0);
 };
 
+ASTNode.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ASTNode_getName_0(self));
+};
+
+ASTNode.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_ASTNode_setName_1(self, arg0);
+};
+
   ASTNode.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_ASTNode___destroy___0(self);

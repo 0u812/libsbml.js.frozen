@@ -548,6 +548,14 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_setUnits_1(libsbml::ASTNode* se
   return self->setUnits(arg0);
 }
 
+const char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_getName_0(libsbml::ASTNode* self) {
+  return self->getName();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_setName_1(libsbml::ASTNode* self, const char* arg0) {
+  return self->setName(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode___destroy___0(libsbml::ASTNode* self) {
   delete self;
 }
