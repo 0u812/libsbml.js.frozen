@@ -248,8 +248,8 @@ interface Reaction {
   KineticLaw getKineticLaw();
 
   // TODO: doc
-  double getReversible();
-  long setReversible(double value);
+  boolean getReversible();
+  long setReversible(boolean value);
   boolean isSetReversible();
 
   // TODO: doc
