@@ -45,8 +45,8 @@ interface Species {
   boolean isSetUnits();
 
   // TODO: doc
-  double getSBOTerm();
-  long setSBOTerm(double value);
+  boolean getSBOTerm();
+  long setSBOTerm(boolean value);
   boolean isSetSBOTerm();
 };
 
@@ -253,8 +253,8 @@ interface Reaction {
   boolean isSetReversible();
 
   // TODO: doc
-  double getSBOTerm();
-  long setSBOTerm(double value);
+  boolean getSBOTerm();
+  long setSBOTerm(boolean value);
   boolean isSetSBOTerm();
 };
 
@@ -275,8 +275,8 @@ interface Compartment {
   boolean isSetUnits();
 
   // TODO: doc
-  double getSBOTerm();
-  long setSBOTerm(double value);
+  boolean getSBOTerm();
+  long setSBOTerm(boolean value);
   boolean isSetSBOTerm();
 };
 
