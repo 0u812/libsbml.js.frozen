@@ -3,8 +3,20 @@ interface SpeciesReference {
   DOMString getId();
   boolean setId(DOMString id);
 
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+
+  // TODO: doc
+  long getSBOTerm();
+  long setSBOTerm(long value);
+  boolean isSetSBOTerm();
+
   DOMString getSpecies();
   long setSpecies(DOMString spec);
+
+  // TODO: doc
+  [Const] Model getModel();
 };
 
 [Prefix="libsbml::"]
@@ -12,8 +24,20 @@ interface ModifierSpeciesReference {
   DOMString getId();
   boolean setId(DOMString id);
 
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+
+  // TODO: doc
+  long getSBOTerm();
+  long setSBOTerm(long value);
+  boolean isSetSBOTerm();
+
   DOMString getSpecies();
   long setSpecies(DOMString spec);
+
+  // TODO: doc
+  [Const] Model getModel();
 };
 
 [Prefix="libsbml::"]
@@ -30,9 +54,15 @@ interface Species {
 
   double getInitialAmount();
   long setInitialAmount(double amt);
+  boolean isSetInitialAmount();
 
   double getInitialConcentration();
   long setInitialConcentration(double conc);
+  boolean isSetInitialConcentration();
+
+  boolean getHasOnlySubstanceUnits();
+  long setHasOnlySubstanceUnits(boolean val);
+  boolean isSetHasOnlySubstanceUnits();
 
   // TODO: doc
   DOMString getCompartment();

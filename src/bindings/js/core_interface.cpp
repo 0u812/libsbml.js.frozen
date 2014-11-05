@@ -188,12 +188,36 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_setId_1(libsb
   return self->setId(arg0);
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_getMetaId_0(libsbml::ModifierSpeciesReference* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_setMetaId_1(libsbml::ModifierSpeciesReference* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_getSBOTerm_0(libsbml::ModifierSpeciesReference* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_setSBOTerm_1(libsbml::ModifierSpeciesReference* self, int arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_isSetSBOTerm_0(libsbml::ModifierSpeciesReference* self) {
+  return self->isSetSBOTerm();
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_getSpecies_0(libsbml::ModifierSpeciesReference* self) {
   return (char*)self->getSpecies().c_str();
 }
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_setSpecies_1(libsbml::ModifierSpeciesReference* self, char* arg0) {
   return self->setSpecies(arg0);
+}
+
+const libsbml::Model* EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference_getModel_0(libsbml::ModifierSpeciesReference* self) {
+  return self->getModel();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference___destroy___0(libsbml::ModifierSpeciesReference* self) {
@@ -260,12 +284,36 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_setId_1(libsbml::Spec
   return self->setId(arg0);
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getMetaId_0(libsbml::SpeciesReference* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_setMetaId_1(libsbml::SpeciesReference* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getSBOTerm_0(libsbml::SpeciesReference* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_setSBOTerm_1(libsbml::SpeciesReference* self, int arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_isSetSBOTerm_0(libsbml::SpeciesReference* self) {
+  return self->isSetSBOTerm();
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getSpecies_0(libsbml::SpeciesReference* self) {
   return (char*)self->getSpecies().c_str();
 }
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_setSpecies_1(libsbml::SpeciesReference* self, char* arg0) {
   return self->setSpecies(arg0);
+}
+
+const libsbml::Model* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getModel_0(libsbml::SpeciesReference* self) {
+  return self->getModel();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference___destroy___0(libsbml::SpeciesReference* self) {
@@ -562,12 +610,32 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setInitialAmount_1(libsbml::Spe
   return self->setInitialAmount(arg0);
 }
 
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetInitialAmount_0(libsbml::Species* self) {
+  return self->isSetInitialAmount();
+}
+
 double EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getInitialConcentration_0(libsbml::Species* self) {
   return self->getInitialConcentration();
 }
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setInitialConcentration_1(libsbml::Species* self, double arg0) {
   return self->setInitialConcentration(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetInitialConcentration_0(libsbml::Species* self) {
+  return self->isSetInitialConcentration();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getHasOnlySubstanceUnits_0(libsbml::Species* self) {
+  return self->getHasOnlySubstanceUnits();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_setHasOnlySubstanceUnits_1(libsbml::Species* self, bool arg0) {
+  return self->setHasOnlySubstanceUnits(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetHasOnlySubstanceUnits_0(libsbml::Species* self) {
+  return self->isSetHasOnlySubstanceUnits();
 }
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_getCompartment_0(libsbml::Species* self) {

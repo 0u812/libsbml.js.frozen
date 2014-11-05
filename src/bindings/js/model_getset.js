@@ -27,3 +27,12 @@ Object.defineProperty(Model.prototype, "parameters", {
     return result;
   }
 });
+
+Model.prototype["findSpecies"] = function(id) {
+  for(var i=0; i<this.getNumSpecies(); i++) {
+    if(this.getSpecies(i).getId() == id) {
+      return this.getSpecies(i);
+    }
+  }
+  throw new Error('No such species with id ' + id);
+}

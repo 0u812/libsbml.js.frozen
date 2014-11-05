@@ -341,6 +341,35 @@ ModifierSpeciesReference.prototype['setId'] = function(arg0) {
   return idl_wrapBool(_emscripten_bind_ModifierSpeciesReference_setId_1(self, arg0));
 };
 
+ModifierSpeciesReference.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ModifierSpeciesReference_getMetaId_0(self));
+};
+
+ModifierSpeciesReference.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_ModifierSpeciesReference_setMetaId_1(self, arg0);
+};
+
+ModifierSpeciesReference.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ModifierSpeciesReference_getSBOTerm_0(self);
+};
+
+ModifierSpeciesReference.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_ModifierSpeciesReference_setSBOTerm_1(self, arg0);
+};
+
+ModifierSpeciesReference.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_ModifierSpeciesReference_isSetSBOTerm_0(self));
+};
+
 ModifierSpeciesReference.prototype['getSpecies'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_ModifierSpeciesReference_getSpecies_0(self));
@@ -351,6 +380,11 @@ ModifierSpeciesReference.prototype['setSpecies'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_ModifierSpeciesReference_setSpecies_1(self, arg0);
+};
+
+ModifierSpeciesReference.prototype['getModel'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_ModifierSpeciesReference_getModel_0(self), Model);
 };
 
   ModifierSpeciesReference.prototype['__destroy__'] = function() {
@@ -452,6 +486,35 @@ SpeciesReference.prototype['setId'] = function(arg0) {
   return idl_wrapBool(_emscripten_bind_SpeciesReference_setId_1(self, arg0));
 };
 
+SpeciesReference.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesReference_getMetaId_0(self));
+};
+
+SpeciesReference.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_SpeciesReference_setMetaId_1(self, arg0);
+};
+
+SpeciesReference.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SpeciesReference_getSBOTerm_0(self);
+};
+
+SpeciesReference.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_SpeciesReference_setSBOTerm_1(self, arg0);
+};
+
+SpeciesReference.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_SpeciesReference_isSetSBOTerm_0(self));
+};
+
 SpeciesReference.prototype['getSpecies'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_SpeciesReference_getSpecies_0(self));
@@ -462,6 +525,11 @@ SpeciesReference.prototype['setSpecies'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_SpeciesReference_setSpecies_1(self, arg0);
+};
+
+SpeciesReference.prototype['getModel'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SpeciesReference_getModel_0(self), Model);
 };
 
   SpeciesReference.prototype['__destroy__'] = function() {
@@ -916,6 +984,11 @@ Species.prototype['setInitialAmount'] = function(arg0) {
   return _emscripten_bind_Species_setInitialAmount_1(self, arg0);
 };
 
+Species.prototype['isSetInitialAmount'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Species_isSetInitialAmount_0(self));
+};
+
 Species.prototype['getInitialConcentration'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Species_getInitialConcentration_0(self);
@@ -926,6 +999,28 @@ Species.prototype['setInitialConcentration'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_Species_setInitialConcentration_1(self, arg0);
+};
+
+Species.prototype['isSetInitialConcentration'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Species_isSetInitialConcentration_0(self));
+};
+
+Species.prototype['getHasOnlySubstanceUnits'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Species_getHasOnlySubstanceUnits_0(self));
+};
+
+Species.prototype['setHasOnlySubstanceUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Species_setHasOnlySubstanceUnits_1(self, arg0);
+};
+
+Species.prototype['isSetHasOnlySubstanceUnits'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Species_isSetHasOnlySubstanceUnits_0(self));
 };
 
 Species.prototype['getCompartment'] = function() {
