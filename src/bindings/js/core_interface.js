@@ -259,6 +259,18 @@ Compartment.prototype['setId'] = function(arg0) {
   return _emscripten_bind_Compartment_setId_1(self, arg0);
 };
 
+Compartment.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Compartment_getMetaId_0(self));
+};
+
+Compartment.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setMetaId_1(self, arg0);
+};
+
 Compartment.prototype['getSize'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Compartment_getSize_0(self);
@@ -269,6 +281,11 @@ Compartment.prototype['setSize'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_Compartment_setSize_1(self, arg0);
+};
+
+Compartment.prototype['isSetSize'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Compartment_isSetSize_0(self));
 };
 
 Compartment.prototype['getVolume'] = function() {
@@ -650,6 +667,23 @@ SBMLReader.prototype['readSBMLFromString'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_SBMLReader___destroy___0(self);
 }
+// SBMLError
+function SBMLError() { throw "cannot construct a SBMLError, no constructor in IDL" }
+SBMLError.prototype = Object.create(WrapperObject.prototype);
+SBMLError.prototype.constructor = SBMLError;
+SBMLError.prototype.__class__ = SBMLError;
+SBMLError.__cache__ = {};
+Module['SBMLError'] = SBMLError;
+
+SBMLError.prototype['getMessage'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SBMLError_getMessage_0(self));
+};
+
+  SBMLError.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBMLError___destroy___0(self);
+}
 // SBMLFormulaParser
 function SBMLFormulaParser() {
   this.ptr = _emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0();
@@ -697,6 +731,13 @@ Module['SBMLDocument'] = SBMLDocument;
 SBMLDocument.prototype['getNumErrors'] = function() {
   var self = this.ptr;
   return _emscripten_bind_SBMLDocument_getNumErrors_0(self);
+};
+
+SBMLDocument.prototype['getError'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_SBMLDocument_getError_1(self, arg0), SBMLError);
 };
 
 SBMLDocument.prototype['getModel'] = function() {

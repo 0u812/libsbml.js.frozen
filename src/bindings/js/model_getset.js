@@ -28,6 +28,16 @@ Object.defineProperty(Model.prototype, "parameters", {
   }
 });
 
+Object.defineProperty(Model.prototype, "compartments", {
+  get: function parameters() {
+    var result = [];
+    for(var i=0; i<this.getNumCompartments(); i++) {
+      result.push(this.getCompartment(i));
+    }
+    return result;
+  }
+});
+
 Model.prototype["findSpecies"] = function(id) {
   for(var i=0; i<this.getNumSpecies(); i++) {
     if(this.getSpecies(i).getId() == id) {

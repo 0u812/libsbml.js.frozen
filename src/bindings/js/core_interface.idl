@@ -293,8 +293,13 @@ interface Compartment {
   DOMString getId();
   long setId(DOMString id);
 
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+
   double getSize();
   long setSize(double val);
+  boolean isSetSize();
 
   double getVolume();
   long setVolume(double val);
@@ -346,6 +351,11 @@ interface Model {
 };
 
 [Prefix="libsbml::"]
+interface SBMLError {
+  DOMString getMessage();
+};
+
+[Prefix="libsbml::"]
 interface SBMLErrorLog {
 // reserved word apparently. whoop-de-doo
 //   DOMString toString();
@@ -354,7 +364,9 @@ interface SBMLErrorLog {
 [Prefix="libsbml::"]
 interface SBMLDocument {
   void SBMLDocument(long level, long version);
+
   long getNumErrors();
+  [Const] SBMLError getError(unsigned long n);
 
   Model getModel();
   Model createModel();

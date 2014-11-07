@@ -65,7 +65,18 @@ var loadsbml = function () {
 
   console.log('Serializing model...\nto a multiline\nstring\n');
 
-  console.log(writer.writeSBMLToString(doc));
+  var serializedSBML = writer.writeSBMLToString(doc);
+  console.log('serialized:');
+  console.log(serializedSBML);
+
+  var reader = new libsbml.SBMLReader();
+  var doc2 = reader.readSBMLFromString(serializedSBML);
+  console.log('num errors2 = ' + String(doc2.getNumErrors()));
+
+  doc2.errors.forEach(function(e) {
+    console.log('Error:');
+    console.log(e.getMessage());
+  });
 };
 
 libsbml.onload(loadsbml);

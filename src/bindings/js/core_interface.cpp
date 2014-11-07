@@ -134,12 +134,24 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setId_1(libsbml::Compartmen
   return self->setId(arg0);
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getMetaId_0(libsbml::Compartment* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setMetaId_1(libsbml::Compartment* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
 double EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getSize_0(libsbml::Compartment* self) {
   return self->getSize();
 }
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_setSize_1(libsbml::Compartment* self, double arg0) {
   return self->setSize(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_isSetSize_0(libsbml::Compartment* self) {
+  return self->isSetSize();
 }
 
 double EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getVolume_0(libsbml::Compartment* self) {
@@ -394,6 +406,16 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLReader___destroy___0(libsbml::SBML
   delete self;
 }
 
+// SBMLError
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLError_getMessage_0(libsbml::SBMLError* self) {
+  return (char*)self->getMessage().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLError___destroy___0(libsbml::SBMLError* self) {
+  delete self;
+}
+
 // SBMLFormulaParser
 
 libsbml::SBMLFormulaParser* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0() {
@@ -420,6 +442,10 @@ libsbml::SBMLDocument* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_SBMLDoc
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getNumErrors_0(libsbml::SBMLDocument* self) {
   return self->getNumErrors();
+}
+
+const libsbml::SBMLError* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getError_1(libsbml::SBMLDocument* self, unsigned int arg0) {
+  return self->getError(arg0);
 }
 
 libsbml::Model* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getModel_0(libsbml::SBMLDocument* self) {
