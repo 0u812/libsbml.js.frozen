@@ -334,15 +334,15 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference___destroy___0(libsbml
 
 // SBMLWriter
 
-libsbmljs::SBMLWriter* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_SBMLWriter_0() {
-  return new libsbmljs::SBMLWriter();
+libsbml::SBMLWriter* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_SBMLWriter_0() {
+  return new libsbml::SBMLWriter();
 }
 
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_writeSBMLToString_1(libsbmljs::SBMLWriter* self, libsbml::SBMLDocument* arg0) {
-  return (char*)self->writeSBMLToString(arg0).c_str();
+const char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_writeSBMLToString_1(libsbml::SBMLWriter* self, libsbml::SBMLDocument* arg0) {
+  return self->writeSBMLToString(arg0);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter___destroy___0(libsbmljs::SBMLWriter* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter___destroy___0(libsbml::SBMLWriter* self) {
   delete self;
 }
 

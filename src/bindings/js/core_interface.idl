@@ -381,8 +381,10 @@ interface SBMLReader {
 };
 
 // different name req'd b/c libsbml version did not have consistent usage of types
-[Prefix="libsbmljs::"]
+[Prefix="libsbml::"]
 interface SBMLWriter {
   void SBMLWriter();
-  DOMString writeSBMLToString(SBMLDocument doc);
+//   DOMString writeSBMLToString(SBMLDocument doc);
+  // BUG: memory may not be freed
+  ByteString writeSBMLToString(SBMLDocument doc);
 };

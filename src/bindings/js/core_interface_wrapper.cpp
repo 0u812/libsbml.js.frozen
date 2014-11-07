@@ -25,10 +25,14 @@ namespace libsbmljs {
 
   class SBMLWriter {
   public:
-    SBMLWriter() {}
+    SBMLWriter() : writer_() {}
 
     std::string writeSBMLToString(const libsbml::SBMLDocument* doc) {
-      return writer_.writeSBMLToString(doc);
+      char* buf = writer_.writeSBMLToString(doc);
+      std::string result(buf);
+      free(buf);
+      // BUG: temporary is retured, then deleted by caller
+      return result;
     }
 
   protected:
