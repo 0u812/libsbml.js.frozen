@@ -316,6 +316,30 @@ interface Compartment {
 };
 
 [Prefix="libsbml::"]
+interface Rule {
+};
+
+[Prefix="libsbml::"]
+interface AssignmentRule {
+  DOMString getVariable();
+};
+
+[Prefix="libsbml::"]
+interface RateRule {
+};
+
+[Prefix="libsbml::"]
+interface AlgebraicRule {
+};
+
+[Prefix="libsbmljs::"]
+interface RuleSwitch {
+  AssignmentRule castToAssignmentRule(Rule r);
+  RateRule castToRateRule(Rule r);
+  AlgebraicRule castToAlgebraicRule(Rule r);
+};
+
+[Prefix="libsbml::"]
 interface Model {
   DOMString getId();
   long setId(DOMString id);
@@ -324,8 +348,8 @@ interface Model {
   DOMString getMetaId();
   long setMetaId(DOMString id);
 
-  long getNumReactions();
-  Reaction getReaction(long i);
+  unsigned long getNumReactions();
+  Reaction getReaction(unsigned long i);
   Reaction createReaction();
 
   unsigned long getNumSpecies();
@@ -342,6 +366,10 @@ interface Model {
   unsigned long getNumParameters();
   Parameter createParameter();
   Parameter getParameter(unsigned long i);
+
+  // TODO: doc
+  unsigned long getNumRules();
+  Rule getRule(unsigned long i);
 
   // TODO: doc
   unsigned long getVersion();
@@ -365,7 +393,7 @@ interface SBMLErrorLog {
 interface SBMLDocument {
   void SBMLDocument(long level, long version);
 
-  long getNumErrors();
+  unsigned long getNumErrors();
   [Const] SBMLError getError(unsigned long n);
 
   Model getModel();

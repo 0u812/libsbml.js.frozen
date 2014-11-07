@@ -39,6 +39,32 @@ namespace libsbmljs {
     libsbml::SBMLWriter writer_;
   };
 
+  class RuleSwitch {
+  public:
+    RuleSwitch() {}
+
+    libsbml::AssignmentRule* castToAssignmentRule(libsbml::Rule* r) {
+      libsbml::AssignmentRule* result = dynamic_cast<libsbml::AssignmentRule*>(r);
+      assert(result && "Cast to assignment rule failed");
+      return result;
+    }
+
+    libsbml::RateRule* castToRateRule(libsbml::Rule* r) {
+      libsbml::RateRule* result = dynamic_cast<libsbml::RateRule*>(r);
+      assert(result && "Cast to rate rule failed");
+      return result;
+    }
+
+    libsbml::AlgebraicRule* castToAlgebraicRule(libsbml::Rule* r) {
+      libsbml::AlgebraicRule* result = dynamic_cast<libsbml::AlgebraicRule*>(r);
+      assert(result && "Cast to algebraic rule failed");
+      return result;
+    }
+
+  protected:
+    libsbml::SBMLWriter writer_;
+  };
+
 }
 
 #include "core_interface.cpp"

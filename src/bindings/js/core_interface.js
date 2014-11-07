@@ -70,6 +70,325 @@ function ensureString(value) {
 }
 
 
+// AssignmentRule
+function AssignmentRule() { throw "cannot construct a AssignmentRule, no constructor in IDL" }
+AssignmentRule.prototype = Object.create(WrapperObject.prototype);
+AssignmentRule.prototype.constructor = AssignmentRule;
+AssignmentRule.prototype.__class__ = AssignmentRule;
+AssignmentRule.__cache__ = {};
+Module['AssignmentRule'] = AssignmentRule;
+
+AssignmentRule.prototype['getVariable'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_AssignmentRule_getVariable_0(self));
+};
+
+  AssignmentRule.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_AssignmentRule___destroy___0(self);
+}
+// KineticLaw
+function KineticLaw() { throw "cannot construct a KineticLaw, no constructor in IDL" }
+KineticLaw.prototype = Object.create(WrapperObject.prototype);
+KineticLaw.prototype.constructor = KineticLaw;
+KineticLaw.prototype.__class__ = KineticLaw;
+KineticLaw.__cache__ = {};
+Module['KineticLaw'] = KineticLaw;
+
+KineticLaw.prototype['getMath'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_KineticLaw_getMath_0(self), ASTNode);
+};
+
+KineticLaw.prototype['setMath'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_KineticLaw_setMath_1(self, arg0);
+};
+
+KineticLaw.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_KineticLaw_getMetaId_0(self));
+};
+
+KineticLaw.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_KineticLaw_setMetaId_1(self, arg0);
+};
+
+KineticLaw.prototype['getNumLocalParameters'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_KineticLaw_getNumLocalParameters_0(self);
+};
+
+KineticLaw.prototype['createLocalParameter'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_KineticLaw_createLocalParameter_0(self), LocalParameter);
+};
+
+KineticLaw.prototype['getLocalParameter'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_KineticLaw_getLocalParameter_1(self, arg0), LocalParameter);
+};
+
+KineticLaw.prototype['getNumParameters'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_KineticLaw_getNumParameters_0(self);
+};
+
+KineticLaw.prototype['createParameter'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_KineticLaw_createParameter_0(self), Parameter);
+};
+
+KineticLaw.prototype['getParameter'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_KineticLaw_getParameter_1(self, arg0), Parameter);
+};
+
+  KineticLaw.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_KineticLaw___destroy___0(self);
+}
+// Compartment
+function Compartment() { throw "cannot construct a Compartment, no constructor in IDL" }
+Compartment.prototype = Object.create(WrapperObject.prototype);
+Compartment.prototype.constructor = Compartment;
+Compartment.prototype.__class__ = Compartment;
+Compartment.__cache__ = {};
+Module['Compartment'] = Compartment;
+
+Compartment.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Compartment_getId_0(self));
+};
+
+Compartment.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setId_1(self, arg0);
+};
+
+Compartment.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Compartment_getMetaId_0(self));
+};
+
+Compartment.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setMetaId_1(self, arg0);
+};
+
+Compartment.prototype['getSize'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_getSize_0(self);
+};
+
+Compartment.prototype['setSize'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setSize_1(self, arg0);
+};
+
+Compartment.prototype['isSetSize'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Compartment_isSetSize_0(self));
+};
+
+Compartment.prototype['getVolume'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_getVolume_0(self);
+};
+
+Compartment.prototype['setVolume'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setVolume_1(self, arg0);
+};
+
+Compartment.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Compartment_getUnits_0(self));
+};
+
+Compartment.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setUnits_1(self, arg0);
+};
+
+Compartment.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Compartment_isSetUnits_0(self));
+};
+
+Compartment.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Compartment_getSBOTerm_0(self);
+};
+
+Compartment.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Compartment_setSBOTerm_1(self, arg0);
+};
+
+Compartment.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Compartment_isSetSBOTerm_0(self));
+};
+
+  Compartment.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Compartment___destroy___0(self);
+}
+// Parameter
+function Parameter() { throw "cannot construct a Parameter, no constructor in IDL" }
+Parameter.prototype = Object.create(WrapperObject.prototype);
+Parameter.prototype.constructor = Parameter;
+Parameter.prototype.__class__ = Parameter;
+Parameter.__cache__ = {};
+Module['Parameter'] = Parameter;
+
+Parameter.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Parameter_getId_0(self));
+};
+
+Parameter.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_Parameter_setId_1(self, arg0));
+};
+
+Parameter.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Parameter_getName_0(self));
+};
+
+Parameter.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Parameter_setName_1(self, arg0);
+};
+
+Parameter.prototype['isSetName'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Parameter_isSetName_0(self));
+};
+
+Parameter.prototype['getValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Parameter_getValue_0(self);
+};
+
+Parameter.prototype['setValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Parameter_setValue_1(self, arg0);
+};
+
+Parameter.prototype['isSetValue'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Parameter_isSetValue_0(self));
+};
+
+Parameter.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Parameter_isSetUnits_0(self));
+};
+
+Parameter.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Parameter_getUnits_0(self));
+};
+
+Parameter.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Parameter_setUnits_1(self, arg0);
+};
+
+  Parameter.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Parameter___destroy___0(self);
+}
+// ASTNode
+function ASTNode() { throw "cannot construct a ASTNode, no constructor in IDL" }
+ASTNode.prototype = Object.create(WrapperObject.prototype);
+ASTNode.prototype.constructor = ASTNode;
+ASTNode.prototype.__class__ = ASTNode;
+ASTNode.__cache__ = {};
+Module['ASTNode'] = ASTNode;
+
+ASTNode.prototype['getNumChildren'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ASTNode_getNumChildren_0(self);
+};
+
+ASTNode.prototype['getChild'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_ASTNode_getChild_1(self, arg0), ASTNode);
+};
+
+ASTNode.prototype['getType'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ASTNode_getType_0(self);
+};
+
+ASTNode.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_ASTNode_isSetUnits_0(self));
+};
+
+ASTNode.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ASTNode_getUnits_0(self));
+};
+
+ASTNode.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_ASTNode_setUnits_1(self, arg0);
+};
+
+ASTNode.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ASTNode_getName_0(self));
+};
+
+ASTNode.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_ASTNode_setName_1(self, arg0);
+};
+
+  ASTNode.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_ASTNode___destroy___0(self);
+}
 // SBMLErrorLog
 function SBMLErrorLog() { throw "cannot construct a SBMLErrorLog, no constructor in IDL" }
 SBMLErrorLog.prototype = Object.create(WrapperObject.prototype);
@@ -81,6 +400,220 @@ Module['SBMLErrorLog'] = SBMLErrorLog;
   SBMLErrorLog.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SBMLErrorLog___destroy___0(self);
+}
+// VoidPtr
+function VoidPtr() { throw "cannot construct a VoidPtr, no constructor in IDL" }
+VoidPtr.prototype = Object.create(WrapperObject.prototype);
+VoidPtr.prototype.constructor = VoidPtr;
+VoidPtr.prototype.__class__ = VoidPtr;
+VoidPtr.__cache__ = {};
+Module['VoidPtr'] = VoidPtr;
+
+  VoidPtr.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_VoidPtr___destroy___0(self);
+}
+// RateRule
+function RateRule() { throw "cannot construct a RateRule, no constructor in IDL" }
+RateRule.prototype = Object.create(WrapperObject.prototype);
+RateRule.prototype.constructor = RateRule;
+RateRule.prototype.__class__ = RateRule;
+RateRule.__cache__ = {};
+Module['RateRule'] = RateRule;
+
+  RateRule.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RateRule___destroy___0(self);
+}
+// LocalParameter
+function LocalParameter() { throw "cannot construct a LocalParameter, no constructor in IDL" }
+LocalParameter.prototype = Object.create(WrapperObject.prototype);
+LocalParameter.prototype.constructor = LocalParameter;
+LocalParameter.prototype.__class__ = LocalParameter;
+LocalParameter.__cache__ = {};
+Module['LocalParameter'] = LocalParameter;
+
+LocalParameter.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalParameter_getId_0(self));
+};
+
+LocalParameter.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_LocalParameter_setId_1(self, arg0));
+};
+
+LocalParameter.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalParameter_getName_0(self));
+};
+
+LocalParameter.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalParameter_setName_1(self, arg0);
+};
+
+LocalParameter.prototype['isSetName'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LocalParameter_isSetName_0(self));
+};
+
+LocalParameter.prototype['getValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalParameter_getValue_0(self);
+};
+
+LocalParameter.prototype['setValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalParameter_setValue_1(self, arg0);
+};
+
+LocalParameter.prototype['isSetValue'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LocalParameter_isSetValue_0(self));
+};
+
+LocalParameter.prototype['isSetUnits'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LocalParameter_isSetUnits_0(self));
+};
+
+LocalParameter.prototype['getUnits'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalParameter_getUnits_0(self));
+};
+
+LocalParameter.prototype['setUnits'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalParameter_setUnits_1(self, arg0);
+};
+
+  LocalParameter.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LocalParameter___destroy___0(self);
+}
+// SpeciesReference
+function SpeciesReference() { throw "cannot construct a SpeciesReference, no constructor in IDL" }
+SpeciesReference.prototype = Object.create(WrapperObject.prototype);
+SpeciesReference.prototype.constructor = SpeciesReference;
+SpeciesReference.prototype.__class__ = SpeciesReference;
+SpeciesReference.__cache__ = {};
+Module['SpeciesReference'] = SpeciesReference;
+
+SpeciesReference.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesReference_getId_0(self));
+};
+
+SpeciesReference.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_SpeciesReference_setId_1(self, arg0));
+};
+
+SpeciesReference.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesReference_getMetaId_0(self));
+};
+
+SpeciesReference.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_SpeciesReference_setMetaId_1(self, arg0);
+};
+
+SpeciesReference.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SpeciesReference_getSBOTerm_0(self);
+};
+
+SpeciesReference.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_SpeciesReference_setSBOTerm_1(self, arg0);
+};
+
+SpeciesReference.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_SpeciesReference_isSetSBOTerm_0(self));
+};
+
+SpeciesReference.prototype['getSpecies'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesReference_getSpecies_0(self));
+};
+
+SpeciesReference.prototype['setSpecies'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_SpeciesReference_setSpecies_1(self, arg0);
+};
+
+SpeciesReference.prototype['getModel'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SpeciesReference_getModel_0(self), Model);
+};
+
+  SpeciesReference.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SpeciesReference___destroy___0(self);
+}
+// RuleSwitch
+function RuleSwitch() { throw "cannot construct a RuleSwitch, no constructor in IDL" }
+RuleSwitch.prototype = Object.create(WrapperObject.prototype);
+RuleSwitch.prototype.constructor = RuleSwitch;
+RuleSwitch.prototype.__class__ = RuleSwitch;
+RuleSwitch.__cache__ = {};
+Module['RuleSwitch'] = RuleSwitch;
+
+RuleSwitch.prototype['castToAssignmentRule'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RuleSwitch_castToAssignmentRule_1(self, arg0), AssignmentRule);
+};
+
+RuleSwitch.prototype['castToRateRule'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RuleSwitch_castToRateRule_1(self, arg0), RateRule);
+};
+
+RuleSwitch.prototype['castToAlgebraicRule'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RuleSwitch_castToAlgebraicRule_1(self, arg0), AlgebraicRule);
+};
+
+  RuleSwitch.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RuleSwitch___destroy___0(self);
+}
+// AlgebraicRule
+function AlgebraicRule() { throw "cannot construct a AlgebraicRule, no constructor in IDL" }
+AlgebraicRule.prototype = Object.create(WrapperObject.prototype);
+AlgebraicRule.prototype.constructor = AlgebraicRule;
+AlgebraicRule.prototype.__class__ = AlgebraicRule;
+AlgebraicRule.__cache__ = {};
+Module['AlgebraicRule'] = AlgebraicRule;
+
+  AlgebraicRule.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_AlgebraicRule___destroy___0(self);
 }
 // Reaction
 function Reaction() { throw "cannot construct a Reaction, no constructor in IDL" }
@@ -239,104 +772,22 @@ Reaction.prototype['isSetSBOTerm'] = function() {
   var self = this.ptr;
   _emscripten_bind_Reaction___destroy___0(self);
 }
-// Compartment
-function Compartment() { throw "cannot construct a Compartment, no constructor in IDL" }
-Compartment.prototype = Object.create(WrapperObject.prototype);
-Compartment.prototype.constructor = Compartment;
-Compartment.prototype.__class__ = Compartment;
-Compartment.__cache__ = {};
-Module['Compartment'] = Compartment;
+// SBMLError
+function SBMLError() { throw "cannot construct a SBMLError, no constructor in IDL" }
+SBMLError.prototype = Object.create(WrapperObject.prototype);
+SBMLError.prototype.constructor = SBMLError;
+SBMLError.prototype.__class__ = SBMLError;
+SBMLError.__cache__ = {};
+Module['SBMLError'] = SBMLError;
 
-Compartment.prototype['getId'] = function() {
+SBMLError.prototype['getMessage'] = function() {
   var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_Compartment_getId_0(self));
+  return Pointer_stringify(_emscripten_bind_SBMLError_getMessage_0(self));
 };
 
-Compartment.prototype['setId'] = function(arg0) {
+  SBMLError.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Compartment_setId_1(self, arg0);
-};
-
-Compartment.prototype['getMetaId'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_Compartment_getMetaId_0(self));
-};
-
-Compartment.prototype['setMetaId'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Compartment_setMetaId_1(self, arg0);
-};
-
-Compartment.prototype['getSize'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_Compartment_getSize_0(self);
-};
-
-Compartment.prototype['setSize'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Compartment_setSize_1(self, arg0);
-};
-
-Compartment.prototype['isSetSize'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Compartment_isSetSize_0(self));
-};
-
-Compartment.prototype['getVolume'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_Compartment_getVolume_0(self);
-};
-
-Compartment.prototype['setVolume'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Compartment_setVolume_1(self, arg0);
-};
-
-Compartment.prototype['getUnits'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_Compartment_getUnits_0(self));
-};
-
-Compartment.prototype['setUnits'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Compartment_setUnits_1(self, arg0);
-};
-
-Compartment.prototype['isSetUnits'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Compartment_isSetUnits_0(self));
-};
-
-Compartment.prototype['getSBOTerm'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_Compartment_getSBOTerm_0(self);
-};
-
-Compartment.prototype['setSBOTerm'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Compartment_setSBOTerm_1(self, arg0);
-};
-
-Compartment.prototype['isSetSBOTerm'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Compartment_isSetSBOTerm_0(self));
-};
-
-  Compartment.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_Compartment___destroy___0(self);
+  _emscripten_bind_SBMLError___destroy___0(self);
 }
 // ModifierSpeciesReference
 function ModifierSpeciesReference() { throw "cannot construct a ModifierSpeciesReference, no constructor in IDL" }
@@ -408,281 +859,17 @@ ModifierSpeciesReference.prototype['getModel'] = function() {
   var self = this.ptr;
   _emscripten_bind_ModifierSpeciesReference___destroy___0(self);
 }
-// LocalParameter
-function LocalParameter() { throw "cannot construct a LocalParameter, no constructor in IDL" }
-LocalParameter.prototype = Object.create(WrapperObject.prototype);
-LocalParameter.prototype.constructor = LocalParameter;
-LocalParameter.prototype.__class__ = LocalParameter;
-LocalParameter.__cache__ = {};
-Module['LocalParameter'] = LocalParameter;
+// Rule
+function Rule() { throw "cannot construct a Rule, no constructor in IDL" }
+Rule.prototype = Object.create(WrapperObject.prototype);
+Rule.prototype.constructor = Rule;
+Rule.prototype.__class__ = Rule;
+Rule.__cache__ = {};
+Module['Rule'] = Rule;
 
-LocalParameter.prototype['getId'] = function() {
+  Rule.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_LocalParameter_getId_0(self));
-};
-
-LocalParameter.prototype['setId'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return idl_wrapBool(_emscripten_bind_LocalParameter_setId_1(self, arg0));
-};
-
-LocalParameter.prototype['getName'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_LocalParameter_getName_0(self));
-};
-
-LocalParameter.prototype['setName'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_LocalParameter_setName_1(self, arg0);
-};
-
-LocalParameter.prototype['isSetName'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_LocalParameter_isSetName_0(self));
-};
-
-LocalParameter.prototype['getValue'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_LocalParameter_getValue_0(self);
-};
-
-LocalParameter.prototype['setValue'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_LocalParameter_setValue_1(self, arg0);
-};
-
-LocalParameter.prototype['isSetValue'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_LocalParameter_isSetValue_0(self));
-};
-
-LocalParameter.prototype['isSetUnits'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_LocalParameter_isSetUnits_0(self));
-};
-
-LocalParameter.prototype['getUnits'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_LocalParameter_getUnits_0(self));
-};
-
-LocalParameter.prototype['setUnits'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_LocalParameter_setUnits_1(self, arg0);
-};
-
-  LocalParameter.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_LocalParameter___destroy___0(self);
-}
-// SpeciesReference
-function SpeciesReference() { throw "cannot construct a SpeciesReference, no constructor in IDL" }
-SpeciesReference.prototype = Object.create(WrapperObject.prototype);
-SpeciesReference.prototype.constructor = SpeciesReference;
-SpeciesReference.prototype.__class__ = SpeciesReference;
-SpeciesReference.__cache__ = {};
-Module['SpeciesReference'] = SpeciesReference;
-
-SpeciesReference.prototype['getId'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_SpeciesReference_getId_0(self));
-};
-
-SpeciesReference.prototype['setId'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return idl_wrapBool(_emscripten_bind_SpeciesReference_setId_1(self, arg0));
-};
-
-SpeciesReference.prototype['getMetaId'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_SpeciesReference_getMetaId_0(self));
-};
-
-SpeciesReference.prototype['setMetaId'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_SpeciesReference_setMetaId_1(self, arg0);
-};
-
-SpeciesReference.prototype['getSBOTerm'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_SpeciesReference_getSBOTerm_0(self);
-};
-
-SpeciesReference.prototype['setSBOTerm'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_SpeciesReference_setSBOTerm_1(self, arg0);
-};
-
-SpeciesReference.prototype['isSetSBOTerm'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_SpeciesReference_isSetSBOTerm_0(self));
-};
-
-SpeciesReference.prototype['getSpecies'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_SpeciesReference_getSpecies_0(self));
-};
-
-SpeciesReference.prototype['setSpecies'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_SpeciesReference_setSpecies_1(self, arg0);
-};
-
-SpeciesReference.prototype['getModel'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_SpeciesReference_getModel_0(self), Model);
-};
-
-  SpeciesReference.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_SpeciesReference___destroy___0(self);
-}
-// SBMLWriter
-function SBMLWriter() {
-  this.ptr = _emscripten_bind_SBMLWriter_SBMLWriter_0();
-  getCache(SBMLWriter)[this.ptr] = this;
-};
-SBMLWriter.prototype = Object.create(WrapperObject.prototype);
-SBMLWriter.prototype.constructor = SBMLWriter;
-SBMLWriter.prototype.__class__ = SBMLWriter;
-SBMLWriter.__cache__ = {};
-Module['SBMLWriter'] = SBMLWriter;
-
-SBMLWriter.prototype['writeSBMLToString'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return Pointer_stringify(_emscripten_bind_SBMLWriter_writeSBMLToString_1(self, arg0));
-};
-
-  SBMLWriter.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_SBMLWriter___destroy___0(self);
-}
-// KineticLaw
-function KineticLaw() { throw "cannot construct a KineticLaw, no constructor in IDL" }
-KineticLaw.prototype = Object.create(WrapperObject.prototype);
-KineticLaw.prototype.constructor = KineticLaw;
-KineticLaw.prototype.__class__ = KineticLaw;
-KineticLaw.__cache__ = {};
-Module['KineticLaw'] = KineticLaw;
-
-KineticLaw.prototype['getMath'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_KineticLaw_getMath_0(self), ASTNode);
-};
-
-KineticLaw.prototype['setMath'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_KineticLaw_setMath_1(self, arg0);
-};
-
-KineticLaw.prototype['getMetaId'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_KineticLaw_getMetaId_0(self));
-};
-
-KineticLaw.prototype['setMetaId'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_KineticLaw_setMetaId_1(self, arg0);
-};
-
-KineticLaw.prototype['getNumLocalParameters'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_KineticLaw_getNumLocalParameters_0(self);
-};
-
-KineticLaw.prototype['createLocalParameter'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_KineticLaw_createLocalParameter_0(self), LocalParameter);
-};
-
-KineticLaw.prototype['getLocalParameter'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_KineticLaw_getLocalParameter_1(self, arg0), LocalParameter);
-};
-
-KineticLaw.prototype['getNumParameters'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_KineticLaw_getNumParameters_0(self);
-};
-
-KineticLaw.prototype['createParameter'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_KineticLaw_createParameter_0(self), Parameter);
-};
-
-KineticLaw.prototype['getParameter'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_KineticLaw_getParameter_1(self, arg0), Parameter);
-};
-
-  KineticLaw.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_KineticLaw___destroy___0(self);
-}
-// SBMLReader
-function SBMLReader() {
-  this.ptr = _emscripten_bind_SBMLReader_SBMLReader_0();
-  getCache(SBMLReader)[this.ptr] = this;
-};
-SBMLReader.prototype = Object.create(WrapperObject.prototype);
-SBMLReader.prototype.constructor = SBMLReader;
-SBMLReader.prototype.__class__ = SBMLReader;
-SBMLReader.__cache__ = {};
-Module['SBMLReader'] = SBMLReader;
-
-SBMLReader.prototype['readSBMLFromString'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_SBMLReader_readSBMLFromString_1(self, arg0), SBMLDocument);
-};
-
-  SBMLReader.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_SBMLReader___destroy___0(self);
-}
-// SBMLError
-function SBMLError() { throw "cannot construct a SBMLError, no constructor in IDL" }
-SBMLError.prototype = Object.create(WrapperObject.prototype);
-SBMLError.prototype.constructor = SBMLError;
-SBMLError.prototype.__class__ = SBMLError;
-SBMLError.__cache__ = {};
-Module['SBMLError'] = SBMLError;
-
-SBMLError.prototype['getMessage'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_SBMLError_getMessage_0(self));
-};
-
-  SBMLError.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_SBMLError___destroy___0(self);
+  _emscripten_bind_Rule___destroy___0(self);
 }
 // SBMLFormulaParser
 function SBMLFormulaParser() {
@@ -866,6 +1053,18 @@ Model.prototype['getParameter'] = function(arg0) {
   return wrapPointer(_emscripten_bind_Model_getParameter_1(self, arg0), Parameter);
 };
 
+Model.prototype['getNumRules'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Model_getNumRules_0(self);
+};
+
+Model.prototype['getRule'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Model_getRule_1(self, arg0), Rule);
+};
+
 Model.prototype['getVersion'] = function() {
   var self = this.ptr;
   return _emscripten_bind_Model_getVersion_0(self);
@@ -882,92 +1081,49 @@ Model.prototype['setAnnotation'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_Model___destroy___0(self);
 }
-// VoidPtr
-function VoidPtr() { throw "cannot construct a VoidPtr, no constructor in IDL" }
-VoidPtr.prototype = Object.create(WrapperObject.prototype);
-VoidPtr.prototype.constructor = VoidPtr;
-VoidPtr.prototype.__class__ = VoidPtr;
-VoidPtr.__cache__ = {};
-Module['VoidPtr'] = VoidPtr;
+// SBMLWriter
+function SBMLWriter() {
+  this.ptr = _emscripten_bind_SBMLWriter_SBMLWriter_0();
+  getCache(SBMLWriter)[this.ptr] = this;
+};
+SBMLWriter.prototype = Object.create(WrapperObject.prototype);
+SBMLWriter.prototype.constructor = SBMLWriter;
+SBMLWriter.prototype.__class__ = SBMLWriter;
+SBMLWriter.__cache__ = {};
+Module['SBMLWriter'] = SBMLWriter;
 
-  VoidPtr.prototype['__destroy__'] = function() {
+SBMLWriter.prototype['writeSBMLToString'] = function(arg0) {
   var self = this.ptr;
-  _emscripten_bind_VoidPtr___destroy___0(self);
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return Pointer_stringify(_emscripten_bind_SBMLWriter_writeSBMLToString_1(self, arg0));
+};
+
+  SBMLWriter.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBMLWriter___destroy___0(self);
 }
-// Parameter
-function Parameter() { throw "cannot construct a Parameter, no constructor in IDL" }
-Parameter.prototype = Object.create(WrapperObject.prototype);
-Parameter.prototype.constructor = Parameter;
-Parameter.prototype.__class__ = Parameter;
-Parameter.__cache__ = {};
-Module['Parameter'] = Parameter;
-
-Parameter.prototype['getId'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_Parameter_getId_0(self));
+// SBMLReader
+function SBMLReader() {
+  this.ptr = _emscripten_bind_SBMLReader_SBMLReader_0();
+  getCache(SBMLReader)[this.ptr] = this;
 };
+SBMLReader.prototype = Object.create(WrapperObject.prototype);
+SBMLReader.prototype.constructor = SBMLReader;
+SBMLReader.prototype.__class__ = SBMLReader;
+SBMLReader.__cache__ = {};
+Module['SBMLReader'] = SBMLReader;
 
-Parameter.prototype['setId'] = function(arg0) {
+SBMLReader.prototype['readSBMLFromString'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return idl_wrapBool(_emscripten_bind_Parameter_setId_1(self, arg0));
+  return wrapPointer(_emscripten_bind_SBMLReader_readSBMLFromString_1(self, arg0), SBMLDocument);
 };
 
-Parameter.prototype['getName'] = function() {
+  SBMLReader.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_Parameter_getName_0(self));
-};
-
-Parameter.prototype['setName'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Parameter_setName_1(self, arg0);
-};
-
-Parameter.prototype['isSetName'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Parameter_isSetName_0(self));
-};
-
-Parameter.prototype['getValue'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_Parameter_getValue_0(self);
-};
-
-Parameter.prototype['setValue'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Parameter_setValue_1(self, arg0);
-};
-
-Parameter.prototype['isSetValue'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Parameter_isSetValue_0(self));
-};
-
-Parameter.prototype['isSetUnits'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_Parameter_isSetUnits_0(self));
-};
-
-Parameter.prototype['getUnits'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_Parameter_getUnits_0(self));
-};
-
-Parameter.prototype['setUnits'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_Parameter_setUnits_1(self, arg0);
-};
-
-  Parameter.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_Parameter___destroy___0(self);
+  _emscripten_bind_SBMLReader___destroy___0(self);
 }
 // Species
 function Species() { throw "cannot construct a Species, no constructor in IDL" }
@@ -1118,64 +1274,6 @@ Species.prototype['isSetSBOTerm'] = function() {
   Species.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Species___destroy___0(self);
-}
-// ASTNode
-function ASTNode() { throw "cannot construct a ASTNode, no constructor in IDL" }
-ASTNode.prototype = Object.create(WrapperObject.prototype);
-ASTNode.prototype.constructor = ASTNode;
-ASTNode.prototype.__class__ = ASTNode;
-ASTNode.__cache__ = {};
-Module['ASTNode'] = ASTNode;
-
-ASTNode.prototype['getNumChildren'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_ASTNode_getNumChildren_0(self);
-};
-
-ASTNode.prototype['getChild'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_ASTNode_getChild_1(self, arg0), ASTNode);
-};
-
-ASTNode.prototype['getType'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_ASTNode_getType_0(self);
-};
-
-ASTNode.prototype['isSetUnits'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_ASTNode_isSetUnits_0(self));
-};
-
-ASTNode.prototype['getUnits'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_ASTNode_getUnits_0(self));
-};
-
-ASTNode.prototype['setUnits'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_ASTNode_setUnits_1(self, arg0);
-};
-
-ASTNode.prototype['getName'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_ASTNode_getName_0(self));
-};
-
-ASTNode.prototype['setName'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_ASTNode_setName_1(self, arg0);
-};
-
-  ASTNode.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_ASTNode___destroy___0(self);
 }
 // libsbml__idl__ASTNodeType_t
 Module['AST_PLUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_PLUS();
