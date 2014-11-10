@@ -223,6 +223,7 @@ interface LocalParameter {
 interface KineticLaw {
   [Const] ASTNode getMath();
   long setMath(ASTNode math);
+  boolean isSetMath();
 
   // TODO: doc
   DOMString getMetaId();
@@ -317,23 +318,55 @@ interface Compartment {
 
 [Prefix="libsbml::"]
 interface Rule {
+  // TODO: doc
+  boolean isRate();
+  boolean isAssignment();
+  boolean isAlgebraic();
+
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+  boolean isSetMetaId();
 };
 
 [Prefix="libsbml::"]
 interface AssignmentRule {
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+  boolean isSetMetaId();
+
+  // TODO: doc
   DOMString getVariable();
+  long setVariable(DOMString id);
+  boolean isSetVariable();
+
+  // TODO: doc
+  [Const] ASTNode getMath();
+  long setMath(ASTNode math);
+  boolean isSetMath();
 };
 
 [Prefix="libsbml::"]
 interface RateRule {
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+  boolean isSetMetaId();
 };
 
 [Prefix="libsbml::"]
 interface AlgebraicRule {
+  // TODO: doc
+  DOMString getMetaId();
+  long setMetaId(DOMString id);
+  boolean isSetMetaId();
 };
 
 [Prefix="libsbmljs::"]
 interface RuleSwitch {
+  void RuleSwitch();
+
   AssignmentRule castToAssignmentRule(Rule r);
   RateRule castToRateRule(Rule r);
   AlgebraicRule castToAlgebraicRule(Rule r);
@@ -347,6 +380,7 @@ interface Model {
   // TODO: doc
   DOMString getMetaId();
   long setMetaId(DOMString id);
+  boolean isSetMetaId();
 
   unsigned long getNumReactions();
   Reaction getReaction(unsigned long i);

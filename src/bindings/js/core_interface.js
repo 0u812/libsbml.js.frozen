@@ -78,9 +78,55 @@ AssignmentRule.prototype.__class__ = AssignmentRule;
 AssignmentRule.__cache__ = {};
 Module['AssignmentRule'] = AssignmentRule;
 
+AssignmentRule.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_AssignmentRule_getMetaId_0(self));
+};
+
+AssignmentRule.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AssignmentRule_setMetaId_1(self, arg0);
+};
+
+AssignmentRule.prototype['isSetMetaId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AssignmentRule_isSetMetaId_0(self));
+};
+
 AssignmentRule.prototype['getVariable'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_AssignmentRule_getVariable_0(self));
+};
+
+AssignmentRule.prototype['setVariable'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AssignmentRule_setVariable_1(self, arg0);
+};
+
+AssignmentRule.prototype['isSetVariable'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AssignmentRule_isSetVariable_0(self));
+};
+
+AssignmentRule.prototype['getMath'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_AssignmentRule_getMath_0(self), ASTNode);
+};
+
+AssignmentRule.prototype['setMath'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AssignmentRule_setMath_1(self, arg0);
+};
+
+AssignmentRule.prototype['isSetMath'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AssignmentRule_isSetMath_0(self));
 };
 
   AssignmentRule.prototype['__destroy__'] = function() {
@@ -105,6 +151,11 @@ KineticLaw.prototype['setMath'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_KineticLaw_setMath_1(self, arg0);
+};
+
+KineticLaw.prototype['isSetMath'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_KineticLaw_isSetMath_0(self));
 };
 
 KineticLaw.prototype['getMetaId'] = function() {
@@ -421,6 +472,23 @@ RateRule.prototype.__class__ = RateRule;
 RateRule.__cache__ = {};
 Module['RateRule'] = RateRule;
 
+RateRule.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RateRule_getMetaId_0(self));
+};
+
+RateRule.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_RateRule_setMetaId_1(self, arg0);
+};
+
+RateRule.prototype['isSetMetaId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RateRule_isSetMetaId_0(self));
+};
+
   RateRule.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_RateRule___destroy___0(self);
@@ -571,7 +639,10 @@ SpeciesReference.prototype['getModel'] = function() {
   _emscripten_bind_SpeciesReference___destroy___0(self);
 }
 // RuleSwitch
-function RuleSwitch() { throw "cannot construct a RuleSwitch, no constructor in IDL" }
+function RuleSwitch() {
+  this.ptr = _emscripten_bind_RuleSwitch_RuleSwitch_0();
+  getCache(RuleSwitch)[this.ptr] = this;
+};
 RuleSwitch.prototype = Object.create(WrapperObject.prototype);
 RuleSwitch.prototype.constructor = RuleSwitch;
 RuleSwitch.prototype.__class__ = RuleSwitch;
@@ -610,6 +681,23 @@ AlgebraicRule.prototype.constructor = AlgebraicRule;
 AlgebraicRule.prototype.__class__ = AlgebraicRule;
 AlgebraicRule.__cache__ = {};
 Module['AlgebraicRule'] = AlgebraicRule;
+
+AlgebraicRule.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_AlgebraicRule_getMetaId_0(self));
+};
+
+AlgebraicRule.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AlgebraicRule_setMetaId_1(self, arg0);
+};
+
+AlgebraicRule.prototype['isSetMetaId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetMetaId_0(self));
+};
 
   AlgebraicRule.prototype['__destroy__'] = function() {
   var self = this.ptr;
@@ -867,6 +955,38 @@ Rule.prototype.__class__ = Rule;
 Rule.__cache__ = {};
 Module['Rule'] = Rule;
 
+Rule.prototype['isRate'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Rule_isRate_0(self));
+};
+
+Rule.prototype['isAssignment'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Rule_isAssignment_0(self));
+};
+
+Rule.prototype['isAlgebraic'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Rule_isAlgebraic_0(self));
+};
+
+Rule.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Rule_getMetaId_0(self));
+};
+
+Rule.prototype['setMetaId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Rule_setMetaId_1(self, arg0);
+};
+
+Rule.prototype['isSetMetaId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Rule_isSetMetaId_0(self));
+};
+
   Rule.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Rule___destroy___0(self);
@@ -976,6 +1096,11 @@ Model.prototype['setMetaId'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return _emscripten_bind_Model_setMetaId_1(self, arg0);
+};
+
+Model.prototype['isSetMetaId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Model_isSetMetaId_0(self));
 };
 
 Model.prototype['getNumReactions'] = function() {

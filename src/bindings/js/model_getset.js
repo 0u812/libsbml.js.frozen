@@ -1,18 +1,8 @@
-Object.defineProperty(Model.prototype, "species", {
-  get: function species() {
+Object.defineProperty(Model.prototype, "compartments", {
+  get: function parameters() {
     var result = [];
-    for(var i=0; i<this.getNumSpecies(); i++) {
-      result.push(this.getSpecies(i));
-    }
-    return result;
-  }
-});
-
-Object.defineProperty(Model.prototype, "reactions", {
-  get: function reactions() {
-    var result = [];
-    for(var i=0; i<this.getNumReactions(); i++) {
-      result.push(this.getReaction(i));
+    for(var i=0; i<this.getNumCompartments(); i++) {
+      result.push(this.getCompartment(i));
     }
     return result;
   }
@@ -28,11 +18,31 @@ Object.defineProperty(Model.prototype, "parameters", {
   }
 });
 
-Object.defineProperty(Model.prototype, "compartments", {
+Object.defineProperty(Model.prototype, "reactions", {
+  get: function reactions() {
+    var result = [];
+    for(var i=0; i<this.getNumReactions(); i++) {
+      result.push(this.getReaction(i));
+    }
+    return result;
+  }
+});
+
+Object.defineProperty(Model.prototype, "rules", {
   get: function parameters() {
     var result = [];
-    for(var i=0; i<this.getNumCompartments(); i++) {
-      result.push(this.getCompartment(i));
+    for(var i=0; i<this.getNumRules(); i++) {
+      result.push(this.getRule(i));
+    }
+    return result;
+  }
+});
+
+Object.defineProperty(Model.prototype, "species", {
+  get: function species() {
+    var result = [];
+    for(var i=0; i<this.getNumSpecies(); i++) {
+      result.push(this.getSpecies(i));
     }
     return result;
   }

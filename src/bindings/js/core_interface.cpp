@@ -14,8 +14,40 @@ void array_bounds_check(const int array_size, const int array_idx) {
 
 // AssignmentRule
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getMetaId_0(libsbml::AssignmentRule* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_setMetaId_1(libsbml::AssignmentRule* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_isSetMetaId_0(libsbml::AssignmentRule* self) {
+  return self->isSetMetaId();
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getVariable_0(libsbml::AssignmentRule* self) {
   return (char*)self->getVariable().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_setVariable_1(libsbml::AssignmentRule* self, char* arg0) {
+  return self->setVariable(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_isSetVariable_0(libsbml::AssignmentRule* self) {
+  return self->isSetVariable();
+}
+
+const libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getMath_0(libsbml::AssignmentRule* self) {
+  return self->getMath();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_setMath_1(libsbml::AssignmentRule* self, libsbml::ASTNode* arg0) {
+  return self->setMath(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_isSetMath_0(libsbml::AssignmentRule* self) {
+  return self->isSetMath();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule___destroy___0(libsbml::AssignmentRule* self) {
@@ -30,6 +62,10 @@ const libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getMath_
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_setMath_1(libsbml::KineticLaw* self, libsbml::ASTNode* arg0) {
   return self->setMath(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_isSetMath_0(libsbml::KineticLaw* self) {
+  return self->isSetMath();
 }
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getMetaId_0(libsbml::KineticLaw* self) {
@@ -236,6 +272,18 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_VoidPtr___destroy___0(void** self) {
 
 // RateRule
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_getMetaId_0(libsbml::RateRule* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_setMetaId_1(libsbml::RateRule* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_isSetMetaId_0(libsbml::RateRule* self) {
+  return self->isSetMetaId();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule___destroy___0(libsbml::RateRule* self) {
   delete self;
 }
@@ -338,6 +386,10 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference___destroy___0(libsbml
 
 // RuleSwitch
 
+libsbmljs::RuleSwitch* EMSCRIPTEN_KEEPALIVE emscripten_bind_RuleSwitch_RuleSwitch_0() {
+  return new libsbmljs::RuleSwitch();
+}
+
 libsbml::AssignmentRule* EMSCRIPTEN_KEEPALIVE emscripten_bind_RuleSwitch_castToAssignmentRule_1(libsbmljs::RuleSwitch* self, libsbml::Rule* arg0) {
   return self->castToAssignmentRule(arg0);
 }
@@ -355,6 +407,18 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RuleSwitch___destroy___0(libsbmljs::Ru
 }
 
 // AlgebraicRule
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getMetaId_0(libsbml::AlgebraicRule* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setMetaId_1(libsbml::AlgebraicRule* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetMetaId_0(libsbml::AlgebraicRule* self) {
+  return self->isSetMetaId();
+}
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::AlgebraicRule* self) {
   delete self;
@@ -524,6 +588,30 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference___destroy___0
 
 // Rule
 
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isRate_0(libsbml::Rule* self) {
+  return self->isRate();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isAssignment_0(libsbml::Rule* self) {
+  return self->isAssignment();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isAlgebraic_0(libsbml::Rule* self) {
+  return self->isAlgebraic();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_getMetaId_0(libsbml::Rule* self) {
+  return (char*)self->getMetaId().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_setMetaId_1(libsbml::Rule* self, char* arg0) {
+  return self->setMetaId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isSetMetaId_0(libsbml::Rule* self) {
+  return self->isSetMetaId();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule___destroy___0(libsbml::Rule* self) {
   delete self;
 }
@@ -592,6 +680,10 @@ char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getMetaId_0(libsbml::Model* sel
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_setMetaId_1(libsbml::Model* self, char* arg0) {
   return self->setMetaId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_isSetMetaId_0(libsbml::Model* self) {
+  return self->isSetMetaId();
 }
 
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getNumReactions_0(libsbml::Model* self) {
