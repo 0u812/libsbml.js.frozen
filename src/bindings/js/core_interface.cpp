@@ -12,6 +12,24 @@ void array_bounds_check(const int array_size, const int array_idx) {
   }
 }
 
+// SBMLFormulaParser
+
+libsbml::SBMLFormulaParser* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0() {
+  return new libsbml::SBMLFormulaParser();
+}
+
+libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseL3Formula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
+  return self->parseL3Formula(arg0);
+}
+
+libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseFormula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
+  return self->parseFormula(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser___destroy___0(libsbml::SBMLFormulaParser* self) {
+  delete self;
+}
+
 // AssignmentRule
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getMetaId_0(libsbml::AssignmentRule* self) {
@@ -474,57 +492,17 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RuleSwitch___destroy___0(libsbmljs::Ru
   delete self;
 }
 
-// AlgebraicRule
+// SBMLWriter
 
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getMetaId_0(libsbml::AlgebraicRule* self) {
-  return (char*)self->getMetaId().c_str();
+libsbml::SBMLWriter* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_SBMLWriter_0() {
+  return new libsbml::SBMLWriter();
 }
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setMetaId_1(libsbml::AlgebraicRule* self, char* arg0) {
-  return self->setMetaId(arg0);
+const char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_writeSBMLToString_1(libsbml::SBMLWriter* self, libsbml::SBMLDocument* arg0) {
+  return self->writeSBMLToString(arg0);
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetMetaId_0(libsbml::AlgebraicRule* self) {
-  return self->isSetMetaId();
-}
-
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getSBOTerm_0(libsbml::AlgebraicRule* self) {
-  return self->getSBOTerm();
-}
-
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setSBOTerm_1(libsbml::AlgebraicRule* self, int arg0) {
-  return self->setSBOTerm(arg0);
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetSBOTerm_0(libsbml::AlgebraicRule* self) {
-  return self->isSetSBOTerm();
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getFormula_0(libsbml::AlgebraicRule* self) {
-  return (char*)self->getFormula().c_str();
-}
-
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setFormula_1(libsbml::AlgebraicRule* self, char* arg0) {
-  return self->setFormula(arg0);
-}
-
-const libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getMath_0(libsbml::AlgebraicRule* self) {
-  return self->getMath();
-}
-
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setMath_1(libsbml::AlgebraicRule* self, libsbml::ASTNode* arg0) {
-  return self->setMath(arg0);
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetMath_0(libsbml::AlgebraicRule* self) {
-  return self->isSetMath();
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isParameter_0(libsbml::AlgebraicRule* self) {
-  return self->isParameter();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::AlgebraicRule* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter___destroy___0(libsbml::SBMLWriter* self) {
   delete self;
 }
 
@@ -744,21 +722,29 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule___destroy___0(libsbml::Rule* self
   delete self;
 }
 
-// SBMLFormulaParser
+// SBasePlugin
 
-libsbml::SBMLFormulaParser* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0() {
-  return new libsbml::SBMLFormulaParser();
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBasePlugin_getPackageName_0(libsbml::SBasePlugin* self) {
+  return (char*)self->getPackageName().c_str();
 }
 
-libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseL3Formula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
-  return self->parseL3Formula(arg0);
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBasePlugin_getPrefix_0(libsbml::SBasePlugin* self) {
+  return (char*)self->getPrefix().c_str();
 }
 
-libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseFormula_1(libsbml::SBMLFormulaParser* self, char* arg0) {
-  return self->parseFormula(arg0);
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBasePlugin_getURI_0(libsbml::SBasePlugin* self) {
+  return (char*)self->getURI().c_str();
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser___destroy___0(libsbml::SBMLFormulaParser* self) {
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBasePlugin_getVersion_0(libsbml::SBasePlugin* self) {
+  return self->getVersion();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBasePlugin_getLevel_0(libsbml::SBasePlugin* self) {
+  return self->getLevel();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBasePlugin___destroy___0(libsbml::SBasePlugin* self) {
   delete self;
 }
 
@@ -786,6 +772,50 @@ libsbml::Model* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_createModel_0(
 
 libsbml::SBMLErrorLog* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getErrorLog_0(libsbml::SBMLDocument* self) {
   return self->getErrorLog();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getNumPlugins_0(libsbml::SBMLDocument* self) {
+  return self->getNumPlugins();
+}
+
+libsbml::SBasePlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getPlugin_1(libsbml::SBMLDocument* self, unsigned int arg0) {
+  return self->getPlugin(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkConsistency_0(libsbml::SBMLDocument* self) {
+  return self->checkConsistency();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkInternalConsistency_0(libsbml::SBMLDocument* self) {
+  return self->checkInternalConsistency();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_validateSBML_0(libsbml::SBMLDocument* self) {
+  return self->validateSBML();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkL1Compatibility_0(libsbml::SBMLDocument* self) {
+  return self->checkL1Compatibility();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkL2v1Compatibility_0(libsbml::SBMLDocument* self) {
+  return self->checkL2v1Compatibility();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkL2v2Compatibility_0(libsbml::SBMLDocument* self) {
+  return self->checkL2v2Compatibility();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkL2v3Compatibility_0(libsbml::SBMLDocument* self) {
+  return self->checkL2v3Compatibility();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkL2v4Compatibility_0(libsbml::SBMLDocument* self) {
+  return self->checkL2v4Compatibility();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkL3v1Compatibility_0(libsbml::SBMLDocument* self) {
+  return self->checkL3v1Compatibility();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument___destroy___0(libsbml::SBMLDocument* self) {
@@ -886,17 +916,57 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Model___destroy___0(libsbml::Model* se
   delete self;
 }
 
-// SBMLWriter
+// AlgebraicRule
 
-libsbml::SBMLWriter* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_SBMLWriter_0() {
-  return new libsbml::SBMLWriter();
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getMetaId_0(libsbml::AlgebraicRule* self) {
+  return (char*)self->getMetaId().c_str();
 }
 
-const char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter_writeSBMLToString_1(libsbml::SBMLWriter* self, libsbml::SBMLDocument* arg0) {
-  return self->writeSBMLToString(arg0);
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setMetaId_1(libsbml::AlgebraicRule* self, char* arg0) {
+  return self->setMetaId(arg0);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLWriter___destroy___0(libsbml::SBMLWriter* self) {
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetMetaId_0(libsbml::AlgebraicRule* self) {
+  return self->isSetMetaId();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getSBOTerm_0(libsbml::AlgebraicRule* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setSBOTerm_1(libsbml::AlgebraicRule* self, int arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetSBOTerm_0(libsbml::AlgebraicRule* self) {
+  return self->isSetSBOTerm();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getFormula_0(libsbml::AlgebraicRule* self) {
+  return (char*)self->getFormula().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setFormula_1(libsbml::AlgebraicRule* self, char* arg0) {
+  return self->setFormula(arg0);
+}
+
+const libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getMath_0(libsbml::AlgebraicRule* self) {
+  return self->getMath();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setMath_1(libsbml::AlgebraicRule* self, libsbml::ASTNode* arg0) {
+  return self->setMath(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetMath_0(libsbml::AlgebraicRule* self) {
+  return self->isSetMath();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isParameter_0(libsbml::AlgebraicRule* self) {
+  return self->isParameter();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::AlgebraicRule* self) {
   delete self;
 }
 

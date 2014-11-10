@@ -7,3 +7,13 @@ Object.defineProperty(SBMLDocument.prototype, "errors", {
     return result;
   }
 });
+
+Object.defineProperty(SBMLDocument.prototype, "plugins", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumPlugins(); i++) {
+      result.push(this.getPlugin(i));
+    }
+    return result;
+  }
+});

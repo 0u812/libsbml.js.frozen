@@ -70,6 +70,35 @@ function ensureString(value) {
 }
 
 
+// SBMLFormulaParser
+function SBMLFormulaParser() {
+  this.ptr = _emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0();
+  getCache(SBMLFormulaParser)[this.ptr] = this;
+};
+SBMLFormulaParser.prototype = Object.create(WrapperObject.prototype);
+SBMLFormulaParser.prototype.constructor = SBMLFormulaParser;
+SBMLFormulaParser.prototype.__class__ = SBMLFormulaParser;
+SBMLFormulaParser.__cache__ = {};
+Module['SBMLFormulaParser'] = SBMLFormulaParser;
+
+SBMLFormulaParser.prototype['parseL3Formula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseL3Formula_1(self, arg0), ASTNode);
+};
+
+SBMLFormulaParser.prototype['parseFormula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseFormula_1(self, arg0), ASTNode);
+};
+
+  SBMLFormulaParser.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBMLFormulaParser___destroy___0(self);
+}
 // AssignmentRule
 function AssignmentRule() { throw "cannot construct a AssignmentRule, no constructor in IDL" }
 AssignmentRule.prototype = Object.create(WrapperObject.prototype);
@@ -771,85 +800,27 @@ RuleSwitch.prototype['castToAlgebraicRule'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_RuleSwitch___destroy___0(self);
 }
-// AlgebraicRule
-function AlgebraicRule() { throw "cannot construct a AlgebraicRule, no constructor in IDL" }
-AlgebraicRule.prototype = Object.create(WrapperObject.prototype);
-AlgebraicRule.prototype.constructor = AlgebraicRule;
-AlgebraicRule.prototype.__class__ = AlgebraicRule;
-AlgebraicRule.__cache__ = {};
-Module['AlgebraicRule'] = AlgebraicRule;
-
-AlgebraicRule.prototype['getMetaId'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_AlgebraicRule_getMetaId_0(self));
+// SBMLWriter
+function SBMLWriter() {
+  this.ptr = _emscripten_bind_SBMLWriter_SBMLWriter_0();
+  getCache(SBMLWriter)[this.ptr] = this;
 };
+SBMLWriter.prototype = Object.create(WrapperObject.prototype);
+SBMLWriter.prototype.constructor = SBMLWriter;
+SBMLWriter.prototype.__class__ = SBMLWriter;
+SBMLWriter.__cache__ = {};
+Module['SBMLWriter'] = SBMLWriter;
 
-AlgebraicRule.prototype['setMetaId'] = function(arg0) {
+SBMLWriter.prototype['writeSBMLToString'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return _emscripten_bind_AlgebraicRule_setMetaId_1(self, arg0);
+  return Pointer_stringify(_emscripten_bind_SBMLWriter_writeSBMLToString_1(self, arg0));
 };
 
-AlgebraicRule.prototype['isSetMetaId'] = function() {
+  SBMLWriter.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetMetaId_0(self));
-};
-
-AlgebraicRule.prototype['getSBOTerm'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_AlgebraicRule_getSBOTerm_0(self);
-};
-
-AlgebraicRule.prototype['setSBOTerm'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_AlgebraicRule_setSBOTerm_1(self, arg0);
-};
-
-AlgebraicRule.prototype['isSetSBOTerm'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetSBOTerm_0(self));
-};
-
-AlgebraicRule.prototype['getFormula'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_AlgebraicRule_getFormula_0(self));
-};
-
-AlgebraicRule.prototype['setFormula'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_AlgebraicRule_setFormula_1(self, arg0);
-};
-
-AlgebraicRule.prototype['getMath'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_AlgebraicRule_getMath_0(self), ASTNode);
-};
-
-AlgebraicRule.prototype['setMath'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_AlgebraicRule_setMath_1(self, arg0);
-};
-
-AlgebraicRule.prototype['isSetMath'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetMath_0(self));
-};
-
-AlgebraicRule.prototype['isParameter'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isParameter_0(self));
-};
-
-  AlgebraicRule.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_AlgebraicRule___destroy___0(self);
+  _emscripten_bind_SBMLWriter___destroy___0(self);
 }
 // Reaction
 function Reaction() { throw "cannot construct a Reaction, no constructor in IDL" }
@@ -1173,34 +1144,42 @@ Rule.prototype['isParameter'] = function() {
   var self = this.ptr;
   _emscripten_bind_Rule___destroy___0(self);
 }
-// SBMLFormulaParser
-function SBMLFormulaParser() {
-  this.ptr = _emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0();
-  getCache(SBMLFormulaParser)[this.ptr] = this;
-};
-SBMLFormulaParser.prototype = Object.create(WrapperObject.prototype);
-SBMLFormulaParser.prototype.constructor = SBMLFormulaParser;
-SBMLFormulaParser.prototype.__class__ = SBMLFormulaParser;
-SBMLFormulaParser.__cache__ = {};
-Module['SBMLFormulaParser'] = SBMLFormulaParser;
+// SBasePlugin
+function SBasePlugin() { throw "cannot construct a SBasePlugin, no constructor in IDL" }
+SBasePlugin.prototype = Object.create(WrapperObject.prototype);
+SBasePlugin.prototype.constructor = SBasePlugin;
+SBasePlugin.prototype.__class__ = SBasePlugin;
+SBasePlugin.__cache__ = {};
+Module['SBasePlugin'] = SBasePlugin;
 
-SBMLFormulaParser.prototype['parseL3Formula'] = function(arg0) {
+SBasePlugin.prototype['getPackageName'] = function() {
   var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseL3Formula_1(self, arg0), ASTNode);
+  return Pointer_stringify(_emscripten_bind_SBasePlugin_getPackageName_0(self));
 };
 
-SBMLFormulaParser.prototype['parseFormula'] = function(arg0) {
+SBasePlugin.prototype['getPrefix'] = function() {
   var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_SBMLFormulaParser_parseFormula_1(self, arg0), ASTNode);
+  return Pointer_stringify(_emscripten_bind_SBasePlugin_getPrefix_0(self));
 };
 
-  SBMLFormulaParser.prototype['__destroy__'] = function() {
+SBasePlugin.prototype['getURI'] = function() {
   var self = this.ptr;
-  _emscripten_bind_SBMLFormulaParser___destroy___0(self);
+  return Pointer_stringify(_emscripten_bind_SBasePlugin_getURI_0(self));
+};
+
+SBasePlugin.prototype['getVersion'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBasePlugin_getVersion_0(self);
+};
+
+SBasePlugin.prototype['getLevel'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBasePlugin_getLevel_0(self);
+};
+
+  SBasePlugin.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SBasePlugin___destroy___0(self);
 }
 // SBMLDocument
 function SBMLDocument(arg0, arg1) {
@@ -1242,6 +1221,63 @@ SBMLDocument.prototype['createModel'] = function() {
 SBMLDocument.prototype['getErrorLog'] = function() {
   var self = this.ptr;
   return wrapPointer(_emscripten_bind_SBMLDocument_getErrorLog_0(self), SBMLErrorLog);
+};
+
+SBMLDocument.prototype['getNumPlugins'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_getNumPlugins_0(self);
+};
+
+SBMLDocument.prototype['getPlugin'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_SBMLDocument_getPlugin_1(self, arg0), SBasePlugin);
+};
+
+SBMLDocument.prototype['checkConsistency'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkConsistency_0(self);
+};
+
+SBMLDocument.prototype['checkInternalConsistency'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkInternalConsistency_0(self);
+};
+
+SBMLDocument.prototype['validateSBML'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_validateSBML_0(self);
+};
+
+SBMLDocument.prototype['checkL1Compatibility'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkL1Compatibility_0(self);
+};
+
+SBMLDocument.prototype['checkL2v1Compatibility'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkL2v1Compatibility_0(self);
+};
+
+SBMLDocument.prototype['checkL2v2Compatibility'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkL2v2Compatibility_0(self);
+};
+
+SBMLDocument.prototype['checkL2v3Compatibility'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkL2v3Compatibility_0(self);
+};
+
+SBMLDocument.prototype['checkL2v4Compatibility'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkL2v4Compatibility_0(self);
+};
+
+SBMLDocument.prototype['checkL3v1Compatibility'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_checkL3v1Compatibility_0(self);
 };
 
   SBMLDocument.prototype['__destroy__'] = function() {
@@ -1388,27 +1424,85 @@ Model.prototype['setAnnotation'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_Model___destroy___0(self);
 }
-// SBMLWriter
-function SBMLWriter() {
-  this.ptr = _emscripten_bind_SBMLWriter_SBMLWriter_0();
-  getCache(SBMLWriter)[this.ptr] = this;
-};
-SBMLWriter.prototype = Object.create(WrapperObject.prototype);
-SBMLWriter.prototype.constructor = SBMLWriter;
-SBMLWriter.prototype.__class__ = SBMLWriter;
-SBMLWriter.__cache__ = {};
-Module['SBMLWriter'] = SBMLWriter;
+// AlgebraicRule
+function AlgebraicRule() { throw "cannot construct a AlgebraicRule, no constructor in IDL" }
+AlgebraicRule.prototype = Object.create(WrapperObject.prototype);
+AlgebraicRule.prototype.constructor = AlgebraicRule;
+AlgebraicRule.prototype.__class__ = AlgebraicRule;
+AlgebraicRule.__cache__ = {};
+Module['AlgebraicRule'] = AlgebraicRule;
 
-SBMLWriter.prototype['writeSBMLToString'] = function(arg0) {
+AlgebraicRule.prototype['getMetaId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_AlgebraicRule_getMetaId_0(self));
+};
+
+AlgebraicRule.prototype['setMetaId'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return Pointer_stringify(_emscripten_bind_SBMLWriter_writeSBMLToString_1(self, arg0));
+  return _emscripten_bind_AlgebraicRule_setMetaId_1(self, arg0);
 };
 
-  SBMLWriter.prototype['__destroy__'] = function() {
+AlgebraicRule.prototype['isSetMetaId'] = function() {
   var self = this.ptr;
-  _emscripten_bind_SBMLWriter___destroy___0(self);
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetMetaId_0(self));
+};
+
+AlgebraicRule.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_AlgebraicRule_getSBOTerm_0(self);
+};
+
+AlgebraicRule.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AlgebraicRule_setSBOTerm_1(self, arg0);
+};
+
+AlgebraicRule.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetSBOTerm_0(self));
+};
+
+AlgebraicRule.prototype['getFormula'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_AlgebraicRule_getFormula_0(self));
+};
+
+AlgebraicRule.prototype['setFormula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AlgebraicRule_setFormula_1(self, arg0);
+};
+
+AlgebraicRule.prototype['getMath'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_AlgebraicRule_getMath_0(self), ASTNode);
+};
+
+AlgebraicRule.prototype['setMath'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AlgebraicRule_setMath_1(self, arg0);
+};
+
+AlgebraicRule.prototype['isSetMath'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetMath_0(self));
+};
+
+AlgebraicRule.prototype['isParameter'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isParameter_0(self));
+};
+
+  AlgebraicRule.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_AlgebraicRule___destroy___0(self);
 }
 // SBMLReader
 function SBMLReader() {

@@ -2,6 +2,7 @@
 #include "sbml/SBMLWriter.h"
 #include "sbml/SBMLDocument.h"
 #include "sbml/Model.h"
+#include "sbml/extension/SBasePlugin.h"
 
 LIBSBML_CPP_NAMESPACE_BEGIN
 
