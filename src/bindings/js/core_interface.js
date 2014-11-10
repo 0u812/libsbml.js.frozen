@@ -95,6 +95,23 @@ AssignmentRule.prototype['isSetMetaId'] = function() {
   return idl_wrapBool(_emscripten_bind_AssignmentRule_isSetMetaId_0(self));
 };
 
+AssignmentRule.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_AssignmentRule_getSBOTerm_0(self);
+};
+
+AssignmentRule.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AssignmentRule_setSBOTerm_1(self, arg0);
+};
+
+AssignmentRule.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AssignmentRule_isSetSBOTerm_0(self));
+};
+
 AssignmentRule.prototype['getVariable'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_AssignmentRule_getVariable_0(self));
@@ -127,6 +144,23 @@ AssignmentRule.prototype['setMath'] = function(arg0) {
 AssignmentRule.prototype['isSetMath'] = function() {
   var self = this.ptr;
   return idl_wrapBool(_emscripten_bind_AssignmentRule_isSetMath_0(self));
+};
+
+AssignmentRule.prototype['getFormula'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_AssignmentRule_getFormula_0(self));
+};
+
+AssignmentRule.prototype['setFormula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AssignmentRule_setFormula_1(self, arg0);
+};
+
+AssignmentRule.prototype['isParameter'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AssignmentRule_isParameter_0(self));
 };
 
   AssignmentRule.prototype['__destroy__'] = function() {
@@ -202,6 +236,18 @@ KineticLaw.prototype['getParameter'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_KineticLaw_getParameter_1(self, arg0), Parameter);
+};
+
+KineticLaw.prototype['getFormula'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_KineticLaw_getFormula_0(self));
+};
+
+KineticLaw.prototype['setFormula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_KineticLaw_setFormula_1(self, arg0);
 };
 
   KineticLaw.prototype['__destroy__'] = function() {
@@ -489,6 +535,57 @@ RateRule.prototype['isSetMetaId'] = function() {
   return idl_wrapBool(_emscripten_bind_RateRule_isSetMetaId_0(self));
 };
 
+RateRule.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RateRule_getSBOTerm_0(self);
+};
+
+RateRule.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_RateRule_setSBOTerm_1(self, arg0);
+};
+
+RateRule.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RateRule_isSetSBOTerm_0(self));
+};
+
+RateRule.prototype['getFormula'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RateRule_getFormula_0(self));
+};
+
+RateRule.prototype['setFormula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_RateRule_setFormula_1(self, arg0);
+};
+
+RateRule.prototype['getMath'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RateRule_getMath_0(self), ASTNode);
+};
+
+RateRule.prototype['setMath'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_RateRule_setMath_1(self, arg0);
+};
+
+RateRule.prototype['isSetMath'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RateRule_isSetMath_0(self));
+};
+
+RateRule.prototype['isParameter'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RateRule_isParameter_0(self));
+};
+
   RateRule.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_RateRule___destroy___0(self);
@@ -697,6 +794,57 @@ AlgebraicRule.prototype['setMetaId'] = function(arg0) {
 AlgebraicRule.prototype['isSetMetaId'] = function() {
   var self = this.ptr;
   return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetMetaId_0(self));
+};
+
+AlgebraicRule.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_AlgebraicRule_getSBOTerm_0(self);
+};
+
+AlgebraicRule.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AlgebraicRule_setSBOTerm_1(self, arg0);
+};
+
+AlgebraicRule.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetSBOTerm_0(self));
+};
+
+AlgebraicRule.prototype['getFormula'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_AlgebraicRule_getFormula_0(self));
+};
+
+AlgebraicRule.prototype['setFormula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AlgebraicRule_setFormula_1(self, arg0);
+};
+
+AlgebraicRule.prototype['getMath'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_AlgebraicRule_getMath_0(self), ASTNode);
+};
+
+AlgebraicRule.prototype['setMath'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_AlgebraicRule_setMath_1(self, arg0);
+};
+
+AlgebraicRule.prototype['isSetMath'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isSetMath_0(self));
+};
+
+AlgebraicRule.prototype['isParameter'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_AlgebraicRule_isParameter_0(self));
 };
 
   AlgebraicRule.prototype['__destroy__'] = function() {
@@ -985,6 +1133,40 @@ Rule.prototype['setMetaId'] = function(arg0) {
 Rule.prototype['isSetMetaId'] = function() {
   var self = this.ptr;
   return idl_wrapBool(_emscripten_bind_Rule_isSetMetaId_0(self));
+};
+
+Rule.prototype['getSBOTerm'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Rule_getSBOTerm_0(self);
+};
+
+Rule.prototype['setSBOTerm'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Rule_setSBOTerm_1(self, arg0);
+};
+
+Rule.prototype['isSetSBOTerm'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Rule_isSetSBOTerm_0(self));
+};
+
+Rule.prototype['getFormula'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Rule_getFormula_0(self));
+};
+
+Rule.prototype['setFormula'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_Rule_setFormula_1(self, arg0);
+};
+
+Rule.prototype['isParameter'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Rule_isParameter_0(self));
 };
 
   Rule.prototype['__destroy__'] = function() {

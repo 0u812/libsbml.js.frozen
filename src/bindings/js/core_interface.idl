@@ -238,6 +238,10 @@ interface KineticLaw {
   unsigned long getNumParameters();
   Parameter createParameter();
   Parameter getParameter(unsigned long i);
+
+  // TODO: doc
+  DOMString getFormula();
+  long setFormula(DOMString formula);
 };
 
 [Prefix="libsbml::"]
@@ -327,6 +331,18 @@ interface Rule {
   DOMString getMetaId();
   long setMetaId(DOMString id);
   boolean isSetMetaId();
+
+  // TODO: doc
+  long getSBOTerm();
+  long setSBOTerm(long value);
+  boolean isSetSBOTerm();
+
+  // TODO: doc
+  DOMString getFormula();
+  long setFormula(DOMString formula);
+
+  // TODO: doc
+  boolean isParameter();
 };
 
 [Prefix="libsbml::"]
@@ -337,6 +353,11 @@ interface AssignmentRule {
   boolean isSetMetaId();
 
   // TODO: doc
+  long getSBOTerm();
+  long setSBOTerm(long value);
+  boolean isSetSBOTerm();
+
+  // TODO: doc
   DOMString getVariable();
   long setVariable(DOMString id);
   boolean isSetVariable();
@@ -345,6 +366,13 @@ interface AssignmentRule {
   [Const] ASTNode getMath();
   long setMath(ASTNode math);
   boolean isSetMath();
+
+  // TODO: doc
+  DOMString getFormula();
+  long setFormula(DOMString formula);
+
+  // TODO: doc
+  boolean isParameter();
 };
 
 [Prefix="libsbml::"]
@@ -353,6 +381,23 @@ interface RateRule {
   DOMString getMetaId();
   long setMetaId(DOMString id);
   boolean isSetMetaId();
+
+  // TODO: doc
+  long getSBOTerm();
+  long setSBOTerm(long value);
+  boolean isSetSBOTerm();
+
+  // TODO: doc
+  DOMString getFormula();
+  long setFormula(DOMString formula);
+
+  // TODO: doc
+  [Const] ASTNode getMath();
+  long setMath(ASTNode math);
+  boolean isSetMath();
+
+  // TODO: doc
+  boolean isParameter();
 };
 
 [Prefix="libsbml::"]
@@ -361,6 +406,23 @@ interface AlgebraicRule {
   DOMString getMetaId();
   long setMetaId(DOMString id);
   boolean isSetMetaId();
+
+  // TODO: doc
+  long getSBOTerm();
+  long setSBOTerm(long value);
+  boolean isSetSBOTerm();
+
+  // TODO: doc
+  DOMString getFormula();
+  long setFormula(DOMString formula);
+
+  // TODO: doc
+  [Const] ASTNode getMath();
+  long setMath(ASTNode math);
+  boolean isSetMath();
+
+  // TODO: doc
+  boolean isParameter();
 };
 
 [Prefix="libsbmljs::"]

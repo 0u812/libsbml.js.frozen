@@ -26,6 +26,18 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_isSetMetaId_0(libsbml::
   return self->isSetMetaId();
 }
 
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getSBOTerm_0(libsbml::AssignmentRule* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_setSBOTerm_1(libsbml::AssignmentRule* self, int arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_isSetSBOTerm_0(libsbml::AssignmentRule* self) {
+  return self->isSetSBOTerm();
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getVariable_0(libsbml::AssignmentRule* self) {
   return (char*)self->getVariable().c_str();
 }
@@ -48,6 +60,18 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_setMath_1(libsbml::Assig
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_isSetMath_0(libsbml::AssignmentRule* self) {
   return self->isSetMath();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getFormula_0(libsbml::AssignmentRule* self) {
+  return (char*)self->getFormula().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_setFormula_1(libsbml::AssignmentRule* self, char* arg0) {
+  return self->setFormula(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_isParameter_0(libsbml::AssignmentRule* self) {
+  return self->isParameter();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule___destroy___0(libsbml::AssignmentRule* self) {
@@ -98,6 +122,14 @@ libsbml::Parameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_createParame
 
 libsbml::Parameter* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getParameter_1(libsbml::KineticLaw* self, unsigned int arg0) {
   return self->getParameter(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_getFormula_0(libsbml::KineticLaw* self) {
+  return (char*)self->getFormula().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw_setFormula_1(libsbml::KineticLaw* self, char* arg0) {
+  return self->setFormula(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw___destroy___0(libsbml::KineticLaw* self) {
@@ -284,6 +316,42 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_isSetMetaId_0(libsbml::RateRu
   return self->isSetMetaId();
 }
 
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_getSBOTerm_0(libsbml::RateRule* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_setSBOTerm_1(libsbml::RateRule* self, int arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_isSetSBOTerm_0(libsbml::RateRule* self) {
+  return self->isSetSBOTerm();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_getFormula_0(libsbml::RateRule* self) {
+  return (char*)self->getFormula().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_setFormula_1(libsbml::RateRule* self, char* arg0) {
+  return self->setFormula(arg0);
+}
+
+const libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_getMath_0(libsbml::RateRule* self) {
+  return self->getMath();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_setMath_1(libsbml::RateRule* self, libsbml::ASTNode* arg0) {
+  return self->setMath(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_isSetMath_0(libsbml::RateRule* self) {
+  return self->isSetMath();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule_isParameter_0(libsbml::RateRule* self) {
+  return self->isParameter();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule___destroy___0(libsbml::RateRule* self) {
   delete self;
 }
@@ -418,6 +486,42 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setMetaId_1(libsbml::Alge
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetMetaId_0(libsbml::AlgebraicRule* self) {
   return self->isSetMetaId();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getSBOTerm_0(libsbml::AlgebraicRule* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setSBOTerm_1(libsbml::AlgebraicRule* self, int arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetSBOTerm_0(libsbml::AlgebraicRule* self) {
+  return self->isSetSBOTerm();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getFormula_0(libsbml::AlgebraicRule* self) {
+  return (char*)self->getFormula().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setFormula_1(libsbml::AlgebraicRule* self, char* arg0) {
+  return self->setFormula(arg0);
+}
+
+const libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getMath_0(libsbml::AlgebraicRule* self) {
+  return self->getMath();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_setMath_1(libsbml::AlgebraicRule* self, libsbml::ASTNode* arg0) {
+  return self->setMath(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isSetMath_0(libsbml::AlgebraicRule* self) {
+  return self->isSetMath();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isParameter_0(libsbml::AlgebraicRule* self) {
+  return self->isParameter();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::AlgebraicRule* self) {
@@ -610,6 +714,30 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_setMetaId_1(libsbml::Rule* self, c
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isSetMetaId_0(libsbml::Rule* self) {
   return self->isSetMetaId();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_getSBOTerm_0(libsbml::Rule* self) {
+  return self->getSBOTerm();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_setSBOTerm_1(libsbml::Rule* self, int arg0) {
+  return self->setSBOTerm(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isSetSBOTerm_0(libsbml::Rule* self) {
+  return self->isSetSBOTerm();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_getFormula_0(libsbml::Rule* self) {
+  return (char*)self->getFormula().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_setFormula_1(libsbml::Rule* self, char* arg0) {
+  return self->setFormula(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isParameter_0(libsbml::Rule* self) {
+  return self->isParameter();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule___destroy___0(libsbml::Rule* self) {
