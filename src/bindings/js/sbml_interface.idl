@@ -552,9 +552,76 @@ interface SBMLWriter {
 interface Capabilities {
   void Capabilities();
   boolean isLayoutSupported();
+};[Prefix="libsbml::"]
+interface GraphicalObject {
 };
+
+[Prefix="libsbml::"]
+interface CompartmentGlyph {
+};
+
+[Prefix="libsbml::"]
+interface CubicBezier {
+};
+
+[Prefix="libsbml::"]
+interface GeneralGlyph {
+};
+
+[Prefix="libsbml::"]
+interface LineSegment {
+};
+
+[Prefix="libsbml::"]
+interface ReactionGlyph {
+};
+
+[Prefix="libsbml::"]
+interface SpeciesGlyph {
+};
+
+[Prefix="libsbml::"]
+interface SpeciesReferenceGlyph {
+};
+
+[Prefix="libsbml::"]
+interface TextGlyph {
+};
+
+[Prefix="libsbml::"]
+interface Layout {
+  GraphicalObject createAdditionalGraphicalObject();
+  CompartmentGlyph createCompartmentGlyph();
+  CubicBezier createCubicBezier();
+  GeneralGlyph createGeneralGlyph();
+  LineSegment createLineSegment();
+  ReactionGlyph createReactionGlyph();
+  SpeciesGlyph createSpeciesGlyph();
+  SpeciesReferenceGlyph createSpeciesReferenceGlyph();
+  TextGlyph createTextGlyph();
+
+  unsigned long getNumAdditionalGraphicalObjects();
+  unsigned long getNumCompartmentGlyphs();
+  unsigned long getNumGeneralGlyphs();
+  unsigned long getNumReactionGlyphs();
+  unsigned long getNumSpeciesGlyphs();
+  unsigned long getNumTextGlyphs();
+
+  GraphicalObject getAdditionalGraphicalObject(unsigned long n);
+  CompartmentGlyph getCompartmentGlyph(unsigned long n);
+  GeneralGlyph getGeneralGlyph(unsigned long n);
+  ReactionGlyph getReactionGlyph(unsigned long n);
+  SpeciesGlyph getSpeciesGlyph(unsigned long n);
+  TextGlyph getTextGlyph(unsigned long n);
+};
+
 [Prefix="libsbml::"]
 interface LayoutModelPlugin {
+  Layout createLayout();
+
+  // NOTE: libSBML signedness is inconsistent here
+  long getNumLayouts();
+  Layout getLayout(unsigned long n);
 };
 
 [Prefix="libsbmljs::"]

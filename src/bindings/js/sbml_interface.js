@@ -70,6 +70,135 @@ function ensureString(value) {
 }
 
 
+// Layout
+function Layout() { throw "cannot construct a Layout, no constructor in IDL" }
+Layout.prototype = Object.create(WrapperObject.prototype);
+Layout.prototype.constructor = Layout;
+Layout.prototype.__class__ = Layout;
+Layout.__cache__ = {};
+Module['Layout'] = Layout;
+
+Layout.prototype['createAdditionalGraphicalObject'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createAdditionalGraphicalObject_0(self), GraphicalObject);
+};
+
+Layout.prototype['createCompartmentGlyph'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createCompartmentGlyph_0(self), CompartmentGlyph);
+};
+
+Layout.prototype['createCubicBezier'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createCubicBezier_0(self), CubicBezier);
+};
+
+Layout.prototype['createGeneralGlyph'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createGeneralGlyph_0(self), GeneralGlyph);
+};
+
+Layout.prototype['createLineSegment'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createLineSegment_0(self), LineSegment);
+};
+
+Layout.prototype['createReactionGlyph'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createReactionGlyph_0(self), ReactionGlyph);
+};
+
+Layout.prototype['createSpeciesGlyph'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createSpeciesGlyph_0(self), SpeciesGlyph);
+};
+
+Layout.prototype['createSpeciesReferenceGlyph'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createSpeciesReferenceGlyph_0(self), SpeciesReferenceGlyph);
+};
+
+Layout.prototype['createTextGlyph'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_createTextGlyph_0(self), TextGlyph);
+};
+
+Layout.prototype['getNumAdditionalGraphicalObjects'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Layout_getNumAdditionalGraphicalObjects_0(self);
+};
+
+Layout.prototype['getNumCompartmentGlyphs'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Layout_getNumCompartmentGlyphs_0(self);
+};
+
+Layout.prototype['getNumGeneralGlyphs'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Layout_getNumGeneralGlyphs_0(self);
+};
+
+Layout.prototype['getNumReactionGlyphs'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Layout_getNumReactionGlyphs_0(self);
+};
+
+Layout.prototype['getNumSpeciesGlyphs'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Layout_getNumSpeciesGlyphs_0(self);
+};
+
+Layout.prototype['getNumTextGlyphs'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Layout_getNumTextGlyphs_0(self);
+};
+
+Layout.prototype['getAdditionalGraphicalObject'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_getAdditionalGraphicalObject_1(self, arg0), GraphicalObject);
+};
+
+Layout.prototype['getCompartmentGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_getCompartmentGlyph_1(self, arg0), CompartmentGlyph);
+};
+
+Layout.prototype['getGeneralGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_getGeneralGlyph_1(self, arg0), GeneralGlyph);
+};
+
+Layout.prototype['getReactionGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_getReactionGlyph_1(self, arg0), ReactionGlyph);
+};
+
+Layout.prototype['getSpeciesGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_getSpeciesGlyph_1(self, arg0), SpeciesGlyph);
+};
+
+Layout.prototype['getTextGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_getTextGlyph_1(self, arg0), TextGlyph);
+};
+
+  Layout.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Layout___destroy___0(self);
+}
 // SBMLFormulaParser
 function SBMLFormulaParser() {
   this.ptr = _emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0();
@@ -98,6 +227,18 @@ SBMLFormulaParser.prototype['parseFormula'] = function(arg0) {
   SBMLFormulaParser.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SBMLFormulaParser___destroy___0(self);
+}
+// CubicBezier
+function CubicBezier() { throw "cannot construct a CubicBezier, no constructor in IDL" }
+CubicBezier.prototype = Object.create(WrapperObject.prototype);
+CubicBezier.prototype.constructor = CubicBezier;
+CubicBezier.prototype.__class__ = CubicBezier;
+CubicBezier.__cache__ = {};
+Module['CubicBezier'] = CubicBezier;
+
+  CubicBezier.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_CubicBezier___destroy___0(self);
 }
 // AssignmentRule
 function AssignmentRule() { throw "cannot construct a AssignmentRule, no constructor in IDL" }
@@ -302,6 +443,18 @@ Capabilities.prototype['isLayoutSupported'] = function() {
   Capabilities.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Capabilities___destroy___0(self);
+}
+// GraphicalObject
+function GraphicalObject() { throw "cannot construct a GraphicalObject, no constructor in IDL" }
+GraphicalObject.prototype = Object.create(WrapperObject.prototype);
+GraphicalObject.prototype.constructor = GraphicalObject;
+GraphicalObject.prototype.__class__ = GraphicalObject;
+GraphicalObject.__cache__ = {};
+Module['GraphicalObject'] = GraphicalObject;
+
+  GraphicalObject.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GraphicalObject___destroy___0(self);
 }
 // LayoutCaster
 function LayoutCaster() {
@@ -805,6 +958,30 @@ SpeciesReference.prototype['getModel'] = function() {
   SpeciesReference.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SpeciesReference___destroy___0(self);
+}
+// ReactionGlyph
+function ReactionGlyph() { throw "cannot construct a ReactionGlyph, no constructor in IDL" }
+ReactionGlyph.prototype = Object.create(WrapperObject.prototype);
+ReactionGlyph.prototype.constructor = ReactionGlyph;
+ReactionGlyph.prototype.__class__ = ReactionGlyph;
+ReactionGlyph.__cache__ = {};
+Module['ReactionGlyph'] = ReactionGlyph;
+
+  ReactionGlyph.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_ReactionGlyph___destroy___0(self);
+}
+// LineSegment
+function LineSegment() { throw "cannot construct a LineSegment, no constructor in IDL" }
+LineSegment.prototype = Object.create(WrapperObject.prototype);
+LineSegment.prototype.constructor = LineSegment;
+LineSegment.prototype.__class__ = LineSegment;
+LineSegment.__cache__ = {};
+Module['LineSegment'] = LineSegment;
+
+  LineSegment.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LineSegment___destroy___0(self);
 }
 // RuleSwitch
 function RuleSwitch() {
@@ -1580,6 +1757,54 @@ SBMLReader.prototype['readSBMLFromString'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_SBMLReader___destroy___0(self);
 }
+// SpeciesReferenceGlyph
+function SpeciesReferenceGlyph() { throw "cannot construct a SpeciesReferenceGlyph, no constructor in IDL" }
+SpeciesReferenceGlyph.prototype = Object.create(WrapperObject.prototype);
+SpeciesReferenceGlyph.prototype.constructor = SpeciesReferenceGlyph;
+SpeciesReferenceGlyph.prototype.__class__ = SpeciesReferenceGlyph;
+SpeciesReferenceGlyph.__cache__ = {};
+Module['SpeciesReferenceGlyph'] = SpeciesReferenceGlyph;
+
+  SpeciesReferenceGlyph.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SpeciesReferenceGlyph___destroy___0(self);
+}
+// GeneralGlyph
+function GeneralGlyph() { throw "cannot construct a GeneralGlyph, no constructor in IDL" }
+GeneralGlyph.prototype = Object.create(WrapperObject.prototype);
+GeneralGlyph.prototype.constructor = GeneralGlyph;
+GeneralGlyph.prototype.__class__ = GeneralGlyph;
+GeneralGlyph.__cache__ = {};
+Module['GeneralGlyph'] = GeneralGlyph;
+
+  GeneralGlyph.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GeneralGlyph___destroy___0(self);
+}
+// SpeciesGlyph
+function SpeciesGlyph() { throw "cannot construct a SpeciesGlyph, no constructor in IDL" }
+SpeciesGlyph.prototype = Object.create(WrapperObject.prototype);
+SpeciesGlyph.prototype.constructor = SpeciesGlyph;
+SpeciesGlyph.prototype.__class__ = SpeciesGlyph;
+SpeciesGlyph.__cache__ = {};
+Module['SpeciesGlyph'] = SpeciesGlyph;
+
+  SpeciesGlyph.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_SpeciesGlyph___destroy___0(self);
+}
+// TextGlyph
+function TextGlyph() { throw "cannot construct a TextGlyph, no constructor in IDL" }
+TextGlyph.prototype = Object.create(WrapperObject.prototype);
+TextGlyph.prototype.constructor = TextGlyph;
+TextGlyph.prototype.__class__ = TextGlyph;
+TextGlyph.__cache__ = {};
+Module['TextGlyph'] = TextGlyph;
+
+  TextGlyph.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_TextGlyph___destroy___0(self);
+}
 // LayoutModelPlugin
 function LayoutModelPlugin() { throw "cannot construct a LayoutModelPlugin, no constructor in IDL" }
 LayoutModelPlugin.prototype = Object.create(WrapperObject.prototype);
@@ -1588,9 +1813,38 @@ LayoutModelPlugin.prototype.__class__ = LayoutModelPlugin;
 LayoutModelPlugin.__cache__ = {};
 Module['LayoutModelPlugin'] = LayoutModelPlugin;
 
+LayoutModelPlugin.prototype['createLayout'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LayoutModelPlugin_createLayout_0(self), Layout);
+};
+
+LayoutModelPlugin.prototype['getNumLayouts'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LayoutModelPlugin_getNumLayouts_0(self);
+};
+
+LayoutModelPlugin.prototype['getLayout'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LayoutModelPlugin_getLayout_1(self, arg0), Layout);
+};
+
   LayoutModelPlugin.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LayoutModelPlugin___destroy___0(self);
+}
+// CompartmentGlyph
+function CompartmentGlyph() { throw "cannot construct a CompartmentGlyph, no constructor in IDL" }
+CompartmentGlyph.prototype = Object.create(WrapperObject.prototype);
+CompartmentGlyph.prototype.constructor = CompartmentGlyph;
+CompartmentGlyph.prototype.__class__ = CompartmentGlyph;
+CompartmentGlyph.__cache__ = {};
+Module['CompartmentGlyph'] = CompartmentGlyph;
+
+  CompartmentGlyph.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_CompartmentGlyph___destroy___0(self);
 }
 // Species
 function Species() { throw "cannot construct a Species, no constructor in IDL" }

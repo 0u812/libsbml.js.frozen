@@ -12,6 +12,96 @@ void array_bounds_check(const int array_size, const int array_idx) {
   }
 }
 
+// Layout
+
+libsbml::GraphicalObject* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createAdditionalGraphicalObject_0(libsbml::Layout* self) {
+  return self->createAdditionalGraphicalObject();
+}
+
+libsbml::CompartmentGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createCompartmentGlyph_0(libsbml::Layout* self) {
+  return self->createCompartmentGlyph();
+}
+
+libsbml::CubicBezier* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createCubicBezier_0(libsbml::Layout* self) {
+  return self->createCubicBezier();
+}
+
+libsbml::GeneralGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createGeneralGlyph_0(libsbml::Layout* self) {
+  return self->createGeneralGlyph();
+}
+
+libsbml::LineSegment* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createLineSegment_0(libsbml::Layout* self) {
+  return self->createLineSegment();
+}
+
+libsbml::ReactionGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createReactionGlyph_0(libsbml::Layout* self) {
+  return self->createReactionGlyph();
+}
+
+libsbml::SpeciesGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createSpeciesGlyph_0(libsbml::Layout* self) {
+  return self->createSpeciesGlyph();
+}
+
+libsbml::SpeciesReferenceGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createSpeciesReferenceGlyph_0(libsbml::Layout* self) {
+  return self->createSpeciesReferenceGlyph();
+}
+
+libsbml::TextGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createTextGlyph_0(libsbml::Layout* self) {
+  return self->createTextGlyph();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getNumAdditionalGraphicalObjects_0(libsbml::Layout* self) {
+  return self->getNumAdditionalGraphicalObjects();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getNumCompartmentGlyphs_0(libsbml::Layout* self) {
+  return self->getNumCompartmentGlyphs();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getNumGeneralGlyphs_0(libsbml::Layout* self) {
+  return self->getNumGeneralGlyphs();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getNumReactionGlyphs_0(libsbml::Layout* self) {
+  return self->getNumReactionGlyphs();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getNumSpeciesGlyphs_0(libsbml::Layout* self) {
+  return self->getNumSpeciesGlyphs();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getNumTextGlyphs_0(libsbml::Layout* self) {
+  return self->getNumTextGlyphs();
+}
+
+libsbml::GraphicalObject* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getAdditionalGraphicalObject_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->getAdditionalGraphicalObject(arg0);
+}
+
+libsbml::CompartmentGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getCompartmentGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->getCompartmentGlyph(arg0);
+}
+
+libsbml::GeneralGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getGeneralGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->getGeneralGlyph(arg0);
+}
+
+libsbml::ReactionGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getReactionGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->getReactionGlyph(arg0);
+}
+
+libsbml::SpeciesGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getSpeciesGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->getSpeciesGlyph(arg0);
+}
+
+libsbml::TextGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getTextGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->getTextGlyph(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout___destroy___0(libsbml::Layout* self) {
+  delete self;
+}
+
 // SBMLFormulaParser
 
 libsbml::SBMLFormulaParser* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_SBMLFormulaParser_0() {
@@ -27,6 +117,12 @@ libsbml::ASTNode* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser_parseFo
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLFormulaParser___destroy___0(libsbml::SBMLFormulaParser* self) {
+  delete self;
+}
+
+// CubicBezier
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier___destroy___0(libsbml::CubicBezier* self) {
   delete self;
 }
 
@@ -165,6 +261,12 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities_isLayoutSupported_0(libsb
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities___destroy___0(libsbmljs::Capabilities* self) {
+  delete self;
+}
+
+// GraphicalObject
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GraphicalObject___destroy___0(libsbml::GraphicalObject* self) {
   delete self;
 }
 
@@ -495,6 +597,18 @@ const libsbml::Model* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference_getM
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference___destroy___0(libsbml::SpeciesReference* self) {
+  delete self;
+}
+
+// ReactionGlyph
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ReactionGlyph___destroy___0(libsbml::ReactionGlyph* self) {
+  delete self;
+}
+
+// LineSegment
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment___destroy___0(libsbml::LineSegment* self) {
   delete self;
 }
 
@@ -1020,9 +1134,51 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLReader___destroy___0(libsbml::SBML
   delete self;
 }
 
+// SpeciesReferenceGlyph
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph___destroy___0(libsbml::SpeciesReferenceGlyph* self) {
+  delete self;
+}
+
+// GeneralGlyph
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GeneralGlyph___destroy___0(libsbml::GeneralGlyph* self) {
+  delete self;
+}
+
+// SpeciesGlyph
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph___destroy___0(libsbml::SpeciesGlyph* self) {
+  delete self;
+}
+
+// TextGlyph
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph___destroy___0(libsbml::TextGlyph* self) {
+  delete self;
+}
+
 // LayoutModelPlugin
 
+libsbml::Layout* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin_createLayout_0(libsbml::LayoutModelPlugin* self) {
+  return self->createLayout();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin_getNumLayouts_0(libsbml::LayoutModelPlugin* self) {
+  return self->getNumLayouts();
+}
+
+libsbml::Layout* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin_getLayout_1(libsbml::LayoutModelPlugin* self, unsigned int arg0) {
+  return self->getLayout(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin___destroy___0(libsbml::LayoutModelPlugin* self) {
+  delete self;
+}
+
+// CompartmentGlyph
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_CompartmentGlyph___destroy___0(libsbml::CompartmentGlyph* self) {
   delete self;
 }
 
