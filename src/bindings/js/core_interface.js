@@ -283,6 +283,26 @@ KineticLaw.prototype['setFormula'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_KineticLaw___destroy___0(self);
 }
+// Capabilities
+function Capabilities() {
+  this.ptr = _emscripten_bind_Capabilities_Capabilities_0();
+  getCache(Capabilities)[this.ptr] = this;
+};
+Capabilities.prototype = Object.create(WrapperObject.prototype);
+Capabilities.prototype.constructor = Capabilities;
+Capabilities.prototype.__class__ = Capabilities;
+Capabilities.__cache__ = {};
+Module['Capabilities'] = Capabilities;
+
+Capabilities.prototype['isLayoutSupported'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Capabilities_isLayoutSupported_0(self));
+};
+
+  Capabilities.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Capabilities___destroy___0(self);
+}
 // Compartment
 function Compartment() { throw "cannot construct a Compartment, no constructor in IDL" }
 Compartment.prototype = Object.create(WrapperObject.prototype);

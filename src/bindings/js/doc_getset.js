@@ -17,3 +17,21 @@ Object.defineProperty(SBMLDocument.prototype, "plugins", {
     return result;
   }
 });
+
+SBMLDocument.prototype["findPlugin"] = function(name) {
+  for(var i=0; i<this.getNumPlugins(); i++) {
+    if(this.getPlugin(i).getPackageName() == name) {
+      return this.getPlugin(i);
+    }
+  }
+  throw new Error('SBMLDocument: No such plugin ' + name);
+}
+
+SBMLDocument.prototype["hasPlugin"] = function(name) {
+  for(var i=0; i<this.getNumPlugins(); i++) {
+    if(this.getPlugin(i).getPackageName() == name) {
+      return true;
+    }
+  }
+  return false;
+}

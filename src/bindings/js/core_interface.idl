@@ -543,3 +543,9 @@ interface SBMLWriter {
   // BUG: memory may not be freed
   ByteString writeSBMLToString(SBMLDocument doc);
 };
+
+[Prefix="libsbmljs::"]
+interface Capabilities {
+  void Capabilities();
+  boolean isLayoutSupported();
+};

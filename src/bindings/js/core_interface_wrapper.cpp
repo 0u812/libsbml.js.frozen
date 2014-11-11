@@ -66,6 +66,19 @@ namespace libsbmljs {
     libsbml::SBMLWriter writer_;
   };
 
+  class Capabilities {
+  public:
+    Capabilities() {}
+
+    bool isLayoutSupported() const {
+# ifdef LIBSBML_HAS_PACKAGE_LAYOUT
+      return true;
+# else
+      return false;
+# endif
+    }
+  };
+
 }
 
 #include "core_interface.cpp"

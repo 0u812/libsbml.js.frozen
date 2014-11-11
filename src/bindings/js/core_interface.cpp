@@ -154,6 +154,20 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_KineticLaw___destroy___0(libsbml::Kine
   delete self;
 }
 
+// Capabilities
+
+libsbmljs::Capabilities* EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities_Capabilities_0() {
+  return new libsbmljs::Capabilities();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities_isLayoutSupported_0(libsbmljs::Capabilities* self) {
+  return self->isLayoutSupported();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities___destroy___0(libsbmljs::Capabilities* self) {
+  delete self;
+}
+
 // Compartment
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Compartment_getId_0(libsbml::Compartment* self) {
