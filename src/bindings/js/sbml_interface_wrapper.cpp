@@ -105,6 +105,22 @@ namespace libsbmljs {
     }
   };
 
+  class CurveCaster {
+  public:
+    CurveCaster() {}
+
+    bool isCubicBezier(libsbml::LineSegment* x) {
+      libsbml::LineSegment* result = dynamic_cast<libsbml::LineSegment*>(x);
+      return result;
+    }
+
+    libsbml::CubicBezier* castToCubicBezier(libsbml::LineSegment* x) {
+      libsbml::CubicBezier* result = dynamic_cast<libsbml::CubicBezier*>(x);
+      assert(result && "Cast to CubicBezier failed");
+      return result;
+    }
+  };
+
 }
 
 #include "sbml_interface.cpp"

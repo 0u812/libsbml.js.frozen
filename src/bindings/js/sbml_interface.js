@@ -755,6 +755,35 @@ Parameter.prototype['setUnits'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_Parameter___destroy___0(self);
 }
+// CurveCaster
+function CurveCaster() {
+  this.ptr = _emscripten_bind_CurveCaster_CurveCaster_0();
+  getCache(CurveCaster)[this.ptr] = this;
+};
+CurveCaster.prototype = Object.create(WrapperObject.prototype);
+CurveCaster.prototype.constructor = CurveCaster;
+CurveCaster.prototype.__class__ = CurveCaster;
+CurveCaster.__cache__ = {};
+Module['CurveCaster'] = CurveCaster;
+
+CurveCaster.prototype['isCubicBezier'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_CurveCaster_isCubicBezier_1(self, arg0));
+};
+
+CurveCaster.prototype['castToCubicBezier'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_CurveCaster_castToCubicBezier_1(self, arg0), CubicBezier);
+};
+
+  CurveCaster.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_CurveCaster___destroy___0(self);
+}
 // ASTNode
 function ASTNode() { throw "cannot construct a ASTNode, no constructor in IDL" }
 ASTNode.prototype = Object.create(WrapperObject.prototype);
@@ -1085,6 +1114,47 @@ ReactionGlyph.prototype['setId'] = function(arg0) {
 ReactionGlyph.prototype['isSetId'] = function() {
   var self = this.ptr;
   return idl_wrapBool(_emscripten_bind_ReactionGlyph_isSetId_0(self));
+};
+
+ReactionGlyph.prototype['getReactionId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ReactionGlyph_getReactionId_0(self));
+};
+
+ReactionGlyph.prototype['setReactionId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ReactionGlyph_setReactionId_1(self, arg0);
+};
+
+ReactionGlyph.prototype['isSetReactionId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_ReactionGlyph_isSetReactionId_0(self));
+};
+
+ReactionGlyph.prototype['getBoundingBox'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_ReactionGlyph_getBoundingBox_0(self), BoundingBox);
+};
+
+ReactionGlyph.prototype['setBoundingBox'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ReactionGlyph_setBoundingBox_1(self, arg0);
+};
+
+ReactionGlyph.prototype['getNumSpeciesReferenceGlyphs'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ReactionGlyph_getNumSpeciesReferenceGlyphs_0(self);
+};
+
+ReactionGlyph.prototype['getSpeciesReferenceGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_ReactionGlyph_getSpeciesReferenceGlyph_1(self, arg0), SpeciesReferenceGlyph);
 };
 
   ReactionGlyph.prototype['__destroy__'] = function() {
@@ -1961,6 +2031,11 @@ SpeciesReferenceGlyph.prototype['createLineSegment'] = function() {
 SpeciesReferenceGlyph.prototype['getCurve'] = function() {
   var self = this.ptr;
   return wrapPointer(_emscripten_bind_SpeciesReferenceGlyph_getCurve_0(self), Curve);
+};
+
+SpeciesReferenceGlyph.prototype['isSetCurve'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_SpeciesReferenceGlyph_isSetCurve_0(self));
 };
 
   SpeciesReferenceGlyph.prototype['__destroy__'] = function() {

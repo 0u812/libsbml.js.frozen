@@ -1,3 +1,41 @@
+CubicBezier.prototype["isCubicBezier"] = function(name) {
+  return true;
+}
+
+LineSegment.prototype["isCubicBezier"] = function(name) {
+  var swtch = new Module.CurveCaster();
+  return swtch.isCubicBezier(this);
+}
+
+LineSegment.prototype["asCubicBezier"] = function(name) {
+  var swtch = new Module.CurveCaster();
+  return swtch.castToCubicBezier(this);
+}
+
+Object.defineProperty(Curve.prototype, "segments", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumCurveSegments(); i++) {
+      if(this.getCurveSegment(i).isCubicBezier()) {
+        result.push(this.getCurveSegment(i).asCubicBezier());
+      } else {
+        result.push(this.getCurveSegment(i));
+      }
+    }
+    return result;
+  }
+});
+
+Object.defineProperty(ReactionGlyph.prototype, "specref", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumSpeciesReferenceGlyphs(); i++) {
+      result.push(this.getSpeciesReferenceGlyph(i));
+    }
+    return result;
+  }
+});
+
 Object.defineProperty(BoundingBox.prototype, "width", {
   get: function errors() {
     return this.getDimensions().getWidth();

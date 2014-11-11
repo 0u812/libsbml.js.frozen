@@ -641,6 +641,16 @@ interface ReactionGlyph {
   DOMString getId();
   void setId(DOMString t);
   boolean isSetId();
+
+  DOMString getReactionId();
+  void setReactionId(DOMString t);
+  boolean isSetReactionId();
+
+  BoundingBox getBoundingBox();
+  void setBoundingBox(BoundingBox b);
+
+  unsigned long getNumSpeciesReferenceGlyphs();
+  SpeciesReferenceGlyph getSpeciesReferenceGlyph(unsigned long n);
 };
 
 [Prefix="libsbml::"]
@@ -675,6 +685,7 @@ interface SpeciesReferenceGlyph {
   LineSegment createLineSegment();
 
   Curve getCurve();
+  boolean isSetCurve();
 };
 
 [Prefix="libsbml::"]
@@ -734,4 +745,11 @@ interface LayoutModelPlugin {
 interface LayoutCaster {
   void LayoutCaster();
   LayoutModelPlugin castToLayoutPlugin(SBasePlugin p);
+};
+
+[Prefix="libsbmljs::"]
+interface CurveCaster {
+  void CurveCaster();
+  boolean isCubicBezier(LineSegment x);
+  CubicBezier castToCubicBezier(LineSegment x);
 };
