@@ -98,6 +98,30 @@ libsbml::TextGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getTextGlyph_1(l
   return self->getTextGlyph(arg0);
 }
 
+libsbml::GraphicalObject* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_removeAdditionalGraphicalObject_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->removeAdditionalGraphicalObject(arg0);
+}
+
+libsbml::CompartmentGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_removeCompartmentGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->removeCompartmentGlyph(arg0);
+}
+
+libsbml::ReactionGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_removeReactionGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->removeReactionGlyph(arg0);
+}
+
+libsbml::SpeciesGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_removeSpeciesGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->removeSpeciesGlyph(arg0);
+}
+
+libsbml::SpeciesReferenceGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_removeSpeciesReferenceGlyph_1(libsbml::Layout* self, char* arg0) {
+  return self->removeSpeciesReferenceGlyph(arg0);
+}
+
+libsbml::TextGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_removeTextGlyph_1(libsbml::Layout* self, unsigned int arg0) {
+  return self->removeTextGlyph(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout___destroy___0(libsbml::Layout* self) {
   delete self;
 }
@@ -810,6 +834,28 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference___destroy___0
   delete self;
 }
 
+// Curve
+
+libsbml::CubicBezier* EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve_createCubicBezier_0(libsbml::Curve* self) {
+  return self->createCubicBezier();
+}
+
+libsbml::LineSegment* EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve_createLineSegment_0(libsbml::Curve* self) {
+  return self->createLineSegment();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve_getNumCurveSegments_0(libsbml::Curve* self) {
+  return self->getNumCurveSegments();
+}
+
+libsbml::LineSegment* EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve_getCurveSegment_1(libsbml::Curve* self, unsigned int arg0) {
+  return self->getCurveSegment(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve___destroy___0(libsbml::Curve* self) {
+  delete self;
+}
+
 // Rule
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule_isRate_0(libsbml::Rule* self) {
@@ -1136,6 +1182,26 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLReader___destroy___0(libsbml::SBML
 
 // SpeciesReferenceGlyph
 
+libsbml::BoundingBox* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_getBoundingBox_0(libsbml::SpeciesReferenceGlyph* self) {
+  return self->getBoundingBox();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_setBoundingBox_1(libsbml::SpeciesReferenceGlyph* self, libsbml::BoundingBox* arg0) {
+  self->setBoundingBox(arg0);
+}
+
+libsbml::CubicBezier* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_createCubicBezier_0(libsbml::SpeciesReferenceGlyph* self) {
+  return self->createCubicBezier();
+}
+
+libsbml::LineSegment* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_createLineSegment_0(libsbml::SpeciesReferenceGlyph* self) {
+  return self->createLineSegment();
+}
+
+libsbml::Curve* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_getCurve_0(libsbml::SpeciesReferenceGlyph* self) {
+  return self->getCurve();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph___destroy___0(libsbml::SpeciesReferenceGlyph* self) {
   delete self;
 }
@@ -1148,13 +1214,71 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_GeneralGlyph___destroy___0(libsbml::Ge
 
 // SpeciesGlyph
 
+libsbml::BoundingBox* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_getBoundingBox_0(libsbml::SpeciesGlyph* self) {
+  return self->getBoundingBox();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_setBoundingBox_1(libsbml::SpeciesGlyph* self, libsbml::BoundingBox* arg0) {
+  self->setBoundingBox(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_getId_0(libsbml::SpeciesGlyph* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_setId_1(libsbml::SpeciesGlyph* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_isSetId_0(libsbml::SpeciesGlyph* self) {
+  return self->isSetId();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_getSpeciesId_0(libsbml::SpeciesGlyph* self) {
+  return (char*)self->getSpeciesId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_setSpeciesId_1(libsbml::SpeciesGlyph* self, char* arg0) {
+  self->setSpeciesId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_isSetSpeciesId_0(libsbml::SpeciesGlyph* self) {
+  return self->isSetSpeciesId();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph___destroy___0(libsbml::SpeciesGlyph* self) {
   delete self;
 }
 
 // TextGlyph
 
+libsbml::BoundingBox* EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph_getBoundingBox_0(libsbml::TextGlyph* self) {
+  return self->getBoundingBox();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph_setBoundingBox_1(libsbml::TextGlyph* self, libsbml::BoundingBox* arg0) {
+  self->setBoundingBox(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph_getText_0(libsbml::TextGlyph* self) {
+  return (char*)self->getText().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph_setText_1(libsbml::TextGlyph* self, char* arg0) {
+  self->setText(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph_isSetText_0(libsbml::TextGlyph* self) {
+  return self->isSetText();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph___destroy___0(libsbml::TextGlyph* self) {
+  delete self;
+}
+
+// BoundingBox
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_BoundingBox___destroy___0(libsbml::BoundingBox* self) {
   delete self;
 }
 

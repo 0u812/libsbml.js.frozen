@@ -195,6 +195,48 @@ Layout.prototype['getTextGlyph'] = function(arg0) {
   return wrapPointer(_emscripten_bind_Layout_getTextGlyph_1(self, arg0), TextGlyph);
 };
 
+Layout.prototype['removeAdditionalGraphicalObject'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_removeAdditionalGraphicalObject_1(self, arg0), GraphicalObject);
+};
+
+Layout.prototype['removeCompartmentGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_removeCompartmentGlyph_1(self, arg0), CompartmentGlyph);
+};
+
+Layout.prototype['removeReactionGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_removeReactionGlyph_1(self, arg0), ReactionGlyph);
+};
+
+Layout.prototype['removeSpeciesGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_removeSpeciesGlyph_1(self, arg0), SpeciesGlyph);
+};
+
+Layout.prototype['removeSpeciesReferenceGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_removeSpeciesReferenceGlyph_1(self, arg0), SpeciesReferenceGlyph);
+};
+
+Layout.prototype['removeTextGlyph'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_removeTextGlyph_1(self, arg0), TextGlyph);
+};
+
   Layout.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Layout___destroy___0(self);
@@ -1285,6 +1327,40 @@ ModifierSpeciesReference.prototype['getModel'] = function() {
   var self = this.ptr;
   _emscripten_bind_ModifierSpeciesReference___destroy___0(self);
 }
+// Curve
+function Curve() { throw "cannot construct a Curve, no constructor in IDL" }
+Curve.prototype = Object.create(WrapperObject.prototype);
+Curve.prototype.constructor = Curve;
+Curve.prototype.__class__ = Curve;
+Curve.__cache__ = {};
+Module['Curve'] = Curve;
+
+Curve.prototype['createCubicBezier'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Curve_createCubicBezier_0(self), CubicBezier);
+};
+
+Curve.prototype['createLineSegment'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Curve_createLineSegment_0(self), LineSegment);
+};
+
+Curve.prototype['getNumCurveSegments'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Curve_getNumCurveSegments_0(self);
+};
+
+Curve.prototype['getCurveSegment'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Curve_getCurveSegment_1(self, arg0), LineSegment);
+};
+
+  Curve.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Curve___destroy___0(self);
+}
 // Rule
 function Rule() { throw "cannot construct a Rule, no constructor in IDL" }
 Rule.prototype = Object.create(WrapperObject.prototype);
@@ -1765,6 +1841,33 @@ SpeciesReferenceGlyph.prototype.__class__ = SpeciesReferenceGlyph;
 SpeciesReferenceGlyph.__cache__ = {};
 Module['SpeciesReferenceGlyph'] = SpeciesReferenceGlyph;
 
+SpeciesReferenceGlyph.prototype['getBoundingBox'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SpeciesReferenceGlyph_getBoundingBox_0(self), BoundingBox);
+};
+
+SpeciesReferenceGlyph.prototype['setBoundingBox'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_SpeciesReferenceGlyph_setBoundingBox_1(self, arg0);
+};
+
+SpeciesReferenceGlyph.prototype['createCubicBezier'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SpeciesReferenceGlyph_createCubicBezier_0(self), CubicBezier);
+};
+
+SpeciesReferenceGlyph.prototype['createLineSegment'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SpeciesReferenceGlyph_createLineSegment_0(self), LineSegment);
+};
+
+SpeciesReferenceGlyph.prototype['getCurve'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SpeciesReferenceGlyph_getCurve_0(self), Curve);
+};
+
   SpeciesReferenceGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SpeciesReferenceGlyph___destroy___0(self);
@@ -1789,6 +1892,52 @@ SpeciesGlyph.prototype.__class__ = SpeciesGlyph;
 SpeciesGlyph.__cache__ = {};
 Module['SpeciesGlyph'] = SpeciesGlyph;
 
+SpeciesGlyph.prototype['getBoundingBox'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SpeciesGlyph_getBoundingBox_0(self), BoundingBox);
+};
+
+SpeciesGlyph.prototype['setBoundingBox'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_SpeciesGlyph_setBoundingBox_1(self, arg0);
+};
+
+SpeciesGlyph.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesGlyph_getId_0(self));
+};
+
+SpeciesGlyph.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_SpeciesGlyph_setId_1(self, arg0);
+};
+
+SpeciesGlyph.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_SpeciesGlyph_isSetId_0(self));
+};
+
+SpeciesGlyph.prototype['getSpeciesId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesGlyph_getSpeciesId_0(self));
+};
+
+SpeciesGlyph.prototype['setSpeciesId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_SpeciesGlyph_setSpeciesId_1(self, arg0);
+};
+
+SpeciesGlyph.prototype['isSetSpeciesId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_SpeciesGlyph_isSetSpeciesId_0(self));
+};
+
   SpeciesGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SpeciesGlyph___destroy___0(self);
@@ -1801,9 +1950,50 @@ TextGlyph.prototype.__class__ = TextGlyph;
 TextGlyph.__cache__ = {};
 Module['TextGlyph'] = TextGlyph;
 
+TextGlyph.prototype['getBoundingBox'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_TextGlyph_getBoundingBox_0(self), BoundingBox);
+};
+
+TextGlyph.prototype['setBoundingBox'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_TextGlyph_setBoundingBox_1(self, arg0);
+};
+
+TextGlyph.prototype['getText'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_TextGlyph_getText_0(self));
+};
+
+TextGlyph.prototype['setText'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_TextGlyph_setText_1(self, arg0);
+};
+
+TextGlyph.prototype['isSetText'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_TextGlyph_isSetText_0(self));
+};
+
   TextGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_TextGlyph___destroy___0(self);
+}
+// BoundingBox
+function BoundingBox() { throw "cannot construct a BoundingBox, no constructor in IDL" }
+BoundingBox.prototype = Object.create(WrapperObject.prototype);
+BoundingBox.prototype.constructor = BoundingBox;
+BoundingBox.prototype.__class__ = BoundingBox;
+BoundingBox.__cache__ = {};
+Module['BoundingBox'] = BoundingBox;
+
+  BoundingBox.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_BoundingBox___destroy___0(self);
 }
 // LayoutModelPlugin
 function LayoutModelPlugin() { throw "cannot construct a LayoutModelPlugin, no constructor in IDL" }

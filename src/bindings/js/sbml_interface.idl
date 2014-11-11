@@ -553,6 +553,10 @@ interface Capabilities {
   void Capabilities();
   boolean isLayoutSupported();
 };[Prefix="libsbml::"]
+interface BoundingBox {
+};
+
+[Prefix="libsbml::"]
 interface GraphicalObject {
 };
 
@@ -578,14 +582,46 @@ interface ReactionGlyph {
 
 [Prefix="libsbml::"]
 interface SpeciesGlyph {
+  BoundingBox getBoundingBox();
+  void setBoundingBox(BoundingBox b);
+
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  DOMString getSpeciesId();
+  void setSpeciesId(DOMString t);
+  boolean isSetSpeciesId();
+};
+
+[Prefix="libsbml::"]
+interface Curve {
+  CubicBezier createCubicBezier();
+  LineSegment createLineSegment();
+
+  unsigned long getNumCurveSegments();
+  LineSegment getCurveSegment(unsigned long n);
 };
 
 [Prefix="libsbml::"]
 interface SpeciesReferenceGlyph {
+  BoundingBox getBoundingBox();
+  void setBoundingBox(BoundingBox b);
+
+  CubicBezier createCubicBezier();
+  LineSegment createLineSegment();
+
+  Curve getCurve();
 };
 
 [Prefix="libsbml::"]
 interface TextGlyph {
+  BoundingBox getBoundingBox();
+  void setBoundingBox(BoundingBox b);
+
+  DOMString getText();
+  void setText(DOMString t);
+  boolean isSetText();
 };
 
 [Prefix="libsbml::"]
@@ -613,6 +649,13 @@ interface Layout {
   ReactionGlyph getReactionGlyph(unsigned long n);
   SpeciesGlyph getSpeciesGlyph(unsigned long n);
   TextGlyph getTextGlyph(unsigned long n);
+
+  GraphicalObject removeAdditionalGraphicalObject(unsigned long n);
+  CompartmentGlyph removeCompartmentGlyph(unsigned long n);
+  ReactionGlyph removeReactionGlyph(unsigned long n);
+  SpeciesGlyph removeSpeciesGlyph(unsigned long n);
+  SpeciesReferenceGlyph removeSpeciesReferenceGlyph(DOMString id);
+  TextGlyph removeTextGlyph(unsigned long n);
 };
 
 [Prefix="libsbml::"]
