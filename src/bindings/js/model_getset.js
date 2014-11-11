@@ -56,3 +56,21 @@ Model.prototype["findSpecies"] = function(id) {
   }
   throw new Error('No such species with id ' + id);
 }
+
+Model.prototype["findPlugin"] = function(name) {
+  for(var i=0; i<this.getNumPlugins(); i++) {
+    if(this.getPlugin(i).getPackageName() == name) {
+      return this.getPlugin(i);
+    }
+  }
+  throw new Error('Model: No such plugin ' + name);
+}
+
+Model.prototype["hasPlugin"] = function(name) {
+  for(var i=0; i<this.getNumPlugins(); i++) {
+    if(this.getPlugin(i).getPackageName() == name) {
+      return true;
+    }
+  }
+  return false;
+}

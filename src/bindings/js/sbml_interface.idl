@@ -553,3 +553,12 @@ interface Capabilities {
   void Capabilities();
   boolean isLayoutSupported();
 };
+[Prefix="libsbml::"]
+interface LayoutModelPlugin {
+};
+
+[Prefix="libsbmljs::"]
+interface LayoutCaster {
+  void LayoutCaster();
+  LayoutModelPlugin castToLayoutPlugin(SBasePlugin p);
+};
