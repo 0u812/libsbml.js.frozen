@@ -1,29 +1,92 @@
 [Prefix="libsbml::"]
+interface Dimensions {
+  double getWidth();
+  double getHeight();
+  double getDepth();
+};
+
+[Prefix="libsbml::"]
+interface Point {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  void setX(double x);
+  void setY(double y);
+  void setZ(double z);
+  void setXOffset(double x);
+  void setYOffset(double y);
+  void setZOffset(double z);
+
+  double x();
+  double y();
+  double z();
+  double getXOffset();
+  double getYOffset();
+  double getZOffset();
+};
+
+[Prefix="libsbml::"]
 interface BoundingBox {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  Dimensions getDimensions();
+  void setDimensions(Dimensions b);
+
+  Point getPosition();
+  void setPosition(Point b);
+
+  void setX(double x);
+  void setY(double y);
+  void setZ(double z);
+
+  double x();
+  double y();
+  double z();
 };
 
 [Prefix="libsbml::"]
 interface GraphicalObject {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
 };
 
 [Prefix="libsbml::"]
 interface CompartmentGlyph {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
 };
 
 [Prefix="libsbml::"]
 interface CubicBezier {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
 };
 
 [Prefix="libsbml::"]
 interface GeneralGlyph {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
 };
 
 [Prefix="libsbml::"]
 interface LineSegment {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
 };
 
 [Prefix="libsbml::"]
 interface ReactionGlyph {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
 };
 
 [Prefix="libsbml::"]

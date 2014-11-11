@@ -278,6 +278,23 @@ CubicBezier.prototype.__class__ = CubicBezier;
 CubicBezier.__cache__ = {};
 Module['CubicBezier'] = CubicBezier;
 
+CubicBezier.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_CubicBezier_getId_0(self));
+};
+
+CubicBezier.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_CubicBezier_setId_1(self, arg0);
+};
+
+CubicBezier.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_CubicBezier_isSetId_0(self));
+};
+
   CubicBezier.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_CubicBezier___destroy___0(self);
@@ -486,6 +503,33 @@ Capabilities.prototype['isLayoutSupported'] = function() {
   var self = this.ptr;
   _emscripten_bind_Capabilities___destroy___0(self);
 }
+// Dimensions
+function Dimensions() { throw "cannot construct a Dimensions, no constructor in IDL" }
+Dimensions.prototype = Object.create(WrapperObject.prototype);
+Dimensions.prototype.constructor = Dimensions;
+Dimensions.prototype.__class__ = Dimensions;
+Dimensions.__cache__ = {};
+Module['Dimensions'] = Dimensions;
+
+Dimensions.prototype['getWidth'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Dimensions_getWidth_0(self);
+};
+
+Dimensions.prototype['getHeight'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Dimensions_getHeight_0(self);
+};
+
+Dimensions.prototype['getDepth'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Dimensions_getDepth_0(self);
+};
+
+  Dimensions.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Dimensions___destroy___0(self);
+}
 // GraphicalObject
 function GraphicalObject() { throw "cannot construct a GraphicalObject, no constructor in IDL" }
 GraphicalObject.prototype = Object.create(WrapperObject.prototype);
@@ -493,6 +537,23 @@ GraphicalObject.prototype.constructor = GraphicalObject;
 GraphicalObject.prototype.__class__ = GraphicalObject;
 GraphicalObject.__cache__ = {};
 Module['GraphicalObject'] = GraphicalObject;
+
+GraphicalObject.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GraphicalObject_getId_0(self));
+};
+
+GraphicalObject.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GraphicalObject_setId_1(self, arg0);
+};
+
+GraphicalObject.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GraphicalObject_isSetId_0(self));
+};
 
   GraphicalObject.prototype['__destroy__'] = function() {
   var self = this.ptr;
@@ -1009,6 +1070,23 @@ ReactionGlyph.prototype.__class__ = ReactionGlyph;
 ReactionGlyph.__cache__ = {};
 Module['ReactionGlyph'] = ReactionGlyph;
 
+ReactionGlyph.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ReactionGlyph_getId_0(self));
+};
+
+ReactionGlyph.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ReactionGlyph_setId_1(self, arg0);
+};
+
+ReactionGlyph.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_ReactionGlyph_isSetId_0(self));
+};
+
   ReactionGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_ReactionGlyph___destroy___0(self);
@@ -1020,6 +1098,23 @@ LineSegment.prototype.constructor = LineSegment;
 LineSegment.prototype.__class__ = LineSegment;
 LineSegment.__cache__ = {};
 Module['LineSegment'] = LineSegment;
+
+LineSegment.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LineSegment_getId_0(self));
+};
+
+LineSegment.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LineSegment_setId_1(self, arg0);
+};
+
+LineSegment.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LineSegment_isSetId_0(self));
+};
 
   LineSegment.prototype['__destroy__'] = function() {
   var self = this.ptr;
@@ -1872,6 +1967,107 @@ SpeciesReferenceGlyph.prototype['getCurve'] = function() {
   var self = this.ptr;
   _emscripten_bind_SpeciesReferenceGlyph___destroy___0(self);
 }
+// Point
+function Point() { throw "cannot construct a Point, no constructor in IDL" }
+Point.prototype = Object.create(WrapperObject.prototype);
+Point.prototype.constructor = Point;
+Point.prototype.__class__ = Point;
+Point.__cache__ = {};
+Module['Point'] = Point;
+
+Point.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Point_getId_0(self));
+};
+
+Point.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Point_setId_1(self, arg0);
+};
+
+Point.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Point_isSetId_0(self));
+};
+
+Point.prototype['setX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Point_setX_1(self, arg0);
+};
+
+Point.prototype['setY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Point_setY_1(self, arg0);
+};
+
+Point.prototype['setZ'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Point_setZ_1(self, arg0);
+};
+
+Point.prototype['setXOffset'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Point_setXOffset_1(self, arg0);
+};
+
+Point.prototype['setYOffset'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Point_setYOffset_1(self, arg0);
+};
+
+Point.prototype['setZOffset'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Point_setZOffset_1(self, arg0);
+};
+
+Point.prototype['x'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Point_x_0(self);
+};
+
+Point.prototype['y'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Point_y_0(self);
+};
+
+Point.prototype['z'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Point_z_0(self);
+};
+
+Point.prototype['getXOffset'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Point_getXOffset_0(self);
+};
+
+Point.prototype['getYOffset'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Point_getYOffset_0(self);
+};
+
+Point.prototype['getZOffset'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Point_getZOffset_0(self);
+};
+
+  Point.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Point___destroy___0(self);
+}
 // GeneralGlyph
 function GeneralGlyph() { throw "cannot construct a GeneralGlyph, no constructor in IDL" }
 GeneralGlyph.prototype = Object.create(WrapperObject.prototype);
@@ -1879,6 +2075,23 @@ GeneralGlyph.prototype.constructor = GeneralGlyph;
 GeneralGlyph.prototype.__class__ = GeneralGlyph;
 GeneralGlyph.__cache__ = {};
 Module['GeneralGlyph'] = GeneralGlyph;
+
+GeneralGlyph.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GeneralGlyph_getId_0(self));
+};
+
+GeneralGlyph.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GeneralGlyph_setId_1(self, arg0);
+};
+
+GeneralGlyph.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GeneralGlyph_isSetId_0(self));
+};
 
   GeneralGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
@@ -1991,6 +2204,83 @@ BoundingBox.prototype.__class__ = BoundingBox;
 BoundingBox.__cache__ = {};
 Module['BoundingBox'] = BoundingBox;
 
+BoundingBox.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_BoundingBox_getId_0(self));
+};
+
+BoundingBox.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_BoundingBox_setId_1(self, arg0);
+};
+
+BoundingBox.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_BoundingBox_isSetId_0(self));
+};
+
+BoundingBox.prototype['getDimensions'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_BoundingBox_getDimensions_0(self), Dimensions);
+};
+
+BoundingBox.prototype['setDimensions'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_BoundingBox_setDimensions_1(self, arg0);
+};
+
+BoundingBox.prototype['getPosition'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_BoundingBox_getPosition_0(self), Point);
+};
+
+BoundingBox.prototype['setPosition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_BoundingBox_setPosition_1(self, arg0);
+};
+
+BoundingBox.prototype['setX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_BoundingBox_setX_1(self, arg0);
+};
+
+BoundingBox.prototype['setY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_BoundingBox_setY_1(self, arg0);
+};
+
+BoundingBox.prototype['setZ'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_BoundingBox_setZ_1(self, arg0);
+};
+
+BoundingBox.prototype['x'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_BoundingBox_x_0(self);
+};
+
+BoundingBox.prototype['y'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_BoundingBox_y_0(self);
+};
+
+BoundingBox.prototype['z'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_BoundingBox_z_0(self);
+};
+
   BoundingBox.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_BoundingBox___destroy___0(self);
@@ -2031,6 +2321,23 @@ CompartmentGlyph.prototype.constructor = CompartmentGlyph;
 CompartmentGlyph.prototype.__class__ = CompartmentGlyph;
 CompartmentGlyph.__cache__ = {};
 Module['CompartmentGlyph'] = CompartmentGlyph;
+
+CompartmentGlyph.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_CompartmentGlyph_getId_0(self));
+};
+
+CompartmentGlyph.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_CompartmentGlyph_setId_1(self, arg0);
+};
+
+CompartmentGlyph.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_CompartmentGlyph_isSetId_0(self));
+};
 
   CompartmentGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
