@@ -295,6 +295,54 @@ CubicBezier.prototype['isSetId'] = function() {
   return idl_wrapBool(_emscripten_bind_CubicBezier_isSetId_0(self));
 };
 
+CubicBezier.prototype['getStart'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_CubicBezier_getStart_0(self), Point);
+};
+
+CubicBezier.prototype['setStart'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_CubicBezier_setStart_1(self, arg0);
+};
+
+CubicBezier.prototype['getEnd'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_CubicBezier_getEnd_0(self), Point);
+};
+
+CubicBezier.prototype['setEnd'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_CubicBezier_setEnd_1(self, arg0);
+};
+
+CubicBezier.prototype['getBasePoint1'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_CubicBezier_getBasePoint1_0(self), Point);
+};
+
+CubicBezier.prototype['setBasePoint1'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_CubicBezier_setBasePoint1_1(self, arg0);
+};
+
+CubicBezier.prototype['getBasePoint2'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_CubicBezier_getBasePoint2_0(self), Point);
+};
+
+CubicBezier.prototype['setBasePoint2'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_CubicBezier_setBasePoint2_1(self, arg0);
+};
+
   CubicBezier.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_CubicBezier___destroy___0(self);
@@ -1186,6 +1234,30 @@ LineSegment.prototype['isSetId'] = function() {
   return idl_wrapBool(_emscripten_bind_LineSegment_isSetId_0(self));
 };
 
+LineSegment.prototype['getStart'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LineSegment_getStart_0(self), Point);
+};
+
+LineSegment.prototype['setStart'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LineSegment_setStart_1(self, arg0);
+};
+
+LineSegment.prototype['getEnd'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LineSegment_getEnd_0(self), Point);
+};
+
+LineSegment.prototype['setEnd'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LineSegment_setEnd_1(self, arg0);
+};
+
   LineSegment.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LineSegment___destroy___0(self);
@@ -2005,6 +2077,23 @@ SpeciesReferenceGlyph.prototype.constructor = SpeciesReferenceGlyph;
 SpeciesReferenceGlyph.prototype.__class__ = SpeciesReferenceGlyph;
 SpeciesReferenceGlyph.__cache__ = {};
 Module['SpeciesReferenceGlyph'] = SpeciesReferenceGlyph;
+
+SpeciesReferenceGlyph.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_SpeciesReferenceGlyph_getId_0(self));
+};
+
+SpeciesReferenceGlyph.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_SpeciesReferenceGlyph_setId_1(self, arg0);
+};
+
+SpeciesReferenceGlyph.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_SpeciesReferenceGlyph_isSetId_0(self));
+};
 
 SpeciesReferenceGlyph.prototype['getBoundingBox'] = function() {
   var self = this.ptr;

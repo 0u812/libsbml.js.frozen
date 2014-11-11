@@ -158,6 +158,38 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_isSetId_0(libsbml::CubicBe
   return self->isSetId();
 }
 
+libsbml::Point* EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_getStart_0(libsbml::CubicBezier* self) {
+  return self->getStart();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_setStart_1(libsbml::CubicBezier* self, libsbml::Point* arg0) {
+  self->setStart(arg0);
+}
+
+libsbml::Point* EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_getEnd_0(libsbml::CubicBezier* self) {
+  return self->getEnd();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_setEnd_1(libsbml::CubicBezier* self, libsbml::Point* arg0) {
+  self->setEnd(arg0);
+}
+
+libsbml::Point* EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_getBasePoint1_0(libsbml::CubicBezier* self) {
+  return self->getBasePoint1();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_setBasePoint1_1(libsbml::CubicBezier* self, libsbml::Point* arg0) {
+  self->setBasePoint1(arg0);
+}
+
+libsbml::Point* EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_getBasePoint2_0(libsbml::CubicBezier* self) {
+  return self->getBasePoint2();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier_setBasePoint2_1(libsbml::CubicBezier* self, libsbml::Point* arg0) {
+  self->setBasePoint2(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier___destroy___0(libsbml::CubicBezier* self) {
   delete self;
 }
@@ -744,6 +776,22 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment_isSetId_0(libsbml::LineSeg
   return self->isSetId();
 }
 
+libsbml::Point* EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment_getStart_0(libsbml::LineSegment* self) {
+  return self->getStart();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment_setStart_1(libsbml::LineSegment* self, libsbml::Point* arg0) {
+  self->setStart(arg0);
+}
+
+libsbml::Point* EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment_getEnd_0(libsbml::LineSegment* self) {
+  return self->getEnd();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment_setEnd_1(libsbml::LineSegment* self, libsbml::Point* arg0) {
+  self->setEnd(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment___destroy___0(libsbml::LineSegment* self) {
   delete self;
 }
@@ -1293,6 +1341,18 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLReader___destroy___0(libsbml::SBML
 }
 
 // SpeciesReferenceGlyph
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_getId_0(libsbml::SpeciesReferenceGlyph* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_setId_1(libsbml::SpeciesReferenceGlyph* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_isSetId_0(libsbml::SpeciesReferenceGlyph* self) {
+  return self->isSetId();
+}
 
 libsbml::BoundingBox* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReferenceGlyph_getBoundingBox_0(libsbml::SpeciesReferenceGlyph* self) {
   return self->getBoundingBox();

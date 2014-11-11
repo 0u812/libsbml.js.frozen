@@ -62,13 +62,6 @@ interface CompartmentGlyph {
 };
 
 [Prefix="libsbml::"]
-interface CubicBezier {
-  DOMString getId();
-  void setId(DOMString t);
-  boolean isSetId();
-};
-
-[Prefix="libsbml::"]
 interface GeneralGlyph {
   DOMString getId();
   void setId(DOMString t);
@@ -80,6 +73,31 @@ interface LineSegment {
   DOMString getId();
   void setId(DOMString t);
   boolean isSetId();
+
+  Point getStart();
+  void setStart(Point p);
+
+  Point getEnd();
+  void setEnd(Point p);
+};
+
+[Prefix="libsbml::"]
+interface CubicBezier {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  Point getStart();
+  void setStart(Point p);
+
+  Point getEnd();
+  void setEnd(Point p);
+
+  Point getBasePoint1();
+  void setBasePoint1(Point p);
+
+  Point getBasePoint2();
+  void setBasePoint2(Point p);
 };
 
 [Prefix="libsbml::"]
@@ -124,6 +142,10 @@ interface Curve {
 
 [Prefix="libsbml::"]
 interface SpeciesReferenceGlyph {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+  
   BoundingBox getBoundingBox();
   void setBoundingBox(BoundingBox b);
 
