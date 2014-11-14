@@ -36,6 +36,24 @@ Object.defineProperty(ReactionGlyph.prototype, "specref", {
   }
 });
 
+Object.defineProperty(BoundingBox.prototype, "x", {
+  get: function errors() {
+    return this.getPosition().x();
+  }
+});
+
+Object.defineProperty(BoundingBox.prototype, "y", {
+  get: function errors() {
+    return this.getPosition().y();
+  }
+});
+
+Object.defineProperty(BoundingBox.prototype, "z", {
+  get: function errors() {
+    return this.getPosition().z();
+  }
+});
+
 Object.defineProperty(BoundingBox.prototype, "width", {
   get: function errors() {
     return this.getDimensions().getWidth();
