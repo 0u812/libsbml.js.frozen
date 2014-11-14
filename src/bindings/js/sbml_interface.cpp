@@ -716,6 +716,12 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesReference___destroy___0(libsbml
   delete self;
 }
 
+// LayoutExtension
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutExtension___destroy___0(libsbml::LayoutExtension* self) {
+  delete self;
+}
+
 // ReactionGlyph
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ReactionGlyph_getId_0(libsbml::ReactionGlyph* self) {
@@ -815,6 +821,24 @@ libsbml::AlgebraicRule* EMSCRIPTEN_KEEPALIVE emscripten_bind_RuleSwitch_castToAl
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RuleSwitch___destroy___0(libsbmljs::RuleSwitch* self) {
+  delete self;
+}
+
+// LayoutExtensionWrapper
+
+libsbmljs::LayoutExtensionWrapper* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutExtensionWrapper_LayoutExtensionWrapper_0() {
+  return new libsbmljs::LayoutExtensionWrapper();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutExtensionWrapper_getXmlnsL2_0(libsbmljs::LayoutExtensionWrapper* self) {
+  return (char*)self->getXmlnsL2().c_str();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutExtensionWrapper_getXmlnsL3V1V1_0(libsbmljs::LayoutExtensionWrapper* self) {
+  return (char*)self->getXmlnsL3V1V1().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutExtensionWrapper___destroy___0(libsbmljs::LayoutExtensionWrapper* self) {
   delete self;
 }
 
@@ -1102,14 +1126,6 @@ libsbml::SBMLDocument* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_SBMLDoc
   return new libsbml::SBMLDocument(arg0, arg1);
 }
 
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getNumErrors_0(libsbml::SBMLDocument* self) {
-  return self->getNumErrors();
-}
-
-const libsbml::SBMLError* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getError_1(libsbml::SBMLDocument* self, unsigned int arg0) {
-  return self->getError(arg0);
-}
-
 libsbml::Model* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getModel_0(libsbml::SBMLDocument* self) {
   return self->getModel();
 }
@@ -1118,8 +1134,24 @@ libsbml::Model* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_createModel_0(
   return self->createModel();
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getNumErrors_0(libsbml::SBMLDocument* self) {
+  return self->getNumErrors();
+}
+
+const libsbml::SBMLError* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getError_1(libsbml::SBMLDocument* self, unsigned int arg0) {
+  return self->getError(arg0);
+}
+
 libsbml::SBMLErrorLog* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getErrorLog_0(libsbml::SBMLDocument* self) {
   return self->getErrorLog();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getVersion_0(libsbml::SBMLDocument* self) {
+  return self->getVersion();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getLevel_0(libsbml::SBMLDocument* self) {
+  return self->getLevel();
 }
 
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getNumPlugins_0(libsbml::SBMLDocument* self) {
@@ -1128,6 +1160,18 @@ unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getNumPlugins_0(l
 
 libsbml::SBasePlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_getPlugin_1(libsbml::SBMLDocument* self, unsigned int arg0) {
   return self->getPlugin(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_enablePackage_3(libsbml::SBMLDocument* self, char* arg0, char* arg1, bool arg2) {
+  return self->enablePackage(arg0, arg1, arg2);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_disablePackage_2(libsbml::SBMLDocument* self, char* arg0, char* arg1) {
+  return self->disablePackage(arg0, arg1);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_isPackageEnabled_1(libsbml::SBMLDocument* self, char* arg0) {
+  return self->isPackageEnabled(arg0);
 }
 
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkConsistency_0(libsbml::SBMLDocument* self) {

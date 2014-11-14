@@ -4,11 +4,13 @@ CubicBezier.prototype["isCubicBezier"] = function(name) {
 
 LineSegment.prototype["isCubicBezier"] = function(name) {
   var swtch = new Module.CurveCaster();
+  // FIXME: mem leak?
   return swtch.isCubicBezier(this);
 }
 
 LineSegment.prototype["asCubicBezier"] = function(name) {
   var swtch = new Module.CurveCaster();
+  // FIXME: mem leak?
   return swtch.castToCubicBezier(this);
 }
 
@@ -122,7 +124,22 @@ Object.defineProperty(LayoutModelPlugin.prototype, "layouts", {
   }
 });
 
+LayoutExtension["getXmlnsL2"] = function(name) {
+  var wrap = new Module.LayoutExtensionWrapper();
+  var result = wrap.getXmlnsL2();
+  Module.destroy(wrap);
+  return result;
+}
+
+LayoutExtension["getXmlnsL3V1V1"] = function(name) {
+  var wrap = new Module.LayoutExtensionWrapper();
+  var result = wrap.getXmlnsL3V1V1();
+  Module.destroy(wrap);
+  return result;
+}
+
 SBasePlugin.prototype["asLayout"] = function(name) {
   var swtch = new Module.LayoutCaster();
+  // FIXME: mem leak?
   return swtch.castToLayoutPlugin(this);
 }

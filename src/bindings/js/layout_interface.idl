@@ -145,7 +145,7 @@ interface SpeciesReferenceGlyph {
   DOMString getId();
   void setId(DOMString t);
   boolean isSetId();
-  
+
   BoundingBox getBoundingBox();
   void setBoundingBox(BoundingBox b);
 
@@ -213,6 +213,17 @@ interface LayoutModelPlugin {
 interface LayoutCaster {
   void LayoutCaster();
   LayoutModelPlugin castToLayoutPlugin(SBasePlugin p);
+};
+
+[Prefix="libsbml::"]
+interface LayoutExtension {
+};
+
+[Prefix="libsbmljs::"]
+interface LayoutExtensionWrapper {
+  void LayoutExtensionWrapper();
+  DOMString getXmlnsL2();
+  DOMString getXmlnsL3V1V1();
 };
 
 [Prefix="libsbmljs::"]

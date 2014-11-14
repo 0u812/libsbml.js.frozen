@@ -1139,6 +1139,18 @@ SpeciesReference.prototype['getModel'] = function() {
   var self = this.ptr;
   _emscripten_bind_SpeciesReference___destroy___0(self);
 }
+// LayoutExtension
+function LayoutExtension() { throw "cannot construct a LayoutExtension, no constructor in IDL" }
+LayoutExtension.prototype = Object.create(WrapperObject.prototype);
+LayoutExtension.prototype.constructor = LayoutExtension;
+LayoutExtension.prototype.__class__ = LayoutExtension;
+LayoutExtension.__cache__ = {};
+Module['LayoutExtension'] = LayoutExtension;
+
+  LayoutExtension.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LayoutExtension___destroy___0(self);
+}
 // ReactionGlyph
 function ReactionGlyph() { throw "cannot construct a ReactionGlyph, no constructor in IDL" }
 ReactionGlyph.prototype = Object.create(WrapperObject.prototype);
@@ -1297,6 +1309,31 @@ RuleSwitch.prototype['castToAlgebraicRule'] = function(arg0) {
   RuleSwitch.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_RuleSwitch___destroy___0(self);
+}
+// LayoutExtensionWrapper
+function LayoutExtensionWrapper() {
+  this.ptr = _emscripten_bind_LayoutExtensionWrapper_LayoutExtensionWrapper_0();
+  getCache(LayoutExtensionWrapper)[this.ptr] = this;
+};
+LayoutExtensionWrapper.prototype = Object.create(WrapperObject.prototype);
+LayoutExtensionWrapper.prototype.constructor = LayoutExtensionWrapper;
+LayoutExtensionWrapper.prototype.__class__ = LayoutExtensionWrapper;
+LayoutExtensionWrapper.__cache__ = {};
+Module['LayoutExtensionWrapper'] = LayoutExtensionWrapper;
+
+LayoutExtensionWrapper.prototype['getXmlnsL2'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LayoutExtensionWrapper_getXmlnsL2_0(self));
+};
+
+LayoutExtensionWrapper.prototype['getXmlnsL3V1V1'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LayoutExtensionWrapper_getXmlnsL3V1V1_0(self));
+};
+
+  LayoutExtensionWrapper.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LayoutExtensionWrapper___destroy___0(self);
 }
 // SBMLWriter
 function SBMLWriter() {
@@ -1728,6 +1765,16 @@ SBMLDocument.prototype.__class__ = SBMLDocument;
 SBMLDocument.__cache__ = {};
 Module['SBMLDocument'] = SBMLDocument;
 
+SBMLDocument.prototype['getModel'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SBMLDocument_getModel_0(self), Model);
+};
+
+SBMLDocument.prototype['createModel'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_SBMLDocument_createModel_0(self), Model);
+};
+
 SBMLDocument.prototype['getNumErrors'] = function() {
   var self = this.ptr;
   return _emscripten_bind_SBMLDocument_getNumErrors_0(self);
@@ -1740,19 +1787,19 @@ SBMLDocument.prototype['getError'] = function(arg0) {
   return wrapPointer(_emscripten_bind_SBMLDocument_getError_1(self, arg0), SBMLError);
 };
 
-SBMLDocument.prototype['getModel'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_SBMLDocument_getModel_0(self), Model);
-};
-
-SBMLDocument.prototype['createModel'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_SBMLDocument_createModel_0(self), Model);
-};
-
 SBMLDocument.prototype['getErrorLog'] = function() {
   var self = this.ptr;
   return wrapPointer(_emscripten_bind_SBMLDocument_getErrorLog_0(self), SBMLErrorLog);
+};
+
+SBMLDocument.prototype['getVersion'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_getVersion_0(self);
+};
+
+SBMLDocument.prototype['getLevel'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_SBMLDocument_getLevel_0(self);
 };
 
 SBMLDocument.prototype['getNumPlugins'] = function() {
@@ -1765,6 +1812,33 @@ SBMLDocument.prototype['getPlugin'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_SBMLDocument_getPlugin_1(self, arg0), SBasePlugin);
+};
+
+SBMLDocument.prototype['enablePackage'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  return idl_wrapBool(_emscripten_bind_SBMLDocument_enablePackage_3(self, arg0, arg1, arg2));
+};
+
+SBMLDocument.prototype['disablePackage'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  return idl_wrapBool(_emscripten_bind_SBMLDocument_disablePackage_2(self, arg0, arg1));
+};
+
+SBMLDocument.prototype['isPackageEnabled'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_SBMLDocument_isPackageEnabled_1(self, arg0));
 };
 
 SBMLDocument.prototype['checkConsistency'] = function() {

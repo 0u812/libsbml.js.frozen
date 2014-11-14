@@ -24,6 +24,17 @@ namespace libsbmljs {
     }
   };
 
+  class LayoutExtensionWrapper {
+  public:
+    const std::string& getXmlnsL2() {
+      return libsbml::LayoutExtension::getXmlnsL2();
+    }
+
+    const std::string& getXmlnsL3V1V1() {
+      return libsbml::LayoutExtension::getXmlnsL3V1V1();
+    }
+  };
+
   class CurveCaster {
   public:
     CurveCaster() {}
