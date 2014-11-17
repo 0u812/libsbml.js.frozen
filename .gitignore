@@ -1,0 +1,5 @@
+docs/src/common-text/libsbml-version.html
+src/WebIDLGrammar.pkl
+src/parser.out
+src/bindings/js/WebIDLGrammar.pkl
+src/bindings/js/parser.out
