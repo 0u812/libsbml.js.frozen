@@ -266,6 +266,13 @@ Layout.prototype['removeTextGlyph'] = function(arg0) {
   return wrapPointer(_emscripten_bind_Layout_removeTextGlyph_1(self, arg0), TextGlyph);
 };
 
+Layout.prototype['getPlugin'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Layout_getPlugin_1(self, arg0), SBasePlugin);
+};
+
   Layout.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Layout___destroy___0(self);
@@ -584,6 +591,28 @@ Capabilities.prototype['isRenderSupported'] = function() {
   Capabilities.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Capabilities___destroy___0(self);
+}
+// RenderCaster
+function RenderCaster() {
+  this.ptr = _emscripten_bind_RenderCaster_RenderCaster_0();
+  getCache(RenderCaster)[this.ptr] = this;
+};
+RenderCaster.prototype = Object.create(WrapperObject.prototype);
+RenderCaster.prototype.constructor = RenderCaster;
+RenderCaster.prototype.__class__ = RenderCaster;
+RenderCaster.__cache__ = {};
+Module['RenderCaster'] = RenderCaster;
+
+RenderCaster.prototype['castToRenderListOfLayoutsPlugin'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderCaster_castToRenderListOfLayoutsPlugin_1(self, arg0), RenderListOfLayoutsPlugin);
+};
+
+  RenderCaster.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderCaster___destroy___0(self);
 }
 // Dimensions
 function Dimensions(arg0, arg1, arg2, arg3) {
@@ -1797,6 +1826,23 @@ ListOfLayouts.prototype['getPlugin'] = function(arg0) {
   ListOfLayouts.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_ListOfLayouts___destroy___0(self);
+}
+// RenderListOfLayoutsPlugin
+function RenderListOfLayoutsPlugin() { throw "cannot construct a RenderListOfLayoutsPlugin, no constructor in IDL" }
+RenderListOfLayoutsPlugin.prototype = Object.create(WrapperObject.prototype);
+RenderListOfLayoutsPlugin.prototype.constructor = RenderListOfLayoutsPlugin;
+RenderListOfLayoutsPlugin.prototype.__class__ = RenderListOfLayoutsPlugin;
+RenderListOfLayoutsPlugin.__cache__ = {};
+Module['RenderListOfLayoutsPlugin'] = RenderListOfLayoutsPlugin;
+
+RenderListOfLayoutsPlugin.prototype['getNumGlobalRenderInformationObjects'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderListOfLayoutsPlugin_getNumGlobalRenderInformationObjects_0(self);
+};
+
+  RenderListOfLayoutsPlugin.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(self);
 }
 // SBasePlugin
 function SBasePlugin() { throw "cannot construct a SBasePlugin, no constructor in IDL" }

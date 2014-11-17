@@ -782,7 +782,7 @@ interface Layout {
   SpeciesReferenceGlyph removeSpeciesReferenceGlyph(DOMString id);
   TextGlyph removeTextGlyph(unsigned long n);
 
-//   SBasePlugin getPlugin(DOMString name);
+  SBasePlugin getPlugin(DOMString name);
 };
 
 [Prefix="libsbml::"]
@@ -828,4 +828,13 @@ interface CurveCaster {
   void CurveCaster();
   boolean isCubicBezier(LineSegment x);
   CubicBezier castToCubicBezier(LineSegment x);
+};[Prefix="libsbml::"]
+interface RenderListOfLayoutsPlugin {
+  unsigned long getNumGlobalRenderInformationObjects();
+};
+
+[Prefix="libsbmljs::"]
+interface RenderCaster {
+  void RenderCaster();
+  RenderListOfLayoutsPlugin castToRenderListOfLayoutsPlugin(SBasePlugin p);
 };

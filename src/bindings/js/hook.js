@@ -23,11 +23,13 @@ var Module = {
 
 //       var libsbml = this;
 
+      // GET is problematic for Firefox here when load is called
+      // twice with the same url
       request.open('post', url, true);
       request.responseType = 'text';
       request.onload = function(e) {
-        console.log('async loaded model ' + url);
-        console.log('status ' + String(request.status));
+//         console.log('async loaded model ' + url);
+//         console.log('status ' + String(request.status));
         if((request.status==200 || request.status==0) && request.response) {
   //         console.log(request.response);
   //         result.text = request.response;

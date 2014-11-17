@@ -142,6 +142,10 @@ libsbml::TextGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_removeTextGlyph_
   return self->removeTextGlyph(arg0);
 }
 
+libsbml::SBasePlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getPlugin_1(libsbml::Layout* self, char* arg0) {
+  return self->getPlugin(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout___destroy___0(libsbml::Layout* self) {
   delete self;
 }
@@ -353,6 +357,20 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities_isRenderSupported_0(libsb
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities___destroy___0(libsbmljs::Capabilities* self) {
+  delete self;
+}
+
+// RenderCaster
+
+libsbmljs::RenderCaster* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster_RenderCaster_0() {
+  return new libsbmljs::RenderCaster();
+}
+
+libsbml::RenderListOfLayoutsPlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster_castToRenderListOfLayoutsPlugin_1(libsbmljs::RenderCaster* self, libsbml::SBasePlugin* arg0) {
+  return self->castToRenderListOfLayoutsPlugin(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster___destroy___0(libsbmljs::RenderCaster* self) {
   delete self;
 }
 
@@ -1141,6 +1159,16 @@ libsbml::SBasePlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_ListOfLayouts_getPlug
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_ListOfLayouts___destroy___0(libsbml::ListOfLayouts* self) {
+  delete self;
+}
+
+// RenderListOfLayoutsPlugin
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin_getNumGlobalRenderInformationObjects_0(libsbml::RenderListOfLayoutsPlugin* self) {
+  return self->getNumGlobalRenderInformationObjects();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(libsbml::RenderListOfLayoutsPlugin* self) {
   delete self;
 }
 

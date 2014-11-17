@@ -1,0 +1,10 @@
+[Prefix="libsbml::"]
+interface RenderListOfLayoutsPlugin {
+  unsigned long getNumGlobalRenderInformationObjects();
+};
+
+[Prefix="libsbmljs::"]
+interface RenderCaster {
+  void RenderCaster();
+  RenderListOfLayoutsPlugin castToRenderListOfLayoutsPlugin(SBasePlugin p);
+};

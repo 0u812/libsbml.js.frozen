@@ -212,7 +212,7 @@ interface Layout {
   SpeciesReferenceGlyph removeSpeciesReferenceGlyph(DOMString id);
   TextGlyph removeTextGlyph(unsigned long n);
 
-//   SBasePlugin getPlugin(DOMString name);
+  SBasePlugin getPlugin(DOMString name);
 };
 
 [Prefix="libsbml::"]
