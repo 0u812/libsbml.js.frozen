@@ -567,6 +567,7 @@ interface SBMLWriter {
 interface Capabilities {
   void Capabilities();
   boolean isLayoutSupported();
+  boolean isRenderSupported();
 };[Prefix="libsbml::"]
 interface Dimensions {
   void Dimensions(LayoutPkgNamespaces ns, double w, double h, double d);

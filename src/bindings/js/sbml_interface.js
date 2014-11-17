@@ -576,6 +576,11 @@ Capabilities.prototype['isLayoutSupported'] = function() {
   return idl_wrapBool(_emscripten_bind_Capabilities_isLayoutSupported_0(self));
 };
 
+Capabilities.prototype['isRenderSupported'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Capabilities_isRenderSupported_0(self));
+};
+
   Capabilities.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Capabilities___destroy___0(self);

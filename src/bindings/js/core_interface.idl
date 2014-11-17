@@ -567,4 +567,5 @@ interface SBMLWriter {
 interface Capabilities {
   void Capabilities();
   boolean isLayoutSupported();
+  boolean isRenderSupported();
 };

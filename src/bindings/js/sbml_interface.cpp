@@ -348,6 +348,10 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities_isLayoutSupported_0(libsb
   return self->isLayoutSupported();
 }
 
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities_isRenderSupported_0(libsbmljs::Capabilities* self) {
+  return self->isRenderSupported();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities___destroy___0(libsbmljs::Capabilities* self) {
   delete self;
 }

@@ -74,6 +74,14 @@ namespace libsbmljs {
       return false;
 # endif
     }
+
+    bool isRenderSupported() const {
+# ifdef LIBSBML_HAS_PACKAGE_RENDER
+      return true;
+# else
+      return false;
+# endif
+    }
   };
 
 }
