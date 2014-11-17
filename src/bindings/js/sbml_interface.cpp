@@ -218,6 +218,12 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier___destroy___0(libsbml::Cub
   delete self;
 }
 
+// LocalRenderInformation
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation___destroy___0(libsbml::LocalRenderInformation* self) {
+  delete self;
+}
+
 // AssignmentRule
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AssignmentRule_getMetaId_0(libsbml::AssignmentRule* self) {
@@ -368,6 +374,10 @@ libsbmljs::RenderCaster* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster_Rende
 
 libsbml::RenderListOfLayoutsPlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster_castToRenderListOfLayoutsPlugin_1(libsbmljs::RenderCaster* self, libsbml::SBasePlugin* arg0) {
   return self->castToRenderListOfLayoutsPlugin(arg0);
+}
+
+libsbml::RenderLayoutPlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster_castToRenderLayoutPlugin_1(libsbmljs::RenderCaster* self, libsbml::SBasePlugin* arg0) {
+  return self->castToRenderLayoutPlugin(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster___destroy___0(libsbmljs::RenderCaster* self) {
@@ -1168,6 +1178,10 @@ unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin_getN
   return self->getNumGlobalRenderInformationObjects();
 }
 
+libsbml::GlobalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin_getRenderInformation_1(libsbml::RenderListOfLayoutsPlugin* self, unsigned int arg0) {
+  return self->getRenderInformation(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(libsbml::RenderListOfLayoutsPlugin* self) {
   delete self;
 }
@@ -1448,6 +1462,12 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::A
   delete self;
 }
 
+// GlobalRenderInformation
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {
+  delete self;
+}
+
 // SBMLReader
 
 libsbml::SBMLReader* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLReader_SBMLReader_0() {
@@ -1659,6 +1679,20 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph_isSetText_0(libsbml::TextGly
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph___destroy___0(libsbml::TextGlyph* self) {
+  delete self;
+}
+
+// RenderLayoutPlugin
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_getNumLocalRenderInformationObjects_0(libsbml::RenderLayoutPlugin* self) {
+  return self->getNumLocalRenderInformationObjects();
+}
+
+libsbml::LocalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_getRenderInformation_1(libsbml::RenderLayoutPlugin* self, unsigned int arg0) {
+  return self->getRenderInformation(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin___destroy___0(libsbml::RenderLayoutPlugin* self) {
   delete self;
 }
 

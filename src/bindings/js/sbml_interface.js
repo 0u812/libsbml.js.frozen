@@ -383,6 +383,18 @@ CubicBezier.prototype['setBasePoint2'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_CubicBezier___destroy___0(self);
 }
+// LocalRenderInformation
+function LocalRenderInformation() { throw "cannot construct a LocalRenderInformation, no constructor in IDL" }
+LocalRenderInformation.prototype = Object.create(WrapperObject.prototype);
+LocalRenderInformation.prototype.constructor = LocalRenderInformation;
+LocalRenderInformation.prototype.__class__ = LocalRenderInformation;
+LocalRenderInformation.__cache__ = {};
+Module['LocalRenderInformation'] = LocalRenderInformation;
+
+  LocalRenderInformation.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LocalRenderInformation___destroy___0(self);
+}
 // AssignmentRule
 function AssignmentRule() { throw "cannot construct a AssignmentRule, no constructor in IDL" }
 AssignmentRule.prototype = Object.create(WrapperObject.prototype);
@@ -608,6 +620,13 @@ RenderCaster.prototype['castToRenderListOfLayoutsPlugin'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_RenderCaster_castToRenderListOfLayoutsPlugin_1(self, arg0), RenderListOfLayoutsPlugin);
+};
+
+RenderCaster.prototype['castToRenderLayoutPlugin'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderCaster_castToRenderLayoutPlugin_1(self, arg0), RenderLayoutPlugin);
 };
 
   RenderCaster.prototype['__destroy__'] = function() {
@@ -1840,6 +1859,13 @@ RenderListOfLayoutsPlugin.prototype['getNumGlobalRenderInformationObjects'] = fu
   return _emscripten_bind_RenderListOfLayoutsPlugin_getNumGlobalRenderInformationObjects_0(self);
 };
 
+RenderListOfLayoutsPlugin.prototype['getRenderInformation'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderListOfLayoutsPlugin_getRenderInformation_1(self, arg0), GlobalRenderInformation);
+};
+
   RenderListOfLayoutsPlugin.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(self);
@@ -2253,6 +2279,18 @@ AlgebraicRule.prototype['isParameter'] = function() {
   var self = this.ptr;
   _emscripten_bind_AlgebraicRule___destroy___0(self);
 }
+// GlobalRenderInformation
+function GlobalRenderInformation() { throw "cannot construct a GlobalRenderInformation, no constructor in IDL" }
+GlobalRenderInformation.prototype = Object.create(WrapperObject.prototype);
+GlobalRenderInformation.prototype.constructor = GlobalRenderInformation;
+GlobalRenderInformation.prototype.__class__ = GlobalRenderInformation;
+GlobalRenderInformation.__cache__ = {};
+Module['GlobalRenderInformation'] = GlobalRenderInformation;
+
+  GlobalRenderInformation.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GlobalRenderInformation___destroy___0(self);
+}
 // SBMLReader
 function SBMLReader() {
   this.ptr = _emscripten_bind_SBMLReader_SBMLReader_0();
@@ -2583,6 +2621,30 @@ TextGlyph.prototype['isSetText'] = function() {
   TextGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_TextGlyph___destroy___0(self);
+}
+// RenderLayoutPlugin
+function RenderLayoutPlugin() { throw "cannot construct a RenderLayoutPlugin, no constructor in IDL" }
+RenderLayoutPlugin.prototype = Object.create(WrapperObject.prototype);
+RenderLayoutPlugin.prototype.constructor = RenderLayoutPlugin;
+RenderLayoutPlugin.prototype.__class__ = RenderLayoutPlugin;
+RenderLayoutPlugin.__cache__ = {};
+Module['RenderLayoutPlugin'] = RenderLayoutPlugin;
+
+RenderLayoutPlugin.prototype['getNumLocalRenderInformationObjects'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderLayoutPlugin_getNumLocalRenderInformationObjects_0(self);
+};
+
+RenderLayoutPlugin.prototype['getRenderInformation'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderLayoutPlugin_getRenderInformation_1(self, arg0), LocalRenderInformation);
+};
+
+  RenderLayoutPlugin.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderLayoutPlugin___destroy___0(self);
 }
 // BoundingBox
 function BoundingBox() { throw "cannot construct a BoundingBox, no constructor in IDL" }

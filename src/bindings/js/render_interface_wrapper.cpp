@@ -23,6 +23,12 @@ namespace libsbmljs {
       assert(result && "Cast to render list of layouts plugin failed");
       return result;
     }
+
+    libsbml::RenderLayoutPlugin* castToRenderLayoutPlugin(libsbml::SBasePlugin* p) {
+      libsbml::RenderLayoutPlugin* result = dynamic_cast<libsbml::RenderLayoutPlugin*>(p);
+      assert(result && "Cast to render layout plugin failed");
+      return result;
+    }
   };
 
 }

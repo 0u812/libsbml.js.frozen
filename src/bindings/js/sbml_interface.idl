@@ -829,12 +829,28 @@ interface CurveCaster {
   boolean isCubicBezier(LineSegment x);
   CubicBezier castToCubicBezier(LineSegment x);
 };[Prefix="libsbml::"]
+interface GlobalRenderInformation {
+};
+
+[Prefix="libsbml::"]
 interface RenderListOfLayoutsPlugin {
   unsigned long getNumGlobalRenderInformationObjects();
+  GlobalRenderInformation getRenderInformation(unsigned long n);
+};
+
+[Prefix="libsbml::"]
+interface LocalRenderInformation {
+};
+
+[Prefix="libsbml::"]
+interface RenderLayoutPlugin {
+  unsigned long getNumLocalRenderInformationObjects();
+  LocalRenderInformation getRenderInformation(unsigned long n);
 };
 
 [Prefix="libsbmljs::"]
 interface RenderCaster {
   void RenderCaster();
   RenderListOfLayoutsPlugin castToRenderListOfLayoutsPlugin(SBasePlugin p);
+  RenderLayoutPlugin castToRenderLayoutPlugin(SBasePlugin p);
 };
