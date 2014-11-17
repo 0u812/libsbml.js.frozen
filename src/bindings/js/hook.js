@@ -23,7 +23,7 @@ var Module = {
 
 //       var libsbml = this;
 
-      request.open('get', url, true);
+      request.open('post', url, true);
       request.responseType = 'text';
       request.onload = function(e) {
         console.log('async loaded model ' + url);
