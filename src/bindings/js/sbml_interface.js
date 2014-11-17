@@ -78,6 +78,35 @@ Layout.prototype.__class__ = Layout;
 Layout.__cache__ = {};
 Module['Layout'] = Layout;
 
+Layout.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Layout_getId_0(self));
+};
+
+Layout.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Layout_setId_1(self, arg0);
+};
+
+Layout.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Layout_isSetId_0(self));
+};
+
+Layout.prototype['getDimensions'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Layout_getDimensions_0(self), Dimensions);
+};
+
+Layout.prototype['setDimensions'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Layout_setDimensions_1(self, arg0);
+};
+
 Layout.prototype['createAdditionalGraphicalObject'] = function() {
   var self = this.ptr;
   return wrapPointer(_emscripten_bind_Layout_createAdditionalGraphicalObject_0(self), GraphicalObject);
@@ -552,12 +581,44 @@ Capabilities.prototype['isLayoutSupported'] = function() {
   _emscripten_bind_Capabilities___destroy___0(self);
 }
 // Dimensions
-function Dimensions() { throw "cannot construct a Dimensions, no constructor in IDL" }
+function Dimensions(arg0, arg1, arg2, arg3) {
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  if (arg3 && typeof arg3 === 'object') arg3 = arg3.ptr;
+  else arg3 = ensureString(arg3);
+  this.ptr = _emscripten_bind_Dimensions_Dimensions_4(arg0, arg1, arg2, arg3);
+  getCache(Dimensions)[this.ptr] = this;
+};
 Dimensions.prototype = Object.create(WrapperObject.prototype);
 Dimensions.prototype.constructor = Dimensions;
 Dimensions.prototype.__class__ = Dimensions;
 Dimensions.__cache__ = {};
 Module['Dimensions'] = Dimensions;
+
+Dimensions.prototype['setWidth'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Dimensions_setWidth_1(self, arg0);
+};
+
+Dimensions.prototype['setHeight'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Dimensions_setHeight_1(self, arg0);
+};
+
+Dimensions.prototype['setDepth'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Dimensions_setDepth_1(self, arg0);
+};
 
 Dimensions.prototype['getWidth'] = function() {
   var self = this.ptr;
@@ -2305,6 +2366,25 @@ Point.prototype['getZOffset'] = function() {
   Point.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Point___destroy___0(self);
+}
+// LayoutPkgNamespaces
+function LayoutPkgNamespaces(arg0, arg1) {
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  this.ptr = _emscripten_bind_LayoutPkgNamespaces_LayoutPkgNamespaces_2(arg0, arg1);
+  getCache(LayoutPkgNamespaces)[this.ptr] = this;
+};
+LayoutPkgNamespaces.prototype = Object.create(WrapperObject.prototype);
+LayoutPkgNamespaces.prototype.constructor = LayoutPkgNamespaces;
+LayoutPkgNamespaces.prototype.__class__ = LayoutPkgNamespaces;
+LayoutPkgNamespaces.__cache__ = {};
+Module['LayoutPkgNamespaces'] = LayoutPkgNamespaces;
+
+  LayoutPkgNamespaces.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LayoutPkgNamespaces___destroy___0(self);
 }
 // GeneralGlyph
 function GeneralGlyph() { throw "cannot construct a GeneralGlyph, no constructor in IDL" }

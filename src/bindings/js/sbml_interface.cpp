@@ -14,6 +14,26 @@ void array_bounds_check(const int array_size, const int array_idx) {
 
 // Layout
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getId_0(libsbml::Layout* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_setId_1(libsbml::Layout* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_isSetId_0(libsbml::Layout* self) {
+  return self->isSetId();
+}
+
+libsbml::Dimensions* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getDimensions_0(libsbml::Layout* self) {
+  return self->getDimensions();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_setDimensions_1(libsbml::Layout* self, libsbml::Dimensions* arg0) {
+  self->setDimensions(arg0);
+}
+
 libsbml::GraphicalObject* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_createAdditionalGraphicalObject_0(libsbml::Layout* self) {
   return self->createAdditionalGraphicalObject();
 }
@@ -333,6 +353,22 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Capabilities___destroy___0(libsbmljs::
 }
 
 // Dimensions
+
+libsbml::Dimensions* EMSCRIPTEN_KEEPALIVE emscripten_bind_Dimensions_Dimensions_4(libsbml::LayoutPkgNamespaces* arg0, double arg1, double arg2, double arg3) {
+  return new libsbml::Dimensions(arg0, arg1, arg2, arg3);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Dimensions_setWidth_1(libsbml::Dimensions* self, double arg0) {
+  self->setWidth(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Dimensions_setHeight_1(libsbml::Dimensions* self, double arg0) {
+  self->setHeight(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Dimensions_setDepth_1(libsbml::Dimensions* self, double arg0) {
+  self->setDepth(arg0);
+}
 
 double EMSCRIPTEN_KEEPALIVE emscripten_bind_Dimensions_getWidth_0(libsbml::Dimensions* self) {
   return self->getWidth();
@@ -1489,6 +1525,16 @@ double EMSCRIPTEN_KEEPALIVE emscripten_bind_Point_getZOffset_0(libsbml::Point* s
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Point___destroy___0(libsbml::Point* self) {
+  delete self;
+}
+
+// LayoutPkgNamespaces
+
+libsbml::LayoutPkgNamespaces* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutPkgNamespaces_LayoutPkgNamespaces_2(unsigned int arg0, unsigned int arg1) {
+  return new libsbml::LayoutPkgNamespaces(arg0, arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutPkgNamespaces___destroy___0(libsbml::LayoutPkgNamespaces* self) {
   delete self;
 }
 

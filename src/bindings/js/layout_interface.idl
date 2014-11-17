@@ -1,5 +1,11 @@
 [Prefix="libsbml::"]
 interface Dimensions {
+  void Dimensions(LayoutPkgNamespaces ns, double w, double h, double d);
+
+  void setWidth(double val);
+  void setHeight(double val);
+  void setDepth(double val);
+
   double getWidth();
   double getHeight();
   double getDepth();
@@ -168,6 +174,13 @@ interface TextGlyph {
 
 [Prefix="libsbml::"]
 interface Layout {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  Dimensions getDimensions();
+  void setDimensions(Dimensions b);
+
   GraphicalObject createAdditionalGraphicalObject();
   CompartmentGlyph createCompartmentGlyph();
   CubicBezier createCubicBezier();
@@ -207,6 +220,11 @@ interface LayoutModelPlugin {
   // NOTE: libSBML signedness is inconsistent here
   long getNumLayouts();
   Layout getLayout(unsigned long n);
+};
+
+[Prefix="libsbml::"]
+interface LayoutPkgNamespaces {
+  void LayoutPkgNamespaces(unsigned long level, unsigned long version);
 };
 
 [Prefix="libsbmljs::"]
