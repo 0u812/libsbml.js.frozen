@@ -391,6 +391,64 @@ LocalRenderInformation.prototype.__class__ = LocalRenderInformation;
 LocalRenderInformation.__cache__ = {};
 Module['LocalRenderInformation'] = LocalRenderInformation;
 
+LocalRenderInformation.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalRenderInformation_getId_0(self));
+};
+
+LocalRenderInformation.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalRenderInformation_setId_1(self, arg0);
+};
+
+LocalRenderInformation.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LocalRenderInformation_isSetId_0(self));
+};
+
+LocalRenderInformation.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalRenderInformation_getName_0(self));
+};
+
+LocalRenderInformation.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalRenderInformation_setName_1(self, arg0);
+};
+
+LocalRenderInformation.prototype['isSetName'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LocalRenderInformation_isSetName_0(self));
+};
+
+LocalRenderInformation.prototype['getProgramVersion'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalRenderInformation_getProgramVersion_0(self));
+};
+
+LocalRenderInformation.prototype['setProgramVersion'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalRenderInformation_setProgramVersion_1(self, arg0);
+};
+
+LocalRenderInformation.prototype['getBackgroundColor'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalRenderInformation_getBackgroundColor_0(self));
+};
+
+LocalRenderInformation.prototype['setBackgroundColor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalRenderInformation_setBackgroundColor_1(self, arg0);
+};
+
   LocalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LocalRenderInformation___destroy___0(self);
@@ -2286,6 +2344,64 @@ GlobalRenderInformation.prototype.constructor = GlobalRenderInformation;
 GlobalRenderInformation.prototype.__class__ = GlobalRenderInformation;
 GlobalRenderInformation.__cache__ = {};
 Module['GlobalRenderInformation'] = GlobalRenderInformation;
+
+GlobalRenderInformation.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getId_0(self));
+};
+
+GlobalRenderInformation.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setId_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GlobalRenderInformation_isSetId_0(self));
+};
+
+GlobalRenderInformation.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getName_0(self));
+};
+
+GlobalRenderInformation.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setName_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['isSetName'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GlobalRenderInformation_isSetName_0(self));
+};
+
+GlobalRenderInformation.prototype['getProgramVersion'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getProgramVersion_0(self));
+};
+
+GlobalRenderInformation.prototype['setProgramVersion'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setProgramVersion_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['getBackgroundColor'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getBackgroundColor_0(self));
+};
+
+GlobalRenderInformation.prototype['setBackgroundColor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(self, arg0);
+};
 
   GlobalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;

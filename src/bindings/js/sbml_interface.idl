@@ -830,6 +830,19 @@ interface CurveCaster {
   CubicBezier castToCubicBezier(LineSegment x);
 };[Prefix="libsbml::"]
 interface GlobalRenderInformation {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  DOMString getName();
+  void setName(DOMString t);
+  boolean isSetName();
+
+  DOMString getProgramVersion();
+  void setProgramVersion(DOMString t);
+
+  DOMString getBackgroundColor();
+  void setBackgroundColor(DOMString t);
 };
 
 [Prefix="libsbml::"]
@@ -840,6 +853,19 @@ interface RenderListOfLayoutsPlugin {
 
 [Prefix="libsbml::"]
 interface LocalRenderInformation {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  DOMString getName();
+  void setName(DOMString t);
+  boolean isSetName();
+
+  DOMString getProgramVersion();
+  void setProgramVersion(DOMString t);
+
+  DOMString getBackgroundColor();
+  void setBackgroundColor(DOMString t);
 };
 
 [Prefix="libsbml::"]

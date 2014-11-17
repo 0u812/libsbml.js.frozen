@@ -220,6 +220,46 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier___destroy___0(libsbml::Cub
 
 // LocalRenderInformation
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getId_0(libsbml::LocalRenderInformation* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_setId_1(libsbml::LocalRenderInformation* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_isSetId_0(libsbml::LocalRenderInformation* self) {
+  return self->isSetId();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getName_0(libsbml::LocalRenderInformation* self) {
+  return (char*)self->getName().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_setName_1(libsbml::LocalRenderInformation* self, char* arg0) {
+  self->setName(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_isSetName_0(libsbml::LocalRenderInformation* self) {
+  return self->isSetName();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getProgramVersion_0(libsbml::LocalRenderInformation* self) {
+  return (char*)self->getProgramVersion().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_setProgramVersion_1(libsbml::LocalRenderInformation* self, char* arg0) {
+  self->setProgramVersion(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getBackgroundColor_0(libsbml::LocalRenderInformation* self) {
+  return (char*)self->getBackgroundColor().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_setBackgroundColor_1(libsbml::LocalRenderInformation* self, char* arg0) {
+  self->setBackgroundColor(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation___destroy___0(libsbml::LocalRenderInformation* self) {
   delete self;
 }
@@ -1463,6 +1503,46 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::A
 }
 
 // GlobalRenderInformation
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getId_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setId_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_isSetId_0(libsbml::GlobalRenderInformation* self) {
+  return self->isSetId();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getName_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getName().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setName_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setName(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_isSetName_0(libsbml::GlobalRenderInformation* self) {
+  return self->isSetName();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getProgramVersion_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getProgramVersion().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setProgramVersion_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setProgramVersion(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getBackgroundColor_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getBackgroundColor().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setBackgroundColor(arg0);
+}
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {
   delete self;
