@@ -449,6 +449,18 @@ LocalRenderInformation.prototype['setBackgroundColor'] = function(arg0) {
   _emscripten_bind_LocalRenderInformation_setBackgroundColor_1(self, arg0);
 };
 
+LocalRenderInformation.prototype['getNumColorDefinitions'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalRenderInformation_getNumColorDefinitions_0(self);
+};
+
+LocalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
+};
+
   LocalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LocalRenderInformation___destroy___0(self);
@@ -2503,6 +2515,18 @@ GlobalRenderInformation.prototype['setBackgroundColor'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   _emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['getNumColorDefinitions'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalRenderInformation_getNumColorDefinitions_0(self);
+};
+
+GlobalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
 };
 
   GlobalRenderInformation.prototype['__destroy__'] = function() {

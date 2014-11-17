@@ -260,6 +260,14 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_setBackgroundCo
   self->setBackgroundColor(arg0);
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumColorDefinitions_0(libsbml::LocalRenderInformation* self) {
+  return self->getNumColorDefinitions();
+}
+
+libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getColorDefinition_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
+  return self->getColorDefinition(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation___destroy___0(libsbml::LocalRenderInformation* self) {
   delete self;
 }
@@ -1604,6 +1612,14 @@ char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getBackground
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(libsbml::GlobalRenderInformation* self, char* arg0) {
   self->setBackgroundColor(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumColorDefinitions_0(libsbml::GlobalRenderInformation* self) {
+  return self->getNumColorDefinitions();
+}
+
+libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getColorDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->getColorDefinition(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {

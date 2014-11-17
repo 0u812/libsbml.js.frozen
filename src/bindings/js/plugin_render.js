@@ -1,3 +1,13 @@
+Object.defineProperty(LocalRenderInformation.prototype, "colors", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumColorDefinitions(); i++) {
+      result.push(this.getColorDefinition(i));
+    }
+    return result;
+  }
+});
+
 Object.defineProperty(RenderLayoutPlugin.prototype, "renderinfo", {
   get: function errors() {
     var result = [];

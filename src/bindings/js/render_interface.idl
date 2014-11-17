@@ -4,7 +4,7 @@ interface ColorDefinition {
   void setId(DOMString t);
   boolean isSetId();
 
-  DOMString createValueString();
+  DOMString createValueString(); // NOTE: may leak (returns rvalue)
   boolean setColorValue(DOMString val);
   void setRGBA(unsigned long r, unsigned long g, unsigned long b, unsigned long a);
 
@@ -34,6 +34,9 @@ interface GlobalRenderInformation {
 
   DOMString getBackgroundColor();
   void setBackgroundColor(DOMString t);
+
+  unsigned long getNumColorDefinitions();
+  ColorDefinition getColorDefinition(unsigned long n);
 };
 
 [Prefix="libsbml::"]
@@ -57,6 +60,9 @@ interface LocalRenderInformation {
 
   DOMString getBackgroundColor();
   void setBackgroundColor(DOMString t);
+
+  unsigned long getNumColorDefinitions();
+  ColorDefinition getColorDefinition(unsigned long n);
 };
 
 [Prefix="libsbml::"]
