@@ -1,4 +1,25 @@
 [Prefix="libsbml::"]
+interface ColorDefinition {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  DOMString createValueString();
+  boolean setColorValue(DOMString val);
+  void setRGBA(unsigned long r, unsigned long g, unsigned long b, unsigned long a);
+
+  void setRed(unsigned long val);
+  void setGreen(unsigned long val);
+  void setBlue(unsigned long val);
+  void setAlpha(unsigned long val);
+
+  unsigned long getRed();
+  unsigned long getGreen();
+  unsigned long getBlue();
+  unsigned long getAlpha();
+};
+
+[Prefix="libsbml::"]
 interface GlobalRenderInformation {
   DOMString getId();
   void setId(DOMString t);

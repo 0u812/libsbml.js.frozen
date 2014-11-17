@@ -691,6 +691,108 @@ RenderCaster.prototype['castToRenderLayoutPlugin'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_RenderCaster___destroy___0(self);
 }
+// ColorDefinition
+function ColorDefinition() { throw "cannot construct a ColorDefinition, no constructor in IDL" }
+ColorDefinition.prototype = Object.create(WrapperObject.prototype);
+ColorDefinition.prototype.constructor = ColorDefinition;
+ColorDefinition.prototype.__class__ = ColorDefinition;
+ColorDefinition.__cache__ = {};
+Module['ColorDefinition'] = ColorDefinition;
+
+ColorDefinition.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ColorDefinition_getId_0(self));
+};
+
+ColorDefinition.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setId_1(self, arg0);
+};
+
+ColorDefinition.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_ColorDefinition_isSetId_0(self));
+};
+
+ColorDefinition.prototype['createValueString'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ColorDefinition_createValueString_0(self));
+};
+
+ColorDefinition.prototype['setColorValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_ColorDefinition_setColorValue_1(self, arg0));
+};
+
+ColorDefinition.prototype['setRGBA'] = function(arg0, arg1, arg2, arg3) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  if (arg3 && typeof arg3 === 'object') arg3 = arg3.ptr;
+  else arg3 = ensureString(arg3);
+  _emscripten_bind_ColorDefinition_setRGBA_4(self, arg0, arg1, arg2, arg3);
+};
+
+ColorDefinition.prototype['setRed'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setRed_1(self, arg0);
+};
+
+ColorDefinition.prototype['setGreen'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setGreen_1(self, arg0);
+};
+
+ColorDefinition.prototype['setBlue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setBlue_1(self, arg0);
+};
+
+ColorDefinition.prototype['setAlpha'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setAlpha_1(self, arg0);
+};
+
+ColorDefinition.prototype['getRed'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getRed_0(self);
+};
+
+ColorDefinition.prototype['getGreen'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getGreen_0(self);
+};
+
+ColorDefinition.prototype['getBlue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getBlue_0(self);
+};
+
+ColorDefinition.prototype['getAlpha'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getAlpha_0(self);
+};
+
+  ColorDefinition.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_ColorDefinition___destroy___0(self);
+}
 // Dimensions
 function Dimensions(arg0, arg1, arg2, arg3) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;

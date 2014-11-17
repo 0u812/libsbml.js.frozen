@@ -424,6 +424,68 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCaster___destroy___0(libsbmljs::
   delete self;
 }
 
+// ColorDefinition
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_getId_0(libsbml::ColorDefinition* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_setId_1(libsbml::ColorDefinition* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_isSetId_0(libsbml::ColorDefinition* self) {
+  return self->isSetId();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_createValueString_0(libsbml::ColorDefinition* self) {
+  return (char*)self->createValueString().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_setColorValue_1(libsbml::ColorDefinition* self, char* arg0) {
+  return self->setColorValue(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_setRGBA_4(libsbml::ColorDefinition* self, unsigned int arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3) {
+  self->setRGBA(arg0, arg1, arg2, arg3);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_setRed_1(libsbml::ColorDefinition* self, unsigned int arg0) {
+  self->setRed(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_setGreen_1(libsbml::ColorDefinition* self, unsigned int arg0) {
+  self->setGreen(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_setBlue_1(libsbml::ColorDefinition* self, unsigned int arg0) {
+  self->setBlue(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_setAlpha_1(libsbml::ColorDefinition* self, unsigned int arg0) {
+  self->setAlpha(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_getRed_0(libsbml::ColorDefinition* self) {
+  return self->getRed();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_getGreen_0(libsbml::ColorDefinition* self) {
+  return self->getGreen();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_getBlue_0(libsbml::ColorDefinition* self) {
+  return self->getBlue();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition_getAlpha_0(libsbml::ColorDefinition* self) {
+  return self->getAlpha();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ColorDefinition___destroy___0(libsbml::ColorDefinition* self) {
+  delete self;
+}
+
 // Dimensions
 
 libsbml::Dimensions* EMSCRIPTEN_KEEPALIVE emscripten_bind_Dimensions_Dimensions_4(libsbml::LayoutPkgNamespaces* arg0, double arg1, double arg2, double arg3) {
