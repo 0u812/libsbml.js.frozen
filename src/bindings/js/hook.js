@@ -26,8 +26,8 @@ var Module = {
       request.open('get', url, true);
       request.responseType = 'text';
       request.onload = function(e) {
-  //       console.log('async loaded model');
-  //       console.log('status ' + String(request.status));
+        console.log('async loaded model ' + url);
+        console.log('status ' + String(request.status));
         if((request.status==200 || request.status==0) && request.response) {
   //         console.log(request.response);
   //         result.text = request.response;
@@ -37,7 +37,7 @@ var Module = {
   //         console.log('post sbml reader');
           result.doc = reader.readSBMLFromString(request.response);
   //         console.log('post read sbml from str');
-  //         this.destroy(reader);
+  //         Module.destroy(reader);
 
           if(result.doc.getNumErrors() > 0) {
             console.log('Invalid model: ' + url);

@@ -1779,6 +1779,25 @@ Rule.prototype['isParameter'] = function() {
   var self = this.ptr;
   _emscripten_bind_Rule___destroy___0(self);
 }
+// ListOfLayouts
+function ListOfLayouts() { throw "cannot construct a ListOfLayouts, no constructor in IDL" }
+ListOfLayouts.prototype = Object.create(WrapperObject.prototype);
+ListOfLayouts.prototype.constructor = ListOfLayouts;
+ListOfLayouts.prototype.__class__ = ListOfLayouts;
+ListOfLayouts.__cache__ = {};
+Module['ListOfLayouts'] = ListOfLayouts;
+
+ListOfLayouts.prototype['getPlugin'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_ListOfLayouts_getPlugin_1(self, arg0), SBasePlugin);
+};
+
+  ListOfLayouts.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_ListOfLayouts___destroy___0(self);
+}
 // SBasePlugin
 function SBasePlugin() { throw "cannot construct a SBasePlugin, no constructor in IDL" }
 SBasePlugin.prototype = Object.create(WrapperObject.prototype);
@@ -2631,6 +2650,11 @@ LayoutModelPlugin.prototype['getLayout'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_LayoutModelPlugin_getLayout_1(self, arg0), Layout);
+};
+
+LayoutModelPlugin.prototype['getListOfLayouts'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LayoutModelPlugin_getListOfLayouts_0(self), ListOfLayouts);
 };
 
   LayoutModelPlugin.prototype['__destroy__'] = function() {

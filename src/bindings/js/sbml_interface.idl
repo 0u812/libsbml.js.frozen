@@ -781,6 +781,13 @@ interface Layout {
   SpeciesGlyph removeSpeciesGlyph(unsigned long n);
   SpeciesReferenceGlyph removeSpeciesReferenceGlyph(DOMString id);
   TextGlyph removeTextGlyph(unsigned long n);
+
+//   SBasePlugin getPlugin(DOMString name);
+};
+
+[Prefix="libsbml::"]
+interface ListOfLayouts {
+  SBasePlugin getPlugin(DOMString name);
 };
 
 [Prefix="libsbml::"]
@@ -790,6 +797,8 @@ interface LayoutModelPlugin {
   // NOTE: libSBML signedness is inconsistent here
   long getNumLayouts();
   Layout getLayout(unsigned long n);
+
+  ListOfLayouts getListOfLayouts();
 };
 
 [Prefix="libsbml::"]

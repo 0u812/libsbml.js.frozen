@@ -1134,6 +1134,16 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rule___destroy___0(libsbml::Rule* self
   delete self;
 }
 
+// ListOfLayouts
+
+libsbml::SBasePlugin* EMSCRIPTEN_KEEPALIVE emscripten_bind_ListOfLayouts_getPlugin_1(libsbml::ListOfLayouts* self, char* arg0) {
+  return self->getPlugin(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_ListOfLayouts___destroy___0(libsbml::ListOfLayouts* self) {
+  delete self;
+}
+
 // SBasePlugin
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_SBasePlugin_getPackageName_0(libsbml::SBasePlugin* self) {
@@ -1694,6 +1704,10 @@ int EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin_getNumLayouts_0(libsb
 
 libsbml::Layout* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin_getLayout_1(libsbml::LayoutModelPlugin* self, unsigned int arg0) {
   return self->getLayout(arg0);
+}
+
+libsbml::ListOfLayouts* EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin_getListOfLayouts_0(libsbml::LayoutModelPlugin* self) {
+  return self->getListOfLayouts();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LayoutModelPlugin___destroy___0(libsbml::LayoutModelPlugin* self) {
