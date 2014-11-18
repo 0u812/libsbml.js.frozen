@@ -1321,6 +1321,58 @@ RateRule.prototype['isParameter'] = function() {
   var self = this.ptr;
   _emscripten_bind_RateRule___destroy___0(self);
 }
+// RelAbsVector
+function RelAbsVector(arg0, arg1) {
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  this.ptr = _emscripten_bind_RelAbsVector_RelAbsVector_2(arg0, arg1);
+  getCache(RelAbsVector)[this.ptr] = this;
+};
+RelAbsVector.prototype = Object.create(WrapperObject.prototype);
+RelAbsVector.prototype.constructor = RelAbsVector;
+RelAbsVector.prototype.__class__ = RelAbsVector;
+RelAbsVector.__cache__ = {};
+Module['RelAbsVector'] = RelAbsVector;
+
+RelAbsVector.prototype['setCoordinate'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_RelAbsVector_setCoordinate_2(self, arg0, arg1);
+};
+
+RelAbsVector.prototype['setAbsoluteValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RelAbsVector_setAbsoluteValue_1(self, arg0);
+};
+
+RelAbsVector.prototype['setRelativeValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RelAbsVector_setRelativeValue_1(self, arg0);
+};
+
+RelAbsVector.prototype['getAbsoluteValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RelAbsVector_getAbsoluteValue_0(self);
+};
+
+RelAbsVector.prototype['getRelativeValue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RelAbsVector_getRelativeValue_0(self);
+};
+
+  RelAbsVector.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RelAbsVector___destroy___0(self);
+}
 // LocalParameter
 function LocalParameter() { throw "cannot construct a LocalParameter, no constructor in IDL" }
 LocalParameter.prototype = Object.create(WrapperObject.prototype);
@@ -2412,6 +2464,35 @@ Model.prototype['getPlugin'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_Model___destroy___0(self);
 }
+// RadialGradient
+function RadialGradient() { throw "cannot construct a RadialGradient, no constructor in IDL" }
+RadialGradient.prototype = Object.create(WrapperObject.prototype);
+RadialGradient.prototype.constructor = RadialGradient;
+RadialGradient.prototype.__class__ = RadialGradient;
+RadialGradient.__cache__ = {};
+Module['RadialGradient'] = RadialGradient;
+
+RadialGradient.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RadialGradient_getId_0(self));
+};
+
+RadialGradient.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RadialGradient_setId_1(self, arg0);
+};
+
+RadialGradient.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RadialGradient_isSetId_0(self));
+};
+
+  RadialGradient.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RadialGradient___destroy___0(self);
+}
 // AlgebraicRule
 function AlgebraicRule() { throw "cannot construct a AlgebraicRule, no constructor in IDL" }
 AlgebraicRule.prototype = Object.create(WrapperObject.prototype);
@@ -2894,11 +2975,25 @@ GradientCaster.prototype['isLinear'] = function(arg0) {
   return idl_wrapBool(_emscripten_bind_GradientCaster_isLinear_1(self, arg0));
 };
 
+GradientCaster.prototype['asLinear'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GradientCaster_asLinear_1(self, arg0), LinearGradient);
+};
+
 GradientCaster.prototype['isRadial'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return idl_wrapBool(_emscripten_bind_GradientCaster_isRadial_1(self, arg0));
+};
+
+GradientCaster.prototype['asRadial'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GradientCaster_asRadial_1(self, arg0), RadialGradient);
 };
 
   GradientCaster.prototype['__destroy__'] = function() {
@@ -3271,6 +3366,100 @@ Species.prototype['isSetSBOTerm'] = function() {
   Species.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Species___destroy___0(self);
+}
+// LinearGradient
+function LinearGradient() { throw "cannot construct a LinearGradient, no constructor in IDL" }
+LinearGradient.prototype = Object.create(WrapperObject.prototype);
+LinearGradient.prototype.constructor = LinearGradient;
+LinearGradient.prototype.__class__ = LinearGradient;
+LinearGradient.__cache__ = {};
+Module['LinearGradient'] = LinearGradient;
+
+LinearGradient.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LinearGradient_getId_0(self));
+};
+
+LinearGradient.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LinearGradient_setId_1(self, arg0);
+};
+
+LinearGradient.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LinearGradient_isSetId_0(self));
+};
+
+LinearGradient.prototype['setCoordinates'] = function(arg0, arg1, arg2, arg3) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  if (arg3 && typeof arg3 === 'object') arg3 = arg3.ptr;
+  else arg3 = ensureString(arg3);
+  _emscripten_bind_LinearGradient_setCoordinates_4(self, arg0, arg1, arg2, arg3);
+};
+
+LinearGradient.prototype['setPoint1'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_LinearGradient_setPoint1_3(self, arg0, arg1, arg2);
+};
+
+LinearGradient.prototype['setPoint2'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_LinearGradient_setPoint2_3(self, arg0, arg1, arg2);
+};
+
+LinearGradient.prototype['getXPoint1'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LinearGradient_getXPoint1_0(self), RelAbsVector);
+};
+
+LinearGradient.prototype['getYPoint1'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LinearGradient_getYPoint1_0(self), RelAbsVector);
+};
+
+LinearGradient.prototype['getZPoint1'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LinearGradient_getZPoint1_0(self), RelAbsVector);
+};
+
+LinearGradient.prototype['getXPoint2'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LinearGradient_getXPoint2_0(self), RelAbsVector);
+};
+
+LinearGradient.prototype['getYPoint2'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LinearGradient_getYPoint2_0(self), RelAbsVector);
+};
+
+LinearGradient.prototype['getZPoint2'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LinearGradient_getZPoint2_0(self), RelAbsVector);
+};
+
+  LinearGradient.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LinearGradient___destroy___0(self);
 }
 // libsbml__idl__ASTNodeType_t
 Module['AST_PLUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_PLUS();

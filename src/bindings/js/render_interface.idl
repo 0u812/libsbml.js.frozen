@@ -1,5 +1,44 @@
 [Prefix="libsbml::"]
+interface RelAbsVector {
+  void RelAbsVector(double a, double r);
+
+  void setCoordinate(double a, double r);
+
+  void setAbsoluteValue(double abs);
+  void setRelativeValue(double rel);
+
+  double getAbsoluteValue();
+  double getRelativeValue();
+};
+
+[Prefix="libsbml::"]
 interface GradientBase {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+};
+
+[Prefix="libsbml::"]
+interface LinearGradient {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  void setCoordinates([Ref] RelAbsVector x1, [Ref] RelAbsVector y1, [Ref] RelAbsVector x2, [Ref] RelAbsVector y2);
+  void setPoint1([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
+  void setPoint2([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
+
+  [Ref] RelAbsVector getXPoint1();
+  [Ref] RelAbsVector getYPoint1();
+  [Ref] RelAbsVector getZPoint1();
+
+  [Ref] RelAbsVector getXPoint2();
+  [Ref] RelAbsVector getYPoint2();
+  [Ref] RelAbsVector getZPoint2();
+};
+
+[Prefix="libsbml::"]
+interface RadialGradient {
   DOMString getId();
   void setId(DOMString t);
   boolean isSetId();
@@ -8,8 +47,12 @@ interface GradientBase {
 [Prefix="libsbmljs::"]
 interface GradientCaster {
   void GradientCaster();
+
   boolean isLinear(GradientBase p);
+  LinearGradient asLinear(GradientBase p);
+
   boolean isRadial(GradientBase p);
+  RadialGradient asRadial(GradientBase p);
 };
 
 [Prefix="libsbml::"]

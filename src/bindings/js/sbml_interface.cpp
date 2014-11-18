@@ -824,6 +824,36 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule___destroy___0(libsbml::RateRu
   delete self;
 }
 
+// RelAbsVector
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_RelAbsVector_2(double arg0, double arg1) {
+  return new libsbml::RelAbsVector(arg0, arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_setCoordinate_2(libsbml::RelAbsVector* self, double arg0, double arg1) {
+  self->setCoordinate(arg0, arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_setAbsoluteValue_1(libsbml::RelAbsVector* self, double arg0) {
+  self->setAbsoluteValue(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_setRelativeValue_1(libsbml::RelAbsVector* self, double arg0) {
+  self->setRelativeValue(arg0);
+}
+
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_getAbsoluteValue_0(libsbml::RelAbsVector* self) {
+  return self->getAbsoluteValue();
+}
+
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_getRelativeValue_0(libsbml::RelAbsVector* self) {
+  return self->getRelativeValue();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector___destroy___0(libsbml::RelAbsVector* self) {
+  delete self;
+}
+
 // LocalParameter
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalParameter_getId_0(libsbml::LocalParameter* self) {
@@ -1544,6 +1574,24 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Model___destroy___0(libsbml::Model* se
   delete self;
 }
 
+// RadialGradient
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getId_0(libsbml::RadialGradient* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_setId_1(libsbml::RadialGradient* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_isSetId_0(libsbml::RadialGradient* self) {
+  return self->isSetId();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient___destroy___0(libsbml::RadialGradient* self) {
+  delete self;
+}
+
 // AlgebraicRule
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_getMetaId_0(libsbml::AlgebraicRule* self) {
@@ -1858,8 +1906,16 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isLinear_1(libsbmljs::G
   return self->isLinear(arg0);
 }
 
+libsbml::LinearGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_asLinear_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->asLinear(arg0);
+}
+
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isRadial_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
   return self->isRadial(arg0);
+}
+
+libsbml::RadialGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_asRadial_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->asRadial(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster___destroy___0(libsbmljs::GradientCaster* self) {
@@ -2103,6 +2159,60 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Species_isSetSBOTerm_0(libsbml::Specie
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Species___destroy___0(libsbml::Species* self) {
+  delete self;
+}
+
+// LinearGradient
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getId_0(libsbml::LinearGradient* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_setId_1(libsbml::LinearGradient* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_isSetId_0(libsbml::LinearGradient* self) {
+  return self->isSetId();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_setCoordinates_4(libsbml::LinearGradient* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2, libsbml::RelAbsVector* arg3) {
+  self->setCoordinates(*arg0, *arg1, *arg2, *arg3);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_setPoint1_3(libsbml::LinearGradient* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setPoint1(*arg0, *arg1, *arg2);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_setPoint2_3(libsbml::LinearGradient* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setPoint2(*arg0, *arg1, *arg2);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getXPoint1_0(libsbml::LinearGradient* self) {
+  return &self->getXPoint1();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getYPoint1_0(libsbml::LinearGradient* self) {
+  return &self->getYPoint1();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getZPoint1_0(libsbml::LinearGradient* self) {
+  return &self->getZPoint1();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getXPoint2_0(libsbml::LinearGradient* self) {
+  return &self->getXPoint2();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getYPoint2_0(libsbml::LinearGradient* self) {
+  return &self->getYPoint2();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getZPoint2_0(libsbml::LinearGradient* self) {
+  return &self->getZPoint2();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient___destroy___0(libsbml::LinearGradient* self) {
   delete self;
 }
 

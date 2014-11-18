@@ -3,3 +3,6 @@ src/WebIDLGrammar.pkl
 src/parser.out
 src/bindings/js/WebIDLGrammar.pkl
 src/bindings/js/parser.out
+
+# vi
+*.swp
