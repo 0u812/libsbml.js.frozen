@@ -1,3 +1,21 @@
+Object.defineProperty(RelAbsVector.prototype, "r", {
+  get: function() {
+    return this.getRelativeValue();
+  },
+  set: function(x) {
+    return this.setRelativeValue(x);
+  }
+});
+
+Object.defineProperty(RelAbsVector.prototype, "a", {
+  get: function() {
+    return this.getAbsoluteValue();
+  },
+  set: function(x) {
+    return this.setAbsoluteValue(x);
+  }
+});
+
 Object.defineProperty(LocalRenderInformation.prototype, "colors", {
   get: function errors() {
     var result = [];
