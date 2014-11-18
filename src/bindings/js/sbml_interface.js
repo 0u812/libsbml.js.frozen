@@ -95,6 +95,23 @@ GradientBase.prototype['isSetId'] = function() {
   return idl_wrapBool(_emscripten_bind_GradientBase_isSetId_0(self));
 };
 
+GradientBase.prototype['getNumGradientStops'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GradientBase_getNumGradientStops_0(self);
+};
+
+GradientBase.prototype['getGradientStop'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GradientBase_getGradientStop_1(self, arg0), GradientStop);
+};
+
+GradientBase.prototype['createGradientStop'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_GradientBase_createGradientStop_0(self), GradientStop);
+};
+
   GradientBase.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_GradientBase___destroy___0(self);
@@ -2312,6 +2329,61 @@ SBMLDocument.prototype['checkL3v1Compatibility'] = function() {
   var self = this.ptr;
   _emscripten_bind_SBMLDocument___destroy___0(self);
 }
+// GradientStop
+function GradientStop() { throw "cannot construct a GradientStop, no constructor in IDL" }
+GradientStop.prototype = Object.create(WrapperObject.prototype);
+GradientStop.prototype.constructor = GradientStop;
+GradientStop.prototype.__class__ = GradientStop;
+GradientStop.__cache__ = {};
+Module['GradientStop'] = GradientStop;
+
+GradientStop.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GradientStop_getId_0(self));
+};
+
+GradientStop.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GradientStop_setId_1(self, arg0);
+};
+
+GradientStop.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GradientStop_isSetId_0(self));
+};
+
+GradientStop.prototype['getOffset'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_GradientStop_getOffset_0(self), RelAbsVector);
+};
+
+GradientStop.prototype['setOffset'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_GradientStop_setOffset_2(self, arg0, arg1);
+};
+
+GradientStop.prototype['getStopColor'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GradientStop_getStopColor_0(self));
+};
+
+GradientStop.prototype['setStopColor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GradientStop_setStopColor_1(self, arg0);
+};
+
+  GradientStop.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GradientStop___destroy___0(self);
+}
 // Model
 function Model() { throw "cannot construct a Model, no constructor in IDL" }
 Model.prototype = Object.create(WrapperObject.prototype);
@@ -2487,6 +2559,23 @@ RadialGradient.prototype['setId'] = function(arg0) {
 RadialGradient.prototype['isSetId'] = function() {
   var self = this.ptr;
   return idl_wrapBool(_emscripten_bind_RadialGradient_isSetId_0(self));
+};
+
+RadialGradient.prototype['getNumGradientStops'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RadialGradient_getNumGradientStops_0(self);
+};
+
+RadialGradient.prototype['getGradientStop'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RadialGradient_getGradientStop_1(self, arg0), GradientStop);
+};
+
+RadialGradient.prototype['createGradientStop'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RadialGradient_createGradientStop_0(self), GradientStop);
 };
 
   RadialGradient.prototype['__destroy__'] = function() {
@@ -3455,6 +3544,23 @@ LinearGradient.prototype['getYPoint2'] = function() {
 LinearGradient.prototype['getZPoint2'] = function() {
   var self = this.ptr;
   return wrapPointer(_emscripten_bind_LinearGradient_getZPoint2_0(self), RelAbsVector);
+};
+
+LinearGradient.prototype['getNumGradientStops'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LinearGradient_getNumGradientStops_0(self);
+};
+
+LinearGradient.prototype['getGradientStop'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LinearGradient_getGradientStop_1(self, arg0), GradientStop);
+};
+
+LinearGradient.prototype['createGradientStop'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LinearGradient_createGradientStop_0(self), GradientStop);
 };
 
   LinearGradient.prototype['__destroy__'] = function() {

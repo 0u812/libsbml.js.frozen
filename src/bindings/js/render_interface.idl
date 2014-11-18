@@ -12,10 +12,27 @@ interface RelAbsVector {
 };
 
 [Prefix="libsbml::"]
+interface GradientStop {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  [Ref] RelAbsVector getOffset();
+  void setOffset(double abs, double rel);
+
+  DOMString getStopColor();
+  void setStopColor(DOMString color);
+};
+
+[Prefix="libsbml::"]
 interface GradientBase {
   DOMString getId();
   void setId(DOMString t);
   boolean isSetId();
+
+  unsigned long getNumGradientStops();
+  GradientStop getGradientStop(unsigned long n);
+  GradientStop createGradientStop();
 };
 
 [Prefix="libsbml::"]
@@ -35,6 +52,10 @@ interface LinearGradient {
   [Ref] RelAbsVector getXPoint2();
   [Ref] RelAbsVector getYPoint2();
   [Ref] RelAbsVector getZPoint2();
+
+  unsigned long getNumGradientStops();
+  GradientStop getGradientStop(unsigned long n);
+  GradientStop createGradientStop();
 };
 
 [Prefix="libsbml::"]
@@ -42,6 +63,10 @@ interface RadialGradient {
   DOMString getId();
   void setId(DOMString t);
   boolean isSetId();
+
+  unsigned long getNumGradientStops();
+  GradientStop getGradientStop(unsigned long n);
+  GradientStop createGradientStop();
 };
 
 [Prefix="libsbmljs::"]

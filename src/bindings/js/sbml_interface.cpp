@@ -26,6 +26,18 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase_isSetId_0(libsbml::Gradie
   return self->isSetId();
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase_getNumGradientStops_0(libsbml::GradientBase* self) {
+  return self->getNumGradientStops();
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase_getGradientStop_1(libsbml::GradientBase* self, unsigned int arg0) {
+  return self->getGradientStop(arg0);
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase_createGradientStop_0(libsbml::GradientBase* self) {
+  return self->createGradientStop();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase___destroy___0(libsbml::GradientBase* self) {
   delete self;
 }
@@ -1472,6 +1484,40 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument___destroy___0(libsbml::SB
   delete self;
 }
 
+// GradientStop
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop_getId_0(libsbml::GradientStop* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop_setId_1(libsbml::GradientStop* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop_isSetId_0(libsbml::GradientStop* self) {
+  return self->isSetId();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop_getOffset_0(libsbml::GradientStop* self) {
+  return &self->getOffset();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop_setOffset_2(libsbml::GradientStop* self, double arg0, double arg1) {
+  self->setOffset(arg0, arg1);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop_getStopColor_0(libsbml::GradientStop* self) {
+  return (char*)self->getStopColor().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop_setStopColor_1(libsbml::GradientStop* self, char* arg0) {
+  self->setStopColor(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientStop___destroy___0(libsbml::GradientStop* self) {
+  delete self;
+}
+
 // Model
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Model_getId_0(libsbml::Model* self) {
@@ -1586,6 +1632,18 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_setId_1(libsbml::Radial
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_isSetId_0(libsbml::RadialGradient* self) {
   return self->isSetId();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getNumGradientStops_0(libsbml::RadialGradient* self) {
+  return self->getNumGradientStops();
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getGradientStop_1(libsbml::RadialGradient* self, unsigned int arg0) {
+  return self->getGradientStop(arg0);
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_createGradientStop_0(libsbml::RadialGradient* self) {
+  return self->createGradientStop();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient___destroy___0(libsbml::RadialGradient* self) {
@@ -2210,6 +2268,18 @@ libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getYP
 
 libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getZPoint2_0(libsbml::LinearGradient* self) {
   return &self->getZPoint2();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getNumGradientStops_0(libsbml::LinearGradient* self) {
+  return self->getNumGradientStops();
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_getGradientStop_1(libsbml::LinearGradient* self, unsigned int arg0) {
+  return self->getGradientStop(arg0);
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient_createGradientStop_0(libsbml::LinearGradient* self) {
+  return self->createGradientStop();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LinearGradient___destroy___0(libsbml::LinearGradient* self) {
