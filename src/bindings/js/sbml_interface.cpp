@@ -12,6 +12,24 @@ void array_bounds_check(const int array_size, const int array_idx) {
   }
 }
 
+// GradientBase
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase_getId_0(libsbml::GradientBase* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase_setId_1(libsbml::GradientBase* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase_isSetId_0(libsbml::GradientBase* self) {
+  return self->isSetId();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase___destroy___0(libsbml::GradientBase* self) {
+  delete self;
+}
+
 // Layout
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getId_0(libsbml::Layout* self) {
@@ -266,6 +284,14 @@ unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumC
 
 libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getColorDefinition_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
   return self->getColorDefinition(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumGradientDefinitions_0(libsbml::LocalRenderInformation* self) {
+  return self->getNumGradientDefinitions();
+}
+
+libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getGradientDefinition_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
+  return self->getGradientDefinition(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation___destroy___0(libsbml::LocalRenderInformation* self) {
@@ -1622,6 +1648,14 @@ libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInfor
   return self->getColorDefinition(arg0);
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(libsbml::GlobalRenderInformation* self) {
+  return self->getNumGradientDefinitions();
+}
+
+libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->getGradientDefinition(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {
   delete self;
 }
@@ -1811,6 +1845,24 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_isSetSpeciesId_0(libsbml:
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph___destroy___0(libsbml::SpeciesGlyph* self) {
+  delete self;
+}
+
+// GradientCaster
+
+libsbmljs::GradientCaster* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_GradientCaster_0() {
+  return new libsbmljs::GradientCaster();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isLinear_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->isLinear(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isRadial_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->isRadial(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster___destroy___0(libsbmljs::GradientCaster* self) {
   delete self;
 }
 

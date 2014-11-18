@@ -70,6 +70,35 @@ function ensureString(value) {
 }
 
 
+// GradientBase
+function GradientBase() { throw "cannot construct a GradientBase, no constructor in IDL" }
+GradientBase.prototype = Object.create(WrapperObject.prototype);
+GradientBase.prototype.constructor = GradientBase;
+GradientBase.prototype.__class__ = GradientBase;
+GradientBase.__cache__ = {};
+Module['GradientBase'] = GradientBase;
+
+GradientBase.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GradientBase_getId_0(self));
+};
+
+GradientBase.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GradientBase_setId_1(self, arg0);
+};
+
+GradientBase.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GradientBase_isSetId_0(self));
+};
+
+  GradientBase.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GradientBase___destroy___0(self);
+}
 // Layout
 function Layout() { throw "cannot construct a Layout, no constructor in IDL" }
 Layout.prototype = Object.create(WrapperObject.prototype);
@@ -459,6 +488,18 @@ LocalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_LocalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
+};
+
+LocalRenderInformation.prototype['getNumGradientDefinitions'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalRenderInformation_getNumGradientDefinitions_0(self);
+};
+
+LocalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
 };
 
   LocalRenderInformation.prototype['__destroy__'] = function() {
@@ -2529,6 +2570,18 @@ GlobalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
   return wrapPointer(_emscripten_bind_GlobalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
 };
 
+GlobalRenderInformation.prototype['getNumGradientDefinitions'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(self);
+};
+
+GlobalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
+};
+
   GlobalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_GlobalRenderInformation___destroy___0(self);
@@ -2822,6 +2875,35 @@ SpeciesGlyph.prototype['isSetSpeciesId'] = function() {
   SpeciesGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SpeciesGlyph___destroy___0(self);
+}
+// GradientCaster
+function GradientCaster() {
+  this.ptr = _emscripten_bind_GradientCaster_GradientCaster_0();
+  getCache(GradientCaster)[this.ptr] = this;
+};
+GradientCaster.prototype = Object.create(WrapperObject.prototype);
+GradientCaster.prototype.constructor = GradientCaster;
+GradientCaster.prototype.__class__ = GradientCaster;
+GradientCaster.__cache__ = {};
+Module['GradientCaster'] = GradientCaster;
+
+GradientCaster.prototype['isLinear'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_GradientCaster_isLinear_1(self, arg0));
+};
+
+GradientCaster.prototype['isRadial'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_GradientCaster_isRadial_1(self, arg0));
+};
+
+  GradientCaster.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GradientCaster___destroy___0(self);
 }
 // TextGlyph
 function TextGlyph() { throw "cannot construct a TextGlyph, no constructor in IDL" }

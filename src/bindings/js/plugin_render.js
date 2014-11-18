@@ -8,6 +8,21 @@ Object.defineProperty(LocalRenderInformation.prototype, "colors", {
   }
 });
 
+Object.defineProperty(LocalRenderInformation.prototype, "gradients", {
+  get: function errors() {
+    var swtch = new Module.GradientCaster();
+    var result = [];
+    for(var i=0; i<this.getNumGradientDefinitions(); i++) {
+      if(swtch.isLinear(this.getGradientDefinition(i))) {
+        result.push(swtch.asLinear(this.getGradientDefinition(i)));
+      } else if(swtch.isRadial(this.getGradientDefinition(i))) {
+        result.push(swtch.asRadial(this.getGradientDefinition(i)));
+      }
+    }
+    return result;
+  }
+});
+
 Object.defineProperty(RenderLayoutPlugin.prototype, "renderinfo", {
   get: function errors() {
     var result = [];

@@ -829,6 +829,20 @@ interface CurveCaster {
   boolean isCubicBezier(LineSegment x);
   CubicBezier castToCubicBezier(LineSegment x);
 };[Prefix="libsbml::"]
+interface GradientBase {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+};
+
+[Prefix="libsbmljs::"]
+interface GradientCaster {
+  void GradientCaster();
+  boolean isLinear(GradientBase p);
+  boolean isRadial(GradientBase p);
+};
+
+[Prefix="libsbml::"]
 interface ColorDefinition {
   DOMString getId();
   void setId(DOMString t);
@@ -867,6 +881,9 @@ interface GlobalRenderInformation {
 
   unsigned long getNumColorDefinitions();
   ColorDefinition getColorDefinition(unsigned long n);
+
+  unsigned long getNumGradientDefinitions();
+  GradientBase getGradientDefinition(unsigned long n);
 };
 
 [Prefix="libsbml::"]
@@ -893,6 +910,9 @@ interface LocalRenderInformation {
 
   unsigned long getNumColorDefinitions();
   ColorDefinition getColorDefinition(unsigned long n);
+
+  unsigned long getNumGradientDefinitions();
+  GradientBase getGradientDefinition(unsigned long n);
 };
 
 [Prefix="libsbml::"]

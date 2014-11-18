@@ -14,6 +14,33 @@
 // Wrapper objects
 namespace libsbmljs {
 
+  class GradientCaster {
+  public:
+    GradientCaster() {}
+
+    bool isLinear(libsbml::GradientBase* p) {
+      libsbml::LinearGradient* result = dynamic_cast<libsbml::LinearGradient*>(p);
+      return result;
+    }
+
+    libsbml::LinearGradient* asLinear(libsbml::GradientBase* p) {
+      libsbml::LinearGradient* result = dynamic_cast<libsbml::LinearGradient*>(p);
+      assert(result && "Cast to linear gradient failed");
+      return result;
+    }
+
+    bool isRadial(libsbml::GradientBase* p) {
+      libsbml::RadialGradient* result = dynamic_cast<libsbml::RadialGradient*>(p);
+      return result;
+    }
+
+    libsbml::RadialGradient* asRadial(libsbml::GradientBase* p) {
+      libsbml::RadialGradient* result = dynamic_cast<libsbml::RadialGradient*>(p);
+      assert(result && "Cast to radial gradient failed");
+      return result;
+    }
+  };
+
   class RenderCaster {
   public:
     RenderCaster() {}
