@@ -21,6 +21,21 @@ enum libsbml__idl__Text__idl__FONT_WEIGHT {
   "libsbml::Text::WEIGHT_BOLD"
 };
 
+enum libsbml__idl__Text__idl__FONT_STYLE {
+  "libsbml::Text::STYLE_UNSET",
+  "libsbml::Text::STYLE_NORMAL",
+  "libsbml::Text::STYLE_ITALIC"
+};
+
+enum libsbml__idl__Text__idl__TEXT_ANCHOR {
+  "libsbml::Text::ANCHOR_UNSET",
+  "libsbml::Text::ANCHOR_START",
+  "libsbml::Text::ANCHOR_MIDDLE",
+  "libsbml::Text::ANCHOR_END",
+  "libsbml::Text::ANCHOR_TOP",
+  "libsbml::Text::ANCHOR_BOTTOM"
+};
+
 [Prefix="libsbml::"]
 interface RenderGroup {
   DOMString getId();
@@ -30,6 +45,7 @@ interface RenderGroup {
   void setFontFamily(DOMString family);
   void setFontSize([Ref] RelAbsVector v);
   void setFontWeight(libsbml__idl__Text__idl__FONT_WEIGHT weight);
+  void setFontStyle(libsbml__idl__Text__idl__FONT_STYLE style);
 };
 
 [Prefix="libsbml::"]

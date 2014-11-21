@@ -1112,8 +1112,12 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontSize_1(libsbml::Ren
   self->setFontSize(*arg0);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontWeight_1(libsbml::RenderGroup* self, libsbml__idl__Text__idl__FONT_WEIGHT arg0) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontWeight_1(libsbml::RenderGroup* self, libsbml::Text::FONT_WEIGHT arg0) {
   self->setFontWeight(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontStyle_1(libsbml::RenderGroup* self, libsbml::Text::FONT_STYLE arg0) {
+  self->setFontStyle(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup___destroy___0(libsbml::RenderGroup* self) {
@@ -2383,6 +2387,26 @@ libsbml::Text::FONT_WEIGHT EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Te
   return libsbml::Text::WEIGHT_BOLD;
 }
 
+// libsbml__idl__Text__idl__TEXT_ANCHOR
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_UNSET() {
+  return libsbml::Text::ANCHOR_UNSET;
+}
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_START() {
+  return libsbml::Text::ANCHOR_START;
+}
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_MIDDLE() {
+  return libsbml::Text::ANCHOR_MIDDLE;
+}
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_END() {
+  return libsbml::Text::ANCHOR_END;
+}
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_TOP() {
+  return libsbml::Text::ANCHOR_TOP;
+}
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_BOTTOM() {
+  return libsbml::Text::ANCHOR_BOTTOM;
+}
+
 // libsbml__idl__ASTNodeType_t
 libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_PLUS() {
   return libsbml::AST_PLUS;
@@ -2596,6 +2620,17 @@ libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNod
 }
 libsbml::ASTNodeType_t EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__ASTNodeType_t_AST_ORIGINATES_IN_PACKAGE() {
   return libsbml::AST_ORIGINATES_IN_PACKAGE;
+}
+
+// libsbml__idl__Text__idl__FONT_STYLE
+libsbml::Text::FONT_STYLE EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__FONT_STYLE_STYLE_UNSET() {
+  return libsbml::Text::STYLE_UNSET;
+}
+libsbml::Text::FONT_STYLE EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__FONT_STYLE_STYLE_NORMAL() {
+  return libsbml::Text::STYLE_NORMAL;
+}
+libsbml::Text::FONT_STYLE EMSCRIPTEN_KEEPALIVE emscripten_enum_libsbml__idl__Text__idl__FONT_STYLE_STYLE_ITALIC() {
+  return libsbml::Text::STYLE_ITALIC;
 }
 
 }

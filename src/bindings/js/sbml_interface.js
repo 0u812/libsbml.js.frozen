@@ -1781,6 +1781,13 @@ RenderGroup.prototype['setFontWeight'] = function(arg0) {
   _emscripten_bind_RenderGroup_setFontWeight_1(self, arg0);
 };
 
+RenderGroup.prototype['setFontStyle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFontStyle_1(self, arg0);
+};
+
   RenderGroup.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_RenderGroup___destroy___0(self);
@@ -3711,6 +3718,14 @@ Module['Text']['WEIGHT_UNSET'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_
 Module['Text']['WEIGHT_NORMAL'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_WEIGHT_WEIGHT_NORMAL();
 Module['Text']['WEIGHT_BOLD'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_WEIGHT_WEIGHT_BOLD();
 
+// libsbml__idl__Text__idl__TEXT_ANCHOR
+Module['Text']['ANCHOR_UNSET'] = _emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_UNSET();
+Module['Text']['ANCHOR_START'] = _emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_START();
+Module['Text']['ANCHOR_MIDDLE'] = _emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_MIDDLE();
+Module['Text']['ANCHOR_END'] = _emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_END();
+Module['Text']['ANCHOR_TOP'] = _emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_TOP();
+Module['Text']['ANCHOR_BOTTOM'] = _emscripten_enum_libsbml__idl__Text__idl__TEXT_ANCHOR_ANCHOR_BOTTOM();
+
 // libsbml__idl__ASTNodeType_t
 Module['AST_PLUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_PLUS();
 Module['AST_MINUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_MINUS();
@@ -3783,4 +3798,9 @@ Module['AST_CONSTRUCTOR_PIECE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_A
 Module['AST_CONSTRUCTOR_OTHERWISE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_CONSTRUCTOR_OTHERWISE();
 Module['AST_UNKNOWN'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_UNKNOWN();
 Module['AST_ORIGINATES_IN_PACKAGE'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_ORIGINATES_IN_PACKAGE();
+
+// libsbml__idl__Text__idl__FONT_STYLE
+Module['Text']['STYLE_UNSET'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_STYLE_STYLE_UNSET();
+Module['Text']['STYLE_NORMAL'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_STYLE_STYLE_NORMAL();
+Module['Text']['STYLE_ITALIC'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_STYLE_STYLE_ITALIC();
 
