@@ -845,6 +845,33 @@ interface RelAbsVector {
 interface Text {
 };
 
+// NOTE: can't wrap due to use of double arrays
+[Prefix="libsbml::"]
+interface Transformation2D {
+};
+
+[Prefix="libsbml::"]
+interface Image {
+  void setCoordinates([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
+  void setX([Ref] RelAbsVector x);
+};
+
+[Prefix="libsbml::"]
+interface Rectangle {
+};
+
+[Prefix="libsbml::"]
+interface Ellipse {
+};
+
+[Prefix="libsbml::"]
+interface RenderCurve {
+};
+
+[Prefix="libsbml::"]
+interface Polygon {
+};
+
 enum libsbml__idl__Text__idl__FONT_WEIGHT {
   "libsbml::Text::WEIGHT_UNSET",
   "libsbml::Text::WEIGHT_NORMAL",
@@ -872,10 +899,50 @@ interface RenderGroup {
   void setId(DOMString t);
   boolean isSetId();
 
+  DOMString getFontFamily();
   void setFontFamily(DOMString family);
+
+  [Ref] RelAbsVector getFontSize();
   void setFontSize([Ref] RelAbsVector v);
+
+  libsbml__idl__Text__idl__FONT_WEIGHT getFontWeight();
   void setFontWeight(libsbml__idl__Text__idl__FONT_WEIGHT weight);
+
+  libsbml__idl__Text__idl__FONT_STYLE getFontStyle();
   void setFontStyle(libsbml__idl__Text__idl__FONT_STYLE style);
+
+  libsbml__idl__Text__idl__TEXT_ANCHOR getTextAnchor();
+  libsbml__idl__Text__idl__TEXT_ANCHOR getVTextAnchor();
+  void setTextAnchor(libsbml__idl__Text__idl__TEXT_ANCHOR anchor);
+  void setVTextAnchor(libsbml__idl__Text__idl__TEXT_ANCHOR anchor);
+  boolean isSetTextAnchor();
+  boolean isSetVTextAnchor();
+
+  DOMString getStartHead();
+  DOMString getEndHead();
+
+  unsigned long getNumElements();
+  Transformation2D getElement(unsigned long n);
+
+  DOMString getElementName();
+
+  Image createImage();
+  RenderGroup createGroup();
+  Rectangle createRectangle();
+  Ellipse createEllipse();
+  RenderCurve createCurve();
+  Polygon createPolygon();
+  Text createText();
+
+  long addChildElement(Transformation2D child);
+
+  boolean isSetStartHead();
+  boolean isSetEndHead();
+  boolean isSetFontFamily();
+  boolean isSetFontWeight();
+  boolean isSetFontStyle();
+
+  long getTypeCode();
 };
 
 [Prefix="libsbml::"]

@@ -774,6 +774,12 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_CurveCaster___destroy___0(libsbmljs::C
   delete self;
 }
 
+// Rectangle
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle___destroy___0(libsbml::Rectangle* self) {
+  delete self;
+}
+
 // ASTNode
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_ASTNode_getNumChildren_0(libsbml::ASTNode* self) {
@@ -1104,20 +1110,136 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetId_0(libsbml::RenderG
   return self->isSetId();
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontFamily_0(libsbml::RenderGroup* self) {
+  return (char*)self->getFontFamily().c_str();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontFamily_1(libsbml::RenderGroup* self, char* arg0) {
   self->setFontFamily(arg0);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontSize_0(libsbml::RenderGroup* self) {
+  return &self->getFontSize();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontSize_1(libsbml::RenderGroup* self, libsbml::RelAbsVector* arg0) {
   self->setFontSize(*arg0);
 }
 
+libsbml::Text::FONT_WEIGHT EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontWeight_0(libsbml::RenderGroup* self) {
+  return self->getFontWeight();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontWeight_1(libsbml::RenderGroup* self, libsbml::Text::FONT_WEIGHT arg0) {
   self->setFontWeight(arg0);
 }
 
+libsbml::Text::FONT_STYLE EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontStyle_0(libsbml::RenderGroup* self) {
+  return self->getFontStyle();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontStyle_1(libsbml::RenderGroup* self, libsbml::Text::FONT_STYLE arg0) {
   self->setFontStyle(arg0);
+}
+
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->getTextAnchor();
+}
+
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getVTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->getVTextAnchor();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setTextAnchor_1(libsbml::RenderGroup* self, libsbml::Text::TEXT_ANCHOR arg0) {
+  self->setTextAnchor(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setVTextAnchor_1(libsbml::RenderGroup* self, libsbml::Text::TEXT_ANCHOR arg0) {
+  self->setVTextAnchor(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->isSetTextAnchor();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetVTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->isSetVTextAnchor();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getStartHead_0(libsbml::RenderGroup* self) {
+  return (char*)self->getStartHead().c_str();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getEndHead_0(libsbml::RenderGroup* self) {
+  return (char*)self->getEndHead().c_str();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getNumElements_0(libsbml::RenderGroup* self) {
+  return self->getNumElements();
+}
+
+libsbml::Transformation2D* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getElement_1(libsbml::RenderGroup* self, unsigned int arg0) {
+  return self->getElement(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getElementName_0(libsbml::RenderGroup* self) {
+  return (char*)self->getElementName().c_str();
+}
+
+libsbml::Image* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createImage_0(libsbml::RenderGroup* self) {
+  return self->createImage();
+}
+
+libsbml::RenderGroup* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createGroup_0(libsbml::RenderGroup* self) {
+  return self->createGroup();
+}
+
+libsbml::Rectangle* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createRectangle_0(libsbml::RenderGroup* self) {
+  return self->createRectangle();
+}
+
+libsbml::Ellipse* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createEllipse_0(libsbml::RenderGroup* self) {
+  return self->createEllipse();
+}
+
+libsbml::RenderCurve* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createCurve_0(libsbml::RenderGroup* self) {
+  return self->createCurve();
+}
+
+libsbml::Polygon* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createPolygon_0(libsbml::RenderGroup* self) {
+  return self->createPolygon();
+}
+
+libsbml::Text* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createText_0(libsbml::RenderGroup* self) {
+  return self->createText();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_addChildElement_1(libsbml::RenderGroup* self, libsbml::Transformation2D* arg0) {
+  return self->addChildElement(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetStartHead_0(libsbml::RenderGroup* self) {
+  return self->isSetStartHead();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetEndHead_0(libsbml::RenderGroup* self) {
+  return self->isSetEndHead();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontFamily_0(libsbml::RenderGroup* self) {
+  return self->isSetFontFamily();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontWeight_0(libsbml::RenderGroup* self) {
+  return self->isSetFontWeight();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontStyle_0(libsbml::RenderGroup* self) {
+  return self->isSetFontStyle();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getTypeCode_0(libsbml::RenderGroup* self) {
+  return self->getTypeCode();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup___destroy___0(libsbml::RenderGroup* self) {
@@ -1340,6 +1462,20 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_ModifierSpeciesReference___destroy___0
   delete self;
 }
 
+// RenderLayoutPlugin
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_getNumLocalRenderInformationObjects_0(libsbml::RenderLayoutPlugin* self) {
+  return self->getNumLocalRenderInformationObjects();
+}
+
+libsbml::LocalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_getRenderInformation_1(libsbml::RenderLayoutPlugin* self, unsigned int arg0) {
+  return self->getRenderInformation(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin___destroy___0(libsbml::RenderLayoutPlugin* self) {
+  delete self;
+}
+
 // Curve
 
 libsbml::CubicBezier* EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve_createCubicBezier_0(libsbml::Curve* self) {
@@ -1359,6 +1495,76 @@ libsbml::LineSegment* EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve_getCurveSegment
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Curve___destroy___0(libsbml::Curve* self) {
+  delete self;
+}
+
+// GlobalRenderInformation
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getId_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setId_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_isSetId_0(libsbml::GlobalRenderInformation* self) {
+  return self->isSetId();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getName_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getName().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setName_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setName(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_isSetName_0(libsbml::GlobalRenderInformation* self) {
+  return self->isSetName();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getProgramVersion_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getProgramVersion().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setProgramVersion_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setProgramVersion(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getBackgroundColor_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getBackgroundColor().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setBackgroundColor(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumColorDefinitions_0(libsbml::GlobalRenderInformation* self) {
+  return self->getNumColorDefinitions();
+}
+
+libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getColorDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->getColorDefinition(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(libsbml::GlobalRenderInformation* self) {
+  return self->getNumGradientDefinitions();
+}
+
+libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->getGradientDefinition(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumLineEndings_0(libsbml::GlobalRenderInformation* self) {
+  return self->getNumLineEndings();
+}
+
+libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getLineEnding_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->getLineEnding(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {
   delete self;
 }
 
@@ -1557,6 +1763,12 @@ unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkL3v1Compatib
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument___destroy___0(libsbml::SBMLDocument* self) {
+  delete self;
+}
+
+// Polygon
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon___destroy___0(libsbml::Polygon* self) {
   delete self;
 }
 
@@ -1780,73 +1992,9 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::A
   delete self;
 }
 
-// GlobalRenderInformation
+// RenderCurve
 
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getId_0(libsbml::GlobalRenderInformation* self) {
-  return (char*)self->getId().c_str();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setId_1(libsbml::GlobalRenderInformation* self, char* arg0) {
-  self->setId(arg0);
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_isSetId_0(libsbml::GlobalRenderInformation* self) {
-  return self->isSetId();
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getName_0(libsbml::GlobalRenderInformation* self) {
-  return (char*)self->getName().c_str();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setName_1(libsbml::GlobalRenderInformation* self, char* arg0) {
-  self->setName(arg0);
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_isSetName_0(libsbml::GlobalRenderInformation* self) {
-  return self->isSetName();
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getProgramVersion_0(libsbml::GlobalRenderInformation* self) {
-  return (char*)self->getProgramVersion().c_str();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setProgramVersion_1(libsbml::GlobalRenderInformation* self, char* arg0) {
-  self->setProgramVersion(arg0);
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getBackgroundColor_0(libsbml::GlobalRenderInformation* self) {
-  return (char*)self->getBackgroundColor().c_str();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(libsbml::GlobalRenderInformation* self, char* arg0) {
-  self->setBackgroundColor(arg0);
-}
-
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumColorDefinitions_0(libsbml::GlobalRenderInformation* self) {
-  return self->getNumColorDefinitions();
-}
-
-libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getColorDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
-  return self->getColorDefinition(arg0);
-}
-
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(libsbml::GlobalRenderInformation* self) {
-  return self->getNumGradientDefinitions();
-}
-
-libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
-  return self->getGradientDefinition(arg0);
-}
-
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumLineEndings_0(libsbml::GlobalRenderInformation* self) {
-  return self->getNumLineEndings();
-}
-
-libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getLineEnding_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
-  return self->getLineEnding(arg0);
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve___destroy___0(libsbml::RenderCurve* self) {
   delete self;
 }
 
@@ -2006,6 +2154,12 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_GeneralGlyph___destroy___0(libsbml::Ge
   delete self;
 }
 
+// Ellipse
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse___destroy___0(libsbml::Ellipse* self) {
+  delete self;
+}
+
 // SpeciesGlyph
 
 libsbml::BoundingBox* EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph_getBoundingBox_0(libsbml::SpeciesGlyph* self) {
@@ -2096,17 +2250,23 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_TextGlyph___destroy___0(libsbml::TextG
   delete self;
 }
 
-// RenderLayoutPlugin
+// Transformation2D
 
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_getNumLocalRenderInformationObjects_0(libsbml::RenderLayoutPlugin* self) {
-  return self->getNumLocalRenderInformationObjects();
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Transformation2D___destroy___0(libsbml::Transformation2D* self) {
+  delete self;
 }
 
-libsbml::LocalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_getRenderInformation_1(libsbml::RenderLayoutPlugin* self, unsigned int arg0) {
-  return self->getRenderInformation(arg0);
+// Image
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setCoordinates_3(libsbml::Image* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setCoordinates(*arg0, *arg1, *arg2);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin___destroy___0(libsbml::RenderLayoutPlugin* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setX_1(libsbml::Image* self, libsbml::RelAbsVector* arg0) {
+  self->setX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image___destroy___0(libsbml::Image* self) {
   delete self;
 }
 

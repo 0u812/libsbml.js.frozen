@@ -1241,6 +1241,18 @@ CurveCaster.prototype['castToCubicBezier'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_CurveCaster___destroy___0(self);
 }
+// Rectangle
+function Rectangle() { throw "cannot construct a Rectangle, no constructor in IDL" }
+Rectangle.prototype = Object.create(WrapperObject.prototype);
+Rectangle.prototype.constructor = Rectangle;
+Rectangle.prototype.__class__ = Rectangle;
+Rectangle.__cache__ = {};
+Module['Rectangle'] = Rectangle;
+
+  Rectangle.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Rectangle___destroy___0(self);
+}
 // ASTNode
 function ASTNode() { throw "cannot construct a ASTNode, no constructor in IDL" }
 ASTNode.prototype = Object.create(WrapperObject.prototype);
@@ -1760,11 +1772,21 @@ RenderGroup.prototype['isSetId'] = function() {
   return idl_wrapBool(_emscripten_bind_RenderGroup_isSetId_0(self));
 };
 
+RenderGroup.prototype['getFontFamily'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getFontFamily_0(self));
+};
+
 RenderGroup.prototype['setFontFamily'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   _emscripten_bind_RenderGroup_setFontFamily_1(self, arg0);
+};
+
+RenderGroup.prototype['getFontSize'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_getFontSize_0(self), RelAbsVector);
 };
 
 RenderGroup.prototype['setFontSize'] = function(arg0) {
@@ -1774,6 +1796,11 @@ RenderGroup.prototype['setFontSize'] = function(arg0) {
   _emscripten_bind_RenderGroup_setFontSize_1(self, arg0);
 };
 
+RenderGroup.prototype['getFontWeight'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getFontWeight_0(self);
+};
+
 RenderGroup.prototype['setFontWeight'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
@@ -1781,11 +1808,149 @@ RenderGroup.prototype['setFontWeight'] = function(arg0) {
   _emscripten_bind_RenderGroup_setFontWeight_1(self, arg0);
 };
 
+RenderGroup.prototype['getFontStyle'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getFontStyle_0(self);
+};
+
 RenderGroup.prototype['setFontStyle'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   _emscripten_bind_RenderGroup_setFontStyle_1(self, arg0);
+};
+
+RenderGroup.prototype['getTextAnchor'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getTextAnchor_0(self);
+};
+
+RenderGroup.prototype['getVTextAnchor'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getVTextAnchor_0(self);
+};
+
+RenderGroup.prototype['setTextAnchor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setTextAnchor_1(self, arg0);
+};
+
+RenderGroup.prototype['setVTextAnchor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setVTextAnchor_1(self, arg0);
+};
+
+RenderGroup.prototype['isSetTextAnchor'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetTextAnchor_0(self));
+};
+
+RenderGroup.prototype['isSetVTextAnchor'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetVTextAnchor_0(self));
+};
+
+RenderGroup.prototype['getStartHead'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getStartHead_0(self));
+};
+
+RenderGroup.prototype['getEndHead'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getEndHead_0(self));
+};
+
+RenderGroup.prototype['getNumElements'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getNumElements_0(self);
+};
+
+RenderGroup.prototype['getElement'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderGroup_getElement_1(self, arg0), Transformation2D);
+};
+
+RenderGroup.prototype['getElementName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getElementName_0(self));
+};
+
+RenderGroup.prototype['createImage'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createImage_0(self), Image);
+};
+
+RenderGroup.prototype['createGroup'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createGroup_0(self), RenderGroup);
+};
+
+RenderGroup.prototype['createRectangle'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createRectangle_0(self), Rectangle);
+};
+
+RenderGroup.prototype['createEllipse'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createEllipse_0(self), Ellipse);
+};
+
+RenderGroup.prototype['createCurve'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createCurve_0(self), RenderCurve);
+};
+
+RenderGroup.prototype['createPolygon'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createPolygon_0(self), Polygon);
+};
+
+RenderGroup.prototype['createText'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createText_0(self), Text);
+};
+
+RenderGroup.prototype['addChildElement'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_RenderGroup_addChildElement_1(self, arg0);
+};
+
+RenderGroup.prototype['isSetStartHead'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetStartHead_0(self));
+};
+
+RenderGroup.prototype['isSetEndHead'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetEndHead_0(self));
+};
+
+RenderGroup.prototype['isSetFontFamily'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontFamily_0(self));
+};
+
+RenderGroup.prototype['isSetFontWeight'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontWeight_0(self));
+};
+
+RenderGroup.prototype['isSetFontStyle'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontStyle_0(self));
+};
+
+RenderGroup.prototype['getTypeCode'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getTypeCode_0(self);
 };
 
   RenderGroup.prototype['__destroy__'] = function() {
@@ -2119,6 +2284,30 @@ ModifierSpeciesReference.prototype['getModel'] = function() {
   var self = this.ptr;
   _emscripten_bind_ModifierSpeciesReference___destroy___0(self);
 }
+// RenderLayoutPlugin
+function RenderLayoutPlugin() { throw "cannot construct a RenderLayoutPlugin, no constructor in IDL" }
+RenderLayoutPlugin.prototype = Object.create(WrapperObject.prototype);
+RenderLayoutPlugin.prototype.constructor = RenderLayoutPlugin;
+RenderLayoutPlugin.prototype.__class__ = RenderLayoutPlugin;
+RenderLayoutPlugin.__cache__ = {};
+Module['RenderLayoutPlugin'] = RenderLayoutPlugin;
+
+RenderLayoutPlugin.prototype['getNumLocalRenderInformationObjects'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderLayoutPlugin_getNumLocalRenderInformationObjects_0(self);
+};
+
+RenderLayoutPlugin.prototype['getRenderInformation'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderLayoutPlugin_getRenderInformation_1(self, arg0), LocalRenderInformation);
+};
+
+  RenderLayoutPlugin.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderLayoutPlugin___destroy___0(self);
+}
 // Curve
 function Curve() { throw "cannot construct a Curve, no constructor in IDL" }
 Curve.prototype = Object.create(WrapperObject.prototype);
@@ -2152,6 +2341,112 @@ Curve.prototype['getCurveSegment'] = function(arg0) {
   Curve.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Curve___destroy___0(self);
+}
+// GlobalRenderInformation
+function GlobalRenderInformation() { throw "cannot construct a GlobalRenderInformation, no constructor in IDL" }
+GlobalRenderInformation.prototype = Object.create(WrapperObject.prototype);
+GlobalRenderInformation.prototype.constructor = GlobalRenderInformation;
+GlobalRenderInformation.prototype.__class__ = GlobalRenderInformation;
+GlobalRenderInformation.__cache__ = {};
+Module['GlobalRenderInformation'] = GlobalRenderInformation;
+
+GlobalRenderInformation.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getId_0(self));
+};
+
+GlobalRenderInformation.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setId_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GlobalRenderInformation_isSetId_0(self));
+};
+
+GlobalRenderInformation.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getName_0(self));
+};
+
+GlobalRenderInformation.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setName_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['isSetName'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GlobalRenderInformation_isSetName_0(self));
+};
+
+GlobalRenderInformation.prototype['getProgramVersion'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getProgramVersion_0(self));
+};
+
+GlobalRenderInformation.prototype['setProgramVersion'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setProgramVersion_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['getBackgroundColor'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getBackgroundColor_0(self));
+};
+
+GlobalRenderInformation.prototype['setBackgroundColor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(self, arg0);
+};
+
+GlobalRenderInformation.prototype['getNumColorDefinitions'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalRenderInformation_getNumColorDefinitions_0(self);
+};
+
+GlobalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
+};
+
+GlobalRenderInformation.prototype['getNumGradientDefinitions'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(self);
+};
+
+GlobalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
+};
+
+GlobalRenderInformation.prototype['getNumLineEndings'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalRenderInformation_getNumLineEndings_0(self);
+};
+
+GlobalRenderInformation.prototype['getLineEnding'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
+};
+
+  GlobalRenderInformation.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GlobalRenderInformation___destroy___0(self);
 }
 // Rule
 function Rule() { throw "cannot construct a Rule, no constructor in IDL" }
@@ -2450,6 +2745,18 @@ SBMLDocument.prototype['checkL3v1Compatibility'] = function() {
   SBMLDocument.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_SBMLDocument___destroy___0(self);
+}
+// Polygon
+function Polygon() { throw "cannot construct a Polygon, no constructor in IDL" }
+Polygon.prototype = Object.create(WrapperObject.prototype);
+Polygon.prototype.constructor = Polygon;
+Polygon.prototype.__class__ = Polygon;
+Polygon.__cache__ = {};
+Module['Polygon'] = Polygon;
+
+  Polygon.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Polygon___destroy___0(self);
 }
 // GradientStop
 function GradientStop() { throw "cannot construct a GradientStop, no constructor in IDL" }
@@ -2784,111 +3091,17 @@ AlgebraicRule.prototype['isParameter'] = function() {
   var self = this.ptr;
   _emscripten_bind_AlgebraicRule___destroy___0(self);
 }
-// GlobalRenderInformation
-function GlobalRenderInformation() { throw "cannot construct a GlobalRenderInformation, no constructor in IDL" }
-GlobalRenderInformation.prototype = Object.create(WrapperObject.prototype);
-GlobalRenderInformation.prototype.constructor = GlobalRenderInformation;
-GlobalRenderInformation.prototype.__class__ = GlobalRenderInformation;
-GlobalRenderInformation.__cache__ = {};
-Module['GlobalRenderInformation'] = GlobalRenderInformation;
+// RenderCurve
+function RenderCurve() { throw "cannot construct a RenderCurve, no constructor in IDL" }
+RenderCurve.prototype = Object.create(WrapperObject.prototype);
+RenderCurve.prototype.constructor = RenderCurve;
+RenderCurve.prototype.__class__ = RenderCurve;
+RenderCurve.__cache__ = {};
+Module['RenderCurve'] = RenderCurve;
 
-GlobalRenderInformation.prototype['getId'] = function() {
+  RenderCurve.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getId_0(self));
-};
-
-GlobalRenderInformation.prototype['setId'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_GlobalRenderInformation_setId_1(self, arg0);
-};
-
-GlobalRenderInformation.prototype['isSetId'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_GlobalRenderInformation_isSetId_0(self));
-};
-
-GlobalRenderInformation.prototype['getName'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getName_0(self));
-};
-
-GlobalRenderInformation.prototype['setName'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_GlobalRenderInformation_setName_1(self, arg0);
-};
-
-GlobalRenderInformation.prototype['isSetName'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_GlobalRenderInformation_isSetName_0(self));
-};
-
-GlobalRenderInformation.prototype['getProgramVersion'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getProgramVersion_0(self));
-};
-
-GlobalRenderInformation.prototype['setProgramVersion'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_GlobalRenderInformation_setProgramVersion_1(self, arg0);
-};
-
-GlobalRenderInformation.prototype['getBackgroundColor'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getBackgroundColor_0(self));
-};
-
-GlobalRenderInformation.prototype['setBackgroundColor'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_GlobalRenderInformation_setBackgroundColor_1(self, arg0);
-};
-
-GlobalRenderInformation.prototype['getNumColorDefinitions'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_GlobalRenderInformation_getNumColorDefinitions_0(self);
-};
-
-GlobalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
-};
-
-GlobalRenderInformation.prototype['getNumGradientDefinitions'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(self);
-};
-
-GlobalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
-};
-
-GlobalRenderInformation.prototype['getNumLineEndings'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_GlobalRenderInformation_getNumLineEndings_0(self);
-};
-
-GlobalRenderInformation.prototype['getLineEnding'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
-};
-
-  GlobalRenderInformation.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_GlobalRenderInformation___destroy___0(self);
+  _emscripten_bind_RenderCurve___destroy___0(self);
 }
 // SBMLReader
 function SBMLReader() {
@@ -3134,6 +3347,18 @@ GeneralGlyph.prototype['isSetId'] = function() {
   var self = this.ptr;
   _emscripten_bind_GeneralGlyph___destroy___0(self);
 }
+// Ellipse
+function Ellipse() { throw "cannot construct a Ellipse, no constructor in IDL" }
+Ellipse.prototype = Object.create(WrapperObject.prototype);
+Ellipse.prototype.constructor = Ellipse;
+Ellipse.prototype.__class__ = Ellipse;
+Ellipse.__cache__ = {};
+Module['Ellipse'] = Ellipse;
+
+  Ellipse.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Ellipse___destroy___0(self);
+}
 // SpeciesGlyph
 function SpeciesGlyph() { throw "cannot construct a SpeciesGlyph, no constructor in IDL" }
 SpeciesGlyph.prototype = Object.create(WrapperObject.prototype);
@@ -3276,29 +3501,47 @@ TextGlyph.prototype['isSetText'] = function() {
   var self = this.ptr;
   _emscripten_bind_TextGlyph___destroy___0(self);
 }
-// RenderLayoutPlugin
-function RenderLayoutPlugin() { throw "cannot construct a RenderLayoutPlugin, no constructor in IDL" }
-RenderLayoutPlugin.prototype = Object.create(WrapperObject.prototype);
-RenderLayoutPlugin.prototype.constructor = RenderLayoutPlugin;
-RenderLayoutPlugin.prototype.__class__ = RenderLayoutPlugin;
-RenderLayoutPlugin.__cache__ = {};
-Module['RenderLayoutPlugin'] = RenderLayoutPlugin;
+// Transformation2D
+function Transformation2D() { throw "cannot construct a Transformation2D, no constructor in IDL" }
+Transformation2D.prototype = Object.create(WrapperObject.prototype);
+Transformation2D.prototype.constructor = Transformation2D;
+Transformation2D.prototype.__class__ = Transformation2D;
+Transformation2D.__cache__ = {};
+Module['Transformation2D'] = Transformation2D;
 
-RenderLayoutPlugin.prototype['getNumLocalRenderInformationObjects'] = function() {
+  Transformation2D.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  return _emscripten_bind_RenderLayoutPlugin_getNumLocalRenderInformationObjects_0(self);
-};
+  _emscripten_bind_Transformation2D___destroy___0(self);
+}
+// Image
+function Image() { throw "cannot construct a Image, no constructor in IDL" }
+Image.prototype = Object.create(WrapperObject.prototype);
+Image.prototype.constructor = Image;
+Image.prototype.__class__ = Image;
+Image.__cache__ = {};
+Module['Image'] = Image;
 
-RenderLayoutPlugin.prototype['getRenderInformation'] = function(arg0) {
+Image.prototype['setCoordinates'] = function(arg0, arg1, arg2) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_RenderLayoutPlugin_getRenderInformation_1(self, arg0), LocalRenderInformation);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_Image_setCoordinates_3(self, arg0, arg1, arg2);
 };
 
-  RenderLayoutPlugin.prototype['__destroy__'] = function() {
+Image.prototype['setX'] = function(arg0) {
   var self = this.ptr;
-  _emscripten_bind_RenderLayoutPlugin___destroy___0(self);
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Image_setX_1(self, arg0);
+};
+
+  Image.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Image___destroy___0(self);
 }
 // BoundingBox
 function BoundingBox() { throw "cannot construct a BoundingBox, no constructor in IDL" }
