@@ -73,6 +73,16 @@ Object.defineProperty(LocalRenderInformation.prototype, "gradients", {
   }
 });
 
+Object.defineProperty(LocalRenderInformation.prototype, "lineendings", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumLineEndings(); i++) {
+      result.push(this.getLineEnding(i));
+    }
+    return result;
+  }
+});
+
 // Global
 
 Object.defineProperty(GlobalRenderInformation.prototype, "colors", {
@@ -95,6 +105,16 @@ Object.defineProperty(GlobalRenderInformation.prototype, "gradients", {
       } else if(swtch.isRadial(this.getGradientDefinition(i))) {
         result.push(swtch.asRadial(this.getGradientDefinition(i)));
       }
+    }
+    return result;
+  }
+});
+
+Object.defineProperty(GlobalRenderInformation.prototype, "lineendings", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumLineEndings(); i++) {
+      result.push(this.getLineEnding(i));
     }
     return result;
   }

@@ -70,6 +70,108 @@ function ensureString(value) {
 }
 
 
+// ColorDefinition
+function ColorDefinition() { throw "cannot construct a ColorDefinition, no constructor in IDL" }
+ColorDefinition.prototype = Object.create(WrapperObject.prototype);
+ColorDefinition.prototype.constructor = ColorDefinition;
+ColorDefinition.prototype.__class__ = ColorDefinition;
+ColorDefinition.__cache__ = {};
+Module['ColorDefinition'] = ColorDefinition;
+
+ColorDefinition.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ColorDefinition_getId_0(self));
+};
+
+ColorDefinition.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setId_1(self, arg0);
+};
+
+ColorDefinition.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_ColorDefinition_isSetId_0(self));
+};
+
+ColorDefinition.prototype['createValueString'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_ColorDefinition_createValueString_0(self));
+};
+
+ColorDefinition.prototype['setColorValue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_ColorDefinition_setColorValue_1(self, arg0));
+};
+
+ColorDefinition.prototype['setRGBA'] = function(arg0, arg1, arg2, arg3) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  if (arg3 && typeof arg3 === 'object') arg3 = arg3.ptr;
+  else arg3 = ensureString(arg3);
+  _emscripten_bind_ColorDefinition_setRGBA_4(self, arg0, arg1, arg2, arg3);
+};
+
+ColorDefinition.prototype['setRed'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setRed_1(self, arg0);
+};
+
+ColorDefinition.prototype['setGreen'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setGreen_1(self, arg0);
+};
+
+ColorDefinition.prototype['setBlue'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setBlue_1(self, arg0);
+};
+
+ColorDefinition.prototype['setAlpha'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_ColorDefinition_setAlpha_1(self, arg0);
+};
+
+ColorDefinition.prototype['getRed'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getRed_0(self);
+};
+
+ColorDefinition.prototype['getGreen'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getGreen_0(self);
+};
+
+ColorDefinition.prototype['getBlue'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getBlue_0(self);
+};
+
+ColorDefinition.prototype['getAlpha'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_ColorDefinition_getAlpha_0(self);
+};
+
+  ColorDefinition.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_ColorDefinition___destroy___0(self);
+}
 // GradientBase
 function GradientBase() { throw "cannot construct a GradientBase, no constructor in IDL" }
 GradientBase.prototype = Object.create(WrapperObject.prototype);
@@ -519,6 +621,18 @@ LocalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
   return wrapPointer(_emscripten_bind_LocalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
 };
 
+LocalRenderInformation.prototype['getNumLineEndings'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalRenderInformation_getNumLineEndings_0(self);
+};
+
+LocalRenderInformation.prototype['getLineEnding'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
+};
+
   LocalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LocalRenderInformation___destroy___0(self);
@@ -761,107 +875,58 @@ RenderCaster.prototype['castToRenderLayoutPlugin'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_RenderCaster___destroy___0(self);
 }
-// ColorDefinition
-function ColorDefinition() { throw "cannot construct a ColorDefinition, no constructor in IDL" }
-ColorDefinition.prototype = Object.create(WrapperObject.prototype);
-ColorDefinition.prototype.constructor = ColorDefinition;
-ColorDefinition.prototype.__class__ = ColorDefinition;
-ColorDefinition.__cache__ = {};
-Module['ColorDefinition'] = ColorDefinition;
+// LineEnding
+function LineEnding() { throw "cannot construct a LineEnding, no constructor in IDL" }
+LineEnding.prototype = Object.create(WrapperObject.prototype);
+LineEnding.prototype.constructor = LineEnding;
+LineEnding.prototype.__class__ = LineEnding;
+LineEnding.__cache__ = {};
+Module['LineEnding'] = LineEnding;
 
-ColorDefinition.prototype['getId'] = function() {
+LineEnding.prototype['getId'] = function() {
   var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_ColorDefinition_getId_0(self));
+  return Pointer_stringify(_emscripten_bind_LineEnding_getId_0(self));
 };
 
-ColorDefinition.prototype['setId'] = function(arg0) {
+LineEnding.prototype['setId'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  _emscripten_bind_ColorDefinition_setId_1(self, arg0);
+  _emscripten_bind_LineEnding_setId_1(self, arg0);
 };
 
-ColorDefinition.prototype['isSetId'] = function() {
+LineEnding.prototype['isSetId'] = function() {
   var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_ColorDefinition_isSetId_0(self));
+  return idl_wrapBool(_emscripten_bind_LineEnding_isSetId_0(self));
 };
 
-ColorDefinition.prototype['createValueString'] = function() {
+LineEnding.prototype['getGroup'] = function() {
   var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_ColorDefinition_createValueString_0(self));
+  return wrapPointer(_emscripten_bind_LineEnding_getGroup_0(self), RenderGroup);
 };
 
-ColorDefinition.prototype['setColorValue'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return idl_wrapBool(_emscripten_bind_ColorDefinition_setColorValue_1(self, arg0));
-};
-
-ColorDefinition.prototype['setRGBA'] = function(arg0, arg1, arg2, arg3) {
+LineEnding.prototype['setGroup'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
-  else arg1 = ensureString(arg1);
-  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
-  else arg2 = ensureString(arg2);
-  if (arg3 && typeof arg3 === 'object') arg3 = arg3.ptr;
-  else arg3 = ensureString(arg3);
-  _emscripten_bind_ColorDefinition_setRGBA_4(self, arg0, arg1, arg2, arg3);
+  _emscripten_bind_LineEnding_setGroup_1(self, arg0);
 };
 
-ColorDefinition.prototype['setRed'] = function(arg0) {
+LineEnding.prototype['getIsEnabledRotationalMapping'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LineEnding_getIsEnabledRotationalMapping_0(self));
+};
+
+LineEnding.prototype['setEnableRotationalMapping'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  _emscripten_bind_ColorDefinition_setRed_1(self, arg0);
+  _emscripten_bind_LineEnding_setEnableRotationalMapping_1(self, arg0);
 };
 
-ColorDefinition.prototype['setGreen'] = function(arg0) {
+  LineEnding.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_ColorDefinition_setGreen_1(self, arg0);
-};
-
-ColorDefinition.prototype['setBlue'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_ColorDefinition_setBlue_1(self, arg0);
-};
-
-ColorDefinition.prototype['setAlpha'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_ColorDefinition_setAlpha_1(self, arg0);
-};
-
-ColorDefinition.prototype['getRed'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_ColorDefinition_getRed_0(self);
-};
-
-ColorDefinition.prototype['getGreen'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_ColorDefinition_getGreen_0(self);
-};
-
-ColorDefinition.prototype['getBlue'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_ColorDefinition_getBlue_0(self);
-};
-
-ColorDefinition.prototype['getAlpha'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_ColorDefinition_getAlpha_0(self);
-};
-
-  ColorDefinition.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_ColorDefinition___destroy___0(self);
+  _emscripten_bind_LineEnding___destroy___0(self);
 }
 // Dimensions
 function Dimensions(arg0, arg1, arg2, arg3) {
@@ -1669,6 +1734,56 @@ LineSegment.prototype['setEnd'] = function(arg0) {
   LineSegment.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LineSegment___destroy___0(self);
+}
+// RenderGroup
+function RenderGroup() { throw "cannot construct a RenderGroup, no constructor in IDL" }
+RenderGroup.prototype = Object.create(WrapperObject.prototype);
+RenderGroup.prototype.constructor = RenderGroup;
+RenderGroup.prototype.__class__ = RenderGroup;
+RenderGroup.__cache__ = {};
+Module['RenderGroup'] = RenderGroup;
+
+RenderGroup.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getId_0(self));
+};
+
+RenderGroup.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setId_1(self, arg0);
+};
+
+RenderGroup.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetId_0(self));
+};
+
+RenderGroup.prototype['setFontFamily'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFontFamily_1(self, arg0);
+};
+
+RenderGroup.prototype['setFontSize'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFontSize_1(self, arg0);
+};
+
+RenderGroup.prototype['setFontWeight'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFontWeight_1(self, arg0);
+};
+
+  RenderGroup.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderGroup___destroy___0(self);
 }
 // RuleSwitch
 function RuleSwitch() {
@@ -2752,6 +2867,18 @@ GlobalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
   return wrapPointer(_emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
 };
 
+GlobalRenderInformation.prototype['getNumLineEndings'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalRenderInformation_getNumLineEndings_0(self);
+};
+
+GlobalRenderInformation.prototype['getLineEnding'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
+};
+
   GlobalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_GlobalRenderInformation___destroy___0(self);
@@ -2939,6 +3066,18 @@ Point.prototype['getZOffset'] = function() {
   Point.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Point___destroy___0(self);
+}
+// Text
+function Text() { throw "cannot construct a Text, no constructor in IDL" }
+Text.prototype = Object.create(WrapperObject.prototype);
+Text.prototype.constructor = Text;
+Text.prototype.__class__ = Text;
+Text.__cache__ = {};
+Module['Text'] = Text;
+
+  Text.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_Text___destroy___0(self);
 }
 // LayoutPkgNamespaces
 function LayoutPkgNamespaces(arg0, arg1) {
@@ -3567,6 +3706,11 @@ LinearGradient.prototype['createGradientStop'] = function() {
   var self = this.ptr;
   _emscripten_bind_LinearGradient___destroy___0(self);
 }
+// libsbml__idl__Text__idl__FONT_WEIGHT
+Module['Text']['WEIGHT_UNSET'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_WEIGHT_WEIGHT_UNSET();
+Module['Text']['WEIGHT_NORMAL'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_WEIGHT_WEIGHT_NORMAL();
+Module['Text']['WEIGHT_BOLD'] = _emscripten_enum_libsbml__idl__Text__idl__FONT_WEIGHT_WEIGHT_BOLD();
+
 // libsbml__idl__ASTNodeType_t
 Module['AST_PLUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_PLUS();
 Module['AST_MINUS'] = _emscripten_enum_libsbml__idl__ASTNodeType_t_AST_MINUS();

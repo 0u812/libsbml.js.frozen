@@ -12,6 +12,40 @@ interface RelAbsVector {
 };
 
 [Prefix="libsbml::"]
+interface Text {
+};
+
+enum libsbml__idl__Text__idl__FONT_WEIGHT {
+  "libsbml::Text::WEIGHT_UNSET",
+  "libsbml::Text::WEIGHT_NORMAL",
+  "libsbml::Text::WEIGHT_BOLD"
+};
+
+[Prefix="libsbml::"]
+interface RenderGroup {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  void setFontFamily(DOMString family);
+  void setFontSize([Ref] RelAbsVector v);
+  void setFontWeight(libsbml__idl__Text__idl__FONT_WEIGHT weight);
+};
+
+[Prefix="libsbml::"]
+interface LineEnding {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  RenderGroup getGroup();
+  void setGroup(RenderGroup g);
+
+  boolean getIsEnabledRotationalMapping();
+  void setEnableRotationalMapping(boolean enable);
+};
+
+[Prefix="libsbml::"]
 interface GradientStop {
   DOMString getId();
   void setId(DOMString t);
@@ -122,6 +156,9 @@ interface GlobalRenderInformation {
 
   unsigned long getNumGradientDefinitions();
   GradientBase getGradientDefinition(unsigned long n);
+
+  unsigned long getNumLineEndings();
+  LineEnding getLineEnding(unsigned long n);
 };
 
 [Prefix="libsbml::"]
@@ -151,6 +188,9 @@ interface LocalRenderInformation {
 
   unsigned long getNumGradientDefinitions();
   GradientBase getGradientDefinition(unsigned long n);
+
+  unsigned long getNumLineEndings();
+  LineEnding getLineEnding(unsigned long n);
 };
 
 [Prefix="libsbml::"]
