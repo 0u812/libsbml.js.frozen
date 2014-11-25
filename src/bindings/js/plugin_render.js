@@ -16,6 +16,51 @@ Object.defineProperty(RelAbsVector.prototype, "a", {
   }
 });
 
+Object.defineProperty(RenderGroup.prototype, "images", {
+  get: function() {
+    var result = [];
+    var swtch = new Module.PrimitiveCaster();
+    for(var i=0; i<this.getNumElements(); i++) {
+      var elt = this.getElement(i);
+      if (swtch.isImage(elt)) {
+        result.push(swtch.asImage(elt));
+      }
+    }
+    Module.destroy(swtch);
+    return result;
+  }
+});
+
+Object.defineProperty(RenderGroup.prototype, "polygons", {
+  get: function() {
+    var result = [];
+    var swtch = new Module.PrimitiveCaster();
+    for(var i=0; i<this.getNumElements(); i++) {
+      var elt = this.getElement(i);
+      if (swtch.isPolygon(elt)) {
+        result.push(swtch.asPolygon(elt));
+      }
+    }
+    Module.destroy(swtch);
+    return result;
+  }
+});
+
+Object.defineProperty(RenderGroup.prototype, "text", {
+  get: function() {
+    var result = [];
+    var swtch = new Module.PrimitiveCaster();
+    for(var i=0; i<this.getNumElements(); i++) {
+      var elt = this.getElement(i);
+      if (swtch.isText(elt)) {
+        result.push(swtch.asText(elt));
+      }
+    }
+    Module.destroy(swtch);
+    return result;
+  }
+});
+
 Object.defineProperty(GradientBase.prototype, "stops", {
   get: function errors() {
     var result = [];

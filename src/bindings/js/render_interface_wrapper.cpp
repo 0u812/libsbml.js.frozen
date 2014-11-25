@@ -14,6 +14,72 @@
 // Wrapper objects
 namespace libsbmljs {
 
+  class PrimitiveCaster {
+  public:
+    PrimitiveCaster() {}
+
+    bool isPolygon(libsbml::Transformation2D* p) {
+      libsbml::Polygon* result = dynamic_cast<libsbml::Polygon*>(p);
+      return result;
+    }
+
+    libsbml::Polygon* asPolygon(libsbml::Transformation2D* p) {
+      libsbml::Polygon* result = dynamic_cast<libsbml::Polygon*>(p);
+      return result;
+    }
+
+    bool isImage(libsbml::Transformation2D* p) {
+      libsbml::Image* result = dynamic_cast<libsbml::Image*>(p);
+      return result;
+    }
+
+    libsbml::Image* asImage(libsbml::Transformation2D* p) {
+      libsbml::Image* result = dynamic_cast<libsbml::Image*>(p);
+      return result;
+    }
+
+    bool isRectangle(libsbml::Transformation2D* p) {
+      libsbml::Rectangle* result = dynamic_cast<libsbml::Rectangle*>(p);
+      return result;
+    }
+
+    libsbml::Rectangle* asRectangle(libsbml::Transformation2D* p) {
+      libsbml::Rectangle* result = dynamic_cast<libsbml::Rectangle*>(p);
+      return result;
+    }
+
+    bool isEllipse(libsbml::Transformation2D* p) {
+      libsbml::Ellipse* result = dynamic_cast<libsbml::Ellipse*>(p);
+      return result;
+    }
+
+    libsbml::Ellipse* asEllipse(libsbml::Transformation2D* p) {
+      libsbml::Ellipse* result = dynamic_cast<libsbml::Ellipse*>(p);
+      return result;
+    }
+
+    bool isRenderCurve(libsbml::Transformation2D* p) {
+      libsbml::RenderCurve* result = dynamic_cast<libsbml::RenderCurve*>(p);
+      return result;
+    }
+
+    libsbml::RenderCurve* asRenderCurve(libsbml::Transformation2D* p) {
+      libsbml::RenderCurve* result = dynamic_cast<libsbml::RenderCurve*>(p);
+      return result;
+    }
+
+    bool isText(libsbml::Transformation2D* p) {
+      libsbml::Text* result = dynamic_cast<libsbml::Text*>(p);
+      return result;
+    }
+
+    libsbml::Text* asText(libsbml::Transformation2D* p) {
+      libsbml::Text* result = dynamic_cast<libsbml::Text*>(p);
+      return result;
+    }
+    
+  };
+
   class GradientCaster {
   public:
     GradientCaster() {}

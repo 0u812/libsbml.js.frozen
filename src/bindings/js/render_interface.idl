@@ -15,7 +15,53 @@ interface RelAbsVector {
 interface Text {
 };
 
+[Prefix="libsbml::"]
+interface RenderPoint {
+  [Ref] RelAbsVector x();
+  [Ref] RelAbsVector y();
+  [Ref] RelAbsVector z();
+  
+  void setX([Ref] RelAbsVector v);
+  void setY([Ref] RelAbsVector v);
+  void setZ([Ref] RelAbsVector v);
+  
+  void setCoordinates([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
+  
+  void initDefaults();
+  
+  DOMString getElementName();
+  boolean hasRequiredElements();
+};
+
+[Prefix="libsbml::"]
+interface RenderCubicBezier {
+  [Ref] RelAbsVector basePoint1_X();
+  [Ref] RelAbsVector basePoint1_Y();
+  [Ref] RelAbsVector basePoint1_Z();
+  
+  void setBasePoint1_X([Ref] RelAbsVector v);
+  void setBasePoint1_Y([Ref] RelAbsVector v);
+  void setBasePoint1_Z([Ref] RelAbsVector v);
+  
+  [Ref] RelAbsVector basePoint2_X();
+  [Ref] RelAbsVector basePoint2_Y();
+  [Ref] RelAbsVector basePoint2_Z();
+  
+  void setBasePoint2_X([Ref] RelAbsVector v);
+  void setBasePoint2_Y([Ref] RelAbsVector v);
+  void setBasePoint2_Z([Ref] RelAbsVector v);
+  
+  void setBasePoint1([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
+  void setBasePoint2([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
+  
+  DOMString getElementName();
+  long getTypeCode();
+  boolean hasRequiredElements();
+  boolean hasRequiredAttributes();
+};
+
 // NOTE: can't wrap due to use of double arrays
+// TODO: write helpers
 [Prefix="libsbml::"]
 interface Transformation2D {
 };
@@ -40,6 +86,28 @@ interface RenderCurve {
 
 [Prefix="libsbml::"]
 interface Polygon {
+  unsigned long getNumElements();
+  RenderPoint getElement(unsigned long n);
+  
+  RenderPoint createPoint();
+  RenderCubicBezier createCubicBezier();
+  DOMString getElementName();
+
+  long getTypeCode();
+};
+
+[Prefix="libsbmljs::"]
+interface PrimitiveCaster {
+  void PrimitiveCaster();
+
+  boolean isPolygon(Transformation2D p);
+  Polygon asPolygon(Transformation2D p);
+
+  boolean isImage(Transformation2D p);
+  Image asImage(Transformation2D p);
+
+  boolean isText(Transformation2D p);
+  Text asText(Transformation2D p);
 };
 
 enum libsbml__idl__Text__idl__FONT_WEIGHT {
@@ -126,6 +194,9 @@ interface LineEnding {
 
   boolean getIsEnabledRotationalMapping();
   void setEnableRotationalMapping(boolean enable);
+  
+  BoundingBox getBoundingBox();
+  void setBoundingBox(BoundingBox b);
 };
 
 [Prefix="libsbml::"]

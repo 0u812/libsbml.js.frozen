@@ -531,6 +531,80 @@ CubicBezier.prototype['setBasePoint2'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_CubicBezier___destroy___0(self);
 }
+// RenderPoint
+function RenderPoint() { throw "cannot construct a RenderPoint, no constructor in IDL" }
+RenderPoint.prototype = Object.create(WrapperObject.prototype);
+RenderPoint.prototype.constructor = RenderPoint;
+RenderPoint.prototype.__class__ = RenderPoint;
+RenderPoint.__cache__ = {};
+Module['RenderPoint'] = RenderPoint;
+
+RenderPoint.prototype['x'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderPoint_x_0(self), RelAbsVector);
+};
+
+RenderPoint.prototype['y'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderPoint_y_0(self), RelAbsVector);
+};
+
+RenderPoint.prototype['z'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderPoint_z_0(self), RelAbsVector);
+};
+
+RenderPoint.prototype['setX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderPoint_setX_1(self, arg0);
+};
+
+RenderPoint.prototype['setY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderPoint_setY_1(self, arg0);
+};
+
+RenderPoint.prototype['setZ'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderPoint_setZ_1(self, arg0);
+};
+
+RenderPoint.prototype['setCoordinates'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_RenderPoint_setCoordinates_3(self, arg0, arg1, arg2);
+};
+
+RenderPoint.prototype['initDefaults'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderPoint_initDefaults_0(self);
+};
+
+RenderPoint.prototype['getElementName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderPoint_getElementName_0(self));
+};
+
+RenderPoint.prototype['hasRequiredElements'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderPoint_hasRequiredElements_0(self));
+};
+
+  RenderPoint.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderPoint___destroy___0(self);
+}
 // LocalRenderInformation
 function LocalRenderInformation() { throw "cannot construct a LocalRenderInformation, no constructor in IDL" }
 LocalRenderInformation.prototype = Object.create(WrapperObject.prototype);
@@ -922,6 +996,18 @@ LineEnding.prototype['setEnableRotationalMapping'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   _emscripten_bind_LineEnding_setEnableRotationalMapping_1(self, arg0);
+};
+
+LineEnding.prototype['getBoundingBox'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LineEnding_getBoundingBox_0(self), BoundingBox);
+};
+
+LineEnding.prototype['setBoundingBox'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LineEnding_setBoundingBox_1(self, arg0);
 };
 
   LineEnding.prototype['__destroy__'] = function() {
@@ -1693,6 +1779,49 @@ ReactionGlyph.prototype['getSpeciesReferenceGlyph'] = function(arg0) {
   ReactionGlyph.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_ReactionGlyph___destroy___0(self);
+}
+// GradientCaster
+function GradientCaster() {
+  this.ptr = _emscripten_bind_GradientCaster_GradientCaster_0();
+  getCache(GradientCaster)[this.ptr] = this;
+};
+GradientCaster.prototype = Object.create(WrapperObject.prototype);
+GradientCaster.prototype.constructor = GradientCaster;
+GradientCaster.prototype.__class__ = GradientCaster;
+GradientCaster.__cache__ = {};
+Module['GradientCaster'] = GradientCaster;
+
+GradientCaster.prototype['isLinear'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_GradientCaster_isLinear_1(self, arg0));
+};
+
+GradientCaster.prototype['asLinear'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GradientCaster_asLinear_1(self, arg0), LinearGradient);
+};
+
+GradientCaster.prototype['isRadial'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_GradientCaster_isRadial_1(self, arg0));
+};
+
+GradientCaster.prototype['asRadial'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GradientCaster_asRadial_1(self, arg0), RadialGradient);
+};
+
+  GradientCaster.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GradientCaster___destroy___0(self);
 }
 // LineSegment
 function LineSegment() { throw "cannot construct a LineSegment, no constructor in IDL" }
@@ -2545,29 +2674,62 @@ ListOfLayouts.prototype['getPlugin'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_ListOfLayouts___destroy___0(self);
 }
-// RenderListOfLayoutsPlugin
-function RenderListOfLayoutsPlugin() { throw "cannot construct a RenderListOfLayoutsPlugin, no constructor in IDL" }
-RenderListOfLayoutsPlugin.prototype = Object.create(WrapperObject.prototype);
-RenderListOfLayoutsPlugin.prototype.constructor = RenderListOfLayoutsPlugin;
-RenderListOfLayoutsPlugin.prototype.__class__ = RenderListOfLayoutsPlugin;
-RenderListOfLayoutsPlugin.__cache__ = {};
-Module['RenderListOfLayoutsPlugin'] = RenderListOfLayoutsPlugin;
-
-RenderListOfLayoutsPlugin.prototype['getNumGlobalRenderInformationObjects'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_RenderListOfLayoutsPlugin_getNumGlobalRenderInformationObjects_0(self);
+// PrimitiveCaster
+function PrimitiveCaster() {
+  this.ptr = _emscripten_bind_PrimitiveCaster_PrimitiveCaster_0();
+  getCache(PrimitiveCaster)[this.ptr] = this;
 };
+PrimitiveCaster.prototype = Object.create(WrapperObject.prototype);
+PrimitiveCaster.prototype.constructor = PrimitiveCaster;
+PrimitiveCaster.prototype.__class__ = PrimitiveCaster;
+PrimitiveCaster.__cache__ = {};
+Module['PrimitiveCaster'] = PrimitiveCaster;
 
-RenderListOfLayoutsPlugin.prototype['getRenderInformation'] = function(arg0) {
+PrimitiveCaster.prototype['isPolygon'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_RenderListOfLayoutsPlugin_getRenderInformation_1(self, arg0), GlobalRenderInformation);
+  return idl_wrapBool(_emscripten_bind_PrimitiveCaster_isPolygon_1(self, arg0));
 };
 
-  RenderListOfLayoutsPlugin.prototype['__destroy__'] = function() {
+PrimitiveCaster.prototype['asPolygon'] = function(arg0) {
   var self = this.ptr;
-  _emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(self);
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_PrimitiveCaster_asPolygon_1(self, arg0), Polygon);
+};
+
+PrimitiveCaster.prototype['isImage'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_PrimitiveCaster_isImage_1(self, arg0));
+};
+
+PrimitiveCaster.prototype['asImage'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_PrimitiveCaster_asImage_1(self, arg0), Image);
+};
+
+PrimitiveCaster.prototype['isText'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_PrimitiveCaster_isText_1(self, arg0));
+};
+
+PrimitiveCaster.prototype['asText'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_PrimitiveCaster_asText_1(self, arg0), Text);
+};
+
+  PrimitiveCaster.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_PrimitiveCaster___destroy___0(self);
 }
 // SBasePlugin
 function SBasePlugin() { throw "cannot construct a SBasePlugin, no constructor in IDL" }
@@ -2753,6 +2915,38 @@ Polygon.prototype.constructor = Polygon;
 Polygon.prototype.__class__ = Polygon;
 Polygon.__cache__ = {};
 Module['Polygon'] = Polygon;
+
+Polygon.prototype['getNumElements'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Polygon_getNumElements_0(self);
+};
+
+Polygon.prototype['getElement'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_Polygon_getElement_1(self, arg0), RenderPoint);
+};
+
+Polygon.prototype['createPoint'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Polygon_createPoint_0(self), RenderPoint);
+};
+
+Polygon.prototype['createCubicBezier'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Polygon_createCubicBezier_0(self), RenderCubicBezier);
+};
+
+Polygon.prototype['getElementName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Polygon_getElementName_0(self));
+};
+
+Polygon.prototype['getTypeCode'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Polygon_getTypeCode_0(self);
+};
 
   Polygon.prototype['__destroy__'] = function() {
   var self = this.ptr;
@@ -3091,6 +3285,30 @@ AlgebraicRule.prototype['isParameter'] = function() {
   var self = this.ptr;
   _emscripten_bind_AlgebraicRule___destroy___0(self);
 }
+// RenderListOfLayoutsPlugin
+function RenderListOfLayoutsPlugin() { throw "cannot construct a RenderListOfLayoutsPlugin, no constructor in IDL" }
+RenderListOfLayoutsPlugin.prototype = Object.create(WrapperObject.prototype);
+RenderListOfLayoutsPlugin.prototype.constructor = RenderListOfLayoutsPlugin;
+RenderListOfLayoutsPlugin.prototype.__class__ = RenderListOfLayoutsPlugin;
+RenderListOfLayoutsPlugin.__cache__ = {};
+Module['RenderListOfLayoutsPlugin'] = RenderListOfLayoutsPlugin;
+
+RenderListOfLayoutsPlugin.prototype['getNumGlobalRenderInformationObjects'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderListOfLayoutsPlugin_getNumGlobalRenderInformationObjects_0(self);
+};
+
+RenderListOfLayoutsPlugin.prototype['getRenderInformation'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderListOfLayoutsPlugin_getRenderInformation_1(self, arg0), GlobalRenderInformation);
+};
+
+  RenderListOfLayoutsPlugin.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(self);
+}
 // RenderCurve
 function RenderCurve() { throw "cannot construct a RenderCurve, no constructor in IDL" }
 RenderCurve.prototype = Object.create(WrapperObject.prototype);
@@ -3417,48 +3635,131 @@ SpeciesGlyph.prototype['isSetSpeciesId'] = function() {
   var self = this.ptr;
   _emscripten_bind_SpeciesGlyph___destroy___0(self);
 }
-// GradientCaster
-function GradientCaster() {
-  this.ptr = _emscripten_bind_GradientCaster_GradientCaster_0();
-  getCache(GradientCaster)[this.ptr] = this;
-};
-GradientCaster.prototype = Object.create(WrapperObject.prototype);
-GradientCaster.prototype.constructor = GradientCaster;
-GradientCaster.prototype.__class__ = GradientCaster;
-GradientCaster.__cache__ = {};
-Module['GradientCaster'] = GradientCaster;
+// RenderCubicBezier
+function RenderCubicBezier() { throw "cannot construct a RenderCubicBezier, no constructor in IDL" }
+RenderCubicBezier.prototype = Object.create(WrapperObject.prototype);
+RenderCubicBezier.prototype.constructor = RenderCubicBezier;
+RenderCubicBezier.prototype.__class__ = RenderCubicBezier;
+RenderCubicBezier.__cache__ = {};
+Module['RenderCubicBezier'] = RenderCubicBezier;
 
-GradientCaster.prototype['isLinear'] = function(arg0) {
+RenderCubicBezier.prototype['basePoint1_X'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCubicBezier_basePoint1_X_0(self), RelAbsVector);
+};
+
+RenderCubicBezier.prototype['basePoint1_Y'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCubicBezier_basePoint1_Y_0(self), RelAbsVector);
+};
+
+RenderCubicBezier.prototype['basePoint1_Z'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCubicBezier_basePoint1_Z_0(self), RelAbsVector);
+};
+
+RenderCubicBezier.prototype['setBasePoint1_X'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return idl_wrapBool(_emscripten_bind_GradientCaster_isLinear_1(self, arg0));
+  _emscripten_bind_RenderCubicBezier_setBasePoint1_X_1(self, arg0);
 };
 
-GradientCaster.prototype['asLinear'] = function(arg0) {
+RenderCubicBezier.prototype['setBasePoint1_Y'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_GradientCaster_asLinear_1(self, arg0), LinearGradient);
+  _emscripten_bind_RenderCubicBezier_setBasePoint1_Y_1(self, arg0);
 };
 
-GradientCaster.prototype['isRadial'] = function(arg0) {
+RenderCubicBezier.prototype['setBasePoint1_Z'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return idl_wrapBool(_emscripten_bind_GradientCaster_isRadial_1(self, arg0));
+  _emscripten_bind_RenderCubicBezier_setBasePoint1_Z_1(self, arg0);
 };
 
-GradientCaster.prototype['asRadial'] = function(arg0) {
+RenderCubicBezier.prototype['basePoint2_X'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCubicBezier_basePoint2_X_0(self), RelAbsVector);
+};
+
+RenderCubicBezier.prototype['basePoint2_Y'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCubicBezier_basePoint2_Y_0(self), RelAbsVector);
+};
+
+RenderCubicBezier.prototype['basePoint2_Z'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCubicBezier_basePoint2_Z_0(self), RelAbsVector);
+};
+
+RenderCubicBezier.prototype['setBasePoint2_X'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_GradientCaster_asRadial_1(self, arg0), RadialGradient);
+  _emscripten_bind_RenderCubicBezier_setBasePoint2_X_1(self, arg0);
 };
 
-  GradientCaster.prototype['__destroy__'] = function() {
+RenderCubicBezier.prototype['setBasePoint2_Y'] = function(arg0) {
   var self = this.ptr;
-  _emscripten_bind_GradientCaster___destroy___0(self);
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderCubicBezier_setBasePoint2_Y_1(self, arg0);
+};
+
+RenderCubicBezier.prototype['setBasePoint2_Z'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderCubicBezier_setBasePoint2_Z_1(self, arg0);
+};
+
+RenderCubicBezier.prototype['setBasePoint1'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_RenderCubicBezier_setBasePoint1_3(self, arg0, arg1, arg2);
+};
+
+RenderCubicBezier.prototype['setBasePoint2'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_RenderCubicBezier_setBasePoint2_3(self, arg0, arg1, arg2);
+};
+
+RenderCubicBezier.prototype['getElementName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderCubicBezier_getElementName_0(self));
+};
+
+RenderCubicBezier.prototype['getTypeCode'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderCubicBezier_getTypeCode_0(self);
+};
+
+RenderCubicBezier.prototype['hasRequiredElements'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderCubicBezier_hasRequiredElements_0(self));
+};
+
+RenderCubicBezier.prototype['hasRequiredAttributes'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderCubicBezier_hasRequiredAttributes_0(self));
+};
+
+  RenderCubicBezier.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderCubicBezier___destroy___0(self);
 }
 // TextGlyph
 function TextGlyph() { throw "cannot construct a TextGlyph, no constructor in IDL" }

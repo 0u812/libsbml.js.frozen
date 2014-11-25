@@ -310,6 +310,52 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_CubicBezier___destroy___0(libsbml::Cub
   delete self;
 }
 
+// RenderPoint
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_x_0(libsbml::RenderPoint* self) {
+  return &self->x();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_y_0(libsbml::RenderPoint* self) {
+  return &self->y();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_z_0(libsbml::RenderPoint* self) {
+  return &self->z();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_setX_1(libsbml::RenderPoint* self, libsbml::RelAbsVector* arg0) {
+  self->setX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_setY_1(libsbml::RenderPoint* self, libsbml::RelAbsVector* arg0) {
+  self->setY(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_setZ_1(libsbml::RenderPoint* self, libsbml::RelAbsVector* arg0) {
+  self->setZ(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_setCoordinates_3(libsbml::RenderPoint* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setCoordinates(*arg0, *arg1, *arg2);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_initDefaults_0(libsbml::RenderPoint* self) {
+  self->initDefaults();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_getElementName_0(libsbml::RenderPoint* self) {
+  return (char*)self->getElementName().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint_hasRequiredElements_0(libsbml::RenderPoint* self) {
+  return self->hasRequiredElements();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderPoint___destroy___0(libsbml::RenderPoint* self) {
+  delete self;
+}
+
 // LocalRenderInformation
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getId_0(libsbml::LocalRenderInformation* self) {
@@ -568,6 +614,14 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LineEnding_getIsEnabledRotationalMappi
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineEnding_setEnableRotationalMapping_1(libsbml::LineEnding* self, bool arg0) {
   self->setEnableRotationalMapping(arg0);
+}
+
+libsbml::BoundingBox* EMSCRIPTEN_KEEPALIVE emscripten_bind_LineEnding_getBoundingBox_0(libsbml::LineEnding* self) {
+  return self->getBoundingBox();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineEnding_setBoundingBox_1(libsbml::LineEnding* self, libsbml::BoundingBox* arg0) {
+  self->setBoundingBox(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineEnding___destroy___0(libsbml::LineEnding* self) {
@@ -1059,6 +1113,32 @@ libsbml::SpeciesReferenceGlyph* EMSCRIPTEN_KEEPALIVE emscripten_bind_ReactionGly
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_ReactionGlyph___destroy___0(libsbml::ReactionGlyph* self) {
+  delete self;
+}
+
+// GradientCaster
+
+libsbmljs::GradientCaster* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_GradientCaster_0() {
+  return new libsbmljs::GradientCaster();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isLinear_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->isLinear(arg0);
+}
+
+libsbml::LinearGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_asLinear_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->asLinear(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isRadial_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->isRadial(arg0);
+}
+
+libsbml::RadialGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_asRadial_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
+  return self->asRadial(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster___destroy___0(libsbmljs::GradientCaster* self) {
   delete self;
 }
 
@@ -1632,17 +1712,37 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_ListOfLayouts___destroy___0(libsbml::L
   delete self;
 }
 
-// RenderListOfLayoutsPlugin
+// PrimitiveCaster
 
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin_getNumGlobalRenderInformationObjects_0(libsbml::RenderListOfLayoutsPlugin* self) {
-  return self->getNumGlobalRenderInformationObjects();
+libsbmljs::PrimitiveCaster* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_PrimitiveCaster_0() {
+  return new libsbmljs::PrimitiveCaster();
 }
 
-libsbml::GlobalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin_getRenderInformation_1(libsbml::RenderListOfLayoutsPlugin* self, unsigned int arg0) {
-  return self->getRenderInformation(arg0);
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_isPolygon_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->isPolygon(arg0);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(libsbml::RenderListOfLayoutsPlugin* self) {
+libsbml::Polygon* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asPolygon_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->asPolygon(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_isImage_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->isImage(arg0);
+}
+
+libsbml::Image* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asImage_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->asImage(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_isText_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->isText(arg0);
+}
+
+libsbml::Text* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asText_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->asText(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster___destroy___0(libsbmljs::PrimitiveCaster* self) {
   delete self;
 }
 
@@ -1767,6 +1867,30 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument___destroy___0(libsbml::SB
 }
 
 // Polygon
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon_getNumElements_0(libsbml::Polygon* self) {
+  return self->getNumElements();
+}
+
+libsbml::RenderPoint* EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon_getElement_1(libsbml::Polygon* self, unsigned int arg0) {
+  return self->getElement(arg0);
+}
+
+libsbml::RenderPoint* EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon_createPoint_0(libsbml::Polygon* self) {
+  return self->createPoint();
+}
+
+libsbml::RenderCubicBezier* EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon_createCubicBezier_0(libsbml::Polygon* self) {
+  return self->createCubicBezier();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon_getElementName_0(libsbml::Polygon* self) {
+  return (char*)self->getElementName().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon_getTypeCode_0(libsbml::Polygon* self) {
+  return self->getTypeCode();
+}
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Polygon___destroy___0(libsbml::Polygon* self) {
   delete self;
@@ -1992,6 +2116,20 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::A
   delete self;
 }
 
+// RenderListOfLayoutsPlugin
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin_getNumGlobalRenderInformationObjects_0(libsbml::RenderListOfLayoutsPlugin* self) {
+  return self->getNumGlobalRenderInformationObjects();
+}
+
+libsbml::GlobalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin_getRenderInformation_1(libsbml::RenderListOfLayoutsPlugin* self, unsigned int arg0) {
+  return self->getRenderInformation(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin___destroy___0(libsbml::RenderListOfLayoutsPlugin* self) {
+  delete self;
+}
+
 // RenderCurve
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve___destroy___0(libsbml::RenderCurve* self) {
@@ -2198,29 +2336,81 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SpeciesGlyph___destroy___0(libsbml::Sp
   delete self;
 }
 
-// GradientCaster
+// RenderCubicBezier
 
-libsbmljs::GradientCaster* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_GradientCaster_0() {
-  return new libsbmljs::GradientCaster();
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_basePoint1_X_0(libsbml::RenderCubicBezier* self) {
+  return &self->basePoint1_X();
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isLinear_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
-  return self->isLinear(arg0);
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_basePoint1_Y_0(libsbml::RenderCubicBezier* self) {
+  return &self->basePoint1_Y();
 }
 
-libsbml::LinearGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_asLinear_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
-  return self->asLinear(arg0);
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_basePoint1_Z_0(libsbml::RenderCubicBezier* self) {
+  return &self->basePoint1_Z();
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_isRadial_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
-  return self->isRadial(arg0);
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint1_X_1(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0) {
+  self->setBasePoint1_X(*arg0);
 }
 
-libsbml::RadialGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster_asRadial_1(libsbmljs::GradientCaster* self, libsbml::GradientBase* arg0) {
-  return self->asRadial(arg0);
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint1_Y_1(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0) {
+  self->setBasePoint1_Y(*arg0);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientCaster___destroy___0(libsbmljs::GradientCaster* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint1_Z_1(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0) {
+  self->setBasePoint1_Z(*arg0);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_basePoint2_X_0(libsbml::RenderCubicBezier* self) {
+  return &self->basePoint2_X();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_basePoint2_Y_0(libsbml::RenderCubicBezier* self) {
+  return &self->basePoint2_Y();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_basePoint2_Z_0(libsbml::RenderCubicBezier* self) {
+  return &self->basePoint2_Z();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint2_X_1(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0) {
+  self->setBasePoint2_X(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint2_Y_1(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0) {
+  self->setBasePoint2_Y(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint2_Z_1(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0) {
+  self->setBasePoint2_Z(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint1_3(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setBasePoint1(*arg0, *arg1, *arg2);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_setBasePoint2_3(libsbml::RenderCubicBezier* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setBasePoint2(*arg0, *arg1, *arg2);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_getElementName_0(libsbml::RenderCubicBezier* self) {
+  return (char*)self->getElementName().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_getTypeCode_0(libsbml::RenderCubicBezier* self) {
+  return self->getTypeCode();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_hasRequiredElements_0(libsbml::RenderCubicBezier* self) {
+  return self->hasRequiredElements();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier_hasRequiredAttributes_0(libsbml::RenderCubicBezier* self) {
+  return self->hasRequiredAttributes();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCubicBezier___destroy___0(libsbml::RenderCubicBezier* self) {
   delete self;
 }
 
