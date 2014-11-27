@@ -60,6 +60,14 @@ interface RenderCubicBezier {
   boolean hasRequiredAttributes();
 };
 
+[Prefix="libsbmljs::"]
+interface BezierCaster {
+  void BezierCaster();
+
+  boolean isBezier(RenderPoint p);
+  RenderCubicBezier asBezier(RenderPoint p);
+};
+
 // NOTE: can't wrap due to use of double arrays
 // TODO: write helpers
 [Prefix="libsbml::"]
@@ -105,6 +113,15 @@ interface PrimitiveCaster {
 
   boolean isImage(Transformation2D p);
   Image asImage(Transformation2D p);
+
+  boolean isRectangle(Transformation2D p);
+  Rectangle asRectangle(Transformation2D p);
+
+  boolean isEllipse(Transformation2D p);
+  Ellipse asEllipse(Transformation2D p);
+
+  boolean isRenderCurve(Transformation2D p);
+  RenderCurve asRenderCurve(Transformation2D p);
 
   boolean isText(Transformation2D p);
   Text asText(Transformation2D p);

@@ -16,6 +16,34 @@ Object.defineProperty(RelAbsVector.prototype, "a", {
   }
 });
 
+RenderPoint.prototype["isBezier"] = function() {
+  var swtch = new Module.BezierCaster();
+  var result = swtch.isBezier(this);
+  Module.destroy(swtch);
+  return result;
+}
+
+RenderCubicBezier.prototype["isBezier"] = function() {
+  return true;
+}
+
+Object.defineProperty(Polygon.prototype, "elements", {
+  get: function() {
+    var result = [];
+    var swtch = new Module.BezierCaster();
+    for(var i=0; i<this.getNumElements(); i++) {
+      var elt = this.getElement(i);
+      if (swtch.isBezier(elt)) {
+        result.push(swtch.asBezier(elt));
+      } else {
+        result.push(elt);
+      }
+    }
+    Module.destroy(swtch);
+    return result;
+  }
+});
+
 Object.defineProperty(RenderGroup.prototype, "images", {
   get: function() {
     var result = [];

@@ -878,6 +878,36 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLErrorLog___destroy___0(libsbml::SB
   delete self;
 }
 
+// RadialGradient
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getId_0(libsbml::RadialGradient* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_setId_1(libsbml::RadialGradient* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_isSetId_0(libsbml::RadialGradient* self) {
+  return self->isSetId();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getNumGradientStops_0(libsbml::RadialGradient* self) {
+  return self->getNumGradientStops();
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getGradientStop_1(libsbml::RadialGradient* self, unsigned int arg0) {
+  return self->getGradientStop(arg0);
+}
+
+libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_createGradientStop_0(libsbml::RadialGradient* self) {
+  return self->createGradientStop();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient___destroy___0(libsbml::RadialGradient* self) {
+  delete self;
+}
+
 // VoidPtr
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_VoidPtr___destroy___0(void** self) {
@@ -1176,153 +1206,21 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineSegment___destroy___0(libsbml::Lin
   delete self;
 }
 
-// RenderGroup
+// BezierCaster
 
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getId_0(libsbml::RenderGroup* self) {
-  return (char*)self->getId().c_str();
+libsbmljs::BezierCaster* EMSCRIPTEN_KEEPALIVE emscripten_bind_BezierCaster_BezierCaster_0() {
+  return new libsbmljs::BezierCaster();
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setId_1(libsbml::RenderGroup* self, char* arg0) {
-  self->setId(arg0);
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_BezierCaster_isBezier_1(libsbmljs::BezierCaster* self, libsbml::RenderPoint* arg0) {
+  return self->isBezier(arg0);
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetId_0(libsbml::RenderGroup* self) {
-  return self->isSetId();
+libsbml::RenderCubicBezier* EMSCRIPTEN_KEEPALIVE emscripten_bind_BezierCaster_asBezier_1(libsbmljs::BezierCaster* self, libsbml::RenderPoint* arg0) {
+  return self->asBezier(arg0);
 }
 
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontFamily_0(libsbml::RenderGroup* self) {
-  return (char*)self->getFontFamily().c_str();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontFamily_1(libsbml::RenderGroup* self, char* arg0) {
-  self->setFontFamily(arg0);
-}
-
-libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontSize_0(libsbml::RenderGroup* self) {
-  return &self->getFontSize();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontSize_1(libsbml::RenderGroup* self, libsbml::RelAbsVector* arg0) {
-  self->setFontSize(*arg0);
-}
-
-libsbml::Text::FONT_WEIGHT EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontWeight_0(libsbml::RenderGroup* self) {
-  return self->getFontWeight();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontWeight_1(libsbml::RenderGroup* self, libsbml::Text::FONT_WEIGHT arg0) {
-  self->setFontWeight(arg0);
-}
-
-libsbml::Text::FONT_STYLE EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontStyle_0(libsbml::RenderGroup* self) {
-  return self->getFontStyle();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontStyle_1(libsbml::RenderGroup* self, libsbml::Text::FONT_STYLE arg0) {
-  self->setFontStyle(arg0);
-}
-
-libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getTextAnchor_0(libsbml::RenderGroup* self) {
-  return self->getTextAnchor();
-}
-
-libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getVTextAnchor_0(libsbml::RenderGroup* self) {
-  return self->getVTextAnchor();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setTextAnchor_1(libsbml::RenderGroup* self, libsbml::Text::TEXT_ANCHOR arg0) {
-  self->setTextAnchor(arg0);
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setVTextAnchor_1(libsbml::RenderGroup* self, libsbml::Text::TEXT_ANCHOR arg0) {
-  self->setVTextAnchor(arg0);
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetTextAnchor_0(libsbml::RenderGroup* self) {
-  return self->isSetTextAnchor();
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetVTextAnchor_0(libsbml::RenderGroup* self) {
-  return self->isSetVTextAnchor();
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getStartHead_0(libsbml::RenderGroup* self) {
-  return (char*)self->getStartHead().c_str();
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getEndHead_0(libsbml::RenderGroup* self) {
-  return (char*)self->getEndHead().c_str();
-}
-
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getNumElements_0(libsbml::RenderGroup* self) {
-  return self->getNumElements();
-}
-
-libsbml::Transformation2D* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getElement_1(libsbml::RenderGroup* self, unsigned int arg0) {
-  return self->getElement(arg0);
-}
-
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getElementName_0(libsbml::RenderGroup* self) {
-  return (char*)self->getElementName().c_str();
-}
-
-libsbml::Image* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createImage_0(libsbml::RenderGroup* self) {
-  return self->createImage();
-}
-
-libsbml::RenderGroup* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createGroup_0(libsbml::RenderGroup* self) {
-  return self->createGroup();
-}
-
-libsbml::Rectangle* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createRectangle_0(libsbml::RenderGroup* self) {
-  return self->createRectangle();
-}
-
-libsbml::Ellipse* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createEllipse_0(libsbml::RenderGroup* self) {
-  return self->createEllipse();
-}
-
-libsbml::RenderCurve* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createCurve_0(libsbml::RenderGroup* self) {
-  return self->createCurve();
-}
-
-libsbml::Polygon* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createPolygon_0(libsbml::RenderGroup* self) {
-  return self->createPolygon();
-}
-
-libsbml::Text* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createText_0(libsbml::RenderGroup* self) {
-  return self->createText();
-}
-
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_addChildElement_1(libsbml::RenderGroup* self, libsbml::Transformation2D* arg0) {
-  return self->addChildElement(arg0);
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetStartHead_0(libsbml::RenderGroup* self) {
-  return self->isSetStartHead();
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetEndHead_0(libsbml::RenderGroup* self) {
-  return self->isSetEndHead();
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontFamily_0(libsbml::RenderGroup* self) {
-  return self->isSetFontFamily();
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontWeight_0(libsbml::RenderGroup* self) {
-  return self->isSetFontWeight();
-}
-
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontStyle_0(libsbml::RenderGroup* self) {
-  return self->isSetFontStyle();
-}
-
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getTypeCode_0(libsbml::RenderGroup* self) {
-  return self->getTypeCode();
-}
-
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup___destroy___0(libsbml::RenderGroup* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_BezierCaster___destroy___0(libsbmljs::BezierCaster* self) {
   delete self;
 }
 
@@ -1734,6 +1632,30 @@ libsbml::Image* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asImage_1(l
   return self->asImage(arg0);
 }
 
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_isRectangle_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->isRectangle(arg0);
+}
+
+libsbml::Rectangle* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asRectangle_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->asRectangle(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_isEllipse_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->isEllipse(arg0);
+}
+
+libsbml::Ellipse* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asEllipse_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->asEllipse(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_isRenderCurve_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->isRenderCurve(arg0);
+}
+
+libsbml::RenderCurve* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asRenderCurve_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
+  return self->asRenderCurve(arg0);
+}
+
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_isText_1(libsbmljs::PrimitiveCaster* self, libsbml::Transformation2D* arg0) {
   return self->isText(arg0);
 }
@@ -2032,33 +1954,153 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Model___destroy___0(libsbml::Model* se
   delete self;
 }
 
-// RadialGradient
+// RenderGroup
 
-char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getId_0(libsbml::RadialGradient* self) {
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getId_0(libsbml::RenderGroup* self) {
   return (char*)self->getId().c_str();
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_setId_1(libsbml::RadialGradient* self, char* arg0) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setId_1(libsbml::RenderGroup* self, char* arg0) {
   self->setId(arg0);
 }
 
-bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_isSetId_0(libsbml::RadialGradient* self) {
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetId_0(libsbml::RenderGroup* self) {
   return self->isSetId();
 }
 
-unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getNumGradientStops_0(libsbml::RadialGradient* self) {
-  return self->getNumGradientStops();
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontFamily_0(libsbml::RenderGroup* self) {
+  return (char*)self->getFontFamily().c_str();
 }
 
-libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_getGradientStop_1(libsbml::RadialGradient* self, unsigned int arg0) {
-  return self->getGradientStop(arg0);
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontFamily_1(libsbml::RenderGroup* self, char* arg0) {
+  self->setFontFamily(arg0);
 }
 
-libsbml::GradientStop* EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient_createGradientStop_0(libsbml::RadialGradient* self) {
-  return self->createGradientStop();
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontSize_0(libsbml::RenderGroup* self) {
+  return &self->getFontSize();
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_RadialGradient___destroy___0(libsbml::RadialGradient* self) {
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontSize_1(libsbml::RenderGroup* self, libsbml::RelAbsVector* arg0) {
+  self->setFontSize(*arg0);
+}
+
+libsbml::Text::FONT_WEIGHT EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontWeight_0(libsbml::RenderGroup* self) {
+  return self->getFontWeight();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontWeight_1(libsbml::RenderGroup* self, libsbml::Text::FONT_WEIGHT arg0) {
+  self->setFontWeight(arg0);
+}
+
+libsbml::Text::FONT_STYLE EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFontStyle_0(libsbml::RenderGroup* self) {
+  return self->getFontStyle();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFontStyle_1(libsbml::RenderGroup* self, libsbml::Text::FONT_STYLE arg0) {
+  self->setFontStyle(arg0);
+}
+
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->getTextAnchor();
+}
+
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getVTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->getVTextAnchor();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setTextAnchor_1(libsbml::RenderGroup* self, libsbml::Text::TEXT_ANCHOR arg0) {
+  self->setTextAnchor(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setVTextAnchor_1(libsbml::RenderGroup* self, libsbml::Text::TEXT_ANCHOR arg0) {
+  self->setVTextAnchor(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->isSetTextAnchor();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetVTextAnchor_0(libsbml::RenderGroup* self) {
+  return self->isSetVTextAnchor();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getStartHead_0(libsbml::RenderGroup* self) {
+  return (char*)self->getStartHead().c_str();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getEndHead_0(libsbml::RenderGroup* self) {
+  return (char*)self->getEndHead().c_str();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getNumElements_0(libsbml::RenderGroup* self) {
+  return self->getNumElements();
+}
+
+libsbml::Transformation2D* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getElement_1(libsbml::RenderGroup* self, unsigned int arg0) {
+  return self->getElement(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getElementName_0(libsbml::RenderGroup* self) {
+  return (char*)self->getElementName().c_str();
+}
+
+libsbml::Image* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createImage_0(libsbml::RenderGroup* self) {
+  return self->createImage();
+}
+
+libsbml::RenderGroup* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createGroup_0(libsbml::RenderGroup* self) {
+  return self->createGroup();
+}
+
+libsbml::Rectangle* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createRectangle_0(libsbml::RenderGroup* self) {
+  return self->createRectangle();
+}
+
+libsbml::Ellipse* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createEllipse_0(libsbml::RenderGroup* self) {
+  return self->createEllipse();
+}
+
+libsbml::RenderCurve* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createCurve_0(libsbml::RenderGroup* self) {
+  return self->createCurve();
+}
+
+libsbml::Polygon* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createPolygon_0(libsbml::RenderGroup* self) {
+  return self->createPolygon();
+}
+
+libsbml::Text* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_createText_0(libsbml::RenderGroup* self) {
+  return self->createText();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_addChildElement_1(libsbml::RenderGroup* self, libsbml::Transformation2D* arg0) {
+  return self->addChildElement(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetStartHead_0(libsbml::RenderGroup* self) {
+  return self->isSetStartHead();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetEndHead_0(libsbml::RenderGroup* self) {
+  return self->isSetEndHead();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontFamily_0(libsbml::RenderGroup* self) {
+  return self->isSetFontFamily();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontWeight_0(libsbml::RenderGroup* self) {
+  return self->isSetFontWeight();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontStyle_0(libsbml::RenderGroup* self) {
+  return self->isSetFontStyle();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getTypeCode_0(libsbml::RenderGroup* self) {
+  return self->getTypeCode();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup___destroy___0(libsbml::RenderGroup* self) {
   delete self;
 }
 

@@ -1409,6 +1409,52 @@ Module['SBMLErrorLog'] = SBMLErrorLog;
   var self = this.ptr;
   _emscripten_bind_SBMLErrorLog___destroy___0(self);
 }
+// RadialGradient
+function RadialGradient() { throw "cannot construct a RadialGradient, no constructor in IDL" }
+RadialGradient.prototype = Object.create(WrapperObject.prototype);
+RadialGradient.prototype.constructor = RadialGradient;
+RadialGradient.prototype.__class__ = RadialGradient;
+RadialGradient.__cache__ = {};
+Module['RadialGradient'] = RadialGradient;
+
+RadialGradient.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RadialGradient_getId_0(self));
+};
+
+RadialGradient.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RadialGradient_setId_1(self, arg0);
+};
+
+RadialGradient.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RadialGradient_isSetId_0(self));
+};
+
+RadialGradient.prototype['getNumGradientStops'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RadialGradient_getNumGradientStops_0(self);
+};
+
+RadialGradient.prototype['getGradientStop'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RadialGradient_getGradientStop_1(self, arg0), GradientStop);
+};
+
+RadialGradient.prototype['createGradientStop'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RadialGradient_createGradientStop_0(self), GradientStop);
+};
+
+  RadialGradient.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RadialGradient___destroy___0(self);
+}
 // VoidPtr
 function VoidPtr() { throw "cannot construct a VoidPtr, no constructor in IDL" }
 VoidPtr.prototype = Object.create(WrapperObject.prototype);
@@ -1876,215 +1922,34 @@ LineSegment.prototype['setEnd'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_LineSegment___destroy___0(self);
 }
-// RenderGroup
-function RenderGroup() { throw "cannot construct a RenderGroup, no constructor in IDL" }
-RenderGroup.prototype = Object.create(WrapperObject.prototype);
-RenderGroup.prototype.constructor = RenderGroup;
-RenderGroup.prototype.__class__ = RenderGroup;
-RenderGroup.__cache__ = {};
-Module['RenderGroup'] = RenderGroup;
-
-RenderGroup.prototype['getId'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_RenderGroup_getId_0(self));
+// BezierCaster
+function BezierCaster() {
+  this.ptr = _emscripten_bind_BezierCaster_BezierCaster_0();
+  getCache(BezierCaster)[this.ptr] = this;
 };
+BezierCaster.prototype = Object.create(WrapperObject.prototype);
+BezierCaster.prototype.constructor = BezierCaster;
+BezierCaster.prototype.__class__ = BezierCaster;
+BezierCaster.__cache__ = {};
+Module['BezierCaster'] = BezierCaster;
 
-RenderGroup.prototype['setId'] = function(arg0) {
+BezierCaster.prototype['isBezier'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  _emscripten_bind_RenderGroup_setId_1(self, arg0);
+  return idl_wrapBool(_emscripten_bind_BezierCaster_isBezier_1(self, arg0));
 };
 
-RenderGroup.prototype['isSetId'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetId_0(self));
-};
-
-RenderGroup.prototype['getFontFamily'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_RenderGroup_getFontFamily_0(self));
-};
-
-RenderGroup.prototype['setFontFamily'] = function(arg0) {
+BezierCaster.prototype['asBezier'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  _emscripten_bind_RenderGroup_setFontFamily_1(self, arg0);
+  return wrapPointer(_emscripten_bind_BezierCaster_asBezier_1(self, arg0), RenderCubicBezier);
 };
 
-RenderGroup.prototype['getFontSize'] = function() {
+  BezierCaster.prototype['__destroy__'] = function() {
   var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_getFontSize_0(self), RelAbsVector);
-};
-
-RenderGroup.prototype['setFontSize'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_RenderGroup_setFontSize_1(self, arg0);
-};
-
-RenderGroup.prototype['getFontWeight'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_RenderGroup_getFontWeight_0(self);
-};
-
-RenderGroup.prototype['setFontWeight'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_RenderGroup_setFontWeight_1(self, arg0);
-};
-
-RenderGroup.prototype['getFontStyle'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_RenderGroup_getFontStyle_0(self);
-};
-
-RenderGroup.prototype['setFontStyle'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_RenderGroup_setFontStyle_1(self, arg0);
-};
-
-RenderGroup.prototype['getTextAnchor'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_RenderGroup_getTextAnchor_0(self);
-};
-
-RenderGroup.prototype['getVTextAnchor'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_RenderGroup_getVTextAnchor_0(self);
-};
-
-RenderGroup.prototype['setTextAnchor'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_RenderGroup_setTextAnchor_1(self, arg0);
-};
-
-RenderGroup.prototype['setVTextAnchor'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  _emscripten_bind_RenderGroup_setVTextAnchor_1(self, arg0);
-};
-
-RenderGroup.prototype['isSetTextAnchor'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetTextAnchor_0(self));
-};
-
-RenderGroup.prototype['isSetVTextAnchor'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetVTextAnchor_0(self));
-};
-
-RenderGroup.prototype['getStartHead'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_RenderGroup_getStartHead_0(self));
-};
-
-RenderGroup.prototype['getEndHead'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_RenderGroup_getEndHead_0(self));
-};
-
-RenderGroup.prototype['getNumElements'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_RenderGroup_getNumElements_0(self);
-};
-
-RenderGroup.prototype['getElement'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_RenderGroup_getElement_1(self, arg0), Transformation2D);
-};
-
-RenderGroup.prototype['getElementName'] = function() {
-  var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_RenderGroup_getElementName_0(self));
-};
-
-RenderGroup.prototype['createImage'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_createImage_0(self), Image);
-};
-
-RenderGroup.prototype['createGroup'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_createGroup_0(self), RenderGroup);
-};
-
-RenderGroup.prototype['createRectangle'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_createRectangle_0(self), Rectangle);
-};
-
-RenderGroup.prototype['createEllipse'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_createEllipse_0(self), Ellipse);
-};
-
-RenderGroup.prototype['createCurve'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_createCurve_0(self), RenderCurve);
-};
-
-RenderGroup.prototype['createPolygon'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_createPolygon_0(self), Polygon);
-};
-
-RenderGroup.prototype['createText'] = function() {
-  var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RenderGroup_createText_0(self), Text);
-};
-
-RenderGroup.prototype['addChildElement'] = function(arg0) {
-  var self = this.ptr;
-  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
-  else arg0 = ensureString(arg0);
-  return _emscripten_bind_RenderGroup_addChildElement_1(self, arg0);
-};
-
-RenderGroup.prototype['isSetStartHead'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetStartHead_0(self));
-};
-
-RenderGroup.prototype['isSetEndHead'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetEndHead_0(self));
-};
-
-RenderGroup.prototype['isSetFontFamily'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontFamily_0(self));
-};
-
-RenderGroup.prototype['isSetFontWeight'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontWeight_0(self));
-};
-
-RenderGroup.prototype['isSetFontStyle'] = function() {
-  var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontStyle_0(self));
-};
-
-RenderGroup.prototype['getTypeCode'] = function() {
-  var self = this.ptr;
-  return _emscripten_bind_RenderGroup_getTypeCode_0(self);
-};
-
-  RenderGroup.prototype['__destroy__'] = function() {
-  var self = this.ptr;
-  _emscripten_bind_RenderGroup___destroy___0(self);
+  _emscripten_bind_BezierCaster___destroy___0(self);
 }
 // RuleSwitch
 function RuleSwitch() {
@@ -2713,6 +2578,48 @@ PrimitiveCaster.prototype['asImage'] = function(arg0) {
   return wrapPointer(_emscripten_bind_PrimitiveCaster_asImage_1(self, arg0), Image);
 };
 
+PrimitiveCaster.prototype['isRectangle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_PrimitiveCaster_isRectangle_1(self, arg0));
+};
+
+PrimitiveCaster.prototype['asRectangle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_PrimitiveCaster_asRectangle_1(self, arg0), Rectangle);
+};
+
+PrimitiveCaster.prototype['isEllipse'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_PrimitiveCaster_isEllipse_1(self, arg0));
+};
+
+PrimitiveCaster.prototype['asEllipse'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_PrimitiveCaster_asEllipse_1(self, arg0), Ellipse);
+};
+
+PrimitiveCaster.prototype['isRenderCurve'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_PrimitiveCaster_isRenderCurve_1(self, arg0));
+};
+
+PrimitiveCaster.prototype['asRenderCurve'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_PrimitiveCaster_asRenderCurve_1(self, arg0), RenderCurve);
+};
+
 PrimitiveCaster.prototype['isText'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
@@ -3159,51 +3066,215 @@ Model.prototype['getPlugin'] = function(arg0) {
   var self = this.ptr;
   _emscripten_bind_Model___destroy___0(self);
 }
-// RadialGradient
-function RadialGradient() { throw "cannot construct a RadialGradient, no constructor in IDL" }
-RadialGradient.prototype = Object.create(WrapperObject.prototype);
-RadialGradient.prototype.constructor = RadialGradient;
-RadialGradient.prototype.__class__ = RadialGradient;
-RadialGradient.__cache__ = {};
-Module['RadialGradient'] = RadialGradient;
+// RenderGroup
+function RenderGroup() { throw "cannot construct a RenderGroup, no constructor in IDL" }
+RenderGroup.prototype = Object.create(WrapperObject.prototype);
+RenderGroup.prototype.constructor = RenderGroup;
+RenderGroup.prototype.__class__ = RenderGroup;
+RenderGroup.__cache__ = {};
+Module['RenderGroup'] = RenderGroup;
 
-RadialGradient.prototype['getId'] = function() {
+RenderGroup.prototype['getId'] = function() {
   var self = this.ptr;
-  return Pointer_stringify(_emscripten_bind_RadialGradient_getId_0(self));
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getId_0(self));
 };
 
-RadialGradient.prototype['setId'] = function(arg0) {
+RenderGroup.prototype['setId'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  _emscripten_bind_RadialGradient_setId_1(self, arg0);
+  _emscripten_bind_RenderGroup_setId_1(self, arg0);
 };
 
-RadialGradient.prototype['isSetId'] = function() {
+RenderGroup.prototype['isSetId'] = function() {
   var self = this.ptr;
-  return idl_wrapBool(_emscripten_bind_RadialGradient_isSetId_0(self));
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetId_0(self));
 };
 
-RadialGradient.prototype['getNumGradientStops'] = function() {
+RenderGroup.prototype['getFontFamily'] = function() {
   var self = this.ptr;
-  return _emscripten_bind_RadialGradient_getNumGradientStops_0(self);
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getFontFamily_0(self));
 };
 
-RadialGradient.prototype['getGradientStop'] = function(arg0) {
+RenderGroup.prototype['setFontFamily'] = function(arg0) {
   var self = this.ptr;
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
-  return wrapPointer(_emscripten_bind_RadialGradient_getGradientStop_1(self, arg0), GradientStop);
+  _emscripten_bind_RenderGroup_setFontFamily_1(self, arg0);
 };
 
-RadialGradient.prototype['createGradientStop'] = function() {
+RenderGroup.prototype['getFontSize'] = function() {
   var self = this.ptr;
-  return wrapPointer(_emscripten_bind_RadialGradient_createGradientStop_0(self), GradientStop);
+  return wrapPointer(_emscripten_bind_RenderGroup_getFontSize_0(self), RelAbsVector);
 };
 
-  RadialGradient.prototype['__destroy__'] = function() {
+RenderGroup.prototype['setFontSize'] = function(arg0) {
   var self = this.ptr;
-  _emscripten_bind_RadialGradient___destroy___0(self);
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFontSize_1(self, arg0);
+};
+
+RenderGroup.prototype['getFontWeight'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getFontWeight_0(self);
+};
+
+RenderGroup.prototype['setFontWeight'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFontWeight_1(self, arg0);
+};
+
+RenderGroup.prototype['getFontStyle'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getFontStyle_0(self);
+};
+
+RenderGroup.prototype['setFontStyle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFontStyle_1(self, arg0);
+};
+
+RenderGroup.prototype['getTextAnchor'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getTextAnchor_0(self);
+};
+
+RenderGroup.prototype['getVTextAnchor'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getVTextAnchor_0(self);
+};
+
+RenderGroup.prototype['setTextAnchor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setTextAnchor_1(self, arg0);
+};
+
+RenderGroup.prototype['setVTextAnchor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setVTextAnchor_1(self, arg0);
+};
+
+RenderGroup.prototype['isSetTextAnchor'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetTextAnchor_0(self));
+};
+
+RenderGroup.prototype['isSetVTextAnchor'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetVTextAnchor_0(self));
+};
+
+RenderGroup.prototype['getStartHead'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getStartHead_0(self));
+};
+
+RenderGroup.prototype['getEndHead'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getEndHead_0(self));
+};
+
+RenderGroup.prototype['getNumElements'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getNumElements_0(self);
+};
+
+RenderGroup.prototype['getElement'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderGroup_getElement_1(self, arg0), Transformation2D);
+};
+
+RenderGroup.prototype['getElementName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getElementName_0(self));
+};
+
+RenderGroup.prototype['createImage'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createImage_0(self), Image);
+};
+
+RenderGroup.prototype['createGroup'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createGroup_0(self), RenderGroup);
+};
+
+RenderGroup.prototype['createRectangle'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createRectangle_0(self), Rectangle);
+};
+
+RenderGroup.prototype['createEllipse'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createEllipse_0(self), Ellipse);
+};
+
+RenderGroup.prototype['createCurve'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createCurve_0(self), RenderCurve);
+};
+
+RenderGroup.prototype['createPolygon'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createPolygon_0(self), Polygon);
+};
+
+RenderGroup.prototype['createText'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderGroup_createText_0(self), Text);
+};
+
+RenderGroup.prototype['addChildElement'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_RenderGroup_addChildElement_1(self, arg0);
+};
+
+RenderGroup.prototype['isSetStartHead'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetStartHead_0(self));
+};
+
+RenderGroup.prototype['isSetEndHead'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetEndHead_0(self));
+};
+
+RenderGroup.prototype['isSetFontFamily'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontFamily_0(self));
+};
+
+RenderGroup.prototype['isSetFontWeight'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontWeight_0(self));
+};
+
+RenderGroup.prototype['isSetFontStyle'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFontStyle_0(self));
+};
+
+RenderGroup.prototype['getTypeCode'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getTypeCode_0(self);
+};
+
+  RenderGroup.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderGroup___destroy___0(self);
 }
 // AlgebraicRule
 function AlgebraicRule() { throw "cannot construct a AlgebraicRule, no constructor in IDL" }

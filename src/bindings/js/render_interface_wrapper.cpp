@@ -14,6 +14,22 @@
 // Wrapper objects
 namespace libsbmljs {
 
+  class BezierCaster {
+  public:
+    BezierCaster() {}
+
+    bool isBezier(libsbml::RenderPoint* p) {
+      libsbml::RenderCubicBezier* result = dynamic_cast<libsbml::RenderCubicBezier*>(p);
+      return result;
+    }
+
+    libsbml::RenderCubicBezier* asBezier(libsbml::RenderPoint* p) {
+      libsbml::RenderCubicBezier* result = dynamic_cast<libsbml::RenderCubicBezier*>(p);
+      assert(result && "Cast to render bezier failed");
+      return result;
+    }
+  };
+
   class PrimitiveCaster {
   public:
     PrimitiveCaster() {}
