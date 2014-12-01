@@ -842,6 +842,62 @@ interface RelAbsVector {
 };
 
 [Prefix="libsbml::"]
+interface LocalStyle {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  DOMString getName();
+  long setName(DOMString name);
+
+  unsigned long getNumIds();
+  boolean isInIdList(DOMString id);
+  void removeId(DOMString id);
+
+  RenderGroup getGroup();
+  void setGroup(RenderGroup g);
+
+  unsigned long getNumRoles();
+  DOMString createRoleString(); // NOTE: may leak (returns rvalue)
+  DOMString createTypeString(); // NOTE: may leak (returns rvalue)
+
+  void addRole(DOMString role);
+  boolean isInRoleList(DOMString role);
+  void removeRole(DOMString role);
+
+  unsigned long getNumTypes();
+  void addType(DOMString t);
+  void isInTypeList(DOMString t);
+  void removeType(DOMString t);
+};
+
+[Prefix="libsbml::"]
+interface GlobalStyle {
+  DOMString getId();
+  void setId(DOMString t);
+  boolean isSetId();
+
+  DOMString getName();
+  long setName(DOMString name);
+
+  RenderGroup getGroup();
+  void setGroup(RenderGroup g);
+
+  unsigned long getNumRoles();
+  DOMString createRoleString(); // NOTE: may leak (returns rvalue)
+  DOMString createTypeString(); // NOTE: may leak (returns rvalue)
+
+  void addRole(DOMString role);
+  boolean isInRoleList(DOMString role);
+  void removeRole(DOMString role);
+
+  unsigned long getNumTypes();
+  void addType(DOMString t);
+  void isInTypeList(DOMString t);
+  void removeType(DOMString t);
+};
+
+[Prefix="libsbml::"]
 interface Text {
 };
 
@@ -1160,6 +1216,9 @@ interface GlobalRenderInformation {
 
   unsigned long getNumLineEndings();
   LineEnding getLineEnding(unsigned long n);
+
+  unsigned long getNumStyles();
+  GlobalStyle getStyle(unsigned long n);
 };
 
 [Prefix="libsbml::"]
@@ -1192,6 +1251,9 @@ interface LocalRenderInformation {
 
   unsigned long getNumLineEndings();
   LineEnding getLineEnding(unsigned long n);
+
+  unsigned long getNumStyles();
+  LocalStyle getStyle(unsigned long n);
 };
 
 [Prefix="libsbml::"]

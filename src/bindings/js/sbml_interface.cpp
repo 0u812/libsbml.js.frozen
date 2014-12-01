@@ -104,6 +104,80 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_GradientBase___destroy___0(libsbml::Gr
   delete self;
 }
 
+// GlobalStyle
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_getId_0(libsbml::GlobalStyle* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_setId_1(libsbml::GlobalStyle* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_isSetId_0(libsbml::GlobalStyle* self) {
+  return self->isSetId();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_getName_0(libsbml::GlobalStyle* self) {
+  return (char*)self->getName().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_setName_1(libsbml::GlobalStyle* self, char* arg0) {
+  return self->setName(arg0);
+}
+
+libsbml::RenderGroup* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_getGroup_0(libsbml::GlobalStyle* self) {
+  return self->getGroup();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_setGroup_1(libsbml::GlobalStyle* self, libsbml::RenderGroup* arg0) {
+  self->setGroup(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_getNumRoles_0(libsbml::GlobalStyle* self) {
+  return self->getNumRoles();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_createRoleString_0(libsbml::GlobalStyle* self) {
+  return (char*)self->createRoleString().c_str();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_createTypeString_0(libsbml::GlobalStyle* self) {
+  return (char*)self->createTypeString().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_addRole_1(libsbml::GlobalStyle* self, char* arg0) {
+  self->addRole(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_isInRoleList_1(libsbml::GlobalStyle* self, char* arg0) {
+  return self->isInRoleList(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_removeRole_1(libsbml::GlobalStyle* self, char* arg0) {
+  self->removeRole(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_getNumTypes_0(libsbml::GlobalStyle* self) {
+  return self->getNumTypes();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_addType_1(libsbml::GlobalStyle* self, char* arg0) {
+  self->addType(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_isInTypeList_1(libsbml::GlobalStyle* self, char* arg0) {
+  self->isInTypeList(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle_removeType_1(libsbml::GlobalStyle* self, char* arg0) {
+  self->removeType(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalStyle___destroy___0(libsbml::GlobalStyle* self) {
+  delete self;
+}
+
 // Layout
 
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Layout_getId_0(libsbml::Layout* self) {
@@ -420,6 +494,14 @@ unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumL
 
 libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getLineEnding_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
   return self->getLineEnding(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumStyles_0(libsbml::LocalRenderInformation* self) {
+  return self->getNumStyles();
+}
+
+libsbml::LocalStyle* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getStyle_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
+  return self->getStyle(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation___destroy___0(libsbml::LocalRenderInformation* self) {
@@ -1542,6 +1624,14 @@ libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformatio
   return self->getLineEnding(arg0);
 }
 
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumStyles_0(libsbml::GlobalRenderInformation* self) {
+  return self->getNumStyles();
+}
+
+libsbml::GlobalStyle* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getStyle_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->getStyle(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {
   delete self;
 }
@@ -1665,6 +1755,92 @@ libsbml::Text* EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster_asText_1(lib
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_PrimitiveCaster___destroy___0(libsbmljs::PrimitiveCaster* self) {
+  delete self;
+}
+
+// LocalStyle
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_getId_0(libsbml::LocalStyle* self) {
+  return (char*)self->getId().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_setId_1(libsbml::LocalStyle* self, char* arg0) {
+  self->setId(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_isSetId_0(libsbml::LocalStyle* self) {
+  return self->isSetId();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_getName_0(libsbml::LocalStyle* self) {
+  return (char*)self->getName().c_str();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_setName_1(libsbml::LocalStyle* self, char* arg0) {
+  return self->setName(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_getNumIds_0(libsbml::LocalStyle* self) {
+  return self->getNumIds();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_isInIdList_1(libsbml::LocalStyle* self, char* arg0) {
+  return self->isInIdList(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_removeId_1(libsbml::LocalStyle* self, char* arg0) {
+  self->removeId(arg0);
+}
+
+libsbml::RenderGroup* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_getGroup_0(libsbml::LocalStyle* self) {
+  return self->getGroup();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_setGroup_1(libsbml::LocalStyle* self, libsbml::RenderGroup* arg0) {
+  self->setGroup(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_getNumRoles_0(libsbml::LocalStyle* self) {
+  return self->getNumRoles();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_createRoleString_0(libsbml::LocalStyle* self) {
+  return (char*)self->createRoleString().c_str();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_createTypeString_0(libsbml::LocalStyle* self) {
+  return (char*)self->createTypeString().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_addRole_1(libsbml::LocalStyle* self, char* arg0) {
+  self->addRole(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_isInRoleList_1(libsbml::LocalStyle* self, char* arg0) {
+  return self->isInRoleList(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_removeRole_1(libsbml::LocalStyle* self, char* arg0) {
+  self->removeRole(arg0);
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_getNumTypes_0(libsbml::LocalStyle* self) {
+  return self->getNumTypes();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_addType_1(libsbml::LocalStyle* self, char* arg0) {
+  self->addType(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_isInTypeList_1(libsbml::LocalStyle* self, char* arg0) {
+  self->isInTypeList(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle_removeType_1(libsbml::LocalStyle* self, char* arg0) {
+  self->removeType(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalStyle___destroy___0(libsbml::LocalStyle* self) {
   delete self;
 }
 

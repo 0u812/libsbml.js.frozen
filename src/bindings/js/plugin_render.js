@@ -89,6 +89,51 @@ Object.defineProperty(RenderGroup.prototype, "text", {
   }
 });
 
+Object.defineProperty(RenderGroup.prototype, "rectangles", {
+  get: function() {
+    var result = [];
+    var swtch = new Module.PrimitiveCaster();
+    for(var i=0; i<this.getNumElements(); i++) {
+      var elt = this.getElement(i);
+      if (swtch.isRectangle(elt)) {
+        result.push(swtch.asRectangle(elt));
+      }
+    }
+    Module.destroy(swtch);
+    return result;
+  }
+});
+
+Object.defineProperty(RenderGroup.prototype, "ellipses", {
+  get: function() {
+    var result = [];
+    var swtch = new Module.PrimitiveCaster();
+    for(var i=0; i<this.getNumElements(); i++) {
+      var elt = this.getElement(i);
+      if (swtch.isEllipse(elt)) {
+        result.push(swtch.asEllipse(elt));
+      }
+    }
+    Module.destroy(swtch);
+    return result;
+  }
+});
+
+Object.defineProperty(RenderGroup.prototype, "curves", {
+  get: function() {
+    var result = [];
+    var swtch = new Module.PrimitiveCaster();
+    for(var i=0; i<this.getNumElements(); i++) {
+      var elt = this.getElement(i);
+      if (swtch.isRenderCurve(elt)) {
+        result.push(swtch.asRenderCurve(elt));
+      }
+    }
+    Module.destroy(swtch);
+    return result;
+  }
+});
+
 Object.defineProperty(GradientBase.prototype, "stops", {
   get: function errors() {
     var result = [];
@@ -156,6 +201,16 @@ Object.defineProperty(LocalRenderInformation.prototype, "lineendings", {
   }
 });
 
+Object.defineProperty(LocalRenderInformation.prototype, "styles", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumStyles(); i++) {
+      result.push(this.getStyle(i));
+    }
+    return result;
+  }
+});
+
 // Global
 
 Object.defineProperty(GlobalRenderInformation.prototype, "colors", {
@@ -188,6 +243,16 @@ Object.defineProperty(GlobalRenderInformation.prototype, "lineendings", {
     var result = [];
     for(var i=0; i<this.getNumLineEndings(); i++) {
       result.push(this.getLineEnding(i));
+    }
+    return result;
+  }
+});
+
+Object.defineProperty(GlobalRenderInformation.prototype, "styles", {
+  get: function errors() {
+    var result = [];
+    for(var i=0; i<this.getNumStyles(); i++) {
+      result.push(this.getStyle(i));
     }
     return result;
   }

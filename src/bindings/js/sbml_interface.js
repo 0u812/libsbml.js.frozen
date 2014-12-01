@@ -218,6 +218,121 @@ GradientBase.prototype['createGradientStop'] = function() {
   var self = this.ptr;
   _emscripten_bind_GradientBase___destroy___0(self);
 }
+// GlobalStyle
+function GlobalStyle() { throw "cannot construct a GlobalStyle, no constructor in IDL" }
+GlobalStyle.prototype = Object.create(WrapperObject.prototype);
+GlobalStyle.prototype.constructor = GlobalStyle;
+GlobalStyle.prototype.__class__ = GlobalStyle;
+GlobalStyle.__cache__ = {};
+Module['GlobalStyle'] = GlobalStyle;
+
+GlobalStyle.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalStyle_getId_0(self));
+};
+
+GlobalStyle.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalStyle_setId_1(self, arg0);
+};
+
+GlobalStyle.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_GlobalStyle_isSetId_0(self));
+};
+
+GlobalStyle.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalStyle_getName_0(self));
+};
+
+GlobalStyle.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_GlobalStyle_setName_1(self, arg0);
+};
+
+GlobalStyle.prototype['getGroup'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_GlobalStyle_getGroup_0(self), RenderGroup);
+};
+
+GlobalStyle.prototype['setGroup'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalStyle_setGroup_1(self, arg0);
+};
+
+GlobalStyle.prototype['getNumRoles'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalStyle_getNumRoles_0(self);
+};
+
+GlobalStyle.prototype['createRoleString'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalStyle_createRoleString_0(self));
+};
+
+GlobalStyle.prototype['createTypeString'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalStyle_createTypeString_0(self));
+};
+
+GlobalStyle.prototype['addRole'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalStyle_addRole_1(self, arg0);
+};
+
+GlobalStyle.prototype['isInRoleList'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_GlobalStyle_isInRoleList_1(self, arg0));
+};
+
+GlobalStyle.prototype['removeRole'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalStyle_removeRole_1(self, arg0);
+};
+
+GlobalStyle.prototype['getNumTypes'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalStyle_getNumTypes_0(self);
+};
+
+GlobalStyle.prototype['addType'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalStyle_addType_1(self, arg0);
+};
+
+GlobalStyle.prototype['isInTypeList'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalStyle_isInTypeList_1(self, arg0);
+};
+
+GlobalStyle.prototype['removeType'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalStyle_removeType_1(self, arg0);
+};
+
+  GlobalStyle.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_GlobalStyle___destroy___0(self);
+}
 // Layout
 function Layout() { throw "cannot construct a Layout, no constructor in IDL" }
 Layout.prototype = Object.create(WrapperObject.prototype);
@@ -705,6 +820,18 @@ LocalRenderInformation.prototype['getLineEnding'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_LocalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
+};
+
+LocalRenderInformation.prototype['getNumStyles'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalRenderInformation_getNumStyles_0(self);
+};
+
+LocalRenderInformation.prototype['getStyle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_getStyle_1(self, arg0), LocalStyle);
 };
 
   LocalRenderInformation.prototype['__destroy__'] = function() {
@@ -2438,6 +2565,18 @@ GlobalRenderInformation.prototype['getLineEnding'] = function(arg0) {
   return wrapPointer(_emscripten_bind_GlobalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
 };
 
+GlobalRenderInformation.prototype['getNumStyles'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_GlobalRenderInformation_getNumStyles_0(self);
+};
+
+GlobalRenderInformation.prototype['getStyle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_getStyle_1(self, arg0), GlobalStyle);
+};
+
   GlobalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_GlobalRenderInformation___destroy___0(self);
@@ -2637,6 +2776,140 @@ PrimitiveCaster.prototype['asText'] = function(arg0) {
   PrimitiveCaster.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_PrimitiveCaster___destroy___0(self);
+}
+// LocalStyle
+function LocalStyle() { throw "cannot construct a LocalStyle, no constructor in IDL" }
+LocalStyle.prototype = Object.create(WrapperObject.prototype);
+LocalStyle.prototype.constructor = LocalStyle;
+LocalStyle.prototype.__class__ = LocalStyle;
+LocalStyle.__cache__ = {};
+Module['LocalStyle'] = LocalStyle;
+
+LocalStyle.prototype['getId'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalStyle_getId_0(self));
+};
+
+LocalStyle.prototype['setId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_setId_1(self, arg0);
+};
+
+LocalStyle.prototype['isSetId'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_LocalStyle_isSetId_0(self));
+};
+
+LocalStyle.prototype['getName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalStyle_getName_0(self));
+};
+
+LocalStyle.prototype['setName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_LocalStyle_setName_1(self, arg0);
+};
+
+LocalStyle.prototype['getNumIds'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalStyle_getNumIds_0(self);
+};
+
+LocalStyle.prototype['isInIdList'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_LocalStyle_isInIdList_1(self, arg0));
+};
+
+LocalStyle.prototype['removeId'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_removeId_1(self, arg0);
+};
+
+LocalStyle.prototype['getGroup'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LocalStyle_getGroup_0(self), RenderGroup);
+};
+
+LocalStyle.prototype['setGroup'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_setGroup_1(self, arg0);
+};
+
+LocalStyle.prototype['getNumRoles'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalStyle_getNumRoles_0(self);
+};
+
+LocalStyle.prototype['createRoleString'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalStyle_createRoleString_0(self));
+};
+
+LocalStyle.prototype['createTypeString'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalStyle_createTypeString_0(self));
+};
+
+LocalStyle.prototype['addRole'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_addRole_1(self, arg0);
+};
+
+LocalStyle.prototype['isInRoleList'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return idl_wrapBool(_emscripten_bind_LocalStyle_isInRoleList_1(self, arg0));
+};
+
+LocalStyle.prototype['removeRole'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_removeRole_1(self, arg0);
+};
+
+LocalStyle.prototype['getNumTypes'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_LocalStyle_getNumTypes_0(self);
+};
+
+LocalStyle.prototype['addType'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_addType_1(self, arg0);
+};
+
+LocalStyle.prototype['isInTypeList'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_isInTypeList_1(self, arg0);
+};
+
+LocalStyle.prototype['removeType'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalStyle_removeType_1(self, arg0);
+};
+
+  LocalStyle.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_LocalStyle___destroy___0(self);
 }
 // SBasePlugin
 function SBasePlugin() { throw "cannot construct a SBasePlugin, no constructor in IDL" }
