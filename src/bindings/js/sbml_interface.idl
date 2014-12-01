@@ -899,6 +899,32 @@ interface GlobalStyle {
 
 [Prefix="libsbml::"]
 interface Text {
+  void setX([Ref] RelAbsVector v);
+  void setY([Ref] RelAbsVector v);
+  void setZ([Ref] RelAbsVector v);
+
+  [Ref] RelAbsVector getX();
+  [Ref] RelAbsVector getY();
+  [Ref] RelAbsVector getZ();
+
+  DOMString getFontFamily();
+  void setFontFamily(DOMString family);
+
+  [Ref] RelAbsVector getFontSize();
+  void setFontSize([Ref] RelAbsVector v);
+
+  libsbml__idl__Text__idl__FONT_WEIGHT getFontWeight();
+  void setFontWeight(libsbml__idl__Text__idl__FONT_WEIGHT weight);
+
+  libsbml__idl__Text__idl__FONT_STYLE getFontStyle();
+  void setFontStyle(libsbml__idl__Text__idl__FONT_STYLE style);
+
+  libsbml__idl__Text__idl__TEXT_ANCHOR getTextAnchor();
+  libsbml__idl__Text__idl__TEXT_ANCHOR getVTextAnchor();
+  void setTextAnchor(libsbml__idl__Text__idl__TEXT_ANCHOR anchor);
+  void setVTextAnchor(libsbml__idl__Text__idl__TEXT_ANCHOR anchor);
+  boolean isSetTextAnchor();
+  boolean isSetVTextAnchor();
 };
 
 [Prefix="libsbml::"]
@@ -964,18 +990,98 @@ interface Transformation2D {
 interface Image {
   void setCoordinates([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
   void setX([Ref] RelAbsVector x);
+  void setY([Ref] RelAbsVector y);
+  void setZ([Ref] RelAbsVector z);
+
+  [Ref] RelAbsVector getX();
+  [Ref] RelAbsVector getY();
+  [Ref] RelAbsVector getZ();
+
+  void setDimensions([Ref] RelAbsVector w, [Ref] RelAbsVector h);
+
+  void setWidth([Ref] RelAbsVector w);
+  void setHeight([Ref] RelAbsVector h);
+
+  [Ref] RelAbsVector getWidth();
+  [Ref] RelAbsVector getHeight();
+
+  void setImageReference(DOMString ref);
+  DOMString getImageReference();
+  boolean isSetImageReference();
+
+  long getTypeCode();
 };
 
 [Prefix="libsbml::"]
 interface Rectangle {
+  void setCoordinatesAndSize([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z, [Ref] RelAbsVector w, [Ref] RelAbsVector h);
+
+  void setCoordinates([Ref] RelAbsVector x, [Ref] RelAbsVector y, [Ref] RelAbsVector z);
+
+  void setSize([Ref] RelAbsVector w, [Ref] RelAbsVector h);
+
+  void setWidth([Ref] RelAbsVector w);
+  void setHeight([Ref] RelAbsVector h);
+
+  void setRadii([Ref] RelAbsVector rx, [Ref] RelAbsVector ry);
+  void setRadiusX([Ref] RelAbsVector rx);
+  void setRadiusY([Ref] RelAbsVector ry);
+
+  void setX([Ref] RelAbsVector x);
+  void setY([Ref] RelAbsVector y);
+  void setZ([Ref] RelAbsVector z);
+
+  [Ref] RelAbsVector getX();
+  [Ref] RelAbsVector getY();
+  [Ref] RelAbsVector getZ();
+
+  [Ref] RelAbsVector getWidth();
+  [Ref] RelAbsVector getHeight();
+
+  [Ref] RelAbsVector getRadiusX();
+  [Ref] RelAbsVector getRadiusY();
+
+  long getTypeCode();
 };
 
 [Prefix="libsbml::"]
 interface Ellipse {
+  [Ref] RelAbsVector getCX();
+  [Ref] RelAbsVector getCY();
+  [Ref] RelAbsVector getCZ();
+
+  [Ref] RelAbsVector getRX();
+  [Ref] RelAbsVector getRY();
+
+  void setCX([Ref] RelAbsVector v);
+  void setCY([Ref] RelAbsVector v);
+  void setCZ([Ref] RelAbsVector v);
+
+  void setRX([Ref] RelAbsVector v);
+  void setRY([Ref] RelAbsVector v);
+
+  void setCenter2D([Ref] RelAbsVector cx, [Ref] RelAbsVector cy);
+  void setCenter3D([Ref] RelAbsVector cx, [Ref] RelAbsVector cy, [Ref] RelAbsVector cz);
+
+  void setRadii([Ref] RelAbsVector rx, [Ref] RelAbsVector ry);
+
+  long getTypeCode();
 };
 
 [Prefix="libsbml::"]
 interface RenderCurve {
+  DOMString getStartHead();
+  DOMString getEndHead();
+
+  boolean isSetStartHead();
+  boolean isSetEndHead();
+
+  unsigned long getNumElements();
+  RenderPoint getElement(unsigned long n);
+  RenderPoint removeElement(unsigned long n);
+
+  RenderCubicBezier createCubicBezier();
+  RenderPoint createPoint();
 };
 
 [Prefix="libsbml::"]

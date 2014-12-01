@@ -912,6 +912,82 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_CurveCaster___destroy___0(libsbmljs::C
 
 // Rectangle
 
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setCoordinatesAndSize_5(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2, libsbml::RelAbsVector* arg3, libsbml::RelAbsVector* arg4) {
+  self->setCoordinatesAndSize(*arg0, *arg1, *arg2, *arg3, *arg4);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setCoordinates_3(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setCoordinates(*arg0, *arg1, *arg2);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setSize_2(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1) {
+  self->setSize(*arg0, *arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setWidth_1(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0) {
+  self->setWidth(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setHeight_1(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0) {
+  self->setHeight(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setRadii_2(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1) {
+  self->setRadii(*arg0, *arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setRadiusX_1(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0) {
+  self->setRadiusX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setRadiusY_1(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0) {
+  self->setRadiusY(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setX_1(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0) {
+  self->setX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setY_1(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0) {
+  self->setY(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_setZ_1(libsbml::Rectangle* self, libsbml::RelAbsVector* arg0) {
+  self->setZ(*arg0);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getX_0(libsbml::Rectangle* self) {
+  return &self->getX();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getY_0(libsbml::Rectangle* self) {
+  return &self->getY();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getZ_0(libsbml::Rectangle* self) {
+  return &self->getZ();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getWidth_0(libsbml::Rectangle* self) {
+  return &self->getWidth();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getHeight_0(libsbml::Rectangle* self) {
+  return &self->getHeight();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getRadiusX_0(libsbml::Rectangle* self) {
+  return &self->getRadiusX();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getRadiusY_0(libsbml::Rectangle* self) {
+  return &self->getRadiusY();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle_getTypeCode_0(libsbml::Rectangle* self) {
+  return self->getTypeCode();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Rectangle___destroy___0(libsbml::Rectangle* self) {
   delete self;
 }
@@ -2350,6 +2426,42 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderListOfLayoutsPlugin___destroy___
 
 // RenderCurve
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_getStartHead_0(libsbml::RenderCurve* self) {
+  return (char*)self->getStartHead().c_str();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_getEndHead_0(libsbml::RenderCurve* self) {
+  return (char*)self->getEndHead().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_isSetStartHead_0(libsbml::RenderCurve* self) {
+  return self->isSetStartHead();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_isSetEndHead_0(libsbml::RenderCurve* self) {
+  return self->isSetEndHead();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_getNumElements_0(libsbml::RenderCurve* self) {
+  return self->getNumElements();
+}
+
+libsbml::RenderPoint* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_getElement_1(libsbml::RenderCurve* self, unsigned int arg0) {
+  return self->getElement(arg0);
+}
+
+libsbml::RenderPoint* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_removeElement_1(libsbml::RenderCurve* self, unsigned int arg0) {
+  return self->removeElement(arg0);
+}
+
+libsbml::RenderCubicBezier* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_createCubicBezier_0(libsbml::RenderCurve* self) {
+  return self->createCubicBezier();
+}
+
+libsbml::RenderPoint* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve_createPoint_0(libsbml::RenderCurve* self) {
+  return self->createPoint();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderCurve___destroy___0(libsbml::RenderCurve* self) {
   delete self;
 }
@@ -2478,6 +2590,86 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Point___destroy___0(libsbml::Point* se
 
 // Text
 
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setX_1(libsbml::Text* self, libsbml::RelAbsVector* arg0) {
+  self->setX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setY_1(libsbml::Text* self, libsbml::RelAbsVector* arg0) {
+  self->setY(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setZ_1(libsbml::Text* self, libsbml::RelAbsVector* arg0) {
+  self->setZ(*arg0);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getX_0(libsbml::Text* self) {
+  return &self->getX();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getY_0(libsbml::Text* self) {
+  return &self->getY();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getZ_0(libsbml::Text* self) {
+  return &self->getZ();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getFontFamily_0(libsbml::Text* self) {
+  return (char*)self->getFontFamily().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setFontFamily_1(libsbml::Text* self, char* arg0) {
+  self->setFontFamily(arg0);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getFontSize_0(libsbml::Text* self) {
+  return &self->getFontSize();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setFontSize_1(libsbml::Text* self, libsbml::RelAbsVector* arg0) {
+  self->setFontSize(*arg0);
+}
+
+libsbml::Text::FONT_WEIGHT EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getFontWeight_0(libsbml::Text* self) {
+  return self->getFontWeight();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setFontWeight_1(libsbml::Text* self, libsbml::Text::FONT_WEIGHT arg0) {
+  self->setFontWeight(arg0);
+}
+
+libsbml::Text::FONT_STYLE EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getFontStyle_0(libsbml::Text* self) {
+  return self->getFontStyle();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setFontStyle_1(libsbml::Text* self, libsbml::Text::FONT_STYLE arg0) {
+  self->setFontStyle(arg0);
+}
+
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getTextAnchor_0(libsbml::Text* self) {
+  return self->getTextAnchor();
+}
+
+libsbml::Text::TEXT_ANCHOR EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_getVTextAnchor_0(libsbml::Text* self) {
+  return self->getVTextAnchor();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setTextAnchor_1(libsbml::Text* self, libsbml::Text::TEXT_ANCHOR arg0) {
+  self->setTextAnchor(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_setVTextAnchor_1(libsbml::Text* self, libsbml::Text::TEXT_ANCHOR arg0) {
+  self->setVTextAnchor(arg0);
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_isSetTextAnchor_0(libsbml::Text* self) {
+  return self->isSetTextAnchor();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Text_isSetVTextAnchor_0(libsbml::Text* self) {
+  return self->isSetVTextAnchor();
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Text___destroy___0(libsbml::Text* self) {
   delete self;
 }
@@ -2511,6 +2703,62 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_GeneralGlyph___destroy___0(libsbml::Ge
 }
 
 // Ellipse
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_getCX_0(libsbml::Ellipse* self) {
+  return &self->getCX();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_getCY_0(libsbml::Ellipse* self) {
+  return &self->getCY();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_getCZ_0(libsbml::Ellipse* self) {
+  return &self->getCZ();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_getRX_0(libsbml::Ellipse* self) {
+  return &self->getRX();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_getRY_0(libsbml::Ellipse* self) {
+  return &self->getRY();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setCX_1(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0) {
+  self->setCX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setCY_1(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0) {
+  self->setCY(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setCZ_1(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0) {
+  self->setCZ(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setRX_1(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0) {
+  self->setRX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setRY_1(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0) {
+  self->setRY(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setCenter2D_2(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1) {
+  self->setCenter2D(*arg0, *arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setCenter3D_3(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1, libsbml::RelAbsVector* arg2) {
+  self->setCenter3D(*arg0, *arg1, *arg2);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_setRadii_2(libsbml::Ellipse* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1) {
+  self->setRadii(*arg0, *arg1);
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse_getTypeCode_0(libsbml::Ellipse* self) {
+  return self->getTypeCode();
+}
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Ellipse___destroy___0(libsbml::Ellipse* self) {
   delete self;
@@ -2672,6 +2920,62 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setCoordinates_3(libsbml::Image*
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setX_1(libsbml::Image* self, libsbml::RelAbsVector* arg0) {
   self->setX(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setY_1(libsbml::Image* self, libsbml::RelAbsVector* arg0) {
+  self->setY(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setZ_1(libsbml::Image* self, libsbml::RelAbsVector* arg0) {
+  self->setZ(*arg0);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_getX_0(libsbml::Image* self) {
+  return &self->getX();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_getY_0(libsbml::Image* self) {
+  return &self->getY();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_getZ_0(libsbml::Image* self) {
+  return &self->getZ();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setDimensions_2(libsbml::Image* self, libsbml::RelAbsVector* arg0, libsbml::RelAbsVector* arg1) {
+  self->setDimensions(*arg0, *arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setWidth_1(libsbml::Image* self, libsbml::RelAbsVector* arg0) {
+  self->setWidth(*arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setHeight_1(libsbml::Image* self, libsbml::RelAbsVector* arg0) {
+  self->setHeight(*arg0);
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_getWidth_0(libsbml::Image* self) {
+  return &self->getWidth();
+}
+
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_getHeight_0(libsbml::Image* self) {
+  return &self->getHeight();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_setImageReference_1(libsbml::Image* self, char* arg0) {
+  self->setImageReference(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_getImageReference_0(libsbml::Image* self) {
+  return (char*)self->getImageReference().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_isSetImageReference_0(libsbml::Image* self) {
+  return self->isSetImageReference();
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_Image_getTypeCode_0(libsbml::Image* self) {
+  return self->getTypeCode();
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_Image___destroy___0(libsbml::Image* self) {

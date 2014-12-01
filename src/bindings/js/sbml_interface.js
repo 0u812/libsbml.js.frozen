@@ -1462,6 +1462,139 @@ Rectangle.prototype.__class__ = Rectangle;
 Rectangle.__cache__ = {};
 Module['Rectangle'] = Rectangle;
 
+Rectangle.prototype['setCoordinatesAndSize'] = function(arg0, arg1, arg2, arg3, arg4) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  if (arg3 && typeof arg3 === 'object') arg3 = arg3.ptr;
+  else arg3 = ensureString(arg3);
+  if (arg4 && typeof arg4 === 'object') arg4 = arg4.ptr;
+  else arg4 = ensureString(arg4);
+  _emscripten_bind_Rectangle_setCoordinatesAndSize_5(self, arg0, arg1, arg2, arg3, arg4);
+};
+
+Rectangle.prototype['setCoordinates'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_Rectangle_setCoordinates_3(self, arg0, arg1, arg2);
+};
+
+Rectangle.prototype['setSize'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_Rectangle_setSize_2(self, arg0, arg1);
+};
+
+Rectangle.prototype['setWidth'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Rectangle_setWidth_1(self, arg0);
+};
+
+Rectangle.prototype['setHeight'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Rectangle_setHeight_1(self, arg0);
+};
+
+Rectangle.prototype['setRadii'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_Rectangle_setRadii_2(self, arg0, arg1);
+};
+
+Rectangle.prototype['setRadiusX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Rectangle_setRadiusX_1(self, arg0);
+};
+
+Rectangle.prototype['setRadiusY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Rectangle_setRadiusY_1(self, arg0);
+};
+
+Rectangle.prototype['setX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Rectangle_setX_1(self, arg0);
+};
+
+Rectangle.prototype['setY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Rectangle_setY_1(self, arg0);
+};
+
+Rectangle.prototype['setZ'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Rectangle_setZ_1(self, arg0);
+};
+
+Rectangle.prototype['getX'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Rectangle_getX_0(self), RelAbsVector);
+};
+
+Rectangle.prototype['getY'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Rectangle_getY_0(self), RelAbsVector);
+};
+
+Rectangle.prototype['getZ'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Rectangle_getZ_0(self), RelAbsVector);
+};
+
+Rectangle.prototype['getWidth'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Rectangle_getWidth_0(self), RelAbsVector);
+};
+
+Rectangle.prototype['getHeight'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Rectangle_getHeight_0(self), RelAbsVector);
+};
+
+Rectangle.prototype['getRadiusX'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Rectangle_getRadiusX_0(self), RelAbsVector);
+};
+
+Rectangle.prototype['getRadiusY'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Rectangle_getRadiusY_0(self), RelAbsVector);
+};
+
+Rectangle.prototype['getTypeCode'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Rectangle_getTypeCode_0(self);
+};
+
   Rectangle.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Rectangle___destroy___0(self);
@@ -3661,6 +3794,55 @@ RenderCurve.prototype.__class__ = RenderCurve;
 RenderCurve.__cache__ = {};
 Module['RenderCurve'] = RenderCurve;
 
+RenderCurve.prototype['getStartHead'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderCurve_getStartHead_0(self));
+};
+
+RenderCurve.prototype['getEndHead'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderCurve_getEndHead_0(self));
+};
+
+RenderCurve.prototype['isSetStartHead'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderCurve_isSetStartHead_0(self));
+};
+
+RenderCurve.prototype['isSetEndHead'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderCurve_isSetEndHead_0(self));
+};
+
+RenderCurve.prototype['getNumElements'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderCurve_getNumElements_0(self);
+};
+
+RenderCurve.prototype['getElement'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderCurve_getElement_1(self, arg0), RenderPoint);
+};
+
+RenderCurve.prototype['removeElement'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderCurve_removeElement_1(self, arg0), RenderPoint);
+};
+
+RenderCurve.prototype['createCubicBezier'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCurve_createCubicBezier_0(self), RenderCubicBezier);
+};
+
+RenderCurve.prototype['createPoint'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderCurve_createPoint_0(self), RenderPoint);
+};
+
   RenderCurve.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_RenderCurve___destroy___0(self);
@@ -3857,6 +4039,124 @@ Text.prototype.__class__ = Text;
 Text.__cache__ = {};
 Module['Text'] = Text;
 
+Text.prototype['setX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setX_1(self, arg0);
+};
+
+Text.prototype['setY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setY_1(self, arg0);
+};
+
+Text.prototype['setZ'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setZ_1(self, arg0);
+};
+
+Text.prototype['getX'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Text_getX_0(self), RelAbsVector);
+};
+
+Text.prototype['getY'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Text_getY_0(self), RelAbsVector);
+};
+
+Text.prototype['getZ'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Text_getZ_0(self), RelAbsVector);
+};
+
+Text.prototype['getFontFamily'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Text_getFontFamily_0(self));
+};
+
+Text.prototype['setFontFamily'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setFontFamily_1(self, arg0);
+};
+
+Text.prototype['getFontSize'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Text_getFontSize_0(self), RelAbsVector);
+};
+
+Text.prototype['setFontSize'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setFontSize_1(self, arg0);
+};
+
+Text.prototype['getFontWeight'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Text_getFontWeight_0(self);
+};
+
+Text.prototype['setFontWeight'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setFontWeight_1(self, arg0);
+};
+
+Text.prototype['getFontStyle'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Text_getFontStyle_0(self);
+};
+
+Text.prototype['setFontStyle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setFontStyle_1(self, arg0);
+};
+
+Text.prototype['getTextAnchor'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Text_getTextAnchor_0(self);
+};
+
+Text.prototype['getVTextAnchor'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Text_getVTextAnchor_0(self);
+};
+
+Text.prototype['setTextAnchor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setTextAnchor_1(self, arg0);
+};
+
+Text.prototype['setVTextAnchor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Text_setVTextAnchor_1(self, arg0);
+};
+
+Text.prototype['isSetTextAnchor'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Text_isSetTextAnchor_0(self));
+};
+
+Text.prototype['isSetVTextAnchor'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Text_isSetVTextAnchor_0(self));
+};
+
   Text.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_Text___destroy___0(self);
@@ -3916,6 +4216,100 @@ Ellipse.prototype.constructor = Ellipse;
 Ellipse.prototype.__class__ = Ellipse;
 Ellipse.__cache__ = {};
 Module['Ellipse'] = Ellipse;
+
+Ellipse.prototype['getCX'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Ellipse_getCX_0(self), RelAbsVector);
+};
+
+Ellipse.prototype['getCY'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Ellipse_getCY_0(self), RelAbsVector);
+};
+
+Ellipse.prototype['getCZ'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Ellipse_getCZ_0(self), RelAbsVector);
+};
+
+Ellipse.prototype['getRX'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Ellipse_getRX_0(self), RelAbsVector);
+};
+
+Ellipse.prototype['getRY'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Ellipse_getRY_0(self), RelAbsVector);
+};
+
+Ellipse.prototype['setCX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Ellipse_setCX_1(self, arg0);
+};
+
+Ellipse.prototype['setCY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Ellipse_setCY_1(self, arg0);
+};
+
+Ellipse.prototype['setCZ'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Ellipse_setCZ_1(self, arg0);
+};
+
+Ellipse.prototype['setRX'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Ellipse_setRX_1(self, arg0);
+};
+
+Ellipse.prototype['setRY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Ellipse_setRY_1(self, arg0);
+};
+
+Ellipse.prototype['setCenter2D'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_Ellipse_setCenter2D_2(self, arg0, arg1);
+};
+
+Ellipse.prototype['setCenter3D'] = function(arg0, arg1, arg2) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  if (arg2 && typeof arg2 === 'object') arg2 = arg2.ptr;
+  else arg2 = ensureString(arg2);
+  _emscripten_bind_Ellipse_setCenter3D_3(self, arg0, arg1, arg2);
+};
+
+Ellipse.prototype['setRadii'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_Ellipse_setRadii_2(self, arg0, arg1);
+};
+
+Ellipse.prototype['getTypeCode'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Ellipse_getTypeCode_0(self);
+};
 
   Ellipse.prototype['__destroy__'] = function() {
   var self = this.ptr;
@@ -4182,6 +4576,90 @@ Image.prototype['setX'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   _emscripten_bind_Image_setX_1(self, arg0);
+};
+
+Image.prototype['setY'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Image_setY_1(self, arg0);
+};
+
+Image.prototype['setZ'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Image_setZ_1(self, arg0);
+};
+
+Image.prototype['getX'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Image_getX_0(self), RelAbsVector);
+};
+
+Image.prototype['getY'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Image_getY_0(self), RelAbsVector);
+};
+
+Image.prototype['getZ'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Image_getZ_0(self), RelAbsVector);
+};
+
+Image.prototype['setDimensions'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_Image_setDimensions_2(self, arg0, arg1);
+};
+
+Image.prototype['setWidth'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Image_setWidth_1(self, arg0);
+};
+
+Image.prototype['setHeight'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Image_setHeight_1(self, arg0);
+};
+
+Image.prototype['getWidth'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Image_getWidth_0(self), RelAbsVector);
+};
+
+Image.prototype['getHeight'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_Image_getHeight_0(self), RelAbsVector);
+};
+
+Image.prototype['setImageReference'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_Image_setImageReference_1(self, arg0);
+};
+
+Image.prototype['getImageReference'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_Image_getImageReference_0(self));
+};
+
+Image.prototype['isSetImageReference'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_Image_isSetImageReference_0(self));
+};
+
+Image.prototype['getTypeCode'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_Image_getTypeCode_0(self);
 };
 
   Image.prototype['__destroy__'] = function() {
