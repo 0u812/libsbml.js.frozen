@@ -361,6 +361,32 @@ interface RenderGroup {
   boolean isSetFontStyle();
 
   long getTypeCode();
+
+  // from GraphicalPrimitive2D
+  void setFillColor(DOMString color);
+  DOMString getFillColor();
+  boolean isSetFillColor();
+
+  // TODO: fill rule
+  boolean isSetFillRule();
+
+  // from GraphicalPrimitive1D
+  void setStroke(DOMString stroke);
+  DOMString getStroke();
+  boolean isSetStroke();
+
+  void setStrokeWidth(double width);
+  double getStrokeWidth();
+  boolean isSetStrokeWidth();
+
+  boolean isSetDashArray();
+  unsigned long getNumDashes();
+  unsigned long getDashByIndex(unsigned long n);
+  void addDash(unsigned long dash);
+  void clearDashes();
+  void setDashByIndex(unsigned long index, unsigned long dash);
+  void insertDash(unsigned long index, unsigned long dash);
+  void removeDash(unsigned long index);
 };
 
 [Prefix="libsbml::"]
@@ -386,6 +412,8 @@ interface GradientStop {
   boolean isSetId();
 
   [Ref] RelAbsVector getOffset();
+  // WARNING: Do not try to call setOffset with a RelAbsVector arg -
+  // the interface does not protect against it
   void setOffset(double abs, double rel);
 
   DOMString getStopColor();
@@ -506,6 +534,7 @@ interface GlobalRenderInformation {
 
   unsigned long getNumStyles();
   GlobalStyle getStyle(unsigned long n);
+  GlobalStyle createStyle(DOMString id);
 };
 
 [Prefix="libsbml::"]
@@ -551,6 +580,7 @@ interface LocalRenderInformation {
 
   unsigned long getNumStyles();
   LocalStyle getStyle(unsigned long n);
+  LocalStyle createStyle(DOMString id);
 };
 
 [Prefix="libsbml::"]

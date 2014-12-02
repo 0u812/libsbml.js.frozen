@@ -887,6 +887,13 @@ LocalRenderInformation.prototype['getStyle'] = function(arg0) {
   return wrapPointer(_emscripten_bind_LocalRenderInformation_getStyle_1(self, arg0), LocalStyle);
 };
 
+LocalRenderInformation.prototype['createStyle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_createStyle_1(self, arg0), LocalStyle);
+};
+
   LocalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LocalRenderInformation___destroy___0(self);
@@ -2855,6 +2862,13 @@ GlobalRenderInformation.prototype['getStyle'] = function(arg0) {
   return wrapPointer(_emscripten_bind_GlobalRenderInformation_getStyle_1(self, arg0), GlobalStyle);
 };
 
+GlobalRenderInformation.prototype['createStyle'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_createStyle_1(self, arg0), GlobalStyle);
+};
+
   GlobalRenderInformation.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_GlobalRenderInformation___destroy___0(self);
@@ -3830,6 +3844,116 @@ RenderGroup.prototype['isSetFontStyle'] = function() {
 RenderGroup.prototype['getTypeCode'] = function() {
   var self = this.ptr;
   return _emscripten_bind_RenderGroup_getTypeCode_0(self);
+};
+
+RenderGroup.prototype['setFillColor'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setFillColor_1(self, arg0);
+};
+
+RenderGroup.prototype['getFillColor'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getFillColor_0(self));
+};
+
+RenderGroup.prototype['isSetFillColor'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFillColor_0(self));
+};
+
+RenderGroup.prototype['isSetFillRule'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetFillRule_0(self));
+};
+
+RenderGroup.prototype['setStroke'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setStroke_1(self, arg0);
+};
+
+RenderGroup.prototype['getStroke'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderGroup_getStroke_0(self));
+};
+
+RenderGroup.prototype['isSetStroke'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetStroke_0(self));
+};
+
+RenderGroup.prototype['setStrokeWidth'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_setStrokeWidth_1(self, arg0);
+};
+
+RenderGroup.prototype['getStrokeWidth'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getStrokeWidth_0(self);
+};
+
+RenderGroup.prototype['isSetStrokeWidth'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetStrokeWidth_0(self));
+};
+
+RenderGroup.prototype['isSetDashArray'] = function() {
+  var self = this.ptr;
+  return idl_wrapBool(_emscripten_bind_RenderGroup_isSetDashArray_0(self));
+};
+
+RenderGroup.prototype['getNumDashes'] = function() {
+  var self = this.ptr;
+  return _emscripten_bind_RenderGroup_getNumDashes_0(self);
+};
+
+RenderGroup.prototype['getDashByIndex'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return _emscripten_bind_RenderGroup_getDashByIndex_1(self, arg0);
+};
+
+RenderGroup.prototype['addDash'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_addDash_1(self, arg0);
+};
+
+RenderGroup.prototype['clearDashes'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderGroup_clearDashes_0(self);
+};
+
+RenderGroup.prototype['setDashByIndex'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_RenderGroup_setDashByIndex_2(self, arg0, arg1);
+};
+
+RenderGroup.prototype['insertDash'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  _emscripten_bind_RenderGroup_insertDash_2(self, arg0, arg1);
+};
+
+RenderGroup.prototype['removeDash'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_RenderGroup_removeDash_1(self, arg0);
 };
 
   RenderGroup.prototype['__destroy__'] = function() {

@@ -540,6 +540,10 @@ libsbml::LocalStyle* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation
   return self->getStyle(arg0);
 }
 
+libsbml::LocalStyle* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_createStyle_1(libsbml::LocalRenderInformation* self, char* arg0) {
+  return self->createStyle(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation___destroy___0(libsbml::LocalRenderInformation* self) {
   delete self;
 }
@@ -1810,6 +1814,10 @@ libsbml::GlobalStyle* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformati
   return self->getStyle(arg0);
 }
 
+libsbml::GlobalStyle* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_createStyle_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  return self->createStyle(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation___destroy___0(libsbml::GlobalRenderInformation* self) {
   delete self;
 }
@@ -2456,6 +2464,78 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFontStyle_0(libsbml::
 
 int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getTypeCode_0(libsbml::RenderGroup* self) {
   return self->getTypeCode();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setFillColor_1(libsbml::RenderGroup* self, char* arg0) {
+  self->setFillColor(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getFillColor_0(libsbml::RenderGroup* self) {
+  return (char*)self->getFillColor().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFillColor_0(libsbml::RenderGroup* self) {
+  return self->isSetFillColor();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetFillRule_0(libsbml::RenderGroup* self) {
+  return self->isSetFillRule();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setStroke_1(libsbml::RenderGroup* self, char* arg0) {
+  self->setStroke(arg0);
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getStroke_0(libsbml::RenderGroup* self) {
+  return (char*)self->getStroke().c_str();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetStroke_0(libsbml::RenderGroup* self) {
+  return self->isSetStroke();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setStrokeWidth_1(libsbml::RenderGroup* self, double arg0) {
+  self->setStrokeWidth(arg0);
+}
+
+double EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getStrokeWidth_0(libsbml::RenderGroup* self) {
+  return self->getStrokeWidth();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetStrokeWidth_0(libsbml::RenderGroup* self) {
+  return self->isSetStrokeWidth();
+}
+
+bool EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_isSetDashArray_0(libsbml::RenderGroup* self) {
+  return self->isSetDashArray();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getNumDashes_0(libsbml::RenderGroup* self) {
+  return self->getNumDashes();
+}
+
+unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_getDashByIndex_1(libsbml::RenderGroup* self, unsigned int arg0) {
+  return self->getDashByIndex(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_addDash_1(libsbml::RenderGroup* self, unsigned int arg0) {
+  self->addDash(arg0);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_clearDashes_0(libsbml::RenderGroup* self) {
+  self->clearDashes();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_setDashByIndex_2(libsbml::RenderGroup* self, unsigned int arg0, unsigned int arg1) {
+  self->setDashByIndex(arg0, arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_insertDash_2(libsbml::RenderGroup* self, unsigned int arg0, unsigned int arg1) {
+  self->insertDash(arg0, arg1);
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup_removeDash_1(libsbml::RenderGroup* self, unsigned int arg0) {
+  self->removeDash(arg0);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderGroup___destroy___0(libsbml::RenderGroup* self) {
