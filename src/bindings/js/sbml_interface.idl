@@ -831,6 +831,7 @@ interface CurveCaster {
   CubicBezier castToCubicBezier(LineSegment x);
 };[Prefix="libsbml::"]
 interface RelAbsVector {
+  void RelAbsVector();
   void RelAbsVector(double a, double r);
 
   void setCoordinate(double a, double r);

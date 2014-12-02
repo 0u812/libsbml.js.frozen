@@ -1182,6 +1182,10 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_RateRule___destroy___0(libsbml::RateRu
 
 // RelAbsVector
 
+libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_RelAbsVector_0() {
+  return new libsbml::RelAbsVector();
+}
+
 libsbml::RelAbsVector* EMSCRIPTEN_KEEPALIVE emscripten_bind_RelAbsVector_RelAbsVector_2(double arg0, double arg1) {
   return new libsbml::RelAbsVector(arg0, arg1);
 }

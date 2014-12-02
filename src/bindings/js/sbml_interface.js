@@ -1891,6 +1891,8 @@ function RelAbsVector(arg0, arg1) {
   else arg0 = ensureString(arg0);
   if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
   else arg1 = ensureString(arg1);
+  if (arg0 === undefined) { this.ptr = _emscripten_bind_RelAbsVector_RelAbsVector_0(); getCache(RelAbsVector)[this.ptr] = this;return }
+  if (arg1 === undefined) { this.ptr = _emscripten_bind_RelAbsVector_RelAbsVector_1(arg0); getCache(RelAbsVector)[this.ptr] = this;return }
   this.ptr = _emscripten_bind_RelAbsVector_RelAbsVector_2(arg0, arg1);
   getCache(RelAbsVector)[this.ptr] = this;
 };
