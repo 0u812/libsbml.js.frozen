@@ -268,6 +268,20 @@ Object.defineProperty(RenderLayoutPlugin.prototype, "renderinfo", {
   }
 });
 
+RenderExtension["getXmlnsL2"] = function(name) {
+  var wrap = new Module.RenderExtensionWrapper();
+  var result = wrap.getXmlnsL2();
+  Module.destroy(wrap);
+  return result;
+}
+
+RenderExtension["getXmlnsL3V1V1"] = function(name) {
+  var wrap = new Module.RenderExtensionWrapper();
+  var result = wrap.getXmlnsL3V1V1();
+  Module.destroy(wrap);
+  return result;
+}
+
 SBasePlugin.prototype["asRenderListOfLayoutsPlugin"] = function(name) {
   var swtch = new Module.RenderCaster();
   var result = swtch.castToRenderListOfLayoutsPlugin(this);

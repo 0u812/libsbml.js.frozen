@@ -478,6 +478,9 @@ interface GlobalRenderInformation {
   void setName(DOMString t);
   boolean isSetName();
 
+  DOMString getProgramName();
+  void setProgramName(DOMString name);
+
   DOMString getProgramVersion();
   void setProgramVersion(DOMString t);
 
@@ -486,12 +489,19 @@ interface GlobalRenderInformation {
 
   unsigned long getNumColorDefinitions();
   ColorDefinition getColorDefinition(unsigned long n);
+  ColorDefinition createColorDefinition();
+  ColorDefinition removeColorDefinition(unsigned long n);
 
   unsigned long getNumGradientDefinitions();
   GradientBase getGradientDefinition(unsigned long n);
+  LinearGradient createLinearGradientDefinition();
+  RadialGradient createRadialGradientDefinition();
+  GradientBase removeGradientDefinition(unsigned long n);
 
   unsigned long getNumLineEndings();
   LineEnding getLineEnding(unsigned long n);
+  LineEnding createLineEnding();
+  LineEnding removeLineEnding(unsigned long n);
 
   unsigned long getNumStyles();
   GlobalStyle getStyle(unsigned long n);
@@ -516,26 +526,50 @@ interface LocalRenderInformation {
   DOMString getProgramVersion();
   void setProgramVersion(DOMString t);
 
+  DOMString getProgramName();
+  void setProgramName(DOMString name);
+
   DOMString getBackgroundColor();
   void setBackgroundColor(DOMString t);
 
   unsigned long getNumColorDefinitions();
   ColorDefinition getColorDefinition(unsigned long n);
+  ColorDefinition createColorDefinition();
+  ColorDefinition removeColorDefinition(unsigned long n);
 
   unsigned long getNumGradientDefinitions();
   GradientBase getGradientDefinition(unsigned long n);
+  LinearGradient createLinearGradientDefinition();
+  RadialGradient createRadialGradientDefinition();
+  GradientBase removeGradientDefinition(unsigned long n);
 
   unsigned long getNumLineEndings();
   LineEnding getLineEnding(unsigned long n);
+  LineEnding createLineEnding();
+  LineEnding removeLineEnding(unsigned long n);
 
   unsigned long getNumStyles();
   LocalStyle getStyle(unsigned long n);
 };
 
 [Prefix="libsbml::"]
+interface RenderExtension {
+};
+
+[Prefix="libsbmljs::"]
+interface RenderExtensionWrapper {
+  void RenderExtensionWrapper();
+  DOMString getXmlnsL2();
+  DOMString getXmlnsL3V1V1();
+};
+
+[Prefix="libsbml::"]
 interface RenderLayoutPlugin {
   unsigned long getNumLocalRenderInformationObjects();
   LocalRenderInformation getRenderInformation(unsigned long n);
+
+  LocalRenderInformation createLocalRenderInformation();
+  LocalRenderInformation removeLocalRenderInformation(unsigned long n);
 };
 
 [Prefix="libsbmljs::"]

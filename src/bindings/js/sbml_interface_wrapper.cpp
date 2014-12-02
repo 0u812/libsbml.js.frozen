@@ -266,6 +266,17 @@ namespace libsbmljs {
     }
   };
 
+  class RenderExtensionWrapper {
+  public:
+    const std::string& getXmlnsL2() {
+      return libsbml::RenderExtension::getXmlnsL2();
+    }
+
+    const std::string& getXmlnsL3V1V1() {
+      return libsbml::RenderExtension::getXmlnsL3V1V1();
+    }
+  };
+
   class RenderCaster {
   public:
     RenderCaster() {}

@@ -774,6 +774,18 @@ LocalRenderInformation.prototype['setProgramVersion'] = function(arg0) {
   _emscripten_bind_LocalRenderInformation_setProgramVersion_1(self, arg0);
 };
 
+LocalRenderInformation.prototype['getProgramName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_LocalRenderInformation_getProgramName_0(self));
+};
+
+LocalRenderInformation.prototype['setProgramName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_LocalRenderInformation_setProgramName_1(self, arg0);
+};
+
 LocalRenderInformation.prototype['getBackgroundColor'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_LocalRenderInformation_getBackgroundColor_0(self));
@@ -798,6 +810,18 @@ LocalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
   return wrapPointer(_emscripten_bind_LocalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
 };
 
+LocalRenderInformation.prototype['createColorDefinition'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_createColorDefinition_0(self), ColorDefinition);
+};
+
+LocalRenderInformation.prototype['removeColorDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_removeColorDefinition_1(self, arg0), ColorDefinition);
+};
+
 LocalRenderInformation.prototype['getNumGradientDefinitions'] = function() {
   var self = this.ptr;
   return _emscripten_bind_LocalRenderInformation_getNumGradientDefinitions_0(self);
@@ -810,6 +834,23 @@ LocalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
   return wrapPointer(_emscripten_bind_LocalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
 };
 
+LocalRenderInformation.prototype['createLinearGradientDefinition'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_createLinearGradientDefinition_0(self), LinearGradient);
+};
+
+LocalRenderInformation.prototype['createRadialGradientDefinition'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_createRadialGradientDefinition_0(self), RadialGradient);
+};
+
+LocalRenderInformation.prototype['removeGradientDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_removeGradientDefinition_1(self, arg0), GradientBase);
+};
+
 LocalRenderInformation.prototype['getNumLineEndings'] = function() {
   var self = this.ptr;
   return _emscripten_bind_LocalRenderInformation_getNumLineEndings_0(self);
@@ -820,6 +861,18 @@ LocalRenderInformation.prototype['getLineEnding'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_LocalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
+};
+
+LocalRenderInformation.prototype['createLineEnding'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_createLineEnding_0(self), LineEnding);
+};
+
+LocalRenderInformation.prototype['removeLineEnding'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_LocalRenderInformation_removeLineEnding_1(self, arg0), LineEnding);
 };
 
 LocalRenderInformation.prototype['getNumStyles'] = function() {
@@ -1140,6 +1193,31 @@ LineEnding.prototype['setBoundingBox'] = function(arg0) {
   LineEnding.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_LineEnding___destroy___0(self);
+}
+// RenderExtensionWrapper
+function RenderExtensionWrapper() {
+  this.ptr = _emscripten_bind_RenderExtensionWrapper_RenderExtensionWrapper_0();
+  getCache(RenderExtensionWrapper)[this.ptr] = this;
+};
+RenderExtensionWrapper.prototype = Object.create(WrapperObject.prototype);
+RenderExtensionWrapper.prototype.constructor = RenderExtensionWrapper;
+RenderExtensionWrapper.prototype.__class__ = RenderExtensionWrapper;
+RenderExtensionWrapper.__cache__ = {};
+Module['RenderExtensionWrapper'] = RenderExtensionWrapper;
+
+RenderExtensionWrapper.prototype['getXmlnsL2'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderExtensionWrapper_getXmlnsL2_0(self));
+};
+
+RenderExtensionWrapper.prototype['getXmlnsL3V1V1'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_RenderExtensionWrapper_getXmlnsL3V1V1_0(self));
+};
+
+  RenderExtensionWrapper.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderExtensionWrapper___destroy___0(self);
 }
 // Dimensions
 function Dimensions(arg0, arg1, arg2, arg3) {
@@ -2558,6 +2636,18 @@ RenderLayoutPlugin.prototype['getRenderInformation'] = function(arg0) {
   return wrapPointer(_emscripten_bind_RenderLayoutPlugin_getRenderInformation_1(self, arg0), LocalRenderInformation);
 };
 
+RenderLayoutPlugin.prototype['createLocalRenderInformation'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_RenderLayoutPlugin_createLocalRenderInformation_0(self), LocalRenderInformation);
+};
+
+RenderLayoutPlugin.prototype['removeLocalRenderInformation'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_RenderLayoutPlugin_removeLocalRenderInformation_1(self, arg0), LocalRenderInformation);
+};
+
   RenderLayoutPlugin.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_RenderLayoutPlugin___destroy___0(self);
@@ -2638,6 +2728,18 @@ GlobalRenderInformation.prototype['isSetName'] = function() {
   return idl_wrapBool(_emscripten_bind_GlobalRenderInformation_isSetName_0(self));
 };
 
+GlobalRenderInformation.prototype['getProgramName'] = function() {
+  var self = this.ptr;
+  return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getProgramName_0(self));
+};
+
+GlobalRenderInformation.prototype['setProgramName'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  _emscripten_bind_GlobalRenderInformation_setProgramName_1(self, arg0);
+};
+
 GlobalRenderInformation.prototype['getProgramVersion'] = function() {
   var self = this.ptr;
   return Pointer_stringify(_emscripten_bind_GlobalRenderInformation_getProgramVersion_0(self));
@@ -2674,6 +2776,18 @@ GlobalRenderInformation.prototype['getColorDefinition'] = function(arg0) {
   return wrapPointer(_emscripten_bind_GlobalRenderInformation_getColorDefinition_1(self, arg0), ColorDefinition);
 };
 
+GlobalRenderInformation.prototype['createColorDefinition'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_createColorDefinition_0(self), ColorDefinition);
+};
+
+GlobalRenderInformation.prototype['removeColorDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_removeColorDefinition_1(self, arg0), ColorDefinition);
+};
+
 GlobalRenderInformation.prototype['getNumGradientDefinitions'] = function() {
   var self = this.ptr;
   return _emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(self);
@@ -2686,6 +2800,23 @@ GlobalRenderInformation.prototype['getGradientDefinition'] = function(arg0) {
   return wrapPointer(_emscripten_bind_GlobalRenderInformation_getGradientDefinition_1(self, arg0), GradientBase);
 };
 
+GlobalRenderInformation.prototype['createLinearGradientDefinition'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_createLinearGradientDefinition_0(self), LinearGradient);
+};
+
+GlobalRenderInformation.prototype['createRadialGradientDefinition'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_createRadialGradientDefinition_0(self), RadialGradient);
+};
+
+GlobalRenderInformation.prototype['removeGradientDefinition'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_removeGradientDefinition_1(self, arg0), GradientBase);
+};
+
 GlobalRenderInformation.prototype['getNumLineEndings'] = function() {
   var self = this.ptr;
   return _emscripten_bind_GlobalRenderInformation_getNumLineEndings_0(self);
@@ -2696,6 +2827,18 @@ GlobalRenderInformation.prototype['getLineEnding'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return wrapPointer(_emscripten_bind_GlobalRenderInformation_getLineEnding_1(self, arg0), LineEnding);
+};
+
+GlobalRenderInformation.prototype['createLineEnding'] = function() {
+  var self = this.ptr;
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_createLineEnding_0(self), LineEnding);
+};
+
+GlobalRenderInformation.prototype['removeLineEnding'] = function(arg0) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  return wrapPointer(_emscripten_bind_GlobalRenderInformation_removeLineEnding_1(self, arg0), LineEnding);
 };
 
 GlobalRenderInformation.prototype['getNumStyles'] = function() {
@@ -3170,6 +3313,15 @@ SBMLDocument.prototype['isPackageEnabled'] = function(arg0) {
   if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
   else arg0 = ensureString(arg0);
   return idl_wrapBool(_emscripten_bind_SBMLDocument_isPackageEnabled_1(self, arg0));
+};
+
+SBMLDocument.prototype['setPackageRequired'] = function(arg0, arg1) {
+  var self = this.ptr;
+  if (arg0 && typeof arg0 === 'object') arg0 = arg0.ptr;
+  else arg0 = ensureString(arg0);
+  if (arg1 && typeof arg1 === 'object') arg1 = arg1.ptr;
+  else arg1 = ensureString(arg1);
+  return _emscripten_bind_SBMLDocument_setPackageRequired_2(self, arg0, arg1);
 };
 
 SBMLDocument.prototype['checkConsistency'] = function() {
@@ -3761,6 +3913,18 @@ AlgebraicRule.prototype['isParameter'] = function() {
   AlgebraicRule.prototype['__destroy__'] = function() {
   var self = this.ptr;
   _emscripten_bind_AlgebraicRule___destroy___0(self);
+}
+// RenderExtension
+function RenderExtension() { throw "cannot construct a RenderExtension, no constructor in IDL" }
+RenderExtension.prototype = Object.create(WrapperObject.prototype);
+RenderExtension.prototype.constructor = RenderExtension;
+RenderExtension.prototype.__class__ = RenderExtension;
+RenderExtension.__cache__ = {};
+Module['RenderExtension'] = RenderExtension;
+
+  RenderExtension.prototype['__destroy__'] = function() {
+  var self = this.ptr;
+  _emscripten_bind_RenderExtension___destroy___0(self);
 }
 // RenderListOfLayoutsPlugin
 function RenderListOfLayoutsPlugin() { throw "cannot construct a RenderListOfLayoutsPlugin, no constructor in IDL" }

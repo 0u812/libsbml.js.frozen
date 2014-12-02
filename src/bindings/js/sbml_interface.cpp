@@ -464,6 +464,14 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_setProgramVersi
   self->setProgramVersion(arg0);
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getProgramName_0(libsbml::LocalRenderInformation* self) {
+  return (char*)self->getProgramName().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_setProgramName_1(libsbml::LocalRenderInformation* self, char* arg0) {
+  self->setProgramName(arg0);
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getBackgroundColor_0(libsbml::LocalRenderInformation* self) {
   return (char*)self->getBackgroundColor().c_str();
 }
@@ -480,6 +488,14 @@ libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInform
   return self->getColorDefinition(arg0);
 }
 
+libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_createColorDefinition_0(libsbml::LocalRenderInformation* self) {
+  return self->createColorDefinition();
+}
+
+libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_removeColorDefinition_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
+  return self->removeColorDefinition(arg0);
+}
+
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumGradientDefinitions_0(libsbml::LocalRenderInformation* self) {
   return self->getNumGradientDefinitions();
 }
@@ -488,12 +504,32 @@ libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformati
   return self->getGradientDefinition(arg0);
 }
 
+libsbml::LinearGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_createLinearGradientDefinition_0(libsbml::LocalRenderInformation* self) {
+  return self->createLinearGradientDefinition();
+}
+
+libsbml::RadialGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_createRadialGradientDefinition_0(libsbml::LocalRenderInformation* self) {
+  return self->createRadialGradientDefinition();
+}
+
+libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_removeGradientDefinition_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
+  return self->removeGradientDefinition(arg0);
+}
+
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumLineEndings_0(libsbml::LocalRenderInformation* self) {
   return self->getNumLineEndings();
 }
 
 libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getLineEnding_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
   return self->getLineEnding(arg0);
+}
+
+libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_createLineEnding_0(libsbml::LocalRenderInformation* self) {
+  return self->createLineEnding();
+}
+
+libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_removeLineEnding_1(libsbml::LocalRenderInformation* self, unsigned int arg0) {
+  return self->removeLineEnding(arg0);
 }
 
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_LocalRenderInformation_getNumStyles_0(libsbml::LocalRenderInformation* self) {
@@ -707,6 +743,24 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineEnding_setBoundingBox_1(libsbml::L
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_LineEnding___destroy___0(libsbml::LineEnding* self) {
+  delete self;
+}
+
+// RenderExtensionWrapper
+
+libsbmljs::RenderExtensionWrapper* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderExtensionWrapper_RenderExtensionWrapper_0() {
+  return new libsbmljs::RenderExtensionWrapper();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderExtensionWrapper_getXmlnsL2_0(libsbmljs::RenderExtensionWrapper* self) {
+  return (char*)self->getXmlnsL2().c_str();
+}
+
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderExtensionWrapper_getXmlnsL3V1V1_0(libsbmljs::RenderExtensionWrapper* self) {
+  return (char*)self->getXmlnsL3V1V1().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderExtensionWrapper___destroy___0(libsbmljs::RenderExtensionWrapper* self) {
   delete self;
 }
 
@@ -1608,6 +1662,14 @@ libsbml::LocalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayo
   return self->getRenderInformation(arg0);
 }
 
+libsbml::LocalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_createLocalRenderInformation_0(libsbml::RenderLayoutPlugin* self) {
+  return self->createLocalRenderInformation();
+}
+
+libsbml::LocalRenderInformation* EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin_removeLocalRenderInformation_1(libsbml::RenderLayoutPlugin* self, unsigned int arg0) {
+  return self->removeLocalRenderInformation(arg0);
+}
+
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderLayoutPlugin___destroy___0(libsbml::RenderLayoutPlugin* self) {
   delete self;
 }
@@ -1660,6 +1722,14 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_isSetName_0(li
   return self->isSetName();
 }
 
+char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getProgramName_0(libsbml::GlobalRenderInformation* self) {
+  return (char*)self->getProgramName().c_str();
+}
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_setProgramName_1(libsbml::GlobalRenderInformation* self, char* arg0) {
+  self->setProgramName(arg0);
+}
+
 char* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getProgramVersion_0(libsbml::GlobalRenderInformation* self) {
   return (char*)self->getProgramVersion().c_str();
 }
@@ -1684,6 +1754,14 @@ libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInfor
   return self->getColorDefinition(arg0);
 }
 
+libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_createColorDefinition_0(libsbml::GlobalRenderInformation* self) {
+  return self->createColorDefinition();
+}
+
+libsbml::ColorDefinition* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_removeColorDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->removeColorDefinition(arg0);
+}
+
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumGradientDefinitions_0(libsbml::GlobalRenderInformation* self) {
   return self->getNumGradientDefinitions();
 }
@@ -1692,12 +1770,32 @@ libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformat
   return self->getGradientDefinition(arg0);
 }
 
+libsbml::LinearGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_createLinearGradientDefinition_0(libsbml::GlobalRenderInformation* self) {
+  return self->createLinearGradientDefinition();
+}
+
+libsbml::RadialGradient* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_createRadialGradientDefinition_0(libsbml::GlobalRenderInformation* self) {
+  return self->createRadialGradientDefinition();
+}
+
+libsbml::GradientBase* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_removeGradientDefinition_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->removeGradientDefinition(arg0);
+}
+
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumLineEndings_0(libsbml::GlobalRenderInformation* self) {
   return self->getNumLineEndings();
 }
 
 libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getLineEnding_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
   return self->getLineEnding(arg0);
+}
+
+libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_createLineEnding_0(libsbml::GlobalRenderInformation* self) {
+  return self->createLineEnding();
+}
+
+libsbml::LineEnding* EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_removeLineEnding_1(libsbml::GlobalRenderInformation* self, unsigned int arg0) {
+  return self->removeLineEnding(arg0);
 }
 
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_GlobalRenderInformation_getNumStyles_0(libsbml::GlobalRenderInformation* self) {
@@ -1998,6 +2096,10 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_disablePackage_2(libsbml:
 
 bool EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_isPackageEnabled_1(libsbml::SBMLDocument* self, char* arg0) {
   return self->isPackageEnabled(arg0);
+}
+
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_setPackageRequired_2(libsbml::SBMLDocument* self, char* arg0, bool arg1) {
+  return self->setPackageRequired(arg0, arg1);
 }
 
 unsigned int EMSCRIPTEN_KEEPALIVE emscripten_bind_SBMLDocument_checkConsistency_0(libsbml::SBMLDocument* self) {
@@ -2407,6 +2509,12 @@ bool EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule_isParameter_0(libsbml::A
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_AlgebraicRule___destroy___0(libsbml::AlgebraicRule* self) {
+  delete self;
+}
+
+// RenderExtension
+
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_RenderExtension___destroy___0(libsbml::RenderExtension* self) {
   delete self;
 }
 

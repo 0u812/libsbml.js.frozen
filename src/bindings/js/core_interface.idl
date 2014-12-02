@@ -530,6 +530,7 @@ interface SBMLDocument {
   boolean enablePackage(DOMString pkgName, DOMString pkgPrefix, boolean flag);
   boolean disablePackage(DOMString pkgName, DOMString pkgPrefix);
   boolean isPackageEnabled(DOMString pkgName);
+  long setPackageRequired(DOMString pkgName, boolean flag);
 
   // validation
   // TODO: doc
