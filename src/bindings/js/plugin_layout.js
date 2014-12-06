@@ -59,12 +59,18 @@ Object.defineProperty(BoundingBox.prototype, "z", {
 Object.defineProperty(BoundingBox.prototype, "width", {
   get: function errors() {
     return this.getDimensions().getWidth();
+  },
+  set: function(v) {
+    this.getDimensions().setWidth(v);
   }
 });
 
 Object.defineProperty(BoundingBox.prototype, "height", {
   get: function errors() {
     return this.getDimensions().getHeight();
+  },
+  set: function(v) {
+    this.getDimensions().setHeight(v);
   }
 });
 
